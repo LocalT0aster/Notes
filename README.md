@@ -2,4 +2,4 @@
 Repository of my markdown notes and guides
 
 ## Contents:
-* [OS Notebook](os/README.md)
+* [OS Notebook](OS/README.md)
