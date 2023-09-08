@@ -7,7 +7,7 @@ If you are using git for the first time on your machine, you should set your nam
 git config --global user.name "Your Name"
 git config --global user.email youremail@example.com
 ```
-Also it is required to have gcc installed to comlete this lab. On Ubuntu/Debian distros you can do this by installing `build-essential` using `apt`:
+Also it is required to have gcc installed to complete this lab. On Ubuntu/Debian distros you can do this by installing `build-essential` using `apt`:
 ```bash
 sudo apt update && sudo apt install -y build-essential
 ```
@@ -19,13 +19,13 @@ Copy and Paste in Linux Terminal is performed using `[Ctrl + Shift + C]` & `[Ctr
 You can navigate using:
 * `cd` to change directories
 * `ls` to show files in current folder
-* `pwd` to show currend folder path
+* `pwd` to show current folder path
 
 ## Git init
 
 Create repo folder and init the git:
 
-Copy & paste in the terminal. Also you might want to create separate folder for repos, befor you create the repo.
+Copy & paste in the terminal. Also you might want to create separate folder for repos, before you create the repo.
 ```bash
 mkdir OSLabs
 cd OSLabs
