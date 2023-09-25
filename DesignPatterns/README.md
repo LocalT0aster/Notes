@@ -6,6 +6,13 @@ Design patterns are standard solutions to common problems in software design. Th
 
 ---
 
+- [Design Patterns](#design-patterns)
+  - [Before you begin studying design patterns:](#before-you-begin-studying-design-patterns)
+- [Gamma categorization](#gamma-categorization)
+  - [Creational](#creational)
+  - [Structural](#structural)
+  - [Behavioral](#behavioral)
+
 ## Before you begin studying design patterns:
 
 [Programming Basics & OOP](ProgrammingBasics&OOP.md)
@@ -29,57 +36,63 @@ The "Gamma categorization" refers to the classification of design patterns propo
 - Behavioral Patterns
     - They are all different; no central theme
 
+---
+
 ## Creational
 
-[Builder](Builder.md)
+[🛠️ Builder](Builder.md)
 
-[Factory](Factory.md)
+[🏭 Factory](Factory.md)
 
-[Prototype](Prototype.md)
+[🧬 Prototype](Prototype.md)
 
-[Singleton](Singleton.md)
+[🔐 Singleton](Singleton.md)
+
+---
 
 ## Structural
 
-[Adapter](Adapter.md)
+[🔌 Adapter](Adapter.md)
 
-[Bridge](Bridge.md)
+[🌉 Bridge](Bridge.md)
 
-[Composite](Composite.md)
+[🌳 Composite](Composite.md)
 
-[Decorator](Decorator.md)
+[🎨 Decorator](Decorator.md)
 
-[Façade](Façade.md)
+[🚪 Façade](Façade.md)
 
-[Flyweight](Flyweight.md)
+[🍃 Flyweight](Flyweight.md)
 
-[Proxy](Proxy.md)
+[🕵️ Proxy](Proxy.md)
+
+---
 
 ## Behavioral
 
-[Chain of Responsibility](ChainOfResponsibility.md)
+[🔗 Chain of Responsibility](ChainOfResponsibility.md)
 
-[Command](Command.md)
+[🔘 Command](Command.md)
 
-[Interpreter](Interpreter.md)
+[📖 Interpreter](Interpreter.md)
 
-[Iterator](Iterator.md)
+[🔄 Iterator](Iterator.md)
 
-[Mediator](Mediator.md)
+[🤝 Mediator](Mediator.md)
 
-[Memento](Memento.md)
+[📦 Memento](Memento.md)
 
-[Null Object](NullObject.md)
+[0️⃣ Null Object](NullObject.md)
 
-[Observer](Observer.md)
+[👁️ Observer](Observer.md)
 
-[State](State.md)
+[🔄 State](State.md)
 
-[Strategy](Strategy.md)
+[💡 Strategy](Strategy.md)
 
-[Template Method](TemplateMethod.md)
+[📜 Template Method](TemplateMethod.md)
 
-[Visitor](Visitor.md)
+[🚶 Visitor](Visitor.md)
 
 ---
 
