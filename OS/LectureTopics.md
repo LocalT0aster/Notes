@@ -1,8 +1,8 @@
 # OS Lecture Topics
 
-* [ ] 1: Comparch
-* [ ] 2: Intro to C
-* [ ] 3: Arrays, Structures and Function pointers
+* [x] 1: Comparch
+* [x] 2: Intro to C
+* [x] 3: Arrays, Structures and Function pointers
 * [ ] 4: Processes and Threads
 * [ ] 5: P&T Race Conditions Semaphore Mutex
 * [ ] 6: P&T Scheduling
