@@ -22,9 +22,13 @@ Also, you can additionally increase the video memory and enable 3D acceleration 
 ![enable VMem & 3D acceleration](img/vminst6.jpg)
 
 ## Step 4: Launch the VM
+
 Select the VM and press `Start` button
 
 ## Step 5: Installing the OS
+
 Follow [this guide](https://manual.lubuntu.me/stable/1/1.3/installation.html) if you are installing `lubuntu`, and if you are using other distro, just search for `[your distro name] installation`.
+
 ### End of the guide
-# [<- Return](Lab1Solution.md)
+
+## [<- Return](Lab1Solution.md)
