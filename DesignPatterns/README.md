@@ -9,9 +9,7 @@ Design patterns are standard solutions to common problems in software design. Th
 - [Design Patterns](#design-patterns)
   - [Before you begin studying design patterns](#before-you-begin-studying-design-patterns)
   - [Gamma categorization](#gamma-categorization)
-    - [Creational](#creational)
-    - [Structural](#structural)
-    - [Behavioral](#behavioral)
+  - [Patterns](#patterns)
 
 ## Before you begin studying design patterns
 
@@ -38,63 +36,22 @@ Design patterns are standard solutions to common problems in software design. Th
 
 ---
 
-### Creational
+## Patterns
 
-[🛠️ Builder](Builder.md)
-
-[🏭 Factory](Factory.md)
-
-[🧬 Prototype](Prototype.md)
-
-[🔐 Singleton](Singleton.md)
-
----
-
-### Structural
-
-[🔌 Adapter](Adapter.md)
-
-[🌉 Bridge](Bridge.md)
-
-[🌳 Composite](Composite.md)
-
-[🎨 Decorator](Decorator.md)
-
-[🚪 Façade](Façade.md)
-
-[🍃 Flyweight](Flyweight.md)
-
-[🕵️ Proxy](Proxy.md)
-
----
-
-### Behavioral
-
-[🔗 Chain of Responsibility](ChainOfResponsibility.md)
-
-[🔘 Command](Command.md)
-
-[📖 Interpreter](Interpreter.md)
-
-[🔄 Iterator](Iterator.md)
-
-[🤝 Mediator](Mediator.md)
-
-[📦 Memento](Memento.md)
-
-[0️⃣ Null Object](NullObject.md)
-
-[👁️ Observer](Observer.md)
-
-[🔄 State](State.md)
-
-[💡 Strategy](Strategy.md)
-
-[📜 Template Method](TemplateMethod.md)
-
-[🚶 Visitor](Visitor.md)
-
----
+| ***Creational***             | ***Structural***             | ***Behavioral***                                       |
+| :--------------------------- | :--------------------------- | :----------------------------------------------------- |
+| [🛠️ Builder](Builder.md)     | [🔌 Adapter](Adapter.md)     | [🔗 Chain of Responsibility](ChainOfResponsibility.md) |
+| [🏭 Factory](Factory.md)     | [🌉 Bridge](Bridge.md)       | [🔘 Command](Command.md) |
+| [🧬 Prototype](Prototype.md) | [🌳 Composite](Composite.md) | [📖 Interpreter](Interpreter.md) |
+| [🔐 Singleton](Singleton.md) | [🎨 Decorator](Decorator.md) | [🔄 Iterator](Iterator.md) |
+|                              | [🚪 Façade](Façade.md)       | [🤝 Mediator](Mediator.md) |
+|                              | [🍃 Flyweight](Flyweight.md) | [📦 Memento](Memento.md) |
+|                              | [🕵️ Proxy](Proxy.md)         | [0️⃣ Null Object](NullObject.md) |
+|                              |                              | [👁️ Observer](Observer.md) |
+|                              |                              | [🔄 State](State.md) |
+|                              |                              | [💡 Strategy](Strategy.md) |
+|                              |                              | [📜 Template Method](TemplateMethod.md) |
+|                              |                              | [🚶 Visitor](Visitor.md) |
 
 GPT4 was used to generate explanations.
 
