@@ -1,36 +1,34 @@
 # Mediator
 
+> **Note**
 > Facilitates communication between components.
->
 
-<aside>
-💡 A component that facilitates communication between other components without them necessarily being aware of each other or having direct (reference) access to each other.
+A component that facilitates communication between other components without them necessarily being aware of each other or having direct (reference) access to each other.
 
-</aside>
+## Intent
 
-## Intent:
+> **Important**
+> **Intent**
+> Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
 
-### Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
+## Explanation
 
-## Explanation:
-
-> The Mediator design pattern is a behavioral pattern that encapsulates how a set of objects interact. It promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently. Instead of objects communicating directly with each other, they communicate indirectly through a mediator object.
->
+The Mediator design pattern is a behavioral pattern that encapsulates how a set of objects interact. It promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently. Instead of objects communicating directly with each other, they communicate indirectly through a mediator object.
 
 ---
 
-### Motivation to use:
+### Motivation to use
 
 - Components may go in and out of a system at any time
-    - Chat room participants
-    - Players in an MMORPG
+  - Chat room participants
+  - Players in an MMORPG
 - It makes no sense for them to have direct references to one another
-    - Those references may go dead
+  - Those references may go dead
 - Solution: have then all refer to some central component that facilitates communication
 
 ---
 
-## Summary from the course:
+## Summary from the course
 
 - Create the mediator and have each object in the system refer to it E.g., in a field
 - Mediator engages in bidirectional communication with its connected components

@@ -1,6 +1,6 @@
-# Builder Examples in C#
+# Builder Examples in `C#`
 
-- [Builder Examples in C#](#builder-examples-in-c)
+- [Builder Examples in `C#`](#builder-examples-in-c)
   - [Builder](#builder)
   - [Builder Facets](#builder-facets)
   - [Builder Inheritance](#builder-inheritance)
@@ -8,6 +8,7 @@
   - [Stepwise Builder](#stepwise-builder)
 
 ## Builder
+
 ```csharp
 // Builder design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/
@@ -131,6 +132,7 @@ public class Demo
 ```
 
 ## Builder Facets
+
 ```csharp
 // Builder facets design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/
@@ -239,6 +241,7 @@ public class Demo
 ```
 
 ## Builder Inheritance
+
 ```csharp
 // Builder inheritance design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/
@@ -328,6 +331,7 @@ internal class Program
 ```
 
 ## Functional Builder
+
 ```csharp
 // functional Builder design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/
@@ -379,6 +383,7 @@ public class FunctionalBuilder
 ```
 
 ## Stepwise Builder
+
 ```csharp
 // stepwise Builder design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/

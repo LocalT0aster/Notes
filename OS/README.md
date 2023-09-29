@@ -1,6 +1,7 @@
 # Introduction to Operating Systems notebook
 
-I use [this book](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) to study
+> **Note**
+> I use [this book](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) to study
 
 ## Contents
 

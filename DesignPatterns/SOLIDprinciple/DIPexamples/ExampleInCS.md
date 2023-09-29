@@ -1,4 +1,4 @@
-# Example in C#
+# Example in `C#`
 
 This code demonstrates the Dependency Inversion Principle (DIP) in action. Let's break it down:
 

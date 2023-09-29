@@ -1,6 +1,6 @@
-# Example in C#
+# Example in `C#`
 
-## Example WRONG code:
+## Example WRONG code
 
 The "wrong" code violates the Single Responsibility Principle (SRP) because the `Journal` class is handling two separate concerns: managing journal entries and managing the persistence of those entries to a file.
 
@@ -61,7 +61,7 @@ public class Demo
 }
 ```
 
-## Example FIXED code:
+## Example FIXED code
 
 The `Journal` class is responsible not just for maintaining the journal entries, but also for saving and loading them from a file.  This violates SRP because a change in how we store the journal entries would require changes to the `Journal` class.
 

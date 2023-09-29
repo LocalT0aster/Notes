@@ -2,8 +2,8 @@
 
 > **Note**
 > Typically a tool for structure traversal rather than anything else.
----
-A pattern where a component (visitor) is allowed to traverse the entire inheritance hierarchy. Implemented by propagating a single visit() method throughout the entire hierarchy.
+
+A pattern where a component (`visitor`) is allowed to traverse the entire inheritance hierarchy. Implemented by propagating a single `visit()` method throughout the entire hierarchy.
 
 ## Intent
 
@@ -13,7 +13,7 @@ A pattern where a component (visitor) is allowed to traverse the entire inherita
 
 ## Explanation
 
-The Visitor design pattern is a behavioral pattern that allows you to add new behaviors to existing class hierarchies without altering any existing code. It involves a visitor class that defines a method for each type of element class that it can visit. These methods implement the specific behavior to be performed on that element. The element classes provide an 'accept' method that takes a visitor instance as an argument, effectively allowing the visitor to 'visit' them.
+The Visitor design pattern is a behavioral pattern that allows you to add new behaviors to existing class hierarchies without altering any existing code. It involves a visitor class that defines a method for each type of element class that it can visit. These methods implement the specific behavior to be performed on that element. The element classes provide an '`accept`' method that takes a visitor instance as an argument, effectively allowing the visitor to '`visit`' them.
 
 ---
 

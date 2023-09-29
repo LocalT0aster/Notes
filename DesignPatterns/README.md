@@ -7,38 +7,38 @@ Design patterns are standard solutions to common problems in software design. Th
 ---
 
 - [Design Patterns](#design-patterns)
-  - [Before you begin studying design patterns:](#before-you-begin-studying-design-patterns)
-- [Gamma categorization](#gamma-categorization)
-  - [Creational](#creational)
-  - [Structural](#structural)
-  - [Behavioral](#behavioral)
+  - [Before you begin studying design patterns](#before-you-begin-studying-design-patterns)
+  - [Gamma categorization](#gamma-categorization)
+    - [Creational](#creational)
+    - [Structural](#structural)
+    - [Behavioral](#behavioral)
 
-## Before you begin studying design patterns:
+## Before you begin studying design patterns
 
 [Programming Basics & OOP](ProgrammingBasics&OOP.md)
 
 [SOLID principle](SOLIDprinciple/README.md)
 
-# Gamma categorization
+## Gamma categorization
 
 ---
-
-The "Gamma categorization" refers to the classification of design patterns proposed in the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma and others. It categorizes design patterns into three types:
+> **Important**
+> The "Gamma categorization" refers to the classification of design patterns proposed in the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma and others. It categorizes design patterns into three types:
 
 - Creational Patterns
-    - Deal with the creation (construction) of objects
-    - Explicit (constructor) vs. implicit (DI, reflection, etc.)
-    - Wholesale (single statement) vs. piecewise (step-by-step)
+  - Deal with the creation (construction) of objects
+  - Explicit (constructor) vs. implicit (DI, reflection, etc.)
+  - Wholesale (single statement) vs. piecewise (step-by-step)
 - Structural Patterns
-    - Concerned with the structure (e.g., class members)
-    - Many patterns are wrappers that mimic the underlying class’ interface
-    - Stress the importance of good API design
+  - Concerned with the structure (e.g., class members)
+  - Many patterns are wrappers that mimic the underlying class’ interface
+  - Stress the importance of good API design
 - Behavioral Patterns
-    - They are all different; no central theme
+  - They are all different; no central theme
 
 ---
 
-## Creational
+### Creational
 
 [🛠️ Builder](Builder.md)
 
@@ -50,7 +50,7 @@ The "Gamma categorization" refers to the classification of design patterns propo
 
 ---
 
-## Structural
+### Structural
 
 [🔌 Adapter](Adapter.md)
 
@@ -68,7 +68,7 @@ The "Gamma categorization" refers to the classification of design patterns propo
 
 ---
 
-## Behavioral
+### Behavioral
 
 [🔗 Chain of Responsibility](ChainOfResponsibility.md)
 

@@ -1,9 +1,11 @@
-# Examples in C#
-- [Examples in C#](#examples-in-c)
+# Examples in `C#`
+
+- [Examples in `C#`](#examples-in-c)
   - [Factory Method](#factory-method)
   - [Abstract Factory](#abstract-factory)
 
 ## Factory Method
+
 ```csharp
 // Factory Method design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/
@@ -95,6 +97,7 @@ class Demo
 ```
 
 ## Abstract Factory
+
 ```csharp
 // Abstract Factory design pattern example
 // from https://www.udemy.com/course/design-patterns-csharp-dotnet/

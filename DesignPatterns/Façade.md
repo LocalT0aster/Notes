@@ -1,38 +1,36 @@
 # Façade
 
+> **Note**
 > Exposing several components through a single interface.
->
 
-<aside>
-💡 Provides a simple, easy to understand/user interface over a large and sophisticated body of code.
+Provides a simple, easy to understand/user interface over a large and sophisticated body of code.
 
-</aside>
+## Intent
 
-## Intent:
+> **Important**
+> **Intent**
+> Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 
-### Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+## Explanation
 
-## Explanation:
-
-> The Facade design pattern provides a unified interface to a set of interfaces in a subsystem. It simplifies the subsystem from the client's perspective by hiding the complexity behind a simplified, high-level API, making the subsystem easier to use.
->
+The Facade design pattern provides a unified interface to a set of interfaces in a subsystem. It simplifies the subsystem from the client's perspective by hiding the complexity behind a simplified, high-level API, making the subsystem easier to use.
 
 ---
 
-### Motivation to use:
+### Motivation to use
 
 ---
 
 - Balancing complexity and presentation/usability
 - Typical home
-    - Many subsystems (electrical, sanitation)
-    - Complex internal structure (e.g., floor layers)
-    - End user is not exposed to internals
+  - Many subsystems (electrical, sanitation)
+  - Complex internal structure (e.g., floor layers)
+  - End user is not exposed to internals
 - Same with software!
-    - Many systems working to provide flexibility, but...
-    - API consumers want it to ‘just work’
+  - Many systems working to provide flexibility, but...
+  - API consumers want it to ‘just work’
 
-## Summary from the course:
+## Summary from the course
 
 ---
 

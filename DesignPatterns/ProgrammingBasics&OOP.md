@@ -2,4 +2,4 @@
 
 [](https://metanit.com/sharp/tutorial/)
 
-C# basics & OOP on Russian
+C# basics & OOP on Russian.

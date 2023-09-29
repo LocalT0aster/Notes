@@ -1,25 +1,23 @@
 # Builder
 
+> **Note**
 > When construction gets a little bit too complicated.
->
 
-<aside>
-💡 When piecewise object construction is complicated, provide an API for doing it succinctly.
+When piecewise object construction is complicated, provide an API for doing it succinctly.
 
-</aside>
+## Intent
 
-## Intent:
+> **Important**
+> **Intent**
+> Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
-### Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+## Explanation
 
-## Explanation:
-
-> The Builder design pattern is a creational pattern that provides a way to construct a complex object step by step. It separates the construction of an object from its representation so that the same construction process can create different representations. This is useful when you need to create an object with lots of possible configuration options.
->
+The Builder design pattern is a creational pattern that provides a way to construct a complex object step by step. It separates the construction of an object from its representation so that the same construction process can create different representations. This is useful when you need to create an object with lots of possible configuration options.
 
 ---
 
-### Motivation to use:
+### Motivation to use
 
 - Some objects are simple and can be created in a single constructor call
 - Other objects require a lot of ceremonies to create
@@ -29,7 +27,7 @@
 
 ---
 
-## Summary from the course:
+## Summary from the course
 
 - A builder is a separate component for building an object
 - Can either give the builder a constructor or return it via a static function
@@ -38,6 +36,6 @@
 
 ---
 
-## Examples:
+## Examples
 
 [Examples in C#](BuilderExamples/ExamplesInCS.md)

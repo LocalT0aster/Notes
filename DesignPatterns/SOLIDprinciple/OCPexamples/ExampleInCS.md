@@ -1,4 +1,4 @@
-# Example in C#
+# Example in `C#`
 
 This example demonstrates the Open-Closed Principle (OCP) by improving the design of a product filtering system.
 

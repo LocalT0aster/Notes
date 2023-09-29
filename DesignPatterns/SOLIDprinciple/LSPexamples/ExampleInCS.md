@@ -1,4 +1,4 @@
-# Example in C#
+# Example in `C#`
 
 This is a classic example of the Liskov Substitution Principle (LSP) in action, using a `Rectangle` and `Square` example.
 

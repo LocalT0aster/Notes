@@ -1,4 +1,4 @@
-# Example in C#
+# Example in `C#`
 
 This example demonstrates the Interface Segregation Principle (ISP). Let's break down the example:
 
