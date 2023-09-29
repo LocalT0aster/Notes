@@ -1,12 +1,14 @@
 # Visitor
 
-> [!NOTE]
+> **Note**
 > Typically a tool for structure traversal rather than anything else.
 ---
 A pattern where a component (visitor) is allowed to traverse the entire inheritance hierarchy. Implemented by propagating a single visit() method throughout the entire hierarchy.
 
-> **Important**
 ## Intent
+
+> **Important**
+> **Intent:**
 > Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
 ## Explanation
