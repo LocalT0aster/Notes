@@ -37,3 +37,6 @@ The Prototype pattern is a creational design pattern that allows cloning objects
 - Customize the resulting instance
 
 ## Examples
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

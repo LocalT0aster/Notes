@@ -44,3 +44,6 @@ The Singleton design pattern ensures that a class has only one instance and prov
 - Singletons are difficult to test
 - Instead of directly using a singleton, consider depending on an abstraction (e.g., an interface)
 - Consider defining singleton lifetime in DI container
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

@@ -122,3 +122,6 @@ public class Demo
 The `Journal` class now only handles journal entries, while a new `Persistence` class is introduced to handle saving the `Journal` object to a file. This adheres to the SRP because each class now has a single responsibility: `Journal` for managing entries, and `Persistence` for managing file operations.
 
 Now, if you need to change how journal entries are stored, you only need to modify the `Persistence` class, not `Journal`. Similarly, if the way we manage journal entries changes, we only update `Journal`, not `Persistence`. This separation of concerns makes the code easier to maintain and understand.
+
+<!--Back Button-->
+[<img src="../../../img/back.svg" style="width:8em;">](../SRP.md)

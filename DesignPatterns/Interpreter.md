@@ -40,3 +40,6 @@ The Interpreter design pattern is a behavioral pattern used when you want to def
 - Parsed data can then be traversed
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

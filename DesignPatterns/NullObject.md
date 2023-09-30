@@ -39,3 +39,6 @@ The Null Object design pattern provides a default object that does nothing in pl
   - With associated performance implications
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

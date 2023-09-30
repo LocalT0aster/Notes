@@ -37,3 +37,6 @@ The Mediator design pattern is a behavioral pattern that encapsulates how a set 
 - Event processing (e.g., Rx) libraries make communication easier to implement
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

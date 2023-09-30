@@ -36,3 +36,6 @@ The Strategy pattern is a behavioral design pattern that lets you define a famil
 - Provide for either dynamic or static composition of strategy in the overall algorithm
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

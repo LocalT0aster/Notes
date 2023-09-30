@@ -37,3 +37,6 @@ The Observer pattern is a behavioral design pattern that allows an object (the "
 - `IObserver<T>`/ `IObservable<T>` are used in stream processing (Reactive Extensions)
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

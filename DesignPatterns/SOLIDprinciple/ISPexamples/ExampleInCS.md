@@ -128,3 +128,6 @@ public struct MultiFunctionMachine : IMultiFunctionDevice
     }
 }
 ```
+
+<!--Back Button-->
+[<img src="../../../img/back.svg" style="width:8em;">](../ISP.md)

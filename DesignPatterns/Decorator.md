@@ -39,3 +39,6 @@ The Decorator design pattern allows behavior to be added to an individual object
 - Exists in a static variation
   - `X<Y<Foo>>`
   - Very limited due to inability to inherit from type parameters
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

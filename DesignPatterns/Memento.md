@@ -35,3 +35,6 @@ The Memento design pattern allows for saving and restoring the state of an objec
 - Can be used to implement undo/redo
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)

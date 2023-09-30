@@ -37,3 +37,6 @@ The Flyweight design pattern is a structural pattern used for efficiency, mainly
 - .NET string interning is the Flyweight pattern
 
 ---
+
+<!--Back Button-->
+[<img src="../img/back.svg" style="width:8em;">](README.md)
