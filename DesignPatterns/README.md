@@ -61,4 +61,4 @@ Examples from the course:
 
 Found on rutracker.org
 
-<button name="back" onclick="../README.md" style="width:12em;display:flex;flex-direction:row;align-items:center;overflow:hidden;"> <img src="../img/back_arrow.svg" alt="<" style="width:4em;background-color:#6B6B6B"> <h2 style="margin:1em;margin-top:1.5em">Back</h2></button>
+[<img src="../img/back.svg" style="width:8em;">](../README.md)
