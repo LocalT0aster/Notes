@@ -10,7 +10,7 @@ Repository of my markdown notes and guides
 
 ## Contents
 
-- [🖥 OS Notebook](OS/README.md)
+- [🖥 OS Notebook](Course/OS/README.md)
 - [🎨 Design Patterns](DesignPatterns/README.md)
 - [➡ NotionMigrationTools](NotionMigrationTools/README.md)
 
