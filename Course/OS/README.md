@@ -7,4 +7,4 @@
 
 * [Lecture topics](LectureTopics.md)
 * [Lab 1 Solution](Lab1Solution.md)
-* [Private Notes](../../../../../NotesPrivate/Course/OS/README.md)
+* [Private Notes](../../../../../NotesPrivate/blob/master/Course/OS/README.md)
