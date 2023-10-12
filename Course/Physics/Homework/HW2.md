@@ -97,5 +97,4 @@ $M=\frac{\mu m\sin(30\degree)}{\cos(30\degree)}$
 
 $M=\frac{0.25\times 50kg\times \not{\frac{1}{2}}}{\sqrt{3}/\not{2}}=\frac{12.5\sqrt{3}}{3}kg=\frac{25\sqrt{3}}{6}kg\approx 7.2kg$
 
-
 $Answer: 7.2kg$
