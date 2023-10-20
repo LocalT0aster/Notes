@@ -36,5 +36,4 @@ The Memento design pattern allows for saving and restoring the state of an objec
 
 ---
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

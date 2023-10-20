@@ -45,5 +45,4 @@ The Singleton design pattern ensures that a class has only one instance and prov
 - Instead of directly using a singleton, consider depending on an abstraction (e.g., an interface)
 - Consider defining singleton lifetime in DI container
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

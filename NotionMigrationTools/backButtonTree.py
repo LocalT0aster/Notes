@@ -1,11 +1,10 @@
 import os
 import re
 
-imagePath = 'img/back.svg'
 rootFolder = 'DesignPatterns'
 
-def button(imgSrc: str, pagePath: str):
-    return f'\n<!--Back Button-->\n[<img src="{imgSrc}" style="width:8em;">]({pagePath})\n'
+def button(pagePath: str):
+    return f'[<kbd><br><- Return<br></kbd>]({pagePath})\n'
 
 # Step 1: Collect all links in each file
 links = {}  # Dictionary to store links found in each file
@@ -28,8 +27,7 @@ for file_path, linked_files in links.items():
         if os.path.exists(linked_file_path):
             relative_path = os.path.relpath(file_path, os.path.dirname(linked_file_path))
             # Calculate the relative path for the image from the linked file to Notes/img
-            relative_image_path = os.path.relpath(imagePath, os.path.dirname(linked_file_path))
-            back_button = button(relative_image_path, relative_path)
+            back_button = button(relative_path)
             with open(linked_file_path, 'r') as f:
                 content = f.read()
                 # Check if the button is already there

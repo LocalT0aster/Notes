@@ -1,5 +1,20 @@
 # OS Lab 1 Solution Script
 
+## TOC
+
+- [OS Lab 1 Solution Script](#os-lab-1-solution-script)
+  - [TOC](#toc)
+  - [Preparing for the lab](#preparing-for-the-lab)
+    - [Useful commands and shortcuts](#useful-commands-and-shortcuts)
+    - [Git init](#git-init)
+  - [Exercises](#exercises)
+    - [Exercise 1](#exercise-1)
+    - [Exercise 2](#exercise-2)
+    - [Exercise 3](#exercise-3)
+    - [Exercise 4](#exercise-4)
+    - [Summarizing and submitting](#summarizing-and-submitting)
+  - [End of the Lab](#end-of-the-lab)
+
 ## Preparing for the lab
 
 If you do not have linux, you can read [How to Create a VM](HowToCreateAVM.md).
@@ -171,3 +186,5 @@ gh repo create
 ```
 
 ## End of the Lab
+
+[<kbd><br><- Return<br></kbd>](OS.md)

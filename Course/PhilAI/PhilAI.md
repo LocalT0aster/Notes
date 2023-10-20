@@ -1,5 +1,15 @@
 # Philosophy II AI
 
+## TOC
+
+- [Philosophy II AI](#philosophy-ii-ai)
+  - [TOC](#toc)
+  - [Week 3: Agents](#week-3-agents)
+    - [Agent definition](#agent-definition)
+    - [Properties of the Environment](#properties-of-the-environment)
+    - [Types of Agents](#types-of-agents)
+    - [Types of reasoning](#types-of-reasoning)
+
 ## Week 3: Agents
 
 ### Agent definition
@@ -66,3 +76,5 @@ Worst Case:
 Deductive Reasoning: Using general statements to draw specific conclusions with certainty.
 
 Inductive Reasoning: a method of drawing conclusions by going from the specific to the general. (bottom-up approach)
+
+[<kbd><br><- Return<br></kbd>](../Course.md)

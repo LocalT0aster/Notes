@@ -38,5 +38,4 @@ The Template Method pattern is a behavioral design pattern that defines the prog
 
 ---
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

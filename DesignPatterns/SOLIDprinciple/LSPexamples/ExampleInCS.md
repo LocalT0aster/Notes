@@ -80,5 +80,4 @@ public class Demo
 }
 ```
 
-<!--Back Button-->
-[<img src="../../../img/back.svg" style="width:8em;">](../LSP.md)
+[<kbd><br><- Return<br></kbd>](../LSP.md)

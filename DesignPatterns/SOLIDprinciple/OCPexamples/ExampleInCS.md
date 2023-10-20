@@ -173,5 +173,4 @@ public class Demo
 }
 ```
 
-<!--Back Button-->
-[<img src="../../../img/back.svg" style="width:8em;">](../OCP.md)
+[<kbd><br><- Return<br></kbd>](../OCP.md)

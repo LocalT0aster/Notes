@@ -1,5 +1,16 @@
 # How to create a Virtual Machine (VM) in VirtualBox
 
+## TOC
+
+- [How to create a Virtual Machine (VM) in VirtualBox](#how-to-create-a-virtual-machine-vm-in-virtualbox)
+  - [TOC](#toc)
+  - [Step 1: Have VirtualBox installed](#step-1-have-virtualbox-installed)
+  - [Step 2: Choose and download the distro image](#step-2-choose-and-download-the-distro-image)
+  - [Step 3: Create the virtual machine](#step-3-create-the-virtual-machine)
+  - [Step 4: Launch the VM](#step-4-launch-the-vm)
+  - [Step 5: Installing the OS](#step-5-installing-the-os)
+  - [End of the guide](#end-of-the-guide)
+
 ## Step 1: Have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
 
 ## Step 2: Choose and download the distro image
@@ -29,6 +40,6 @@ Select the VM and press `Start` button
 
 Follow [this guide](https://manual.lubuntu.me/stable/1/1.3/installation.html) if you are installing `lubuntu`, and if you are using other distro, just search for `[your distro name] installation`.
 
-### End of the guide
+## End of the guide
 
-## [<- Return](Lab1Solution.md)
+[<kbd><br><- Return<br></kbd>](Lab1Solution.md)

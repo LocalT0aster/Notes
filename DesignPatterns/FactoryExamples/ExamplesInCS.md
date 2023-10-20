@@ -227,5 +227,4 @@ class Program
 }
 ```
 
-<!--Back Button-->
-[<img src="../../img/back.svg" style="width:8em;">](../Factory.md)
+[<kbd><br><- Return<br></kbd>](../Factory.md)

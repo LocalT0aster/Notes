@@ -31,5 +31,4 @@ These principles aim to make software designs more understandable, flexible, and
 - (DIP) Dependency Inversion Principle:
   - High-level modules should not depend upon low-level ones; use abstractions
 
-<!--Back Button-->
-[<img src="../../img/back.svg" style="width:8em;">](../README.md)
+[<kbd><br><- Return<br></kbd>](../README.md)

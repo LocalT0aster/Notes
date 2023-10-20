@@ -123,5 +123,4 @@ The `Journal` class now only handles journal entries, while a new `Persistence` 
 
 Now, if you need to change how journal entries are stored, you only need to modify the `Persistence` class, not `Journal`. Similarly, if the way we manage journal entries changes, we only update `Journal`, not `Persistence`. This separation of concerns makes the code easier to maintain and understand.
 
-<!--Back Button-->
-[<img src="../../../img/back.svg" style="width:8em;">](../SRP.md)
+[<kbd><br><- Return<br></kbd>](../SRP.md)

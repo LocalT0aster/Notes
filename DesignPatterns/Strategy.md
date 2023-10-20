@@ -37,5 +37,4 @@ The Strategy pattern is a behavioral design pattern that lets you define a famil
 
 ---
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

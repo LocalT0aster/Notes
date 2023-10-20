@@ -40,5 +40,4 @@ The Builder design pattern is a creational pattern that provides a way to constr
 
 [Examples in C#](BuilderExamples/ExamplesInCS.md)
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

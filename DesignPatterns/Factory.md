@@ -74,5 +74,4 @@ Factory Method is a pattern that lets subclasses decide which class to instantia
 
 [Examples in C#](FactoryExamples/ExamplesInCS.md)
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

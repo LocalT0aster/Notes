@@ -203,39 +203,28 @@ public class PersonAddressBuilder : PersonBuilder
     public PersonAddressBuilder At(string streetAddress)
     {
         person.StreetAddress = streetAddress;
-        return this;
-    }
+        return this;a' for every 'b' it reads. If the input string is in $L$, the stack will be empty at the end of the input.
 
-    public PersonAddressBuilder WithPostcode(string postcode)
-    {
-        person.Postcode = postcode;
-        return this;
-    }
+I hope this gives a clearer understanding of the topics! Let me know if you'd like a deeper dive into any specific area.
 
-    public PersonAddressBuilder In(string city)
-    {
-        person.City = city;
-        return this;
-    }
+---
 
-}
+### 4. Operations on Pushdown Automata and PDA Transducers
 
-public class Demo
-{
-    static void Main(string[] args)
-    {
-        var pb = new PersonBuilder();
-        Person person = pb
-          .Lives
-            .At("123 London Road")
-            .In("London")
-            .WithPostcode("SW12BC")
-          .Works
-            .At("Fabrikam")
-            .AsA("Engineer")
-            .Earning(123000);
+- Complex operations using PDA.
+- Use of PDA transducers.
 
-        Console.WriteLine(person);
+#### Pushdown Automata (PDA)
+
+First, a quick refresher: A Pushdown Automata (PDA) is a computational model used to recognize context-free languages. It is essentially a finite automaton with the added capability of a stack. The stack provides the PDA with memory, allowing it to recognize languages that regular automata cannot.
+
+##### Complex Operations using PDA
+
+While the basic operations on PDAs, such as pushing and popping symbols from the stack, are straightforward, some complex operations can be built using these basic operations. For example:
+
+1. **Intersection**: Given two PDAs $P_1$ and $P_2$, we can construct a PDA that recognizes the intersection of the languages they recognize. This is not straightforward, as the intersection of two context-free languages is not necessarily context-free.
+
+2. **Complement**: The complement of a context-free language (i.e., all strings not in the language) is not necessarily context-free. Thus, complemen        Console.WriteLine(person);
     }
 }
 ```
@@ -465,5 +454,4 @@ class Program
 }
 ```
 
-<!--Back Button-->
-[<img src="../../img/back.svg" style="width:8em;">](../Builder.md)
+[<kbd><br><- Return<br></kbd>](../Builder.md)

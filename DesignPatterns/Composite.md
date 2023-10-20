@@ -38,5 +38,4 @@ The Composite design pattern is a structural design pattern that allows you to c
 - C# has special support for the enumeration concept
 - A single object can masquerade as a collection with yield return this;
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](README.md)
+[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

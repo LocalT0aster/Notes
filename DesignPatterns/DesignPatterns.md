@@ -15,7 +15,7 @@ Design patterns are standard solutions to common problems in software design. Th
 
 [Programming Basics & OOP](ProgrammingBasics&OOP.md)
 
-[SOLID principle](SOLIDprinciple/README.md)
+[SOLID principle](SOLIDprinciple/SOLID.md)
 
 ## Gamma categorization
 
@@ -61,5 +61,4 @@ Examples from the course:
 
 Found on rutracker.org
 
-<!--Back Button-->
-[<img src="../img/back.svg" style="width:8em;">](../README.md)
+[<kbd><br><- Return<br></kbd>](../README.md)
