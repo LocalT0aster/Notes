@@ -32,7 +32,7 @@ Also it is required to have gcc installed to complete this lab. On Ubuntu/Debian
 sudo apt update && sudo apt install -y build-essential
 ```
 
-If you use VSCode and Virtual Machine (VM) it's better to launch it on host and connect to vscode server, using `code tunnel` command. [[More info]](https://code.visualstudio.com/docs/remote/vscode-server)
+If you use VSCode and Virtual Machine (VM) it's better to launch it on host and connect to vscode server, using `code tunnel` command. [More info](https://code.visualstudio.com/docs/remote/vscode-server)
 
 ### Useful commands and shortcuts
 
@@ -40,9 +40,9 @@ Copy and Paste in Linux Terminal is performed using `[Ctrl + Shift + C]` & `[Ctr
 
 You can navigate using:
 
-* `cd` to change directories
-* `ls` to show files in current folder
-* `pwd` to show current folder path
+- `cd` to change directories
+- `ls` to show files in current folder
+- `pwd` to show current folder path
 
 ### Git init
 

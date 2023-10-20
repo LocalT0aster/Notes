@@ -6,17 +6,60 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:DesignPatterns/SOLIDprinciple",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:DesignPatterns ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "file:README.md",
+      "color": {
+        "a": 1,
+        "rgb": 16711935
+      }
+    },
+    {
+      "query": "path:Course/OS  ",
+      "color": {
+        "a": 1,
+        "rgb": 255
+      }
+    },
+    {
+      "query": "path:Course  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:Misc",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 0.838565488565489,
-  "lineSizeMultiplier": 1.91839916839917,
+  "nodeSizeMultiplier": 1.25,
+  "lineSizeMultiplier": 3.0,
   "collapse-forces": false,
-  "centerStrength": 0.121621621621622,
-  "repelStrength": 17.6507276507277,
+  "centerStrength": 0.2,
+  "repelStrength": 10.0,
   "linkStrength": 1,
-  "linkDistance": 263,
-  "scale": 0.3628873693012104,
+  "linkDistance": 300,
+  "scale": 0.2,
   "close": false
 }
