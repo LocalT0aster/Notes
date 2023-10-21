@@ -1,0 +1,5 @@
+# exclude workspace cache
+.obsidian/workspace/*
+
+*.html
+.obsidian/workspace.json
