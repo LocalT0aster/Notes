@@ -1,5 +1,13 @@
+*.html
+
+# Obsidian
+
+.obsidian/themes
+.obsidian/appearance.json
+.obsidian/workspace.json
+
 # exclude workspace cache
 .obsidian/workspace/*
 
-*.html
-.obsidian/workspace.json
+# Exclude Untitled Notes
+Untitled*
