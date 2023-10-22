@@ -15,7 +15,7 @@
       }
     },
     {
-      "query": "path:DesignPatterns ",
+      "query": "path:DesignPatterns",
       "color": {
         "a": 1,
         "rgb": 14701138
@@ -29,14 +29,14 @@
       }
     },
     {
-      "query": "path:Course/OS  ",
+      "query": "path:Course/OS",
       "color": {
         "a": 1,
         "rgb": 255
       }
     },
     {
-      "query": "path:Course  ",
+      "query": "path:Course",
       "color": {
         "a": 1,
         "rgb": 5431378
@@ -61,5 +61,5 @@
   "linkStrength": 1,
   "linkDistance": 300,
   "scale": 0.2,
-  "close": false
+  "close": true
 }
