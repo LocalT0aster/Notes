@@ -8,6 +8,7 @@
 
 ## Contents
 
+- [Optimization](Optimization/Optimization.md)
 - [OS](OS/OS.md)
 - [Physics](Physics/Physics.md)
 - [Philosophy AI](PhilAI/PhilAI.md)

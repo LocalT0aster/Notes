@@ -1,10 +1,10 @@
 import os
 import re
 
-rootFolder = 'DesignPatterns'
+rootFolder = 'Course'
 
 def button(pagePath: str):
-    return f'[<kbd><br><- Return<br></kbd>]({pagePath})\n'
+    return f'\n[<kbd><br><- Return<br></kbd>]({pagePath})\n'
 
 # Step 1: Collect all links in each file
 links = {}  # Dictionary to store links found in each file
