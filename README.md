@@ -6,7 +6,7 @@ Repository of my markdown notes and guides
 
 - [Toaster Notes](#toaster-notes)
   - [Contents](#contents)
-  - [TODO](#todo)
+  - [Project File Tree](#project-file-tree)
 
 ## Contents
 
@@ -14,6 +14,4 @@ Repository of my markdown notes and guides
 - [🎨 Design Patterns](DesignPatterns/DesignPatterns.md)
 - [🥪 Misc](Misc/Misc.md)
 
-## TODO
-
-- Script for automatic addition of back buttons.
+## [Project File Tree](fileTree.md)
