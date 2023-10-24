@@ -9,12 +9,17 @@ def button(pagePath: str):
 # Step 1: Collect all links in each file
 links = {}  # Dictionary to store links found in each file
 
+# New regex to exclude return button links
+pattern = r'\[(?!<kbd><br><- Return<br></kbd>])[^]]+\]\((.*?\.md)\)'
+
 for (dirpath, dirnames, filenames) in os.walk(rootFolder):
     for name in filenames:
         if name.endswith('.md'):
             with open(os.path.join(dirpath, name), 'r') as f:
                 content = f.read()
-                matches = re.findall(r'\((.*?\.md)\)', content)
+                if content.startswith('<!--Document-->'):
+                    continue
+                matches = re.findall(pattern, content)
                 if matches:
                     print(f'found links in {os.path.join(dirpath, name)}')
                     full_path = os.path.join(dirpath, name)
@@ -31,6 +36,6 @@ for file_path, linked_files in links.items():
             with open(linked_file_path, 'r') as f:
                 content = f.read()
                 # Check if the button is already there
-                if back_button not in content:
+                if (back_button not in content) and not content.startswith('<!--Document-->'):
                     with open(linked_file_path, 'a') as f_append:
                         f_append.write(back_button)

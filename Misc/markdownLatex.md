@@ -1,3 +1,4 @@
+<!--Document-->
 # Attempt at Latex in markdown😢
 
 $$x + y$$
