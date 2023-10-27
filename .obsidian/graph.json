@@ -36,6 +36,13 @@
       }
     },
     {
+      "query": "path:Course/Optimization ",
+      "color": {
+        "a": 1,
+        "rgb": 9175295
+      }
+    },
+    {
       "query": "path:Course",
       "color": {
         "a": 1,

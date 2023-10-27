@@ -8,6 +8,7 @@
 
 ## Contents
 
+- [Differential Equations](DifFurry/DifFurry.md)
 - [Optimization](Optimization/Optimization.md)
 - [OS](OS/OS.md)
 - [Physics](Physics/Physics.md)
