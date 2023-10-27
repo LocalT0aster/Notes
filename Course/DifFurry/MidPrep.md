@@ -140,7 +140,7 @@ Investigate if these functions are linearly dependent.
 $(x+2), (x-2)$
 
 $\begin{vmatrix}
-    x+2&x-2\\
+    x+2&x-2 \\
     1&1
 \end{vmatrix} = 4 \ne 0 =>$
 lin. indep.
@@ -198,8 +198,7 @@ Hence, the functions $f(x) = x^2$ and $g(x) = x|x|$ are linearly independent.
 
 $x, e^x, xe^x$
 
-$$
-\begin{vmatrix}
+$\begin{vmatrix}
     x&e^x&xe^x \\\
     1&e^x&e^x+xe^x \\\
     0&e^x&2e^x+xe^x
@@ -211,8 +210,7 @@ $$
 -\begin{vmatrix}
     e^x&xe^x \\\
     e^x&2e^x+xe^x
-\end{vmatrix} =
-$$
+\end{vmatrix} =$
 
 $=2xe^{2x}+x^2e^{2x}-xe^{2x}-x^2e^{2x}-2e^{2x}-xe^{2x}+xe^{2x}=\\
 =e^{2x}(x-2)=>$ lin. indep.
