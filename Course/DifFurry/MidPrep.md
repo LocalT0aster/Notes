@@ -142,7 +142,8 @@ $(x+2), (x-2)$
 $\begin{vmatrix}
     x+2&x-2\\
     1&1
-\end{vmatrix}=4 \ne 0 =>$ lin. indep.
+\end{vmatrix} = 4 \ne 0 =>$
+lin. indep.
 
 #### 6.2)
 
@@ -202,14 +203,15 @@ $\begin{vmatrix}
     1&e^x&e^x+xe^x\\
     0&e^x&2e^x+xe^x
 \end{vmatrix}$
-$=x\begin{vmatrix}
+$= x \begin{vmatrix}
     e^x&e^x+xe^x\\
     e^x&2e^x+xe^x
 \end{vmatrix}$
-$-\begin{vmatrix}
+$- \begin{vmatrix}
     e^x&xe^x\\
     e^x&2e^x+xe^x
-\end{vmatrix}=$
+\end{vmatrix} =$
+
 $=2xe^{2x}+x^2e^{2x}-xe^{2x}-x^2e^{2x}-2e^{2x}-xe^{2x}+xe^{2x}=\\
 =e^{2x}(x-2)=>$ lin. indep.
 
@@ -412,18 +414,18 @@ $y′′ + y = 1, y(0) = 0, y(\pi) = 0$
 
 > N758
 
-$y′′ − y = 1, y(0) = 0, y|_{x\rightarrow \infinity}$ is bounded
+$y′′ − y = 1, y(0) = 0, y|_{x\rightarrow \infty}$ is bounded
 
 ## Answers
 
-- [4.1)](#41) $y=Ce^{\plusmn x}$
+- [4.1)](#41) $y=Ce^{\pm x}$
 - [4.2)](#42) $y(x+C)^2=1;y=0$
 - [4.3)](#43) $4y=(x+C)^2;y=Ce^x$
 - [4.4)](#44) $x=x=p^3+p,4y=3p^4+2p^2+C$
 - [4.5)](#45) $x=3p^2+2p+C,y=2p^3+p^2;y=0$
 - [4.6)](#46) $Cx=\ln(Cy);y=ex$
 - [4.9)](#49) $y=0,27y=4x^3$
-- [4.10)](#410) $xy=\plusmn a^2$
+- [4.10)](#410) $xy=\pm a^2$
 - [6.1)](#61) $indep$
 - [6.2)](#62) $indep$
 - [6.3)](#63) $indep$
