@@ -201,12 +201,12 @@ $\begin{vmatrix}
     x&e^x&xe^x\\
     1&e^x&e^x+xe^x\\
     0&e^x&2e^x+xe^x
-\end{vmatrix}
-=x\begin{vmatrix}
+\end{vmatrix}$
+$=x\begin{vmatrix}
     e^x&e^x+xe^x\\
     e^x&2e^x+xe^x
-\end{vmatrix}
--\begin{vmatrix}
+\end{vmatrix}$
+$-\begin{vmatrix}
     e^x&xe^x\\
     e^x&2e^x+xe^x
 \end{vmatrix}=$
@@ -412,7 +412,7 @@ $y′′ + y = 1, y(0) = 0, y(\pi) = 0$
 
 > N758
 
-$y′′ − y = 1, y(0) = 0, y|_{x\rightarrow \infin}$ is bounded
+$y′′ − y = 1, y(0) = 0, y|_{x\rightarrow \infinity}$ is bounded
 
 ## Answers
 
@@ -438,13 +438,13 @@ $y′′ − y = 1, y(0) = 0, y|_{x\rightarrow \infin}$ is bounded
 - [7.1)](#71) $y=C_1e^{-x}+C_2e^{3x}$
 - [7.2)](#72) $y=c_1e^{3x}+C_2e^{-3x}+e^{3x}(\frac{6}{37}\sin(x)-\frac{1}{37}\cos(x))$
 - [7.3)](#73) $y=(C_1-\frac{x^2}{4})\cos(x)+(C_2+\frac{x}{4})\sin(x)$
-- [7.4)](#74) $$
-- [7.5)](#75) $$
-- [7.6)](#76) $$
-- [7.7)](#77) $$
-- [7.8)](#78) $$
-- [7.9)](#79) $$
-- [7.10)](#710) $$
-- [7.11)](#711) $$
+- [7.4)](#74) $-$
+- [7.5)](#75) $-$
+- [7.6)](#76) $-$
+- [7.7)](#77) $y=2\cos(x)-5\sin(x)+2e^x$
+- [7.8)](#78) $y=x-x\sin(x)-2\cos(x)$
+- [7.9)](#79) $y=(\frac{shx}{sh1})-2x$
+- [7.10)](#710) $no solution$
+- [7.11)](#711) $y=e^{-x}-1$
 
 [<kbd><br><- Return<br></kbd>](DifFurry.md)
