@@ -200,16 +200,16 @@ $x, e^x, xe^x$
 
 $$
 \begin{vmatrix}
-    x&e^x&xe^x\\\
-    1&e^x&e^x+xe^x\\\
+    x&e^x&xe^x \\\
+    1&e^x&e^x+xe^x \\\
     0&e^x&2e^x+xe^x
 \end{vmatrix}
  = x \begin{vmatrix}
-    e^x&e^x+xe^x\\\
+    e^x&e^x+xe^x \\\
     e^x&2e^x+xe^x
 \end{vmatrix}
-- \begin{vmatrix}
-    e^x&xe^x\\\
+-\begin{vmatrix}
+    e^x&xe^x \\\
     e^x&2e^x+xe^x
 \end{vmatrix} =
 $$
