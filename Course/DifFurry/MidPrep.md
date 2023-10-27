@@ -198,7 +198,8 @@ Hence, the functions $f(x) = x^2$ and $g(x) = x|x|$ are linearly independent.
 
 $x, e^x, xe^x$
 
-$\begin{vmatrix}
+$$
+\begin{vmatrix}
     x&e^x&xe^x \\\
     1&e^x&e^x+xe^x \\\
     0&e^x&2e^x+xe^x
@@ -210,10 +211,13 @@ $\begin{vmatrix}
 -\begin{vmatrix}
     e^x&xe^x \\\
     e^x&2e^x+xe^x
-\end{vmatrix} =$
+\end{vmatrix} =
+$$
 
-$=2xe^{2x}+x^2e^{2x}-xe^{2x}-x^2e^{2x}-2e^{2x}-xe^{2x}+xe^{2x}=\\
-=e^{2x}(x-2)=>$ lin. indep.
+$$
+=2xe^{2x}+x^2e^{2x}-xe^{2x}-x^2e^{2x}-2e^{2x}-xe^{2x}+xe^{2x}=\\
+=e^{2x}(x-2)=>lin.indep.
+$$
 
 ### Construct a homogeneous lin eq
 
