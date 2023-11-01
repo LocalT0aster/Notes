@@ -1,14 +1,31 @@
 # AGLA 2 Final preparation
 
+## TOC
+
+- [AGLA 2 Final preparation](#agla-2-final-preparation)
+  - [TOC](#toc)
+  - [Notes From @kupamonke](#notes-from-kupamonke)
+    - [Нахождение обратной матрицы 2x2](#нахождение-обратной-матрицы-2x2)
+    - [Нахождение обратной матрицы 3x3](#нахождение-обратной-матрицы-3x3)
+    - [Нахождение собственный значений и векторов (**Eigenvalues and Eigenvectors**)](#нахождение-собственный-значений-и-векторов-eigenvalues-and-eigenvectors)
+    - [1 задание](#1-задание)
+    - [2 задание](#2-задание)
+    - [3 задание](#3-задание)
+    - [4 задание](#4-задание)
+    - [5 задание](#5-задание)
+    - [6 задание](#6-задание)
+  - [Kholodov Lecture Notes from @kupamonke](#kholodov-lecture-notes-from-kupamonke)
+  - [MIT Lecture notes from @kupamonke](#mit-lecture-notes-from-kupamonke)
+
 ## Notes From @kupamonke
 
-### Нахождение обратной матрицы $2 \times 2$
+### Нахождение обратной матрицы 2x2
 
 $A = \begin {bmatrix} a & b \\ c & d \\ \end{bmatrix}$
 
 $A^{-1} = \frac{1}{|A|}\begin {bmatrix} d & -b \\ -c & a \\ \end{bmatrix}$
 
-### Нахождение обратной матрицы $3 \times 3$
+### Нахождение обратной матрицы 3x3
 
 $A = \begin{bmatrix}
 a & b & c \\
@@ -116,106 +133,12 @@ a\cdot cos(b) \\ \end{bmatrix}$
 
 <https://yutsumura.com/eigenvalues-of-a-hermitian-matrix-are-real-numbers/>
 
-## Cholodov lecture notes from @kupamonke
+## Kholodov Lecture Notes from @kupamonke
 
-### lecture 4
-
-$(AB)^{-1} = B^{-1}A^{-1}$
-
-if $AA^{-1}=I$ then $(A^T)^{-1}$ = $(A^{-1})^T$
-
-асимптотическая сложность решения квадратной системы уравнений (если за одну операцию принять сложение и умножение) заданной матрицей n$\times$n Ъ($n^3$)
-
-A - matrix
-
-we want to get L and U: A = LU and L-lower triangular matrix, U - upper triangular matrix
-
-иногда мы при этом хотим выебнуться и раскладываем на LDU, D - diagonal matrix
-
-$\begin{bmatrix}  1 & 0 & 0\\0 & 1 & 0\\ 0 & 0 & 1  \end{bmatrix}$
-
-A(X+$\delta$X) = $b +\delta b$
-
-symmetric matrix for $A_{m\times n}$ $A^TA$ (n$\times$n) or $AA^T$ (m$\times$m)
-
-### lecture 6
-
-column space of matrix
-
-column space of$\begin{bmatrix} 1 & 0 & 0\\0 & 1 & 0\\ 0 & 0 & 1\\0 & 0 & 1 \end{bmatrix}$3D subspace of $\mathbb R^4$
-
-null space of A all X : AX=0
-
-### холодов 3
-
-#### vector space
-
-(с 1 лекции аглы-1) - Vector space V over $\mathbb R$ is a collection of vectors together with operations
-1$)\bar a + \bar b$ 2)$\lambda a, \lambda \in \mathbb R$
-
-union of 2 subspaces - not subspace, intersection - subspace
-
-#### column space of matrix $A_{m\times n}$
-
-C($A_{m\times n}$)  $\in \mathbb R^m$
-
-$rg(A_{m\times n})D$ in $\mathbb R^m$
-
-The column space of matrix A$\begin{bmatrix} \bar a_1&…&\bar a_m \end{bmatrix}$ = <$\bar a_1,…,\bar a_m$>
-
-row space - пошёл нахуй
-
-#### null space
-
-null space of A all X : $AX=0$
-
-ту ту ту
-
-$\forall$ $A_{n\times n}$ : |$A$| $\neq$ 0 $AX=0$ $\iff$ x = $\bar 0$
-
-пиздец как же маркер скрипит
-
-$\forall$ LES AX=B, it solvable $\iff B \in <\bar a_1,…,\bar a_m>$
-
-перекур
-
-row rank = column rank $\forall$ matrix
-
-classification of solutions: (refer to решение СЛУ МФТИ лекция 1)
-
-### Холодов 4
-
-| $rg(A_{m\times n}) = r$ | full column and row rank $r=n=m$ | full column rank $r=n<m$ | full row rank $r = m < n$ | $r<m, r < n$ |
-| --- | --- | --- | --- | --- |
-| RREF | $I_{n\times n}$ | $\begin{bmatrix} I_{n\times n}\\0_{m-n\times n}\end{bmatrix}$ | $\begin{bmatrix} I_{m\times m} & F_{m\times n-m}\end{bmatrix}$ | $\begin{bmatrix} I_{r\times r} & F_{r\times n-r}\\0_{m-r\times r} & 0_{m-r \times n - r}\end{bmatrix}$ |
-| Number of solutions of $A\vec x=\vec b$ | 1 | $\vec b \in C(A) ⇒ 1$
-$\vec b \not\in C(A) ⇒ \emptyset$ | $\infty$ | $\vec b \in C(A) ⇒ \infty$
-$\vec b \not\in C(A) ⇒ \emptyset$ |
-
-$\begin{bmatrix} I_{r\times r} & F_{r\times n-r}\\0_{m-r\times r} & 0_{m-r \times n - r}\end{bmatrix}$$\vec x = \vec b$  ⇒ $\vec x = \vec b + \begin{bmatrix} -F_{r\times n-r}\\ I_{m-r \times n - r}\end{bmatrix}\vec ъ$, where $\vec ъ$ - vector of arbitrary constants
-
-4 fundamental matrix spaces of matrix $A_{m\times n}$:
-r - rank of A
-
-1) $N(A)$ null space {$\vec x | A\vec x = 0$} - $(n-r)D$ subspace in $\mathbb R^n$
-2) $N(A^T)$ left null space {$\vec x | A^T\vec x = 0$} - $(m - r)D$ subspace in $\mathbb R^m$
-3) $C(A)$ column space $rD$ subspace in $\mathbb R^m$
-4) $C(A^T)$ row space $rD$ subspace in $\mathbb R^n$
-
-subspace A $\perp$ subspace B$\iff$$\forall \vec a \in A, \vec b \in B$ ($\vec a \perp \vec b$)
-
-$N(A^T)$ orthogonal $C(A)$
-$N(A)$ orthogonal $C(A^T)$
+[Link to Kholodov Notes](Kholodov.md)
 
 ## MIT Lecture notes from @kupamonke
 
-- [9. Independence, Basis, and Dimension](MIT/MIT09.md)
-- [10. The Four Fundamental Subspaces](MIT/MIT10.md)
-- [15 - 16. Projections onto Subspaces](MIT/MIT15.16.md)
-- [17. Orthogonal Matrices and Gram-Schmidt](MIT/MIT17.md)
-- [18, 19, 20](MIT/MIT18.19.20.md)
-- [21 (test 2)](MIT/MIT21.22.23.29.md)
-- [24](MIT/MIT24.md)
-- [28. Similar Matrices and Jordan Form](MIT/MIT28.md)
+[Link to MIT Notes](MIT/MIT.md)
 
 [<kbd><br><- Return<br></kbd>](AGLA2.md)

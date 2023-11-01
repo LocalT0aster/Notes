@@ -43,6 +43,13 @@
       }
     },
     {
+      "query": "path:Course/AGLA2  ",
+      "color": {
+        "a": 1,
+        "rgb": 13954195
+      }
+    },
+    {
       "query": "path:Course",
       "color": {
         "a": 1,

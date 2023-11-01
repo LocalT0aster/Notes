@@ -62,4 +62,4 @@ $\vec p = P\vec b$
 $\vec p + \vec e = \vec b$
 $\vec e = (I - P)b$
 
-[<kbd><br><- Return<br></kbd>](../FinalPrep.md)
+[<kbd><br><- Return<br></kbd>](MIT.md)

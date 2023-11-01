@@ -21,4 +21,4 @@ $S^{-1} A S = \Lambda$ so $A$ and $\Lambda$ are simular
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fe115ab6-42e5-4106-8ace-6f8dc7ea3302/Untitled.png)
 
-[<kbd><br><- Return<br></kbd>](../FinalPrep.md)
+[<kbd><br><- Return<br></kbd>](MIT.md)

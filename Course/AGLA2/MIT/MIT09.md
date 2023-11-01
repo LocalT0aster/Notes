@@ -24,4 +24,4 @@ rg(A) = # pivot columns = dimension of C(A) = dimension of R(A)
 
 dimension of N(A) = # columns - rg(A)
 
-[<kbd><br><- Return<br></kbd>](../FinalPrep.md)
+[<kbd><br><- Return<br></kbd>](MIT.md)

@@ -36,4 +36,4 @@ $\begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}^{-1} = \frac{1}{ad - cd} \begin
 
 $\underset{n\times n}A^{-1} = \frac{1}{|A|} \underset{n\times n}C ^ T$
 
-[<kbd><br><- Return<br></kbd>](../FinalPrep.md)
+[<kbd><br><- Return<br></kbd>](MIT.md)
