@@ -21,16 +21,22 @@
 
 ### Нахождение обратной матрицы 2x2
 
-$A = \begin {bmatrix} a & b \\ c & d \\ \end{bmatrix}$
+$A = \begin{bmatrix}
+  a & b \\
+  c & d
+\end{bmatrix}$
 
-$A^{-1} = \frac{1}{|A|}\begin {bmatrix} d & -b \\ -c & a \\ \end{bmatrix}$
+$A^{-1} = \frac{1}{|A|}\begin{bmatrix}
+  d & -b \\
+  -c & a
+\end{bmatrix}$
 
 ### Нахождение обратной матрицы 3x3
 
 $A = \begin{bmatrix}
 a & b & c \\
 d & e & f \\
-g & h & i \\
+g & h & i
 \end{bmatrix}$
 
 $A^{-1} = \frac{1}{|A|} \bar A$
@@ -60,9 +66,13 @@ $I$ - identity matrix
 
 ### 1 задание
 
-$S = \begin {bmatrix} x_1 & \ldots & x_n \\\end{bmatrix}$
+$S = \begin{bmatrix} x_1 & \ldots & x_n \end{bmatrix}$
 
-$AS = S\Lambda , \Lambda = \begin {bmatrix} \lambda_1 & 0 & 0 \\ 0 & \ddots & 0 \\ 0 & 0 & \lambda_n \\ \end{bmatrix}$
+$AS = S\Lambda , \Lambda = \begin{bmatrix}
+\lambda_1 & 0 & 0 \\
+0 & \ddots & 0 \\
+0 & 0 & \lambda_n
+\end{bmatrix}$
 
 $S^{-1}AS = \Lambda$
 
@@ -88,10 +98,11 @@ $M = QS^{-1}$
 
 ### 3 задание
 
-$A^T = A ⇒$ $A = \begin{bmatrix}
+$A^T = A ⇒$
+$A = \begin{bmatrix}
 a & b & c \\
 b & d & e \\
-c & e & f \\
+c & e & f
 \end{bmatrix}$
 
 Эту матрицу мы просто подставляем в уравнение и брутфорсом распиываем его
@@ -124,8 +135,11 @@ $\forall i$ $a_i, b_i, c_i, \alpha_i \in \mathbb R$
 $Ax = b$ - no sol
 $A^TA\bar x = A^Tb$ - least squares approximation
 
-В этом задании вектор x будет равен $\begin {bmatrix} a\cdot sin(b) \\
-a\cdot cos(b) \\ \end{bmatrix}$
+В этом задании вектор x будет равен
+$\begin{bmatrix}
+a\cdot sin(b) \\
+a\cdot cos(b)
+\end{bmatrix}$
 
 ![FinalPrep5.jpg](img/FinalPrep5.jpg)
 
