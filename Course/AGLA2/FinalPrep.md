@@ -56,7 +56,7 @@ $I$ - identity matrix
 
 Из $|A - \lambda I| = 0$ находим собственные значения, зная их из $(A - \lambda I)\vec x = 0$ находим собсвенные вектора для каждого собственного значения $(x_i = N(A-\lambda_i I))$
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea507abd-6458-45dd-8dd9-7fa168128c97/Untitled.png)
+![FinalPrep1.png](img/FinalPrep1.png)
 
 ### 1 задание
 
@@ -72,7 +72,7 @@ $A^2 = S \Lambda^2 S^{-1}$
 
 $A^k = S\Lambda^k S^{-1}$
 
-![1.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b404105-730f-4beb-9a2c-8c827d90767c/1.jpg)
+![FinalPrep2.jpg](img/FinalPrep2.jpg)
 
 ### 2 задание
 
@@ -84,7 +84,7 @@ $S \Lambda S^{-1} = M^{-1} Q\Lambda Q^{-1} M ⇒ S = M^{-1}Q ⇒ M = QS^{-1}$
 
 $M = QS^{-1}$
 
-![2.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f8267e99-ea27-40e8-a6fc-0ce674874e99/2.jpg)
+![FinalPrep3.jpg](img/FinalPrep3.jpg)
 
 ### 3 задание
 
@@ -117,7 +117,7 @@ $u = (a_1 cos(\omega_1 t) + b_1 sin(\omega_1 t))x_1 + …$
 
 $\forall i$ $a_i, b_i, c_i, \alpha_i \in \mathbb R$
 
-![4.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/db36b320-7ecd-4acd-93c2-c535290d3a4e/4.jpg)
+![FinalPrep4.jpg](img/FinalPrep4.jpg)
 
 ### 5 задание
 
@@ -127,7 +127,7 @@ $A^TA\bar x = A^Tb$ - least squares approximation
 В этом задании вектор x будет равен $\begin {bmatrix} a\cdot sin(b) \\
 a\cdot cos(b) \\ \end{bmatrix}$
 
-![3.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69dfdd04-6fe8-4604-87ff-0ff372d67a3b/3.jpg)
+![FinalPrep5.jpg](img/FinalPrep5.jpg)
 
 ### 6 задание
 
