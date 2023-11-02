@@ -89,4 +89,5 @@ subspace A $\perp$ subspace B$\iff$$\forall \vec a \in A, \vec b \in B$ ($\vec a
 $N(A^T)$ orthogonal $C(A)$
 $N(A)$ orthogonal $C(A^T)$
 
-[<kbd><br><- Return<br></kbd>](FinalPrep.md)
+[<kbd><br><- Return (FinalPrep)<br></kbd>](FinalPrep.md)
+[<kbd><br><- Return (AGLA2)<br></kbd>](AGLA2.md)

@@ -8,8 +8,9 @@
 
 ## Contents
 
-- [Final Preparation](FinalPrep.md)
-- [MIT Lecture Notes](MIT/MIT.md)
 - [Kholodov Lecture Notes](Kholodov.md)
+- [MIT Lecture Notes](MIT/MIT.md)
+- [Final Preparation](FinalPrep.md)
+- [Retake preparation](RetakePrep.md)
 
 [<kbd><br><- Return<br></kbd>](../Course.md)
