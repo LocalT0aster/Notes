@@ -20,9 +20,9 @@ Here's a step-by-step process to solve a linear programming problem graphically:
 
    Subject to:
 
-   $a_{11}x_1 + a_{12}x_2 \leq b_1\\
-   a_{21}x_1 + a_{22}x_2 \leq b_2\\
-   ...\\
+   $a_{11}x_1 + a_{12}x_2 \leq b_1\\\
+   a_{21}x_1 + a_{22}x_2 \leq b_2\\\
+   ...\\\
    x_1, x_2 \geq 0$
 2. **Graph the Constraints**:
 

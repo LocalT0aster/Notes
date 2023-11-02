@@ -41,10 +41,10 @@ $$Z = 5x_1 + 4x_2 + 3x_3$$
 Subject to:
 $$
 \begin{align*}
-2x_1 + 3x_2 + x_3 &\leq 5 \\
-4x_1 + x_2 + 2x_3 &\leq 11 \\
-3x_1 + 4x_2 + 2x_3 &\leq 8 \\
-x_1, x_2, x_3 &\geq 0 \\
+2x_1 + 3x_2 + x_3 &\leq 5 \\\
+4x_1 + x_2 + 2x_3 &\leq 11 \\\
+3x_1 + 4x_2 + 2x_3 &\leq 8 \\\
+x_1, x_2, x_3 &\geq 0 \\\
 \end{align*}
 $$
 
@@ -56,9 +56,9 @@ We can do this by adding slack variables.
 
 $$
 \begin{align*}
-2x_1 + 3x_2 + x_3 + s_1 &= 5 \\
-4x_1 + x_2 + 2x_3 + s_2 &= 11 \\
-3x_1 + 4x_2 + 2x_3 + s_3 &= 8 \\
+2x_1 + 3x_2 + x_3 + s_1 &= 5 \\\
+4x_1 + x_2 + 2x_3 + s_2 &= 11 \\\
+3x_1 + 4x_2 + 2x_3 + s_3 &= 8 \\\
 \end{align*}
 $$
 
@@ -95,12 +95,12 @@ Here's the initial Simplex tableau:
 $$
 \begin{array}{|c|c|c|c|c|c|c|}
 \hline
-& x_1 & x_2 & x_3 & s_1 & s_2 & s_3 & \text{RHS} \\
+& x_1 & x_2 & x_3 & s_1 & s_2 & s_3 & \text{RHS} \\\
 \hline
-\text{Row1} & 2 & 3 & 1 & 1 & 0 & 0 & 5 \\
-\text{Row2} & 4 & 1 & 2 & 0 & 1 & 0 & 11 \\
-\text{Row3} & 3 & 4 & 2 & 0 & 0 & 1 & 8 \\
-Z & -5 & -4 & -3 & 0 & 0 & 0 & 0 \\
+\text{Row1} & 2 & 3 & 1 & 1 & 0 & 0 & 5 \\\
+\text{Row2} & 4 & 1 & 2 & 0 & 1 & 0 & 11 \\\
+\text{Row3} & 3 & 4 & 2 & 0 & 0 & 1 & 8 \\\
+Z & -5 & -4 & -3 & 0 & 0 & 0 & 0 \\\
 \hline
 \end{array}
 $$
@@ -169,12 +169,12 @@ After the pivot operation, our updated tableau looks like:
 $$
 \begin{array}{|c|c|c|c|c|c|c|}
 \hline
-& x_1 & x_2 & x_3 & s_1 & s_2 & s_3 & \text{RHS} \\
+& x_1 & x_2 & x_3 & s_1 & s_2 & s_3 & \text{RHS} \\\
 \hline
-\text{Row1} & 1 & 1.5 & 0.5 & 0.5 & 0 & 0 & 2.5 \\
-\text{Row2} & 0 & -5.0 & 0.0 & -2.0 & 1 & 0 & 1.0 \\
-\text{Row3} & 0 & -0.5 & 0.5 & -1.5 & 0 & 1 & 0.5 \\
-Z & 0 & 3.5 & -0.5 & 2.5 & 0 & 0 & 12.5 \\
+\text{Row1} & 1 & 1.5 & 0.5 & 0.5 & 0 & 0 & 2.5 \\\
+\text{Row2} & 0 & -5.0 & 0.0 & -2.0 & 1 & 0 & 1.0 \\\
+\text{Row3} & 0 & -0.5 & 0.5 & -1.5 & 0 & 1 & 0.5 \\\
+Z & 0 & 3.5 & -0.5 & 2.5 & 0 & 0 & 12.5 \\\
 \hline
 \end{array}
 $$
@@ -232,12 +232,12 @@ After the second pivot operation, our updated tableau is:
 $$
 \begin{array}{|c|c|c|c|c|c|c|}
 \hline
-& x_1 & x_2 & x_3 & s_1 & s_2 & s_3 & \text{RHS} \\
+& x_1 & x_2 & x_3 & s_1 & s_2 & s_3 & \text{RHS} \\\
 \hline
-\text{Row1} & 1 & 2.0 & 0.0 & 2.0 & 0 & -1 & 2.0 \\
-\text{Row2} & 0 & -5.0 & 0.0 & -2.0 & 1 & 0 & 1.0 \\
-\text{Row3} & 0 & -1.0 & 1.0 & -3.0 & 0 & 2 & 1.0 \\
-Z & 0 & 3.0 & 0.0 & 1.0 & 0 & 1 & 13.0 \\
+\text{Row1} & 1 & 2.0 & 0.0 & 2.0 & 0 & -1 & 2.0 \\\
+\text{Row2} & 0 & -5.0 & 0.0 & -2.0 & 1 & 0 & 1.0 \\\
+\text{Row3} & 0 & -1.0 & 1.0 & -3.0 & 0 & 2 & 1.0 \\\
+Z & 0 & 3.0 & 0.0 & 1.0 & 0 & 1 & 13.0 \\\
 \hline
 \end{array}
 $$
