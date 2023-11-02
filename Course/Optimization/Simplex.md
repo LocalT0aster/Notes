@@ -109,7 +109,7 @@ $$
 
 Starting with the tableau above, we'll follow the Simplex steps to optimize the function:
 
-1. Identify the entering variable (non-basic variable) by finding the most negative coefficient in the last row (for maximization problems). In this case, \(x_1\) with a coefficient of -5 is the most negative.
+1. Identify the entering variable (non-basic variable) by finding the most negative coefficient in the last row (for maximization problems). In this case, $x_1$ with a coefficient of -5 is the most negative.
 2. Identify the departing variable (basic variable). We do this by looking at the ratios of the RHS to the column entries of the entering variable and choosing the smallest non-negative ratio. This step determines which constraint is "tightest" or most binding as the entering variable increases.
 
 Let's perform these steps to identify the pivot element.
@@ -183,7 +183,7 @@ Now, we need to continue iterating until all coefficients in the Z-row are non-n
 
 **Step 5: Continue Iterating**
 
-We can see that the coefficient for \(x_3\) in the Z-row is negative (-0.5). Hence, \(x_3\) will be our next entering variable.
+We can see that the coefficient for $x_3$ in the Z-row is negative (-0.5). Hence, $x_3$ will be our next entering variable.
 
 Let's identify the next pivot element by computing the ratios again.
 

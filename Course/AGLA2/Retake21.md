@@ -2,7 +2,7 @@
 # AGLA 2 Retake Exam 2021
 
 1. If a 4x4 matrix has a $det(A)=1/2$, find $det(2A)$, $det(-A)$, $det(A^2)$, and $det(A−1)$. (10 pts.)
-2. Consider matrix: $𝐴=\begin{bmatrix}
+2. Consider matrix: $A=\begin{bmatrix}
    1 & 2 & 0 \\
    2 & 6 & 4 \\
    0 & 4 & 11
