@@ -1,6 +1,6 @@
 # 24. Markov Matrices; Fourier Series
 
-markov $A = \begin {bmatrix} 0.01 & 0.5 \\\ 0.99 &0.5 \\\ \end {bmatrix}$
+markov $A = \begin {bmatrix} 0.01 & 0.5 \\ 0.99 &0.5 \\ \end {bmatrix}$
 
 1. All numbers $≥ 0$
 2. $\forall$ columns $\sum$ of elements $= 1$

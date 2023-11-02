@@ -19,9 +19,9 @@ $I$ - identity matrix
 
 $\forall i \in \{1,…,n\} A\vec x_i = \lambda_i \vec x_i$
 
-$S = \begin {bmatrix} x_1 & \ldots & x_n \\\ \end{bmatrix}$
+$S = \begin {bmatrix} x_1 & \ldots & x_n \\ \end{bmatrix}$
 
-$AS = S\Lambda , \Lambda = \begin {bmatrix} \lambda_1 & 0 & 0 \\\ 0 & \ddots & 0 \\\ 0 & 0 & \lambda_n \\\ \end{bmatrix}$
+$AS = S\Lambda , \Lambda = \begin {bmatrix} \lambda_1 & 0 & 0 \\ 0 & \ddots & 0 \\ 0 & 0 & \lambda_n \\ \end{bmatrix}$
 
 $S^{-1}AS = \Lambda$
 
@@ -33,17 +33,17 @@ $A^k = S\Lambda^k S^{-1}$
 
 ## 23. Differential Equations and $e^{At}$
 
-$u(0) = \begin{bmatrix} u_1(0) \\\ u_2(0) \\\ \end{bmatrix} = \begin{bmatrix} 1 \\\ 0 \\\ \end{bmatrix}$
+$u(0) = \begin{bmatrix} u_1(0) \\ u_2(0) \\ \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ \end{bmatrix}$
 
-$\begin{cases} \frac{du_1}{dt} = -u_1 + 2u_2 \\\ \frac{du_2}{dt} = u_1 - 2u_2 \\\ \end{cases}$
+$\begin{cases} \frac{du_1}{dt} = -u_1 + 2u_2 \\ \frac{du_2}{dt} = u_1 - 2u_2 \\ \end{cases}$
 
-$A = \begin{bmatrix} -1 & 2 \\\ 1 & -2 \\\ \end{bmatrix}$
+$A = \begin{bmatrix} -1 & 2 \\ 1 & -2 \\ \end{bmatrix}$
 
 $\frac{du}{dt} = Au$
 
 $\lambda = \{0, - 3\}$
 
-$x = \{\begin{bmatrix} 2 \\\ 1 \\\ \end{bmatrix}, \begin{bmatrix} 1 \\\ -1 \\\ \end{bmatrix}\}$
+$x = \{\begin{bmatrix} 2 \\ 1 \\ \end{bmatrix}, \begin{bmatrix} 1 \\ -1 \\ \end{bmatrix}\}$
 
 $u(t) = c_1 e^{\lambda_1 t} x_1 + c_2 e^{\lambda_2 t} x_2; c_1,c_2 \in \mathbb R$
 

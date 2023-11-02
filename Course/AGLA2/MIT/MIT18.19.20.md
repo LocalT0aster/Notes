@@ -9,8 +9,8 @@ Properties that define determinant:
 
 1. $|I| = 1$
 2. $|P_{ij}\cdot A| = - |A|$
-3. $det\begin{bmatrix}ta & tb \\\ c &d \\\ \end{bmatrix} = t\cdot det\begin{bmatrix}a & b \\\ c &d \\\ \end{bmatrix}$
-4. $det\begin{bmatrix}a + a’ & b + b’ \\\ c &d \\\ \end{bmatrix} = det\begin{bmatrix}a & b \\\ c &d \\\ \end{bmatrix} + det\begin{bmatrix}a’ & b’ \\\ c &d \\\ \end{bmatrix}$
+3. $det\begin{bmatrix}ta & tb \\ c &d \\ \end{bmatrix} = t\cdot det\begin{bmatrix}a & b \\ c &d \\ \end{bmatrix}$
+4. $det\begin{bmatrix}a + a’ & b + b’ \\ c &d \\ \end{bmatrix} = det\begin{bmatrix}a & b \\ c &d \\ \end{bmatrix} + det\begin{bmatrix}a’ & b’ \\ c &d \\ \end{bmatrix}$
 
 Just properties:
 
@@ -32,7 +32,7 @@ $|\underset{n\times n}A| = \sum\limits_{i = 1}^n (-1)^{n-1} a_{1,i} det(C(a_{1,i
 
 ## 20. Cramer's Rule, Inverse Matrix, and Volume
 
-$\begin{bmatrix} a & b \\\ c & d \\\ \end{bmatrix}^{-1} = \frac{1}{ad - cd} \begin{bmatrix} d & -b \\\ -c & a \\\ \end{bmatrix}$
+$\begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}^{-1} = \frac{1}{ad - cd} \begin{bmatrix} d & -b \\ -c & a \\ \end{bmatrix}$
 
 $\underset{n\times n}A^{-1} = \frac{1}{|A|} \underset{n\times n}C ^ T$
 

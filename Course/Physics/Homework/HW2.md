@@ -15,11 +15,11 @@ By Nesterov Danil <d.nesterov@innopolis.university>
 <tr>
 <td>
 
-$m=0.25kg\\\
-R=0.7m\\\
-T_{max}=30N\\\
-g=9.8m/s^2\\\
-1)\vec{P_{T_{max}}}-?\\\
+$m=0.25kg\\
+R=0.7m\\
+T_{max}=30N\\
+g=9.8m/s^2\\
+1)\vec{P_{T_{max}}}-?\\
 2)u_{max}-?$
 </td>
 <td>
@@ -34,18 +34,18 @@ g=9.8m/s^2\\\
 *Answer:* At the lowest point.
 
 $\begin{cases}
-    u=const\\\
-    R=const\\\
+    u=const\\
+    R=const\\
     m=const
 \end{cases}=>
 \begin{cases}
-    ma_c=const\\\
+    ma_c=const\\
     mg=const
 \end{cases}$
 
 $\phi$ is the angle between *string* and *string at the lowest point*
 
-$T-mg\cos(\phi)=ma_c\\\
+$T-mg\cos(\phi)=ma_c\\
 T=c_1+c_2\cos(\phi)$
 
 we can reach $T_{max}$ if $\cos(\phi)=0<=>\phi=2\pi k, k\in R$
@@ -64,11 +64,11 @@ $\phi=2\pi k, k\in R$ (lowest point)
 <tr>
 <td>
 
-$m=50kg\\\
-\mu=0.25\\\
-\theta=30\degree\\\
-T_2$ is horizontal$\\\
-g=9.8m/s^2\\\
+$m=50kg\\
+\mu=0.25\\
+\theta=30\degree\\
+T_2$ is horizontal$\\
+g=9.8m/s^2\\
 M-?$
 </td>
 <td>
@@ -79,16 +79,16 @@ M-?$
 </table>
 
 $\begin{cases}
-    mg=N\\\
-    F_{fr}=\mu N => F_{fr} = \mu mg\\\
-    T_3=F_{fr}\\\
-    Mg=T_1\\\
-    T_2 \sin(30 \degree)=T_1\\\
+    mg=N\\
+    F_{fr}=\mu N => F_{fr} = \mu mg\\
+    T_3=F_{fr}\\
+    Mg=T_1\\
+    T_2 \sin(30 \degree)=T_1\\
     T_2 \cos(30 \degree)=T_3
 \end{cases}$
 
 $\begin{cases}
-    T_2=\frac{Mg}{\sin(30\degree)}\\\
+    T_2=\frac{Mg}{\sin(30\degree)}\\
     T_2=\frac{\mu mg}{\cos(30\degree)}
 \end{cases}$
 

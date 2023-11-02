@@ -14,7 +14,7 @@ we want to get L and U: A = LU and L-lower triangular matrix, U - upper triangul
 
 иногда мы при этом хотим выебнуться и раскладываем на LDU, D - diagonal matrix
 
-$\begin{bmatrix}  1 & 0 & 0\\\0 & 1 & 0\\\ 0 & 0 & 1  \end{bmatrix}$
+$\begin{bmatrix}  1 & 0 & 0\\0 & 1 & 0\\ 0 & 0 & 1  \end{bmatrix}$
 
 A(X+$\delta$X) = $b +\delta b$
 
@@ -24,7 +24,7 @@ symmetric matrix for $A_{m\times n}$ $A^TA$ (n$\times$n) or $AA^T$ (m$\times$m)
 
 column space of matrix
 
-column space of$\begin{bmatrix} 1 & 0 & 0\\\0 & 1 & 0\\\ 0 & 0 & 1\\\0 & 0 & 1 \end{bmatrix}$3D subspace of $\mathbb R^4$
+column space of$\begin{bmatrix} 1 & 0 & 0\\0 & 1 & 0\\ 0 & 0 & 1\\0 & 0 & 1 \end{bmatrix}$3D subspace of $\mathbb R^4$
 
 null space of A all X : AX=0
 
@@ -69,12 +69,12 @@ classification of solutions: (refer to решение СЛУ МФТИ лекци
 
 | $rg(A_{m\times n}) = r$ | full column and row rank $r=n=m$ | full column rank $r=n<m$ | full row rank $r = m < n$ | $r<m, r < n$ |
 | --- | --- | --- | --- | --- |
-| RREF | $I_{n\times n}$ | $\begin{bmatrix} I_{n\times n}\\\0_{m-n\times n}\end{bmatrix}$ | $\begin{bmatrix} I_{m\times m} & F_{m\times n-m}\end{bmatrix}$ | $\begin{bmatrix} I_{r\times r} & F_{r\times n-r}\\\0_{m-r\times r} & 0_{m-r \times n - r}\end{bmatrix}$ |
+| RREF | $I_{n\times n}$ | $\begin{bmatrix} I_{n\times n}\\0_{m-n\times n}\end{bmatrix}$ | $\begin{bmatrix} I_{m\times m} & F_{m\times n-m}\end{bmatrix}$ | $\begin{bmatrix} I_{r\times r} & F_{r\times n-r}\\0_{m-r\times r} & 0_{m-r \times n - r}\end{bmatrix}$ |
 | Number of solutions of $A\vec x=\vec b$ | 1 | $\vec b \in C(A) ⇒ 1$
 $\vec b \not\in C(A) ⇒ \emptyset$ | $\infty$ | $\vec b \in C(A) ⇒ \infty$
 $\vec b \not\in C(A) ⇒ \emptyset$ |
 
-$\begin{bmatrix} I_{r\times r} & F_{r\times n-r}\\\0_{m-r\times r} & 0_{m-r \times n - r}\end{bmatrix}$$\vec x = \vec b$  ⇒ $\vec x = \vec b + \begin{bmatrix} -F_{r\times n-r}\\\ I_{m-r \times n - r}\end{bmatrix}\vec ъ$, where $\vec ъ$ - vector of arbitrary constants
+$\begin{bmatrix} I_{r\times r} & F_{r\times n-r}\\0_{m-r\times r} & 0_{m-r \times n - r}\end{bmatrix}$$\vec x = \vec b$  ⇒ $\vec x = \vec b + \begin{bmatrix} -F_{r\times n-r}\\ I_{m-r \times n - r}\end{bmatrix}\vec ъ$, where $\vec ъ$ - vector of arbitrary constants
 
 4 fundamental matrix spaces of matrix $A_{m\times n}$:
 r - rank of A

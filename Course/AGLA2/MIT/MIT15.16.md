@@ -23,17 +23,17 @@ $\vec e = \vec b - \vec p$
 $p = x_1\vec a_1 + x_2\vec a_2$ = Ax
 
 $\begin{cases}
-\vec a_1 \cdot (\vec b - \vec p) = 0 \\\
-\vec a_2 \cdot (\vec b - \vec p) = 0 \\\
+\vec a_1 \cdot (\vec b - \vec p) = 0 \\
+\vec a_2 \cdot (\vec b - \vec p) = 0 \\
 \end{cases}$ $\iff (b-Ax) \perp a$ $\iff$ $\begin{cases}
-\vec a_1 \cdot (\vec b - Ax) = 0 \\\
-\vec a_2 \cdot (\vec b - Ax) = 0 \\\
+\vec a_1 \cdot (\vec b - Ax) = 0 \\
+\vec a_2 \cdot (\vec b - Ax) = 0 \\
 \end{cases}$ $\iff$$\begin{bmatrix}
-a_1^T \\\
-a_2^T \\\
+a_1^T \\
+a_2^T \\
 \end{bmatrix}$$[b-Ax] =$ $\begin{bmatrix}
-0 \\\
-0 \\\
+0 \\
+0 \\
 \end{bmatrix}$$\iff A^T(b - Ax) = 0$
 
 Since $b - Ax = e$, $e = N(A^T)$ ⇒ $e\perp$ C(A)
