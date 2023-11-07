@@ -32,12 +32,10 @@ Here's a step-by-step process to solve a linear programming problem graphically:
 3. **Identify the Feasible Region**:
    This is the region where all the constraints overlap. It can be a bounded area (like a polygon) or unbounded. If the problem has no feasible region, then it has no solution.
 4. **Plot the Objective Function**:
-
    - Choose a value for $Z$ (it can be any value that will fit comfortably on your graph).
    - Rewrite the objective function in terms of one of the variables (e.g., $x_2 = \frac{Z - c_1x_1}{c_2}$).
    - Plot this line on the graph.
 5. **Find the Optimal Solution**:
-
    - If you're maximizing, move the objective function line outward (increasing $Z$) from the feasible region until the last point it touches.
    - If you're minimizing, move it inward (decreasing $Z$) until the first point it touches.
    - The last (or first) point of the feasible region that the objective function touches is the optimal solution.

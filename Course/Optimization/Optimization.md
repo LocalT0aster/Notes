@@ -5,7 +5,10 @@
 - [Introduction to Optimization](#introduction-to-optimization)
   - [TOC](#toc)
   - [Course Topics in Order](#course-topics-in-order)
-  - [Midterm Topics by Ex](#midterm-topics-by-ex)
+  - [Exam topics](#exam-topics)
+    - [Midterm Topics by Ex](#midterm-topics-by-ex)
+    - [Test 2 topics](#test-2-topics)
+    - [Final topics](#final-topics)
   - [Resources](#resources)
 
 ## Course Topics in Order
@@ -18,11 +21,13 @@
 6. [Advanced Linear Programming](LinProgrammingAdv.md)
 7. [An Interior-Point Algorithm](InteriorPoint.md)
 8. [Transportation Model](TransportModel.md)
-9. Classical Optimization (todo)
+9. [Classical Optimization](ClassicalOptimization.md)
 10. Nonlinear Optimization (todo)
 11. Minimization and Maximization of Convex Functions (todo)
 
-## Midterm Topics by Ex
+## Exam topics
+
+### Midterm Topics by Ex
 
 1. Construction of dual problem (topic 4,5)
 2. Transportation problem (topic 8)
@@ -32,6 +37,12 @@
 6. Adv. Lin. Prog. (matrix) (topic 6)
 
 2345678
+
+### Test 2 topics
+
+1. Classical Optimization (topic 9)
+
+### Final topics
 
 ## Resources
 
