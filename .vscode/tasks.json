@@ -1,0 +1,14 @@
+{
+    "tasks": [
+        {
+            "label": "Count gpt-4 tokens",
+            "type": "shell",
+            "command": "python3 Tools/tiktoken_count.py ${relativeFile}",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}
