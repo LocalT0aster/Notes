@@ -96,3 +96,5 @@ A^+ = \begin{bmatrix}
 $$
 
 The pseudoinverse matrix $A^+$ can be used to solve linear systems where $A$ is not square or is rank-deficient, for example in least squares problems.
+
+[<kbd><br><- Return<br></kbd>](../RetakePrep.md)

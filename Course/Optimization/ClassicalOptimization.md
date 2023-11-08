@@ -75,3 +75,5 @@ The KKT conditions include:
 These conditions together help in finding the optimal solutions to the constrained optimization problem.
 
 In summary, classical optimization provides a set of tools and methods to solve problems where one seeks to find the best possible decision within a defined set of possible decisions. The methods vary depending on the presence and type of constraints involved.
+
+[<kbd><br><- Return<br></kbd>](Optimization.md)

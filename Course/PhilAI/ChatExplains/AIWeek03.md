@@ -64,3 +64,5 @@ Worst Case:
 Deductive Reasoning: Using general statements to draw specific conclusions with certainty.
 
 Inductive Reasoning: a method of drawing conclusions by going from the specific to the general. (bottom-up approach)
+
+[<kbd><br><- Return<br></kbd>](../PhilAI.md)
