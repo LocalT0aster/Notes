@@ -1,0 +1,3 @@
+[submodule "MDTools"]
+	path = MDTools
+	url = https://github.com/LocalT0aster/MDTools.git
