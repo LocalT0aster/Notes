@@ -40,6 +40,8 @@
 
 ### Test 2 topics
 
+[Test 2 Prep](Test2Prep.md)
+
 1. Classical Optimization (topic 9)
 
 ### Final topics
