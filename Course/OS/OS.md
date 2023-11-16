@@ -16,6 +16,6 @@
 
 - [Lecture topics](LectureTopics.md)
 - [Lab 1 Solution](Lab1Solution.md)
-- [Private Notes](../../../../../NotesPrivate/blob/master/Course/OS/OS.md)
+- [Private Notes](../../../Course/OS/OS.md)
 
 [<kbd><br><- Return<br></kbd>](../Course.md)
