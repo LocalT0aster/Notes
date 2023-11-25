@@ -9,7 +9,7 @@
 ## Contents
 
 - [Kholodov Lecture Notes](Kholodov.md)
-- [MIT Lecture Notes](MIT/MIT.md)
+- [MIT Lecture Notes from Kupamonke](MITkup/MITkup.md)
 - [Final Preparation](FinalPrep.md)
 - [Retake preparation](RetakePrep.md)
 - Exams:
