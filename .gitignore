@@ -11,3 +11,15 @@
 
 # Exclude Untitled Notes
 Untitled*
+
+# Latex cache
+*.out
+*.fls
+*.fdb_latexmk
+*.aux
+*.synctex.gz
+*.log
+
+# Compiled files
+*.pdf
+*.out.tex
