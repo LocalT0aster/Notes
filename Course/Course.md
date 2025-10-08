@@ -16,5 +16,6 @@
 - [Philosophy AI](PhilAI/PhilAI.md)
 - [ProbStat](ProbStat/ProbStat.md)
 - [TCS](TCS/TCS.md)
+- [SoftArch](SoftArch/SoftArch.md)
 
 [<kbd><br><- Return<br></kbd>](../README.md)
