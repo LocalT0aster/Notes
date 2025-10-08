@@ -168,8 +168,8 @@ The **requirements spec is a contract**. Free-text is accessible but **ambiguous
 
 ### References (IEEE-style)
 
-[1] **Lecture transcript**: “Lecture04_2025-09-24.merged.txt,” live class notes (.NET overview; CLR/assemblies; service orientation; OOA workflow from use-cases to classes to dynamics), Sept. 24, 2025.
-[2] **Slides**: “Lecture04_.NET.pdf,” *Software Architectures — Introduction to Microsoft .NET* (vision/model/platform/toolkit; CLR/CLS/CTS; assemblies & metadata; BCL/ADO.NET/ASP.NET; Windows/Web Forms; Web services; component programming; pros/cons), HSE University.
-[3] **Slides**: “Lecture04_OOA.pdf,” *Architecture of Software Systems — OO Analysis & Requirements Specification* (DFD/logic/data dictionaries/I-O specs; OOA vs structural; use-case modeling—roles, diagrams, scenarios; class modeling—noun extraction & filtering; dynamic modeling—state & sequence; lab: build DFD/STD/ER), HSE University.
+- [1] **Lecture transcript**: “Lecture04_2025-09-24.merged.txt,” live class notes (.NET overview; CLR/assemblies; service orientation; OOA workflow from use-cases to classes to dynamics), Sept. 24, 2025.
+- [2] **Slides**: “Lecture04_.NET.pdf,” *Software Architectures — Introduction to Microsoft .NET* (vision/model/platform/toolkit; CLR/CLS/CTS; assemblies & metadata; BCL/ADO.NET/ASP.NET; Windows/Web Forms; Web services; component programming; pros/cons), HSE University.
+- [3] **Slides**: “Lecture04_OOA.pdf,” *Architecture of Software Systems — OO Analysis & Requirements Specification* (DFD/logic/data dictionaries/I-O specs; OOA vs structural; use-case modeling—roles, diagrams, scenarios; class modeling—noun extraction & filtering; dynamic modeling—state & sequence; lab: build DFD/STD/ER), HSE University.
 
 [<kbd><br><- Return (PreMid)<br></kbd>](PreMid.md)

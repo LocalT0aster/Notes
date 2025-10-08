@@ -161,7 +161,7 @@ For a risky algorithmic part, plan an **Architectural Spike**; write a **failing
 
 ### References (IEEE-style)
 
-[1] **Lecture transcript**: “Lecture02_2025-09-03.merged.txt,” live class notes (RUP, MSF, Scrum/Agile overview; pitfalls; MSF stabilization nuance), Sept. 3, 2025.
-[2] **Slides**: “Lecture02_DevMethodologies.pdf,” *Software System Architecture — Lecture 4: Software System Development Methodologies* (RUP essence/iterations/disciplines; MSF team & process model; Scrum/XP values, roles, artifacts, pros/cons), HSE University, 2025.
+- [1] **Lecture transcript**: “Lecture02_2025-09-03.merged.txt,” live class notes (RUP, MSF, Scrum/Agile overview; pitfalls; MSF stabilization nuance), Sept. 3, 2025.
+- [2] **Slides**: “Lecture02_DevMethodologies.pdf,” *Software System Architecture — Lecture 4: Software System Development Methodologies* (RUP essence/iterations/disciplines; MSF team & process model; Scrum/XP values, roles, artifacts, pros/cons), HSE University, 2025.
 
 [<kbd><br><- Return (PreMid)<br></kbd>](PreMid.md)

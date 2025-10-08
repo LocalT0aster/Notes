@@ -150,7 +150,7 @@
 
 ### References (IEEE-style)
 
-[1] **Lecture transcript**: “Lecture03_2025-09-17.txt,” live class notes (client/thin/thick/app-server; grid; quality attributes; diagram pitfalls; architecture vs business alignment), Sept. 17, 2025.
-[2] **Slides**: “Lecture03_SoftwareArchitectures.pdf,” *Architecture of Software Systems — Lecture 5: Software Architectures* (open systems; client–server DBMS; RPC; PL/BL/AL; 2-tier/3-tier web flows; server-side extensions; DB server models; integrated/federated/multi-DB; grid systems), HSE University, 2021.
+- [1] **Lecture transcript**: “Lecture03_2025-09-17.txt,” live class notes (client/thin/thick/app-server; grid; quality attributes; diagram pitfalls; architecture vs business alignment), Sept. 17, 2025.
+- [2] **Slides**: “Lecture03_SoftwareArchitectures.pdf,” *Architecture of Software Systems — Lecture 5: Software Architectures* (open systems; client–server DBMS; RPC; PL/BL/AL; 2-tier/3-tier web flows; server-side extensions; DB server models; integrated/federated/multi-DB; grid systems), HSE University, 2021.
 
 [<kbd><br><- Return (PreMid)<br></kbd>](PreMid.md)

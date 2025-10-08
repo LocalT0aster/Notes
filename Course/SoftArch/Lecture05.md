@@ -153,8 +153,8 @@
 
 ### References (IEEE-style)
 
-[1] **Lecture transcript**: “Lecture05_2025-10-01.merged.txt,” live class notes (need for sequence/collaboration diagrams; detailing class diagrams with types/visibility; cardinality/modality; STDs; V&V/traceability; interfaces/algorithms/data structures), Oct. 1, 2025.
-[2] **Slides**: “Lecture05_ООD.pdf,” *Architecture of Software Systems — Lecture 3: Object-Oriented Design* (principles—modularity, cohesion, coupling; AOD/DOD/OOD; architectural design order; interaction diagrams; class modeling; project testing), HSE University, 2021.
-[3] **Slides**: “Lecture05_Detailed_ООD.pdf,” *Architecture of Software Systems — Lecture 4: Detailed OO Design* (detailed class diagrams; interaction/state diagrams; detailed design spec—interfaces/algorithms/data structures; project testing and review), HSE University, 2021.
+- [1] **Lecture transcript**: “Lecture05_2025-10-01.merged.txt,” live class notes (need for sequence/collaboration diagrams; detailing class diagrams with types/visibility; cardinality/modality; STDs; V&V/traceability; interfaces/algorithms/data structures), Oct. 1, 2025.
+- [2] **Slides**: “Lecture05_ООD.pdf,” *Architecture of Software Systems — Lecture 3: Object-Oriented Design* (principles—modularity, cohesion, coupling; AOD/DOD/OOD; architectural design order; interaction diagrams; class modeling; project testing), HSE University, 2021.
+- [3] **Slides**: “Lecture05_Detailed_ООD.pdf,” *Architecture of Software Systems — Lecture 4: Detailed OO Design* (detailed class diagrams; interaction/state diagrams; detailed design spec—interfaces/algorithms/data structures; project testing and review), HSE University, 2021.
 
 [<kbd><br><- Return (PreMid)<br></kbd>](PreMid.md)

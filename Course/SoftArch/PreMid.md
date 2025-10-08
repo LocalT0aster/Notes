@@ -30,11 +30,11 @@
 
 ### File references (IEEE-style)
 
-[1] **Lecture01.md** — *Course Introduction & Lifecycle Models*, 27 Aug 2025.
-[2] **Lecture02.md** — *Development Methodologies (RUP, MSF, Scrum, XP)*, 3 Sep 2025.
-[3] **Lecture03.md** — *Software Architectures (client/server, web tiers, DB models, grids)*, 17 Sep 2025.
-[4] **Lecture04.md** — *.NET Platform & Object-Oriented Analysis*, 24 Sep 2025.
-[5] **Lecture05.md** — *Object-Oriented Design & Detailed OOD*, 1 Oct 2025.
-[6] **LabsPreMid.md** — *Labs Pack (Weeks 1–6): setup, elicitation, ToR, use-cases, model/method, class diagram & architecture*, 27 Aug–1 Oct 2025.
+- [1] **Lecture01.md** — *Course Introduction & Lifecycle Models*, 27 Aug 2025.
+- [2] **Lecture02.md** — *Development Methodologies (RUP, MSF, Scrum, XP)*, 3 Sep 2025.
+- [3] **Lecture03.md** — *Software Architectures (client/server, web tiers, DB models, grids)*, 17 Sep 2025.
+- [4] **Lecture04.md** — *.NET Platform & Object-Oriented Analysis*, 24 Sep 2025.
+- [5] **Lecture05.md** — *Object-Oriented Design & Detailed OOD*, 1 Oct 2025.
+- [6] **LabsPreMid.md** — *Labs Pack (Weeks 1–6): setup, elicitation, ToR, use-cases, model/method, class diagram & architecture*, 27 Aug–1 Oct 2025.
 
 [<kbd><br><- Return (SoftArch)<br></kbd>](SoftArch.md)
