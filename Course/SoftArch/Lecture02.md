@@ -93,8 +93,8 @@ You inherit a service with flaky releases. Propose **MSF-like** staging with a *
 
 ### Strengths vs. risks
 
-* * Transparency, client co-creation, frequent working increments, strong team learning.
-* − Minimal formal docs outside management; architecture can be **under-elaborated** if teams chase short-term velocity only. [2]
+- Transparency, client co-creation, frequent working increments, strong team learning.
+- Minimal formal docs outside management; architecture can be **under-elaborated** if teams chase short-term velocity only. [2]
 
 **Lab-style drill:**
 Turn vague stakeholder wishes into a **backlog** (story + acceptance criteria). Plan a 2-week sprint: pick top items, define **DoD** with demo conditions, and outline the **review**. Show one **risk** you’ll spike early.
@@ -118,8 +118,8 @@ Turn vague stakeholder wishes into a **backlog** (story + acceptance criteria). 
 
 ### Strengths vs. risks
 
-* * Bakes quality in (TDD/CI), real customer feedback, measurable cadence.
-* − Heavy reliance on oral communication; **practices work best together**; **little formal design notation**; **simple design** can mean **insufficient architectural elaboration**. [2]
+* Bakes quality in (TDD/CI), real customer feedback, measurable cadence.
+* Heavy reliance on oral communication; **practices work best together**; **little formal design notation**; **simple design** can mean **insufficient architectural elaboration**. [2]
 
 **Lab-style drill:**
 For a risky algorithmic part, plan an **Architectural Spike**; write a **failing test first**, define a “**small release**” boundary, and state the **refactoring** you expect once the spike informs the design.

@@ -50,7 +50,7 @@ For each model: **Idea → When to use → Strengths → Pitfalls → One-line d
 ### 3.1 Code-and-Fix (Build-and-Fix) — *incomplete lifecycle*
 
 * **Idea:** Minimal upfront spec/design; build a version, show to client, **modify until accepted**. [3], [4]
-* **Use when:** **Very small** scope with **clear, stable requirements** and **predictable behavior** (think <<1 KLOC guideline in slides). [3]
+* **Use when:** **Very small** scope with **clear, stable requirements** and **predictable behavior** (think << 1K LOC guideline in slides). [3]
 * **Strengths:** Tiny overhead, quick start. [3]
 * **Pitfalls:** Late discovery of early errors ⇒ cost spikes; **non-scalable** beyond trivial problems. [3], [4]
 * **Diagnostic:** “We’ll just hack until they like it.” → That’s Code-and-Fix.
