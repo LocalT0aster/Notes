@@ -29,6 +29,7 @@
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage[thinc]{esdiff}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 % \DeclareMathOperator{\tg}{\operatorname{tg}}
@@ -59,6 +60,115 @@
 \setlength{\jot}{2pt}
 
 \begin{document}
+\[
+F(s)\qquad Y(s)
+\]
+
+\[
+f(t)\qquad y(t)
+\]
+
+\[
+ABCD
+\]
+
+\[
+t^1 \qquad t^2
+\]
+
+\[
+\begin{aligned}
+&Y(s) = \mathcal{L}\{{y(t)}\}\\
+&\mathcal{L}\{{y'}\} = sY - y(0)\\
+&\mathcal{L}\{{y''}\} = s^2Y - sy(0) - y'(0)\\
+&\mathcal{L}\{{y^{n}}\} \cdots
+\end{aligned}
+\]
+
+\[
+x'= f(x,y),\,y'=g(x,y)
+\]
+
+\[
+\lambda\qquad\lambda_1\qquad\lambda_2
+\]
+
+\[
+\mathcal{J} = \begin{bmatrix}
+\diff{f}{x} & \diff{f}{y} \\
+\diff{g}{x} & \diff{g}{y}
+\end{bmatrix}
+\]
+
+\[
+\det(\mathcal{J}-\mathcal{I}\lambda)=0
+\]
+
+\[
+\lambda = a \pm bi
+\]
+
+N7
+
+\[
+x' = f_1,\, y' = f_2,\, z' = f_3
+\]
+
+\[
+\mathcal{J} = \begin{bmatrix}
+\diff{f_1}{x} & \diff{f_1}{y} & \diff{f_1}{z}\\
+\diff{f_2}{x} & \diff{f_2}{y} & \diff{f_2}{z}\\
+\diff{f_3}{x} & \diff{f_3}{y} & \diff{f_3}{z}
+\end{bmatrix}
+\]
+
+N6
+
+\[
+X' = A X + F(t)
+\]
+\[
+X' = A X \,\Rightarrow\, \Phi = [X_1, X_2]
+\]
+\[
+|A - \lambda I| = 0
+\]
+\[
+\begin{aligned}
+&\lambda_1 = ?\,\Rightarrow\,(A - \lambda_1 I)v \ \ = 0 \Rightarrow X_1 = e^{\lambda_1 t} v \\
+&\lambda_2 = ?\,\Rightarrow\,(A - \lambda_2 I)w = 0 \Rightarrow X_2 = e^{\lambda_2 t} w
+\end{aligned}
+\]
+\[
+\lambda_1 = \lambda_2\,\Rightarrow\,(A - \lambda I)w = v \,\Rightarrow\, X_2 = e^{\lambda t}(w + v t)
+\]
+\[
+X = \Phi C + \Phi \int \Phi^{-1} F(t) \, dt
+\]
+\[
+\Phi=
+\begin{pmatrix}
+| & | \\
+X_1 & X_2 \\
+| & |
+\end{pmatrix},\,
+\Phi^{-1}=
+\frac{1}{\det(\Phi)}
+\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}
+\]
+\[
+\boxed{
+\begin{cases}
+x = \dots \\
+y = \dots
+\end{cases}
+}
+\]
+
+\newpage
 % Integration by parts
 \[
 \int u\,\mathrm{d}v = uv - \int v\,\mathrm{d}u .
@@ -95,12 +205,34 @@
 \end{aligned}
 \]
 
+\[
+\begin{aligned}
+&\sin^2 \alpha + \cos^2 \alpha = 1\\
+&\sin 2\alpha = 2 \sin \alpha \cos \alpha\\
+&\cos 2\alpha = \cos^2 \alpha - \sin^2 \alpha\\
+&\sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta\\
+&\cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta\\
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+&\sec x=\frac{1}{\cos x}\\
+&\sinh x = \frac{e^x - e^{-x}}{2}\\
+&\cosh x = \frac{e^x + e^{-x}}{2}\\
+&\tanh x = \frac{\sinh x}{\cosh x}\\
+&\coth x = \frac{\cosh x}{\sinh x} = \frac{1}{\tanh x}\\
+&\operatorname{sech} x = \frac{1}{\cosh x}\\
+&\operatorname{csch} x = \frac{1}{\sinh x}
+\end{aligned}
+\]
+
+\newpage
 % Laplace transforms:
 \[
 \mathcal{L}\{f(t)\}(s)=\int_{0}^{\infty}e^{-st}f(t)\,dt=F(s)
 \]
 
-\newpage
 \[
 \begin{aligned}
 &\mathcal{L}\{1\}&=&\frac{1}{s}\\
