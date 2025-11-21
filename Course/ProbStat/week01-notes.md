@@ -34,7 +34,7 @@
   - Observations are the actual values we record from that mechanism; the collection of observed values is a sample.
 - Formal definition (if needed).
   - We assume there is an unknown probability distribution describing the phenomenon.
-  - A sample is a finite sequence of real numbers \(x_1, \dots, x_n\) drawn from that distribution.
+  - A sample is a finite sequence of real numbers $x_1, \dots, x_n$ drawn from that distribution.
 - Intuition / mental model.
   - Think of the state of nature as the complete list of all possible outputs, which we can never fully see, and the sample as a small subset we actually measure.
   - Examples from the lecture: all possible responses of a large AI model, all heights in a city, or all device lifetimes from a factory.
@@ -45,138 +45,138 @@
 - Plain-language definition.
   - The sample mean is the average value of the data; it is one way to describe the center of a sample.
 - Formal definition (if needed).
-  - For a sample \(\{x_1, \dots, x_n\}\), the sample mean is
-    \[
+  - For a sample $\{x_1, \dots, x_n\}$, the sample mean is
+    $$
     \bar{x} = \frac{1}{n}\sum_{j=1}^n x_j.
-    \]
-  - It is the unique number \(\mu\) for which \(\sum_{j=1}^n (x_j - \mu) = 0\).
+    $$
+  - It is the unique number $\mu$ for which $\sum_{j=1}^n (x_j - \mu) = 0$.
 - Intuition / mental model.
   - Imagine the data points as weights on a number line; the mean is the balance point where the system is in equilibrium.
   - It is very sensitive to extreme values (outliers), because every data point enters the sum directly.
 - Tiny example.
-  - If reaction times in a tiny sample are \(180, 220, 200\) milliseconds, then
-    \(\bar{x} = (180 + 220 + 200)/3 = 200\) ms.
+  - If reaction times in a tiny sample are $180, 220, 200$ milliseconds, then
+    $\bar{x} = (180 + 220 + 200)/3 = 200$ ms.
 
 ### 2.4 Median and quantiles (more location measures)
 - Plain-language definition.
   - The median is the “middle” value of an ordered sample.
   - Quantiles (such as quartiles) mark positions that split the ordered data into fixed fractions (like quarters).
 - Formal definition (if needed).
-  - Reorder the sample into an increasing sequence \(y_1 \le \dots \le y_n\).
-  - If \(n\) is odd, the median \(m\) is \(y_{(n+1)/2}\).
-  - If \(n\) is even, the median is
-    \[
+  - Reorder the sample into an increasing sequence $y_1 \le \dots \le y_n$.
+  - If $n$ is odd, the median $m$ is $y_{(n+1)/2}$.
+  - If $n$ is even, the median is
+    $$
     m = \frac{y_{n/2} + y_{n/2 + 1}}{2}.
-    \]
-  - For a positive integer \(q\), the \(k\)-th \(q\)-quantile is the value \(y_j\) such that roughly \(k/q\) of the values lie below \(y_j\) and the rest above it.
+    $$
+  - For a positive integer $q$, the $k$-th $q$-quantile is the value $y_j$ such that roughly $k/q$ of the values lie below $y_j$ and the rest above it.
 - Intuition / mental model.
   - The median is a center that is robust: moving a few extreme points far away does not change it much, as long as the order around the middle stays the same.
   - Quartiles cut the ordered data into four blocks of equal size and help describe spread and skewness.
 - Tiny example.
-  - For the ordered data \( \{1, 3, 5, 9, 10\} \) (\(n = 5\)), the median is the third value: \(m = 5\).
-  - For \(\{1, 3, 5, 9\}\) (\(n = 4\)), the median is \((3 + 5)/2 = 4\).
+  - For the ordered data $\{1, 3, 5, 9, 10\}$ ($n = 5$), the median is the third value: $m = 5$.
+  - For $\{1, 3, 5, 9\}$ ($n = 4$), the median is $(3 + 5)/2 = 4$.
 
 ### 2.5 Standard deviation and mean absolute deviation (measures of scattering)
 - Plain-language definition.
   - The standard deviation measures how far, on average in a squared sense, data points are from the mean.
   - The mean absolute deviation (m.a.d.) measures how far, on average, data points are from the mean using absolute distances.
 - Formal definition (if needed).
-  - For a sample \(\{x_1, \dots, x_n\}\) with mean \(\bar{x}\), the (sample) standard deviation is
-    \[
+  - For a sample $\{x_1, \dots, x_n\}$ with mean $\bar{x}$, the (sample) standard deviation is
+    $$
     s = \sqrt{\frac{1}{n - 1}\sum_{j=1}^n (x_j - \bar{x})^2}.
-    \]
+    $$
   - The mean absolute deviation is
-    \[
+    $$
     \text{m.a.d.} = \frac{1}{n}\sum_{j=1}^n |x_j - \bar{x}|.
-    \]
-  - The sample variance is \(s^2\), the square of the standard deviation.
+    $$
+  - The sample variance is $s^2$, the square of the standard deviation.
 - Intuition / mental model.
   - Both numbers describe how “together” or “spread out” the data are, but standard deviation penalizes large deviations more strongly because of the square.
   - Standard deviation and m.a.d. are insensitive to adding a constant to all data (a shift), but they scale when all data are multiplied by a constant.
 - Tiny example.
-  - If a small sample is \(\{9, 10, 11\}\), then \(\bar{x} = 10\).
-  - The deviations are \(-1, 0, +1\); the m.a.d. is \((1 + 0 + 1)/3 = 2/3\).
-  - The standard deviation is \(\sqrt{[(1^2 + 0^2 + 1^2)/(3 - 1)]} = \sqrt{1} = 1\).
+  - If a small sample is $\{9, 10, 11\}$, then $\bar{x} = 10$.
+  - The deviations are $-1, 0, +1$; the m.a.d. is $(1 + 0 + 1)/3 = 2/3$.
+  - The standard deviation is $\sqrt{[(1^2 + 0^2 + 1^2)/(3 - 1)]} = \sqrt{1} = 1$.
 
 ### 2.6 Dot plots and histograms (data representation)
 - Plain-language definition.
   - A dot plot places a dot for each data point in one of several equal-width cells along the horizontal axis.
   - A histogram uses rectangles over those cells; the height of each rectangle is the frequency (or relative frequency) of data in that cell.
 - Formal definition (if needed).
-  - Let \(x_{\min}\) and \(x_{\max}\) be the minimum and maximum data values.
-  - Choose a number of cells \(N\) and partition \([x_{\min}, x_{\max}]\) into \(N\) subintervals of equal length.
+  - Let $x_{\min}$ and $x_{\max}$ be the minimum and maximum data values.
+  - Choose a number of cells $N$ and partition $[x_{\min}, x_{\max}]$ into $N$ subintervals of equal length.
   - Dot plot: for each subinterval, draw a column of dots, one per data point in that interval.
   - Histogram: for each subinterval, draw a rectangle with base the subinterval and height equal to the number of data points (or relative frequency) in that interval.
 - Intuition / mental model.
   - Dot plots are very clear for small to moderate samples: you can see each point and where it falls.
   - Histograms are better for large samples, letting you see overall shape (e.g., symmetric, skewed, multimodal) without tracking individual values.
 - Tiny example.
-  - For the sample \(\{10, -2, -4.5, -7.8, -1, 0, 0, 0, 3, 3, 0, 5, -1, 0, -2, -2, -7.7, 10, 10, 11, -2, -3\}\) from the lecture, the instructor shows dot plots and histograms that change shape when the number of cells \(N\) changes.
+  - For the sample $\{10, -2, -4.5, -7.8, -1, 0, 0, 0, 3, 3, 0, 5, -1, 0, -2, -2, -7.7, 10, 10, 11, -2, -3\}$ from the lecture, the instructor shows dot plots and histograms that change shape when the number of cells $N$ changes.
 
 ### 2.7 Outliers and empirical distribution function
 - Plain-language definition.
   - Outliers are data points that look atypical or far from the bulk of the sample.
-  - The empirical distribution function (EDF), denoted \(F_{\text{emp}}(x)\), describes, for each \(x\), the proportion of data values that are \(\le x\).
+  - The empirical distribution function (EDF), denoted $F_{\text{emp}}(x)$, describes, for each $x$, the proportion of data values that are $\le x$.
 - Formal definition (if needed).
-  - For a sample \(\{x_1, \dots, x_n\}\), the EDF is
-    \[
+  - For a sample $\{x_1, \dots, x_n\}$, the EDF is
+    $$
     F_{\text{emp}}(x) = \frac{1}{n}\#\{ j \in \{1, \dots, n\} : x_j \le x\}.
-    \]
+    $$
   - Outliers are not defined by a single formula in the lecture; their identification depends on the underlying state of nature and context.
 - Intuition / mental model.
-  - \(F_{\text{emp}}(x)\) is a step function that jumps up by \(1/n\) at each data point; it shows how the sample “accumulates” as \(x\) increases.
-  - Outliers may lie outside a range such as \((\bar{x} - s, \bar{x} + s)\), but in many real problems this simple rule can mislead, so context is crucial.
+  - $F_{\text{emp}}(x)$ is a step function that jumps up by $1/n$ at each data point; it shows how the sample “accumulates” as $x$ increases.
+  - Outliers may lie outside a range such as $(\bar{x} - s, \bar{x} + s)$, but in many real problems this simple rule can mislead, so context is crucial.
 - Tiny example.
-  - For the sample \(\{22, 24, 35, 1, 1, 5, 6, 10, 13, 21, 10, 10, 40, 41, 47\}\) from the lecture, \(F_{\text{emp}}(x)\) is \(0\) for \(x < 1\), jumps to \(2/15\) at \(x = 1\), and eventually reaches \(1\) after the largest value \(47\).
+  - For the sample $\{22, 24, 35, 1, 1, 5, 6, 10, 13, 21, 10, 10, 40, 41, 47\}$ from the lecture, $F_{\text{emp}}(x)$ is $0$ for $x < 1$, jumps to $2/15$ at $x = 1$, and eventually reaches $1$ after the largest value $47$.
 
 ## 3. Core formulas and how to use them
 
 ### 3.1 Sample mean
 - Formula.
-  - \[
+  - $$
     \bar{x} = \frac{1}{n}\sum_{j=1}^n x_j.
-    \]
+    $$
 - Symbols.
-  - \(x_1, \dots, x_n\): observed data values (the sample).
-  - \(n\): sample size.
-  - \(\bar{x}\): sample mean (average).
+  - $x_1, \dots, x_n$: observed data values (the sample).
+  - $n$: sample size.
+  - $\bar{x}$: sample mean (average).
 - When to use it.
   - To summarize the central tendency of quantitative data when you are not too worried about extreme values.
   - In many later results in probability and statistics, the sample mean is a basic building block.
 - Common mistakes.
-  - Forgetting to divide by \(n\) after summing.
+  - Forgetting to divide by $n$ after summing.
   - Using rounded intermediate sums that cause unnecessary rounding error.
   - Treating the mean as robust to outliers (it is not).
 
 ### 3.2 Median and quantiles
 - Formula / definition.
-  - Order the data: \(y_1 \le \dots \le y_n\).
-  - Median \(m\):
-    - If \(n\) is odd, \(m = y_{(n+1)/2}\).
-    - If \(n\) is even, \(m = (y_{n/2} + y_{n/2+1})/2\).
+  - Order the data: $y_1 \le \dots \le y_n$.
+  - Median $m$:
+    - If $n$ is odd, $m = y_{(n+1)/2}$.
+    - If $n$ is even, $m = (y_{n/2} + y_{n/2+1})/2$.
   - First and third quartiles are special quantiles located at roughly 25% and 75% positions in the ordered list.
 - Symbols.
-  - \(y_j\): \(j\)-th ordered value of the sample.
-  - \(n\): sample size.
-  - \(m\): sample median.
+  - $y_j$: $j$-th ordered value of the sample.
+  - $n$: sample size.
+  - $m$: sample median.
 - When to use it.
   - To describe the center of data sets with clear skewness or outliers, where the mean might be misleading.
   - To split the data into parts and reason about where most values lie.
 - Common mistakes.
   - Forgetting to order the data before taking the middle.
-  - Miscounting indices when \(n\) is even.
+  - Miscounting indices when $n$ is even.
   - Confusing median (position-based) with mean (value-based).
 
 ### 3.3 Trimmed mean (used in the lab)
 - Formula / definition.
-  - For a \(p\%\) trimmed mean:
+  - For a $p\%$ trimmed mean:
     1. Order the data.
-    2. Remove the smallest \(p\%\) and largest \(p\%\) of observations.
+    2. Remove the smallest $p\%$ and largest $p\%$ of observations.
     3. Take the ordinary mean of the remaining data.
-  - The lab uses a \(10\%\) trimmed mean.
+  - The lab uses a $10\%$ trimmed mean.
 - Symbols.
-  - \(p\): trimming percentage.
-  - \(n\): sample size; \(pn\) (rounded appropriately) observations are trimmed from each tail.
+  - $p$: trimming percentage.
+  - $n$: sample size; $pn$ (rounded appropriately) observations are trimmed from each tail.
 - When to use it.
   - When you want a measure of center that behaves like the mean but is less sensitive to a few extreme values.
   - To check whether outliers are heavily influencing the plain mean by comparing mean vs trimmed mean vs median.
@@ -188,37 +188,37 @@
 ### 3.4 Standard deviation and variance
 - Formula.
   - Standard deviation:
-    \[
+    $$
     s = \sqrt{\frac{1}{n - 1}\sum_{j=1}^n (x_j - \bar{x})^2}.
-    \]
+    $$
   - Variance:
-    \[
+    $$
     s^2 = \frac{1}{n - 1}\sum_{j=1}^n (x_j - \bar{x})^2.
-    \]
+    $$
 - Symbols.
-  - \(x_j\): data points.
-  - \(\bar{x}\): sample mean.
-  - \(n\): sample size.
-  - \(s\): sample standard deviation.
-  - \(s^2\): sample variance.
+  - $x_j$: data points.
+  - $\bar{x}$: sample mean.
+  - $n$: sample size.
+  - $s$: sample standard deviation.
+  - $s^2$: sample variance.
 - When to use it.
   - To measure spread around the mean and compare variability between samples (e.g., control vs treatment groups in the lab).
   - As input to many later statistical procedures (confidence intervals, tests, etc.).
 - Common mistakes.
-  - Using \(n\) instead of \(n - 1\) when the formula is defined with \(n - 1\) in the lecture.
+  - Using $n$ instead of $n - 1$ when the formula is defined with $n - 1$ in the lecture.
   - Forgetting to square the deviations before summing.
   - Taking the square root too early or forgetting it when going from variance to standard deviation.
 
 ### 3.5 Mean absolute deviation (m.a.d.)
 - Formula.
-  - \[
+  - $$
     \text{m.a.d.} = \frac{1}{n}\sum_{j=1}^n |x_j - \bar{x}|.
-    \]
+    $$
 - Symbols.
-  - \(x_j\): data points.
-  - \(\bar{x}\): sample mean.
-  - \(n\): sample size.
-  - \(|\cdot|\): absolute value.
+  - $x_j$: data points.
+  - $\bar{x}$: sample mean.
+  - $n$: sample size.
+  - $|\cdot|$: absolute value.
 - When to use it.
   - When you want a measure of spread that treats all deviations linearly instead of squaring them.
   - As a way to see how much data typically differ from the mean without giving extra emphasis to outliers.
@@ -228,58 +228,58 @@
 
 ### 3.6 Empirical distribution function (EDF)
 - Formula.
-  - \[
+  - $$
     F_{\text{emp}}(x) = \frac{1}{n}\#\{ j \in \{1, \dots, n\} : x_j \le x\}.
-    \]
+    $$
 - Symbols.
-  - \(x\): point on the horizontal axis where we evaluate the function.
-  - \(x_j\): data points.
-  - \(n\): sample size.
-  - \(\#\{\cdot\}\): number of elements in the set.
+  - $x$: point on the horizontal axis where we evaluate the function.
+  - $x_j$: data points.
+  - $n$: sample size.
+  - $\#\{\cdot\}$: number of elements in the set.
 - When to use it.
   - To visualize how the sample accumulates as values increase.
-  - To connect sample behavior with quantiles (e.g., where \(F_{\text{emp}}\) crosses 0.25, 0.5, 0.75).
+  - To connect sample behavior with quantiles (e.g., where $F_{\text{emp}}$ crosses 0.25, 0.5, 0.75).
 - Common mistakes.
   - Counting only strictly less than instead of “less than or equal”, which changes the step locations.
-  - Forgetting to divide by \(n\), giving counts instead of proportions.
+  - Forgetting to divide by $n$, giving counts instead of proportions.
 
 ## 4. Worked examples
 
 ### 4.1 Effect of a single extreme value on mean, median, standard deviation, and m.a.d.
 - Setup.
-  - From the lecture: suppose we have one thousand data points, one of which is \(1000\) and all the rest are \(0\).
-  - So the sample is \(x_1, \dots, x_{1000}\) with 999 zeros and a single 1000.
+  - From the lecture: suppose we have one thousand data points, one of which is $1000$ and all the rest are $0$.
+  - So the sample is $x_1, \dots, x_{1000}$ with 999 zeros and a single 1000.
 - Step 1: compute the sample mean.
-  - The sum of all values is \(1000 + 0 + \dots + 0 = 1000\).
-  - The sample size is \(n = 1000\).
+  - The sum of all values is $1000 + 0 + \dots + 0 = 1000$.
+  - The sample size is $n = 1000$.
   - The mean is
-    \[
+    $$
     \bar{x} = \frac{1000}{1000} = 1.
-    \]
+    $$
 - Step 2: compute the median.
   - Order the data: 999 zeros, then one 1000 at the end.
-  - For \(n = 1000\), the median is the average of the 500th and 501st ordered values.
+  - For $n = 1000$, the median is the average of the 500th and 501st ordered values.
   - Both the 500th and 501st values are 0, so the median is
-    \[
+    $$
     m = \frac{0 + 0}{2} = 0.
-    \]
+    $$
 - Step 3: compute the standard deviation.
-  - Deviations from the mean: 999 values equal to \((0 - 1) = -1\), and one value equal to \((1000 - 1) = 999\).
+  - Deviations from the mean: 999 values equal to $(0 - 1) = -1$, and one value equal to $(1000 - 1) = 999$.
   - Sum of squared deviations:
-    \[
+    $$
     \sum_{j=1}^{1000} (x_j - \bar{x})^2 = 999^2 + 999 \cdot 1^2 = 999 \cdot 1000 = 999000.
-    \]
+    $$
   - The standard deviation is
-    \[
+    $$
     s = \sqrt{\frac{999000}{1000 - 1}} = \sqrt{\frac{999000}{999}} = \sqrt{1000} \approx 31.6.
-    \]
+    $$
 - Step 4: compute the mean absolute deviation.
-  - Absolute deviations: \(|1000 - 1| = 999\), and 999 copies of \(|0 - 1| = 1\).
-  - Sum of absolute deviations is \(999 + 999 \cdot 1 = 1998\).
+  - Absolute deviations: $|1000 - 1| = 999$, and 999 copies of $|0 - 1| = 1$.
+  - Sum of absolute deviations is $999 + 999 \cdot 1 = 1998$.
   - m.a.d. is
-    \[
+    $$
     \text{m.a.d.} = \frac{1998}{1000} = 1.998.
-    \]
+    $$
 - Check your intuition.
   - The mean (1) lies close to the many zeros but is pulled away by the single large value.
   - The median (0) completely ignores the extreme 1000.
@@ -289,31 +289,31 @@
 ### 4.2 Empirical distribution function and quantiles
 - Setup.
   - From the lecture, consider the sample
-    \(\{22, 24, 35, 1, 1, 5, 6, 10, 13, 21, 10, 10, 40, 41, 47\}\).
-  - There are \(n = 15\) observations.
+    $\{22, 24, 35, 1, 1, 5, 6, 10, 13, 21, 10, 10, 40, 41, 47\}$.
+  - There are $n = 15$ observations.
 - Step 1: order the data.
-  - Ordered sample: \(\{1, 1, 5, 6, 10, 10, 10, 13, 21, 22, 24, 35, 40, 41, 47\}\).
-- Step 2: compute \(F_{\text{emp}}(x)\) at a few points.
-  - For \(x < 1\), no observations are \(\le x\), so \(F_{\text{emp}}(x) = 0\).
-  - At \(x = 1\), two observations are \(\le 1\), so
-    \[
+  - Ordered sample: $\{1, 1, 5, 6, 10, 10, 10, 13, 21, 22, 24, 35, 40, 41, 47\}$.
+- Step 2: compute $F_{\text{emp}}(x)$ at a few points.
+  - For $x < 1$, no observations are $\le x$, so $F_{\text{emp}}(x) = 0$.
+  - At $x = 1$, two observations are $\le 1$, so
+    $$
     F_{\text{emp}}(1) = \frac{2}{15}.
-    \]
-  - At \(x = 10\), seven observations are \(\le 10\), so
-    \[
+    $$
+  - At $x = 10$, seven observations are $\le 10$, so
+    $$
     F_{\text{emp}}(10) = \frac{7}{15}.
-    \]
-  - For any \(x\) between 41 and 47 (but less than 47), 14 observations are \(\le x\), so \(F_{\text{emp}}(x) = 14/15\).
-  - For \(x \ge 47\), all 15 observations are \(\le x\), so \(F_{\text{emp}}(x) = 1\).
+    $$
+  - For any $x$ between 41 and 47 (but less than 47), 14 observations are $\le x$, so $F_{\text{emp}}(x) = 14/15$.
+  - For $x \ge 47$, all 15 observations are $\le x$, so $F_{\text{emp}}(x) = 1$.
 - Step 3: relate to quantiles.
-  - The median is the 8th ordered value (since \(n = 15\)), which is \(13\).
-  - At \(x = 13\), exactly 8 observations are \(\le 13\), so
-    \[
+  - The median is the 8th ordered value (since $n = 15$), which is $13$.
+  - At $x = 13$, exactly 8 observations are $\le 13$, so
+    $$
     F_{\text{emp}}(13) = \frac{8}{15} \approx 0.53.
-    \]
+    $$
   - This is just above 0.5, consistent with the interpretation of the median as the 50%-quantile.
 - Check your intuition.
-  - As \(x\) moves along the horizontal axis, the EDF jumps up by \(1/15\) at each data point.
+  - As $x$ moves along the horizontal axis, the EDF jumps up by $1/15$ at each data point.
   - Reading off approximate levels like 0.25, 0.5, and 0.75 on the vertical axis helps locate quartiles and median.
 
 ## 5. Lab/Tutorial essentials (week01.pdf)
@@ -385,13 +385,13 @@
 ## 6. Quick recap
 - Probability assumes a model with known probabilities and computes chances of events; statistics uses data to infer those unknown probabilities or parameters.
 - The state of nature is the underlying reality (or probability distribution); a sample is the finite list of observed values.
-- The sample mean \(\bar{x} = \frac{1}{n}\sum x_j\) is a natural measure of center but is sensitive to outliers.
+- The sample mean $\bar{x} = \frac{1}{n}\sum x_j$ is a natural measure of center but is sensitive to outliers.
 - The median and other quantiles are location measures based on ordered positions and are more robust to extreme values.
-- The sample standard deviation \(s\) and variance \(s^2\) measure how spread out the data are around the mean, with large deviations heavily weighted.
+- The sample standard deviation $s$ and variance $s^2$ measure how spread out the data are around the mean, with large deviations heavily weighted.
 - The mean absolute deviation measures spread using absolute distances and usually gives a smaller value than the standard deviation for the same data.
 - Dot plots and histograms turn raw data into visual summaries that reveal center, spread, skewness, and potential outliers.
-- Outliers are atypical points whose importance must be judged in context; simple rules based on \((\bar{x} - s, \bar{x} + s)\) can be misleading.
-- The empirical distribution function \(F_{\text{emp}}(x)\) counts the proportion of observations \(\le x\) and connects the sample to quantiles like the median.
+- Outliers are atypical points whose importance must be judged in context; simple rules based on $(\bar{x} - s, \bar{x} + s)$ can be misleading.
+- The empirical distribution function $F_{\text{emp}}(x)$ counts the proportion of observations $\le x$ and connects the sample to quantiles like the median.
 - The week 1 lab reinforces these ideas by having you compute means, medians, trimmed means, standard deviations, draw dot plots and histograms, and interpret differences between groups.
 
 
