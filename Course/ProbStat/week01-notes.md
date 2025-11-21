@@ -29,7 +29,7 @@
   - Statistics question: I tossed a coin ten times and got eight heads; can I reasonably claim the coin is not fair?
 
 ### 2.2 State of nature, observations, and samples
-- Plain-language definition.
+- Plain-language.
   - The state of nature is the underlying reality or mechanism that generates data.
   - Observations are the actual values we record from that mechanism; the collection of observed values is a sample.
 - Formal definition (if needed).
@@ -39,7 +39,7 @@
   - Think of the state of nature as the complete list of all possible outputs, which we can never fully see, and the sample as a small subset we actually measure.
   - Examples from the lecture: all possible responses of a large AI model, all heights in a city, or all device lifetimes from a factory.
 - Tiny example.
-  - Population heights: the true heights of everyone in Kazan form the state of nature; the thousand people you measure in a study form your sample.
+  - Population heights: the true heights of everyone in Kazan form the state of nature; the thousand peoe you measure in a study form your sample.
 
 ### 2.3 Sample mean (measure of location)
 - Plain-language definition.
