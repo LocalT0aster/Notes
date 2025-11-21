@@ -466,9 +466,9 @@ Imagine standing at a crossroads where multiple paths lie ahead, and instead of 
 ##### Characteristics
 
 - **Multiple Choices**: At any given point in the computation, a nondeterministic machine can choose among multiple transitions based on its current state and input.
-  
+
 - **Acceptance**: For languages, if any branch of the computation accepts the input, the entire computation is considered to have accepted the input.
-  
+
 - **Parallel Universes Analogy**: Nondeterminism can be thought of as exploring multiple "parallel universes" of computation. If success is found in any universe, it's as if success is achieved in the "real" universe.
 
 #### 2. Differences Between Deterministic and Non-deterministic Models
@@ -476,9 +476,9 @@ Imagine standing at a crossroads where multiple paths lie ahead, and instead of 
 ##### Deterministic Models
 
 - **Single Choice**: At every step of the computation, there's exactly one action or transition the machine can take based on its current state and input.
-  
+
 - **Predictable**: Given the same input, the deterministic machine will always follow the same sequence of steps and produce the same output.
-  
+
 - **Acceptance**: For languages, the input is either accepted or rejected based on a single computation path.
 
 Examples: Deterministic Finite Automata (DFA), Deterministic Turing Machines
@@ -486,9 +486,9 @@ Examples: Deterministic Finite Automata (DFA), Deterministic Turing Machines
 ##### Non-deterministic Models
 
 - **Multiple Choices**: At any step, the machine can choose among several possible transitions.
-  
+
 - **Unpredictable Path**: Even with the same input, the machine can explore different computation paths in different "parallel universes."
-  
+
 - **Acceptance**: The input is accepted if any of the computation paths lead to acceptance.
 
 Examples: Non-deterministic Finite Automata (NFA), Non-deterministic Turing Machines, Non-deterministic Pushdown Automata
@@ -496,7 +496,7 @@ Examples: Non-deterministic Finite Automata (NFA), Non-deterministic Turing Mach
 ##### Practical Implications
 
 - While nondeterministic models are powerful theoretical tools and can simplify descriptions of algorithms or languages, they don't directly correspond to physical machines we can build.
-  
+
 - However, they're useful in algorithm design and complexity theory. For instance, the concept of nondeterminism is central to the famous $P$ vs. $NP$ problem in computer science.
 
 In summary, while deterministic models are restricted to a single, predictable path of execution, nondeterministic models can explore multiple paths, allowing for a richer set of possibilities in theoretical computation.
@@ -518,9 +518,9 @@ A nondeterministic Turing machine (NTM) differs in that, given its current state
 ##### Importance of Nondeterminism in NTMs
 
 1. **Expressive Power**: Despite the ability to "guess," it's proven that NTMs and DTMs have the same expressive power, meaning anything computable by an NTM is also computable by a DTM. However, the way they compute can be vastly different.
-  
+
 2. **Efficiency**: For some problems, NTMs can provide a more "efficient" theoretical solution compared to DTMs. One example is the nondeterministic polynomial time (NP) class of problems. While no efficient deterministic solutions are known for many NP problems, their solutions can be verified efficiently, which aligns with the concept of "guess and check" that NTMs embody.
-  
+
 3. **Simpler Descriptions**: For some algorithms or problems, describing them with an NTM can be simpler and more intuitive than using a DTM.
 
 #### Pushdown Automata (PDAs)
@@ -707,7 +707,7 @@ The Church-Turing thesis (often termed a conjecture or hypothesis) is a fundamen
 There are two primary implications of this thesis:
 
 1. **Nature of Computation**: It provides a formal definition for what we mean by "computation" or "algorithm". If something cannot be computed by a Turing machine, then, according to the Church-Turing thesis, it's not "computable" in the general sense of the word.
-  
+
 2. **Universality of Turing Machines**: Given that other computational models (like lambda calculus, Post systems, etc.) can be shown to be equivalent to Turing machines in terms of their computational power, the Church-Turing thesis suggests that the Turing machine is as powerful a model of computation as any other. This universality concept leads to the idea of a Universal Turing Machine.
 
 #### 2. Universal Turing Machine (UTM)
@@ -725,7 +725,7 @@ Here's why the UTM is significant:
 #### In summary
 
 - The **Church-Turing Thesis** provides a foundational understanding of what we mean by "computation" and suggests that the Turing machine is a universal model of computation.
-  
+
 - The **Universal Turing Machine** is a realization of this universality, showing that a single machine can simulate any other machine. This concept is foundational to the design and understanding of modern general-purpose computers.
 
 ---
