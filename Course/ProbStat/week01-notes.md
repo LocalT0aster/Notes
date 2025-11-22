@@ -85,11 +85,12 @@
     $$
     s = \sqrt{\frac{1}{n - 1}\sum_{j=1}^n (x_j - \bar{x})^2}.
     $$
+    > Notice that we use $n-1$ when we calculate the SD of the limited sample to compensate for consistently low variance estimate. But when we calculate the SD of a known dataset (in ML for example), $n$ is preferred.
+  - The sample variance ($\operatorname{Var}(x)$) is $s^2$, the square of the standard deviation.
   - The mean absolute deviation is
     $$
     \text{m.a.d.} = \frac{1}{n}\sum_{j=1}^n |x_j - \bar{x}|.
     $$
-  - The sample variance is $s^2$, the square of the standard deviation.
 - Intuition / mental model.
   - Both numbers describe how “together” or “spread out” the data are, but standard deviation penalizes large deviations more strongly because of the square.
   - Standard deviation and m.a.d. are insensitive to adding a constant to all data (a shift), but they scale when all data are multiplied by a constant.
