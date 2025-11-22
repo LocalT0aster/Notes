@@ -17,7 +17,7 @@
 ### 2.1 Expected value of a discrete random variable
 - Plain-language definition.
   - The expected value (mean) of a discrete random variable is the “long-run average” value you would see if you repeated the experiment many times.
-- Formal definition (if needed).
+- Formal definition.
   - Let $\xi$ be a discrete random variable with pmf $p_\xi(x)=P(\xi=x)$. Its expected value is
     $$
     E\xi = \sum_{x\in\mathbb{R}} x\,p_\xi(x),
@@ -35,7 +35,7 @@
 ### 2.2 Expectation of indicator variables
 - Plain-language definition.
   - The expected value of an indicator random variable is just the probability of the underlying event.
-- Formal definition (if needed).
+- Formal definition.
   - For an event $E$, its indicator is $I(E)(\omega)=1$ if $\omega\in E$ and $0$ otherwise.
   - If $P(E)=p$, then
     $$
@@ -81,7 +81,7 @@
   - The first moment of a random variable $\xi$ is its mean $E\xi$.
   - The second moment is $E\xi^2$.
   - The variance measures how much $\xi$ typically deviates from its mean, with big deviations penalized more.
-- Formal definitions (if needed).
+- Formal definitions.
   - $n$-th moment: $E\xi^n$ (if it exists) for integer $n\ge1$.
   - Variance:
     $$
@@ -126,7 +126,7 @@
   - Covariance measures how two random variables vary together relative to their means.
   - A covariance matrix collects all variances and covariances of components of a random vector.
   - Correlation is a normalized covariance, always between $-1$ and $1$, that measures linear dependence strength.
-- Formal definitions (if needed).
+- Formal definitions.
   - For a two-dimensional random vector $\xi=(\xi_1,\xi_2)$ with finite means:
     $$
     \text{Cov}(\xi_1,\xi_2) = E(\xi_1-E\xi_1)(\xi_2-E\xi_2).
@@ -154,7 +154,7 @@
 ### 2.7 Conditional expectation (discrete case)
 - Plain-language definition.
   - Conditional expectation $E[\xi_1|\xi_2]$ is a new random variable that gives the expected value of $\xi_1$ when we know the value of $\xi_2$.
-- Formal definition (if needed).
+- Formal definition.
   - Let $\xi=(\xi_1,\xi_2)$ be a discrete random vector. For a fixed value $y$ where $P(\xi_2=y)>0$, the conditional pmf is
     $$
     p_{\xi_1|\xi_2}(x|y) = P(\xi_1=x|\xi_2=y),

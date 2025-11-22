@@ -21,7 +21,7 @@
   - The sample space, usually written $\Omega$, is the set of all possible outcomes of an experiment.
   - An event is a subset of $\Omega$; it represents a statement about the outcome that can either occur or not.
   - A σ-algebra (σ-field) $\mathcal{F}$ is a collection of subsets of $\Omega$ that we are allowed to treat as events.
-- Formal definition (if needed).
+- Formal definition.
   - Sample space: $\Omega$ is a nonempty set (for example, $\{H, T\}$ when tossing one coin).
   - Event: any element of $\mathcal{F} \subseteq 2^\Omega$.
   - σ-algebra $\mathcal{F}$ satisfies:
@@ -40,7 +40,7 @@
 - Plain-language definition.
   - A probability measure $P$ assigns to each event a number between 0 and 1 that represents how likely it is.
   - A probability space is the triple $(\Omega, \mathcal{F}, P)$ that fully describes a probability model.
-- Formal definition (if needed).
+- Formal definition.
   - A probability measure is a function $P : \mathcal{F} \to [0,1]$ such that:
     1. $P(\varnothing) = 0$.
     2. $P(\Omega) = 1$.
@@ -62,7 +62,7 @@
 ### 2.3 Combinatorial probability (finite uniform spaces)
 - Plain-language definition.
   - In many simple problems with a finite number of equally likely outcomes, the probability of an event is “favorable outcomes divided by total outcomes”.
-- Formal definition (if needed).
+- Formal definition.
   - Suppose $\Omega = \{\omega_1,\dots,\omega_n\}$, $\mathcal{F} = 2^\Omega$, and $P(\{\omega_j\}) = 1/n$ for all $j$. For any event $E \subseteq \Omega$,
     $$
     P(E) = \frac{\#E}{n},
@@ -81,7 +81,7 @@
 - Plain-language definition.
   - Geometric probability treats outcomes as points in a region of the plane (or space), and events as subregions.
   - The probability of the event is the ratio of the subregion’s area (or length/volume) to the total region’s area (or length/volume).
-- Formal definition (if needed).
+- Formal definition.
   - Let $\Omega$ be a region (for example, a square in $\mathbb{R}^2$) and let $E \subseteq \Omega$ be a subregion.
   - If all points of $\Omega$ are equally likely, then
     $$
@@ -103,7 +103,7 @@
 - Plain-language definition.
   - Two events $A$ and $B$ are independent if learning that one occurred does not change the probability of the other.
   - For more than two events, mutual independence means every subcollection behaves like that: the probability that all events in the subcollection occur equals the product of their individual probabilities.
-- Formal definition (if needed).
+- Formal definition.
   - Two events $A,B$ are independent if
     $$
     P(A \cap B) = P(A)P(B).
@@ -130,7 +130,7 @@
   - The conditional probability $P(A|B)$ is the probability of $A$ after we are told that event $B$ has occurred.
   - The formula of total probability expresses the probability of an event by splitting according to a partition of the sample space.
   - Bayes’ formula gives the probability of a “cause” or hypothesis $B_j$ given an observed outcome $A$.
-- Formal definitions (if needed).
+- Formal definitions.
   - Conditional probability (for $P(B) > 0$):
     $$
     P(A|B) = \frac{P(A\cap B)}{P(B)}.

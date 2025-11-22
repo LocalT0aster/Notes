@@ -16,7 +16,7 @@
 ### 2.1 Gamma distribution
 - Plain-language definition.
   - The Gamma distribution models the waiting time until the $t$-th event in a Poisson process with rate $\lambda$, or more generally, has a flexible positive-valued shape controlled by parameters $\lambda$ (rate) and $t$ (shape).
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has Gamma distribution with parameters $\lambda>0$ and $t>0$, written $\xi\sim\text{Gamma}(\lambda,t)$, if its pdf is
     $$
     p_\xi(x) = \frac{1}{\Gamma(t)}\lambda^t x^{t-1} e^{-\lambda x} I(x>0),

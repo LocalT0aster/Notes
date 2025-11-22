@@ -16,7 +16,7 @@
 ### 2.1 Binomial distribution (review)
 - Plain-language definition.
   - A binomial random variable counts the number of successes in a fixed number $n$ of independent trials, where each trial has the same success probability $p$.
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has binomial distribution with parameters $n$ and $p$, written $\xi\sim \text{Binomial}(n,p)$, if its pmf is
     $$
     p_\xi(x) = \binom{n}{x}p^x(1-p)^{n-x} I(x\in\{0,1,\dots,n\}).
@@ -37,7 +37,7 @@
 ### 2.2 Multinomial distribution
 - Plain-language definition.
   - The multinomial distribution generalizes the binomial to more than two categories. It gives the joint distribution of counts of each category in repeated independent trials.
-- Formal definition (if needed).
+- Formal definition.
   - Suppose we have independent random variables $\xi_1,\dots,\xi_n$, each taking values in $\{1,\dots,m\}$ with
     $$
     P(\xi_k=j) = p_j,\quad j=1,\dots,m,\quad \sum_{j=1}^m p_j = 1.
@@ -76,7 +76,7 @@
 - Plain-language definition.
   - A continuous random variable uses a density function instead of a pmf; probabilities of intervals are given by integrals of the density.
   - For a continuous random variable, $P(\xi=x)=0$ for every single point $x$; only intervals (or more general sets) can have positive probability.
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ is continuous if there exists a function $p_\xi:\mathbb{R}\to\mathbb{R}$ such that:
     1. $p_\xi(x)\ge 0$ for all $x$.
     2. $\displaystyle\int_{-\infty}^\infty p_\xi(x)\,dx = 1.$
@@ -129,7 +129,7 @@
 ### 2.5 Continuous uniform distribution on $(a,b)$
 - Plain-language definition.
   - A continuous uniform random variable on $(a,b)$ is a random number equally likely to fall anywhere between $a$ and $b$.
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has continuous uniform distribution on $(a,b)$, written $\xi\sim\text{Uni}(a,b)$, if its pdf is
     $$
     p_\xi(x) = \frac{1}{b-a}I(a<x<b).
@@ -160,7 +160,7 @@
 ### 2.6 Normal (Gaussian) distribution
 - Plain-language definition.
   - The normal (Gaussian) distribution is a bell-shaped continuous distribution centered at $\mu$ with spread controlled by $\sigma>0$.
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has normal distribution with parameters $\mu\in\mathbb{R}$ and $\sigma^2>0$, written $\xi\sim N(\mu,\sigma^2)$, if its pdf is
     $$
     p_\xi(x) = \frac{1}{\sqrt{2\pi}\,\sigma}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right).

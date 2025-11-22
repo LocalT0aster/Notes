@@ -16,7 +16,7 @@
 ### 2.1 Poisson random variable and Poisson approximation
 - Plain-language definition.
   - A Poisson random variable counts how many times a certain type of event happens in a fixed interval when events are rare and occur independently at a constant average rate.
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has Poisson distribution with parameter $\lambda>0$, written $\xi\sim\text{Poi}(\lambda)$, if its pmf is
     $$
     P(\xi = x) = \frac{e^{-\lambda}\lambda^x}{x!} I(x\in\{0,1,2,\dots\}).
@@ -57,7 +57,7 @@
 ### 2.3 Continuous random vectors and joint pdf
 - Plain-language definition.
   - A continuous random vector is a vector of random variables that has a joint pdf $p_\xi(x_1,\dots,x_d)$; probabilities of regions in $\mathbb{R}^d$ come from integrating this pdf.
-- Formal definition (if needed).
+- Formal definition.
   - A random vector $\xi=(\xi_1,\dots,\xi_d):\Omega\to\mathbb{R}^d$ is continuous if there exists a nonnegative integrable function $p_\xi:\mathbb{R}^d\to\mathbb{R}$ such that for every Borel set $B\subset\mathbb{R}^d$:
     $$
     P(\xi\in B) = \int_B p_\xi(x)\,dx,
@@ -74,7 +74,7 @@
 ### 2.4 Marginal pdfs
 - Plain-language definition.
   - Marginal pdfs are the densities of individual components of a random vector; they are obtained by integrating the joint pdf over the other variables.
-- Formal definitions (if needed).
+- Formal definitions.
   - For a 2D random vector $\xi=(\xi_1,\xi_2)$ with joint pdf $p_\xi(x_1,x_2)$:
     $$
     p_{\xi_1}(x_1) = \int_{-\infty}^\infty p_\xi(x_1,x_2)\,dx_2,\quad
@@ -142,7 +142,7 @@
 - Plain-language definition.
   - The conditional pdf $p_{\xi_2|\xi_1}(x_2|x_1)$ describes the distribution of $\xi_2$ when we condition on $\xi_1=x_1$, for continuous variables.
   - The conditional expectation $E[\xi_2|\xi_1=x_1]$ is the mean of this conditional distribution; as a function of $x_1$, it is a new random variable $E[\xi_2|\xi_1]$.
-- Formal definitions (if needed).
+- Formal definitions.
   - For a continuous random vector $(\xi_1,\xi_2)$ with joint pdf $p_{\xi_1,\xi_2}(x_1,x_2)$ and marginals $p_{\xi_1},p_{\xi_2}$:
     $$
     p_{\xi_2|\xi_1}(x_2|x_1) = \frac{p_{\xi_1,\xi_2}(x_1,x_2)}{p_{\xi_1}(x_1)} I(p_{\xi_1}(x_1)\ne 0).

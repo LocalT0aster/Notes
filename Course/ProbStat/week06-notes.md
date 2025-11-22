@@ -16,7 +16,7 @@
 ### 2.1 Hypergeometric distribution
 - Plain-language definition.
   - The hypergeometric distribution describes the number of “successes” when you draw $n$ items from a finite population of size $N$ without replacement, where $b$ items are “good” and $N-b$ are “bad”.
-- Formal definition (if needed).
+- Formal definition.
   - There are $N$ tickets in a bag; $b$ are good, $N-b$ are bad. Draw $n$ tickets without replacement. Let $\xi$ be the number of good tickets drawn.
   - Its pmf is
     $$
@@ -42,7 +42,7 @@
 ### 2.2 Moments of continuous random variables and expectation via density
 - Plain-language definition.
   - For continuous random variables, means and higher moments are computed by integrating against the density instead of summing against a pmf.
-- Formal definition (if needed).
+- Formal definition.
   - Let $\xi$ be a continuous random variable with pdf $p_\xi(x)$. If the integral exists, then
     $$
     E\xi = \int_{-\infty}^{\infty} x\,p_\xi(x)\,dx.
@@ -75,7 +75,7 @@
 ### 2.3 Moment generating function (mentioned)
 - Plain-language definition.
   - The moment generating function (mgf) of a random variable is a function whose derivatives at 0 give the moments.
-- Formal definition (if needed).
+- Formal definition.
   - For a random variable $\xi$ (discrete or continuous), when the expectation exists:
     $$
     \varphi_\xi(t) = Ee^{t\xi}.
@@ -91,7 +91,7 @@
 ### 2.4 Cauchy distribution
 - Plain-language definition.
   - The Cauchy distribution is a continuous distribution with very heavy tails; it does not have finite moments (no mean, no variance).
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has the Cauchy distribution if its pdf is
     $$
     p_\xi(x) = \frac{1}{\pi(x^2+1)},\quad x\in\mathbb{R}.
@@ -105,7 +105,7 @@
 ### 2.5 Exponential distribution
 - Plain-language definition.
   - The exponential distribution models the waiting time until a random event happens, with a constant rate $\lambda$, and has the memoryless property.
-- Formal definition (if needed).
+- Formal definition.
   - A random variable $\xi$ has exponential distribution with parameter $\lambda>0$, written $\xi\sim\text{Exp}(\lambda)$, if
     $$
     p_\xi(x) = \lambda e^{-\lambda x} I(x\ge 0).

@@ -17,7 +17,7 @@
 - Plain-language definition.
   - A random variable is a numerical quantity whose value depends on the outcome of a random experiment.
   - Formally it is a function defined on the sample space, but usually we think of it just as “the number we measure.”
-- Formal definition (if needed).
+- Formal definition.
   - Given a sample space $\Omega$ with σ-algebra $\mathcal{F}$, a random variable $X$ is a function
     $$
     X:\Omega \to \mathbb{R}
@@ -33,7 +33,7 @@
 ### 2.2 Indicator random variables
 - Plain-language definition.
   - An indicator of an event $E$ is a random variable that is 1 when the event happens and 0 otherwise.
-- Formal definition (if needed).
+- Formal definition.
   - For $E \in \mathcal{F}$, the indicator function $I(E)$ is
     $$
     I(E)(\omega) = \begin{cases}
@@ -54,7 +54,7 @@
 ### 2.3 Distribution function (cdf) of a random variable
 - Plain-language definition.
   - The distribution function (also called cumulative distribution function, cdf) of a random variable $X$ tells us, for each real number $x$, the probability that $X$ is at most $x$.
-- Formal definition (if needed).
+- Formal definition.
   - For a random variable $X$ on a probability space $(\Omega,\mathcal{F},P)$, its cdf is
     $$
     F_X(x) = P(X \le x), \quad x\in\mathbb{R}.
@@ -83,7 +83,7 @@
 ### 2.4 Discrete random variables and probability mass function (pmf)
 - Plain-language definition.
   - A random variable is discrete if it takes values only in a countable set (finite or countably infinite), and all probability is concentrated on those values.
-- Formal definition (if needed).
+- Formal definition.
   - $X$ is discrete if there exists a countable set $C\subset\mathbb{R}$ such that $P(X\in C)=1$.
   - Its probability mass function (pmf) is
     $$
@@ -113,7 +113,7 @@
 ### 2.5 Independence of random variables
 - Plain-language definition.
   - Several random variables are independent if knowing the values of some of them does not change the probability distribution of the others.
-- Formal definition (if needed).
+- Formal definition.
   - Random variables $\xi_1,\dots,\xi_n$ on the same probability space are independent if for all real numbers $x_1,\dots,x_n$:
     $$
     P(\xi_1\le x_1,\dots,\xi_n\le x_n) = F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
@@ -216,7 +216,7 @@
 - Plain-language definition.
   - A random vector is an ordered collection of random variables defined on the same probability space.
   - The joint pmf describes probabilities of all combinations of their values; marginal pmfs give distributions of individual components; conditional pmfs describe one component given another.
-- Formal definitions (if needed).
+- Formal definitions.
   - Random vector $X = (X_1,\dots,X_d): \Omega\to\mathbb{R}^d$.
   - Joint pmf for discrete $X$:
     $$

@@ -18,7 +18,7 @@
 - Plain-language definition.
   - Probability is a branch of mathematics that encodes uncertainty and lets us compute chances of events under a model.
   - Statistics uses observed data to infer the unknown parameters or probabilities that define that model.
-- Formal definition (if needed).
+- Formal definition.
   - In probability, we assume a probability model is known: basic events have assigned probabilities, and we derive the probabilities of more complex events from them.
   - In statistics, we treat those probabilities or parameters as unknown and use data samples to estimate or test them.
 - Intuition / mental model.
@@ -32,7 +32,7 @@
 - Plain-language definition.
   - The state of nature is the underlying reality or mechanism that generates data.
   - Observations are the actual values we record from that mechanism; the collection of observed values is a sample.
-- Formal definition (if needed).
+- Formal definition.
   - We assume there is an unknown probability distribution describing the phenomenon.
   - A sample is a finite sequence of real numbers $x_1, \dots, x_n$ drawn from that distribution.
 - Intuition / mental model.
@@ -44,7 +44,7 @@
 ### 2.3 Sample mean (measure of location)
 - Plain-language definition.
   - The sample mean is the average value of the data; it is one way to describe the center of a sample.
-- Formal definition (if needed).
+- Formal definition.
   - For a sample $\{x_1, \dots, x_n\}$, the sample mean is
     $$
     \bar{x} = \frac{1}{n}\sum_{j=1}^n x_j.
@@ -61,7 +61,7 @@
 - Plain-language definition.
   - The median is the “middle” value of an ordered sample.
   - Quantiles (such as quartiles) mark positions that split the ordered data into fixed fractions (like quarters).
-- Formal definition (if needed).
+- Formal definition.
   - Reorder the sample into an increasing sequence $y_1 \le \dots \le y_n$.
   - If $n$ is odd, the median $m$ is $y_{(n+1)/2}$.
   - If $n$ is even, the median is
@@ -80,13 +80,14 @@
 - Plain-language definition.
   - The standard deviation measures how far, on average in a squared sense, data points are from the mean.
   - The mean absolute deviation (m.a.d.) measures how far, on average, data points are from the mean using absolute distances.
-- Formal definition (if needed).
+- Formal definition.
   - For a sample $\{x_1, \dots, x_n\}$ with mean $\bar{x}$, the (sample) standard deviation is
     $$
     s = \sqrt{\frac{1}{n - 1}\sum_{j=1}^n (x_j - \bar{x})^2}.
     $$
-    > Notice that we use $n-1$ when we calculate the SD of the limited sample to compensate for consistently low variance estimate. But when we calculate the SD of a known dataset (in ML for example), $n$ is preferred.
+    > The denominator $n-1$ is the “degrees of freedom” correction (Bessel’s correction): we already used the data once to estimate $\bar{x}$, so if we divided by $n$ the average squared deviation would systematically underestimate the true variance of the population. With $1/(n-1)$, $s^2$ is (under standard i.i.d. assumptions) an unbiased estimator of the population variance.
   - The sample variance ($\operatorname{Var}(x)$) is $s^2$, the square of the standard deviation.
+  - If instead you are treating the data set as the whole population (for example, measuring spread of all exam scores in a fixed class, or computing loss over all points in a finite training set), it is natural to drop the correction and define the population variance by dividing by $n$.
   - The mean absolute deviation is
     $$
     \text{m.a.d.} = \frac{1}{n}\sum_{j=1}^n |x_j - \bar{x}|.
@@ -103,7 +104,7 @@
 - Plain-language definition.
   - A dot plot places a dot for each data point in one of several equal-width cells along the horizontal axis.
   - A histogram uses rectangles over those cells; the height of each rectangle is the frequency (or relative frequency) of data in that cell.
-- Formal definition (if needed).
+- Formal definition.
   - Let $x_{\min}$ and $x_{\max}$ be the minimum and maximum data values.
   - Choose a number of cells $N$ and partition $[x_{\min}, x_{\max}]$ into $N$ subintervals of equal length.
   - Dot plot: for each subinterval, draw a column of dots, one per data point in that interval.
@@ -127,7 +128,7 @@
 - Plain-language definition.
   - Outliers are data points that look atypical or far from the bulk of the sample.
   - The empirical distribution function (EDF), denoted $F_{\text{emp}}(x)$, describes, for each $x$, the proportion of data values that are $\le x$.
-- Formal definition (if needed).
+- Formal definition.
   - For a sample $\{x_1, \dots, x_n\}$, the EDF is
     $$
     F_{\text{emp}}(x) = \frac{1}{n}\#\{ j \in \{1, \dots, n\} : x_j \le x\}.
@@ -215,7 +216,9 @@
   - To measure spread around the mean and compare variability between samples (e.g., control vs treatment groups in the lab).
   - As input to many later statistical procedures (confidence intervals, tests, etc.).
 - Common mistakes.
-  - Using $n$ instead of $n - 1$ when the formula is defined with $n - 1$ in the lecture.
+  - Forgetting the context of the denominator:
+    - use $n-1$ when the data are a sample from a larger population and you want $s^2$ to estimate the unknown population variance (unbiased “sample” variance);
+    - use $n$ when you are describing the spread of a finite population you have completely observed (population variance).
   - Forgetting to square the deviations before summing.
   - Taking the square root too early or forgetting it when going from variance to standard deviation.
 
