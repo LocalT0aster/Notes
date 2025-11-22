@@ -119,8 +119,8 @@
     $$
     F_\xi(x) =
     \begin{cases}
-    0, & x\le a,\$$2pt]
-    \dfrac{x-a}{b-a}, & a<x<b,\$$6pt]
+    0, & x\le a,\\
+    \dfrac{x-a}{b-a}, & a<x<b,\\
     1, & x\ge b,
     \end{cases}
     $$
@@ -254,18 +254,26 @@
   - $$
     p_\xi(x) = \frac{1}{\sqrt{2\pi}\,\sigma}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right).
     $$
+    <img src="img/CSE206_Fa24-05_image1548.png" alt="Standard normal pdf">
 - Standardization formula.
   - If $\xi\sim N(\mu,\sigma^2)$ and
     $$
     \eta = \frac{\xi-\mu}{\sigma},
     $$
     then $\eta\sim N(0,1)$.
+    <img src="img/CSE206_Fa24-05_image1549.png" alt="Shifted/variance-changed normal pdf">
 - When to use it.
   - To convert any normal variable to a standard normal variable so you can use standard tables or numerical functions to find probabilities.
   - To relate probabilities like $P(\xi\le t)$ to standard normal probabilities $P(Z\le z)$.
 - Common mistakes.
   - Forgetting to subtract $\mu$ before dividing by $\sigma$.
   - Using $\sigma^2$ instead of $\sigma$ in the denominator.
+
+<table><tr><td>
+<img src="img/CSE206_Fa24-05_image1550.png" alt="Normal cdf example">
+</td><td>
+<img src="img/CSE206_Fa24-05_image1551.png" alt="Normal cdf example with shift">
+</td></tr></table>
 
 ## 4. Worked examples
 

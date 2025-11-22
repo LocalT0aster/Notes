@@ -113,6 +113,15 @@
   - Histograms are better for large samples, letting you see overall shape (e.g., symmetric, skewed, multimodal) without tracking individual values.
 - Tiny example.
   - For the sample $\{10, -2, -4.5, -7.8, -1, 0, 0, 0, 3, 3, 0, 5, -1, 0, -2, -2, -7.7, 10, 10, 11, -2, -3\}$ from the lecture, the instructor shows dot plots and histograms that change shape when the number of cells $N$ changes.
+<table><tr><td>
+<img src="img/CSE206_Fa24-01_image430.png">
+</td><td>
+<img src="img/CSE206_Fa24-01_image428.png">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-01_image446.png">
+</td><td>
+<img src="img/CSE206_Fa24-01_image444.png">
+</td></tr></table>
 
 ### 2.7 Outliers and empirical distribution function
 - Plain-language definition.

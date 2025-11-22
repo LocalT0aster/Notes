@@ -62,6 +62,8 @@
 - Intuition / mental model.
   - $F_X(x)$ accumulates probability mass as $x$ increases; plotting $F_X$ shows how probability is distributed along the real line.
   - For discrete $X$, the cdf is a step function; for continuous $X$ (later), it will be continuous and usually smooth.
+  - Example cdf shape from lecture:
+    <img src="img/CSE206_Fa24-03_image797.png" alt="Step cdf for a discrete variable">
 - Basic properties (from lecture).
   - $\lim_{x\to -\infty}F_X(x)=0$.
   - $\lim_{x\to +\infty}F_X(x)=1$.
@@ -71,9 +73,9 @@
   - For $X$ = number of heads in two tosses of a fair coin, possible values are 0, 1, 2, and the lecture gives
     $$
     F_X(x)=\begin{cases}
-    0, & x<0,\$$2pt]
-    1/4, & 0\le x<1,\$$2pt]
-    3/4, & 1\le x<2,\$$2pt]
+    0, & x<0,\\
+    1/4, & 0\le x<1,\\
+    3/4, & 1\le x<2,\\
     1, & x\ge 2.
     \end{cases}
     $$

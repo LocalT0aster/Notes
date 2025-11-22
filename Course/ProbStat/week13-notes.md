@@ -11,6 +11,8 @@
 - The sample median is defined carefully using the ordered sample and has good asymptotic behavior for continuous distributions.
 - A general asymptotic result shows that, under mild conditions, the sample median is approximately normal around the true median when the sample size is large, with a variance depending on the underlying density at the median.
 
+<img src="img/CSE206_Fa24-13_image797.png" alt="Median sensitivity to density">
+
 ## 2. Key concepts and definitions
 
 ### 2.1 Risk function and loss
@@ -105,7 +107,7 @@
     $$
     \text{MAD}=
     \begin{cases}
-      \xi_{(j+1)}, &\text{if } n=2j+1 \text{ (odd sample size)},\$$4pt]
+      \xi_{(j+1)}, &\text{if } n=2j+1 \text{ (odd sample size)},\\
       \frac{1}{2}(\xi_{(j)}+\xi_{(j+1)}), &\text{if } n=2j \text{ (even sample size)}.
     \end{cases}
     $$

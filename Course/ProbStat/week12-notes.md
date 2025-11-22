@@ -12,6 +12,12 @@
 - Unbiasedness is defined as a key property of estimators: on average, the estimator equals the true parameter. Examples show both unbiased and biased estimators.
 - The lab applies these ideas to measurement data: computing confidence intervals, unbiased estimates of variance and standard deviation, and interpreting sample means via CLT.
 
+<img src="img/CSE206_Fa24-12_image605.png" alt="Confidence interval illustration">
+
+<img src="img/CSE206_Fa24-12_image854.png" alt="Estimator distribution depiction">
+
+<img src="img/CSE206_Fa24-12_image1207.png" alt="Sample minimum likelihood example">
+
 ## 2. Key concepts and definitions
 
 ### 2.1 Statistics and parameter space

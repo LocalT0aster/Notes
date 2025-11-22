@@ -127,6 +127,11 @@
 ### 2.6 Density of a function of a random variable
 - Plain-language definition.
   - If $\xi$ has a known density and we form a new variable $\eta = f(\xi)$, we can often find the density of $\eta$ using either cdfs or a change-of-variable formula.
+- Intuition / picture.
+  - Visualize how $f$ maps regions of the original support to the new support; areas stretch/shrink according to the derivative/Jacobian.
+  - The lecture uses geometric sketches for angular spreads and support mapping:
+    <img src="img/CSE206_Fa24-06_image1261.png" alt="Angular spread illustration">
+    <img src="img/CSE206_Fa24-06_image1468.png" alt="Mapping support through transformation">
 - Approach 1: via cdf.
   - For any real $y$,
     $$

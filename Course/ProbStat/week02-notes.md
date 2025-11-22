@@ -14,6 +14,8 @@
 
 ## 2. Key concepts and definitions
 
+<img src="img/CSE206_Fa24-02_image1266.png" alt="Venn diagram of events A and B inside sample space">
+
 ### 2.1 Sample space, events, and σ-algebra
 - Plain-language definition.
   - The sample space, usually written $\Omega$, is the set of all possible outcomes of an experiment.

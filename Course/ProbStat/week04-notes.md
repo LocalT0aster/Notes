@@ -209,6 +209,8 @@
   - Forgetting to square $(\xi-E\xi)$ when computing variance.
   - Using $\text{Var}(\xi)=E\xi^2$ instead of $\text{Var}(\xi)=E\xi^2 - (E\xi)^2$.
 
+<img src="img/CSE206_Fa24-04_image1488.png" alt="Sample pmf plot">
+
 ### 3.2 Linearity and variance rules
 - Linearity of expectation.
   - For any random variables $\xi_1,\dots,\xi_n$ with finite expectations:
@@ -227,6 +229,8 @@
 - Common mistakes.
   - Assuming “variance is linear” without independence; for non-independent variables, cross terms appear.
   - Forgetting to square $c$ when pulling it out of variance.
+
+<img src="img/CSE206_Fa24-04_image1490.png" alt="Pmf with higher concentration near mean">
 
 ### 3.3 Covariance and correlation
 - Covariance formula.
@@ -386,6 +390,8 @@
     \xi = \sum_{j=1}^n I_j,
     $$
     and compute $E\xi$ as $\sum E I_j$. Similar ideas help with lift stops, number of white balls, etc.
+
+<img src="img/CSE206_Fa24-04_image2880.png" alt="Mixed cdf with jump and slope">
 
 ### 5.3 Mini practice
 - Practice 1: variance and shifts.

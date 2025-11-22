@@ -11,6 +11,40 @@
 - WLLN and CLT underpin statistical estimation: sample averages from polls or experiments become accurate and approximately normal for large samples.
 - The lab applies Chebyshev’s inequality and CLT to dice, Bernoulli sequences, and other discrete models to bound or approximate probabilities.
 
+<table><tr><td>
+<img src="img/CSE206_Fa24-11_image1923.png" alt="Sample mean convergence illustration 1">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1924.png" alt="Sample mean convergence illustration 2">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1925.png" alt="Sample mean convergence illustration 3">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1926.png" alt="Sample mean convergence illustration 4">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1927.png" alt="Sample mean convergence illustration 5">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1928.png" alt="Sample mean convergence illustration 6">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1929.png" alt="Sample mean convergence illustration 7">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1930.png" alt="Sample mean convergence illustration 8">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1951.png" alt="Bernstein vs Chebyshev 1">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1952.png" alt="Bernstein vs Chebyshev 2">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1953.png" alt="Bernstein vs Chebyshev 3">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1954.png" alt="Bernstein vs Chebyshev 4">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1955.png" alt="Bernstein vs Chebyshev 5">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1956.png" alt="Bernstein vs Chebyshev 6">
+</td></tr><tr><td>
+<img src="img/CSE206_Fa24-11_image1957.png" alt="Bernstein vs Chebyshev 7">
+</td><td>
+<img src="img/CSE206_Fa24-11_image1958.png" alt="Bernstein vs Chebyshev 8">
+</td></tr></table>
+
 ## 2. Key concepts and definitions
 
 ### 2.1 Weak law of large numbers (WLLN)
