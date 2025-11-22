@@ -244,6 +244,7 @@
   - $$
     F_{\text{emp}}(x) = \frac{1}{n}\#\{ j \in \{1, \dots, n\} : x_j \le x\}.
     $$
+  - In words: the EDF takes your sample values $x_1,\dots,x_n$ and, for any cutoff $x$ you choose, gives back the fraction of sample points that are $\le x$. If you plot $x\mapsto F_{\text{emp}}(x)$, you get a step graph that shows how the data accumulate from left to right.
 - Symbols.
   - $x$: point on the horizontal axis where we evaluate the function.
   - $x_j$: data points.
