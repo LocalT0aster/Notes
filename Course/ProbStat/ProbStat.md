@@ -24,6 +24,7 @@
   - [Week 13 Notes](week13-notes.md): UMVU, risk, Cauchy caveat, sample median asymptotics
   - [Week 14 Notes](week14-notes.md): Estimation methods (moments, MLE), hypothesis testing setup (Type I/II, critical regions)
   - [Week 15 Notes](week15-notes.md): Hypothesis testing II (power, unbiased/consistent tests)
+- [Formulas](formulas.md)
 - [Test 1 Cheat Sheet](Test1cheat.md)
 
 [<kbd><br><- Return<br></kbd>](../Course.md)

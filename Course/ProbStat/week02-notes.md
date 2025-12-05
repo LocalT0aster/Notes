@@ -23,7 +23,7 @@
   - A σ-algebra (σ-field) $\mathcal{F}$ is a collection of subsets of $\Omega$ that we are allowed to treat as events.
 - Formal definition.
   - Sample space: $\Omega$ is a nonempty set (for example, $\{H, T\}$ when tossing one coin).
-  - Event: any element of $\mathcal{F} \subseteq 2^\Omega$.
+  - Event: any element of $\mathcal{F} \subseteq 2^\Omega$, where $2^\Omega$ (the power set of $\Omega$) means “all subsets of $\Omega$”.
   - σ-algebra $\mathcal{F}$ satisfies:
     1. $\varnothing \in \mathcal{F}$.
     2. If $A \in \mathcal{F}$, then its complement $A^c = \Omega \setminus A \in \mathcal{F}$.
