@@ -44,5 +44,3 @@ Chains of responsibility:
 - Object removal from chain (e.g., in Dispose())
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

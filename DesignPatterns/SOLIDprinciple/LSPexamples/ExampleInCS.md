@@ -79,5 +79,3 @@ public class Demo
     }
 }
 ```
-
-[<kbd><br><- Return<br></kbd>](../LSP.md)

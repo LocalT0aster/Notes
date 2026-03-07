@@ -11,5 +11,3 @@
 - ChatGPT 4 Explains
   - [Week 03 Actors](ChatExplains/AIWeek03.md)
 - [Private Notes](../../../Course/PhilAI/PhilAI.md)
-
-[<kbd><br><- Return<br></kbd>](../Course.md)

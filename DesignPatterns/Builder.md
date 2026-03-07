@@ -39,5 +39,3 @@ The Builder design pattern is a creational pattern that provides a way to constr
 ## Examples
 
 [Examples in C#](BuilderExamples/ExamplesInCS.md)
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

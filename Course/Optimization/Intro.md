@@ -16,5 +16,3 @@
 - What if we know about Optimization?
   - We can use these methods and techniques for all kind of engineering and scientific problems.
   - We can improve these methods and adapt them for special problems.
-
-[<kbd><br><- Return<br></kbd>](Optimization.md)

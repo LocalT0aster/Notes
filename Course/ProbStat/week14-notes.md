@@ -335,5 +335,3 @@
 - For normal data with known variance, tests on the mean use standardized sample means and normal quantiles, paralleling confidence interval constructions.
 - The week 14 lab reinforces computation of MMEs/MLEs and practice in setting up and interpreting hypothesis tests for binomial and normal models, including Type I/II error probabilities and normal approximations.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

@@ -251,5 +251,3 @@
 - Under general conditions on the pdf at the median, the sample median is asymptotically normal with variance depending on the density at the median, giving a consistent and approximately Gaussian estimator even when the mean may not exist.
 - For models with good properties (normal, Bernoulli, uniform), UMVU estimators match familiar statistics; for heavy-tailed models (Cauchy), robust estimators like the median are needed.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

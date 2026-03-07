@@ -294,5 +294,3 @@
 - The inversion and rejection sampling methods allow us to simulate from many distributions starting from a `Uni(0,1)` source, and the lab applies these ideas to exponentials and general densities.
 - The lab also develops the chi-squared distribution as the sum of squares of independent standard normal variables, linking normal and chi-squared families.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

@@ -73,5 +73,3 @@ Factory Method is a pattern that lets subclasses decide which class to instantia
 ## Examples
 
 [Examples in C#](FactoryExamples/ExamplesInCS.md)
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

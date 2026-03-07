@@ -291,5 +291,3 @@
 - Optimal transport reframes transport maps and costs in terms of couplings, leading to the Monge–Kantorovich formulation.
 - The week 10 recap lab ties together multivariate normals, change-of-variables, convolution, sampling via inversion and rejection, and Markov/Chebyshev bounds as a consolidation of earlier material.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

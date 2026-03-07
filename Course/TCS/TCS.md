@@ -9,5 +9,3 @@
 ## Contents
 
 - [AI explains Syllabus topics](AIrequests.md)
-
-[<kbd><br><- Return<br></kbd>](../Course.md)

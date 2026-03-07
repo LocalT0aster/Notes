@@ -9,5 +9,3 @@
 ## Contents
 
 - [Midterm Prep](MidPrep.md)
-
-[<kbd><br><- Return<br></kbd>](../Course.md)

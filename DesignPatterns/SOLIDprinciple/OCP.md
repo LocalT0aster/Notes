@@ -10,5 +10,3 @@
 ## Examples
 
 [Example in C#](OCPexamples/ExampleInCS.md)
-
-[<kbd><br><- Return<br></kbd>](SOLID.md)

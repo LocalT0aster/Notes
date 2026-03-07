@@ -64,5 +64,3 @@ $A = S\Lambda S^{-1}$
 $A = Q\Lambda Q^T$
 
 $AV = U\Sigma$
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

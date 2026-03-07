@@ -12,5 +12,3 @@ All columns of $A - I = 0 ⇒ A-I$ singular because rows dependent $A^T\times (1
 $\lambda$ of $A$ and $A^T$ same
 
 $U_{k+1} = A\times U_k$
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

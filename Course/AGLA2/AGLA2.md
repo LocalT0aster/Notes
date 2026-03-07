@@ -14,5 +14,3 @@
 - [Retake preparation](RetakePrep.md)
 - Exams:
   - [Retake 1 2021](Retake21.md)
-
-[<kbd><br><- Return<br></kbd>](../Course.md)

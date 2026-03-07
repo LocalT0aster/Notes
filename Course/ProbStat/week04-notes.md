@@ -417,5 +417,3 @@
 - Expectation extends beyond purely discrete variables using cdfs and integrals; mixed distributions can combine discrete masses and continuous densities.
 - The week 4 lab applies these concepts to Poisson, geometric, permutations, joint distributions, and real-world style models (testing, lifts, dice, cards).
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

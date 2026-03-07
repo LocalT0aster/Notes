@@ -226,5 +226,3 @@ class Program
     }
 }
 ```
-
-[<kbd><br><- Return<br></kbd>](../Factory.md)

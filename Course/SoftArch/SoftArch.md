@@ -9,5 +9,3 @@
 ## Contents
 
 - [Pre-Midterm Preparation](PreMid.md)
-
-[<kbd><br><- Return (Course)<br></kbd>](../Course.md)

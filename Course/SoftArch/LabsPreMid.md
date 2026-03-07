@@ -153,5 +153,3 @@
 - [L4] **Lab deck**: “Lab Week 4 (Use Case Diagram).pdf,” *UML use-case components & relationships; workflow examples; deliverable requirements*, Sept. 17, 2025.
 - [L5] **Lab deck**: “Lab Week 5 Choosing a model and methodology.pdf,” *Lifecycle models vs. methodologies; comparative analysis; selection questions; justification task*, Sept. 24, 2025.
 - [L6] **Lab deck**: “Lab Week 6.pdf,” *Detailed class diagram & final architecture choice; UML relationships, visibility, parameter directionality; midterm announcement*, Oct. 1, 2025.
-
-[<kbd><br><- Return (PreMid)<br></kbd>](PreMid.md)

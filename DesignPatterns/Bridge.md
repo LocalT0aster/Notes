@@ -35,5 +35,3 @@ The Bridge design pattern is a structural design pattern that decouples an abstr
 - Decouple abstraction from implementation
 - Both can exist as hierarchies
 - A stronger form of encapsulation
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

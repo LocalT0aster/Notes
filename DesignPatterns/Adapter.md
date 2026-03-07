@@ -37,5 +37,3 @@ we require from the interface we have
 - Intermediate representations can pile up: use caching and other optimizations
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

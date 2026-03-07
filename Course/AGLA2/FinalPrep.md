@@ -154,5 +154,3 @@ a\cdot cos(b)
 ## MIT Lecture notes from @kupamonke
 
 [Link to MIT Notes](MIT/MIT.md)
-
-[<kbd><br><- Return<br></kbd>](AGLA2.md)

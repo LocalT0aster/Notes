@@ -128,5 +128,3 @@ public struct MultiFunctionMachine : IMultiFunctionDevice
     }
 }
 ```
-
-[<kbd><br><- Return<br></kbd>](../ISP.md)

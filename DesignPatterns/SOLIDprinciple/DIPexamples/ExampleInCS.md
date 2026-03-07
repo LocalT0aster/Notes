@@ -91,6 +91,3 @@ public class Research
     }
 }
 ```
-
-<!--Back Button-->
-[<kbd><br><- Return<br></kbd>](../DIP.md)

@@ -94,5 +94,3 @@ Quick reference of the formulas used across the weekly notes, with brief explana
 - Power function (conceptual): $\beta(\theta)=P_\theta(\text{reject }H_0)$; aim for small Type I, large power on $H_1$.
 - Unbiased/consistent tests: see week15 notes for specific constructions; formulas follow the same critical-value pattern as week14.
   - Symbols: $\beta(\theta)$ power; $\alpha$ significance; $H_0,H_1$ hypotheses.
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

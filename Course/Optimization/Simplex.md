@@ -253,5 +253,3 @@ Now, all coefficients in the Z-row are non-negative, which means we have reached
 - $s_1 = 0$ (Not in the basis)
 - $s_2 = 1$
 - $s_3 = 0$ (Not in the basis)
-
-[<kbd><br><- Return<br></kbd>](Optimization.md)

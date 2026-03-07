@@ -455,5 +455,3 @@ $y′′ − y = 1, y(0) = 0, y|_{x\rightarrow \infty}$ is bounded
 - [7.9)](#79) $y=(\frac{shx}{sh1})-2x$
 - [7.10)](#710) $no solution$
 - [7.11)](#711) $y=e^{-x}-1$
-
-[<kbd><br><- Return<br></kbd>](DifFurry.md)

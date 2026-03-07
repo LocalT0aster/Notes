@@ -37,5 +37,3 @@ The Flyweight design pattern is a structural pattern used for efficiency, mainly
 - .NET string interning is the Flyweight pattern
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

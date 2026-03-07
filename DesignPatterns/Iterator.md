@@ -37,5 +37,3 @@ The Iterator design pattern provides a way to access elements of a collection ob
 type that has Current and `MoveNext()`
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

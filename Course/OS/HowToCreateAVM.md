@@ -41,5 +41,3 @@ Select the VM and press `Start` button
 Follow [this guide](https://manual.lubuntu.me/stable/1/1.3/installation.html) if you are installing `lubuntu`, and if you are using other distro, just search for `[your distro name] installation`.
 
 ## End of the guide
-
-[<kbd><br><- Return<br></kbd>](Lab1Solution.md)

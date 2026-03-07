@@ -20,5 +20,3 @@ $S^{-1} A S = \Lambda$ so $A$ and $\Lambda$ are simular
 ![282.png](img/282.png)
 
 ![283.png](img/283.png)
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

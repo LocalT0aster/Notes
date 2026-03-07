@@ -23,5 +23,3 @@ dimension of space V is number of vectors in basis of V
 rg(A) = # pivot columns = dimension of C(A) = dimension of R(A)
 
 dimension of N(A) = # columns - rg(A)
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

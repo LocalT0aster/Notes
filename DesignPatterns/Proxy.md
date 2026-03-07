@@ -38,5 +38,3 @@ The Proxy pattern provides a surrogate or placeholder for another object to cont
 - Different proxies (communication, logging, caching, etc.) have completely different behaviors
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

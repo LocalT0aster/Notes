@@ -311,5 +311,3 @@
 - Chebyshev and Bernstein inequalities are useful for rigorous upper bounds, while CLT is used for accurate numerical approximations of probabilities.
 - The week 11 lab applies these limit theorems to real-style problems: typo rates, dice sums, patterns in Bernoulli sequences, growing-variance normals, counts of events, and digit-based “lucky ticket” criteria.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

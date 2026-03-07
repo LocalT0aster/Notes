@@ -43,5 +43,3 @@ This pattern decouples the sender (Invoker) and receiver (Receiver) of a request
 - Can create composite commands (a.k.a. macros)
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

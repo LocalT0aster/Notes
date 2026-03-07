@@ -435,5 +435,3 @@
 - The normal distribution $N(\mu,\sigma^2)$ has bell-shaped density, with most probability mass within a few standard deviations of the mean, and can be standardized to $N(0,1)$.
 - The week 5 lab emphasizes working with uniform cdfs and pdfs (including max and min), and with transformations of normal random variables (standardization and squaring).
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

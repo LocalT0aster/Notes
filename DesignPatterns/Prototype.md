@@ -37,5 +37,3 @@ The Prototype pattern is a creational design pattern that allows cloning objects
 - Customize the resulting instance
 
 ## Examples
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

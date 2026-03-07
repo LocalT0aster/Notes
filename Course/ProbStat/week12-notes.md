@@ -406,5 +406,3 @@
 - The sample mean is an unbiased estimator of the population mean; other intuitive estimators (like $n/S_n$ in exponential models) can be biased.
 - The week 12 lab practices constructing confidence intervals, computing unbiased variance and standard deviation estimates, and using CLT to interpret sample means in real measurement and quality-control contexts.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

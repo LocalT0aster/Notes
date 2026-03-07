@@ -367,5 +367,3 @@
 - The density of a transformed random variable $\eta=f(\xi)$ can be found by differentiating its cdf or using the change-of-variable formula with the inverse of $f$.
 - The week 6 lab deepens understanding of hypergeometric distributions, Monte Carlo estimation of integrals, multinomial profiles of topics, and density transformations for Cauchy and exponential variables.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

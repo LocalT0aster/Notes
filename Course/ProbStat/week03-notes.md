@@ -439,5 +439,3 @@
 - Random vectors group several random variables; their behavior is described using joint, marginal, and conditional pmfs.
 - The lab reinforces these ideas through problems on joint distributions, indicator variables, derived pmfs, sums of Poisson and binomial variables, and constructing valid discrete distributions.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

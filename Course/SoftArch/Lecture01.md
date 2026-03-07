@@ -183,5 +183,3 @@ For each model: **Idea → When to use → Strengths → Pitfalls → One-line d
 - [2] **Slides**: “Lecture01_CourseIntroduction.pdf,” *Based on ISR: Architectures for Software Systems* (architecture motivation, definitions, agile vs. architecture, right-weight design), Sept. 2023.
 - [3] **Slides**: “Lecture01_Lifecycle_Models.pdf,” *Enterprise Software Systems Development — Lifecycle Models* (Build-and-Fix, Waterfall/V-model, Rapid Prototyping, Incremental/Evolution, Spiral, Synchronize-and-Stabilize, OO/Fountain; pros/cons and applicability), 2024.
 - [4] **Slides (self-study)**: “Lecture01_SoftwareLifecycle.pdf,” *Architecture of Software Systems — Software Lifecycle* (stages, roles, economics, maintenance share, comparative model analysis), 2021.
-
-[<kbd><br><- Return (PreMid)<br></kbd>](PreMid.md)

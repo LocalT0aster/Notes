@@ -396,5 +396,3 @@
 - Bayes’ formula updates the probabilities of hypotheses after observing data, and can dramatically shift probabilities when observations are unlikely under most hypotheses.
 - The week 2 lab deepens these ideas through many exercises on combinatorial probability, conditional probability, independence, and Bayes’ rule in practical scenarios.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

@@ -37,5 +37,3 @@ The Template Method pattern is a behavioral design pattern that defines the prog
 - Inherit the algorithm class, providing necessary overrides
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

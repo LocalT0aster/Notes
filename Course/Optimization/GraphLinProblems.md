@@ -172,5 +172,3 @@ The optimal solution occurs at the point $(x, y) = (2, 3)$ with a maximum object
 This means that to maximize $Z = 3x + 4y$ subject to the given constraints, we should choose $x = 2$ and $y = 3$.
 
 The graphical method is a powerful tool for visualizing and understanding the solution to linear programming problems, especially when there are only two variables. For problems with more than two variables, however, we would need to use other methods, such as the Simplex method or interior point methods.
-
-[<kbd><br><- Return<br></kbd>](Optimization.md)

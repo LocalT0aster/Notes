@@ -16,6 +16,3 @@
 - [21 (test 2)](MIT21.22.23.29.md)
 - [24](MIT24.md)
 - [28. Similar Matrices and Jordan Form](MIT28.md)
-
-[<kbd><br><- Return (FinalPrep)<br></kbd>](../FinalPrep.md)
-[<kbd><br><- Return (AGLA2)<br></kbd>](../AGLA2.md)

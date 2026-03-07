@@ -60,5 +60,3 @@ Examples from the course:
 [Design Patterns in C# and .NET: Learn Solutions to Common Problems](https://www.udemy.com/course/design-patterns-csharp-dotnet/)
 
 Found on rutracker.org
-
-[<kbd><br><- Return<br></kbd>](../README.md)

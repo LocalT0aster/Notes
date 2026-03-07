@@ -6,5 +6,3 @@
 4. left null space $N(A^T)$
 
 Подробнее в [Холодов 4](../Kholodov.md#холодов-4).
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

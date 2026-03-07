@@ -186,5 +186,3 @@ gh repo create
 ```
 
 ## End of the Lab
-
-[<kbd><br><- Return<br></kbd>](OS.md)

@@ -39,5 +39,3 @@ The Decorator design pattern allows behavior to be added to an individual object
 - Exists in a static variation
   - `X<Y<Foo>>`
   - Very limited due to inability to inherit from type parameters
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

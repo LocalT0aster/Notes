@@ -36,5 +36,3 @@
 - [4] **Lecture04.md** — *.NET Platform & Object-Oriented Analysis*, 24 Sep 2025.
 - [5] **Lecture05.md** — *Object-Oriented Design & Detailed OOD*, 1 Oct 2025.
 - [6] **LabsPreMid.md** — *Labs Pack (Weeks 1–6): setup, elicitation, ToR, use-cases, model/method, class diagram & architecture*, 27 Aug–1 Oct 2025.
-
-[<kbd><br><- Return (SoftArch)<br></kbd>](SoftArch.md)

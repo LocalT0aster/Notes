@@ -39,5 +39,3 @@ The Null Object design pattern provides a default object that does nothing in pl
   - With associated performance implications
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

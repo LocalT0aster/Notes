@@ -27,5 +27,3 @@
 - [Formulas](formulas.md)
 - [Distributions](distributions.md)
 - [Test 1 Cheat Sheet](Test1cheat.md)
-
-[<kbd><br><- Return<br></kbd>](../Course.md)

@@ -38,5 +38,3 @@ The Visitor design pattern is a behavioral pattern that allows you to add new be
 (dynamic dispatch)
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

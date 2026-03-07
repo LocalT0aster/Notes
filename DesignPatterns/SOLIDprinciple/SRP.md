@@ -16,5 +16,3 @@ Example in C++ (soon)
 Example in Java (soon)
 
 Example in python (soon)
-
-[<kbd><br><- Return<br></kbd>](SOLID.md)

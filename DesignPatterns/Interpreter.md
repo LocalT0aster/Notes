@@ -40,5 +40,3 @@ The Interpreter design pattern is a behavioral pattern used when you want to def
 - Parsed data can then be traversed
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

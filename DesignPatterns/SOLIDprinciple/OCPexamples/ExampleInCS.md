@@ -172,5 +172,3 @@ public class Demo
     }
 }
 ```
-
-[<kbd><br><- Return<br></kbd>](../OCP.md)

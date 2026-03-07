@@ -42,5 +42,3 @@
   - Default action when no transitions are found for an event
 
 ---
-
-[<kbd><br><- Return<br></kbd>](DesignPatterns.md)

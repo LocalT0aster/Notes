@@ -40,5 +40,3 @@ $q_3^* = a_3 - (a_3\cdot q_1)q_1 - (a_3\cdot q_2)q_2, q_3 = \frac{q_3^*}{|q_3^*|
 $R = Q^TA$
 
 $R = \begin{bmatrix} |\vec a| & a_2\cdot q_1 & a_3\cdot q_1 \\ 0 & |q_2^*| & a_3\cdot q_2 \\ 0 & 0 & |q_3^*| \end{bmatrix}$
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

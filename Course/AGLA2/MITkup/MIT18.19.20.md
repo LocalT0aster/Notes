@@ -35,5 +35,3 @@ $|\underset{n\times n}A| = \sum\limits_{i = 1}^n (-1)^{n-1} a_{1,i} det(C(a_{1,i
 $\begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}^{-1} = \frac{1}{ad - cd} \begin{bmatrix} d & -b \\ -c & a \\ \end{bmatrix}$
 
 $\underset{n\times n}A^{-1} = \frac{1}{|A|} \underset{n\times n}C ^ T$
-
-[<kbd><br><- Return<br></kbd>](MIT.md)

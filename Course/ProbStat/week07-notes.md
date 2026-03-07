@@ -369,5 +369,3 @@
 - Joint densities transform under smooth invertible changes of variables via the Jacobian determinant, both in one and multiple dimensions.
 - The week 7 lab connects Poisson approximations to practical problems and uses geometric joint densities (like the unit disk) to practice finding marginals, covariances, dependence, and conditional expectations.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

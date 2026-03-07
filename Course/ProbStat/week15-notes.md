@@ -233,5 +233,3 @@
 - A test is consistent if, for any fixed alternative parameter, the power approaches 1 as the sample size grows, ensuring that large samples make true differences almost surely noticeable.
 - The week 15 lecture uses the normal mean test to derive these ideas concretely, but the definitions and concepts generalize to a wide range of statistical testing problems.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

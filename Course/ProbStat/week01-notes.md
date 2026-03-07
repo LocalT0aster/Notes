@@ -408,5 +408,3 @@
 - The empirical distribution function $F_{\text{emp}}(x)$ counts the proportion of observations $\le x$ and connects the sample to quantiles like the median.
 - The week 1 lab reinforces these ideas by having you compute means, medians, trimmed means, standard deviations, draw dot plots and histograms, and interpret differences between groups.
 
-
-[<kbd><br><- Return (ProbStat)<br></kbd>](ProbStat.md)

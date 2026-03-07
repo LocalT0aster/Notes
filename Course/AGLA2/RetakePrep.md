@@ -14,5 +14,3 @@
 8. [Vector Differential Equations.](ChatExplainRetake/8.md)
 9. [Orthogonalization (Gram-Schmidt), QR decomposition.](ChatExplainRetake/9.md)
 10. [SVD decomposition, Pseudoinverse.](ChatExplainRetake/a.md)
-
-[<kbd><br><- Return<br></kbd>](AGLA2.md)

@@ -51,5 +51,3 @@
 - Engineering Optimization: Theory and Practice, by Singiresu S. Rao, John Wiley and Sons.
 - Introduction to Linear Optimization, by Bertsimas, Dimitris, and John Tsitsiklis. Belmont, MA: Athena Scientific, 1997. ISBN: 9781886529199.
 - Convex Optimization, by Boyd and Vandenberghe. Cambridge University Press.
-
-[<kbd><br><- Return<br></kbd>](../Course.md)
