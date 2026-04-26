@@ -10,6 +10,7 @@
 
 - [AGLA2](AGLA2/AGLA2.md)
 - [Differential Equations](DifFurry/DifFurry.md)
+- [ML](ML/ML.md)
 - [Optimization](Optimization/Optimization.md)
 - [OS](OS/OS.md)
 - [Physics](Physics/Physics.md)
