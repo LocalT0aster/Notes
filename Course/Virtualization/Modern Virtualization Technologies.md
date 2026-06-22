@@ -27,8 +27,10 @@ Split and cleaned from the original Etherpad HTML dump. Each lecture note keeps 
 
 ## Guides
 
-- [[guides/Alpine VM with LVM and networking|Alpine VM with LVM and networking]] - QEMU setup with an LVM-backed disk and user-mode DHCP/NAT networking
-- [[guides/Arch VM with LVM and networking|Arch VM with LVM and networking]] - QEMU setup with an LVM-backed disk, GRUB, and persistent DHCP networking
+- [[guides/VM setup with LVM - branching guide|VM setup with LVM - branching guide]] - entry point for Arch/Alpine VM setup branches
+- [[guides/Arch VM with LVM and networking|Arch VM with LVM and networking]] - Arch branch index with GRUB and UKI options
+- [[guides/Alpine VM with LVM and networking|Alpine VM with LVM and networking]] - Alpine branch using an LVM-backed disk
+- [[guides/VM networking with QEMU and libvirt|VM networking with QEMU and libvirt]] - shared NAT, bridge, DHCP, static IP, and SSH setup
 
 ## Source
 

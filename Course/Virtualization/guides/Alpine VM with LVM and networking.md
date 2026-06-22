@@ -4,7 +4,7 @@ topics:
   - "Alpine Linux"
   - "QEMU"
   - "LVM-backed virtual disks"
-  - "user-mode networking"
+  - "networking branch"
 tags:
   - virtualization
   - virtual-machines
@@ -17,14 +17,14 @@ source: "2026-04-11 Compose profiles and VM intro.md"
 
 # Alpine VM with LVM and networking
 
-This flow creates a small Alpine VM using an LVM logical volume as the disk. QEMU provides a virtual network card and a built-in DHCP/NAT network by default, so the VM can reach the internet without extra host-side bridge setup.
+This is the Alpine branch from [[guides/VM setup with LVM - branching guide|VM setup with LVM - branching guide]]. Alpine uses its own installer and OpenRC networking, then merges into [[guides/VM networking with QEMU and libvirt|VM networking with QEMU and libvirt]] for NAT, SSH forwarding, and bridge notes.
 
 Assumptions:
 
-- The volume group is called `astra`.
-- The logical volume will be called `vm-alpine`.
-- The Alpine ISO is in the current directory.
-- Commands that access the LVM block device run with `sudo`.
+- Host volume group: `astra`
+- Host logical volume: `vm-alpine`
+- Alpine ISO is in the current directory.
+- QEMU uses the host LV as a raw disk.
 
 ## Select the image
 
@@ -36,27 +36,14 @@ Example from the lecture:
 wget https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-virt-3.23.3-x86_64.iso
 ```
 
-## Install QEMU tools
-
-```bash
-sudo apt install --no-install-recommends qemu-system-x86 qemu-utils
-```
-
-## Create the LVM disk
-
-Create a 2 GiB logical volume:
+## Create the host LVM disk
 
 ```bash
 sudo lvcreate -L2G -n vm-alpine astra
-```
-
-Check that the block device exists:
-
-```bash
 ls -l /dev/astra/vm-alpine
 ```
 
-The QEMU disk format is `raw` because an LVM logical volume is already a block device. Do not use `qcow2` here.
+Use `format=raw` because an LVM LV is already a block device.
 
 ## Boot the installer
 
@@ -72,50 +59,21 @@ sudo qemu-system-x86_64 \
   -nic user,model=virtio-net-pci
 ```
 
-Options:
-
-- `-m 256` gives the VM 256 MiB of RAM.
-- `-enable-kvm -cpu host` uses hardware virtualization when available.
-- `-nographic` keeps the VM in the terminal.
-- `-cdrom ... -boot d` boots from the Alpine ISO.
-- `-drive file=/dev/astra/vm-alpine,format=raw` uses the LVM volume as the VM disk.
-- `-nic user,model=virtio-net-pci` gives the VM outbound NAT networking with DHCP.
-
-## Bring up networking in the live ISO
+## Bring up live ISO networking
 
 Log in as `root`; the live ISO has no root password.
 
-Check that the virtual NIC exists:
-
 ```bash
 ip a
-```
-
-Bring up `eth0` and request an address:
-
-```bash
 ip link set dev eth0 up
 udhcpc -i eth0
-```
-
-Verify connectivity:
-
-```bash
-ip a show eth0
-ip route
 ping -c 3 1.1.1.1
 ping -c 3 alpine.org
 ```
 
-If the IP ping works but the domain ping fails, check DNS:
+## Install Alpine
 
-```bash
-cat /etc/resolv.conf
-```
-
-## Install Alpine to the LVM disk
-
-Run the installer:
+Run:
 
 ```bash
 setup-alpine
@@ -137,8 +95,6 @@ poweroff
 
 ## Boot from the installed disk
 
-Start QEMU without the ISO:
-
 ```bash
 sudo qemu-system-x86_64 \
   -m 256 \
@@ -149,14 +105,11 @@ sudo qemu-system-x86_64 \
   -nic user,model=virtio-net-pci
 ```
 
-After boot, networking should come up from the installed configuration. If it does not:
+Continue to [[guides/VM networking with QEMU and libvirt|VM networking with QEMU and libvirt]].
 
-```bash
-ip link set dev eth0 up
-udhcpc -i eth0
-```
+## Alpine-specific persistence
 
-For persistent DHCP, `/etc/network/interfaces` should contain:
+If DHCP does not persist after install, `/etc/network/interfaces` should contain:
 
 ```ini
 auto lo
@@ -166,30 +119,14 @@ auto eth0
 iface eth0 inet dhcp
 ```
 
-Enable and restart networking if needed:
+Enable and restart networking:
 
 ```bash
 rc-update add networking boot
 rc-service networking restart
 ```
 
-## Optional SSH access from the host
-
-QEMU user-mode networking lets the VM reach the internet, but the host cannot directly connect into the VM unless you forward a port.
-
-Boot with host port `2222` forwarded to guest port `22`:
-
-```bash
-sudo qemu-system-x86_64 \
-  -m 256 \
-  -enable-kvm \
-  -cpu host \
-  -nographic \
-  -drive file=/dev/astra/vm-alpine,format=raw \
-  -nic user,model=virtio-net-pci,hostfwd=tcp::2222-:22
-```
-
-Inside Alpine, install and start SSH:
+For SSH:
 
 ```bash
 apk update
@@ -198,41 +135,4 @@ rc-update add sshd default
 rc-service sshd start
 ```
 
-Connect from the host:
-
-```bash
-ssh -p 2222 root@127.0.0.1
-```
-
-For real use, create a normal user and use SSH keys instead of logging in as root.
-
-## Troubleshooting
-
-No `eth0`:
-
-```bash
-ip link
-```
-
-If there is no NIC at all, make sure QEMU was started with `-nic user,model=virtio-net-pci` and not `-nic none`.
-
-No IP address:
-
-```bash
-ip link set dev eth0 up
-udhcpc -i eth0
-```
-
-No DNS:
-
-```bash
-cat /etc/resolv.conf
-```
-
-Cannot boot from disk:
-
-```bash
-sudo fdisk -l /dev/astra/vm-alpine
-```
-
-If the disk is empty or not marked as installed, boot from the ISO again and rerun `setup-alpine`, selecting `sda` and `sys`.
+See [[guides/VM networking with QEMU and libvirt#SSH service in the guest|SSH service in the guest]] for the shared SSH notes.
