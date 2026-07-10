@@ -77,7 +77,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
-Optional microcode:
+Optional microcode (ignore if you don't know):
 
 ```bash
 pacman -S intel-ucode
@@ -96,6 +96,7 @@ hwclock --systohc
 
 Set locale:
 
+> If you are human, instead of `sed` you can do: `nano /etc/locale.gen` -> Where/Find -> `en_US` -> remove `#`.
 ```bash
 sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
@@ -117,7 +118,7 @@ Edit:
 nano /etc/mkinitcpio.conf
 ```
 
-Make sure `lvm2` is between `block` and `filesystems`:
+> **⚠️⚠️⚠️Make sure `lvm2` is between `block` and `filesystems`⚠️⚠️⚠️**
 
 ```bash
 HOOKS=(base udev autodetect microcode modconf kms keyboard keymap block lvm2 filesystems fsck)
@@ -133,8 +134,8 @@ ROOT_UUID="$(blkid -s UUID -o value /dev/arch/root)"
 echo "root=UUID=$ROOT_UUID rw" > /etc/kernel/cmdline
 ```
 
-The `root=` value points to the root filesystem UUID, not the host LV and not the ESP.
-
+> The `root=` value points to the root filesystem UUID, not the host LV and not the ESP.
+> If the `()` don't work for you for some reason, you can pipe the `blkid` to the file and edit with nano.
 ## Configure UKI output
 
 Edit:
@@ -193,7 +194,7 @@ mkdir -p /efi/EFI/Linux
 mkinitcpio -p linux
 ```
 
-Verify:
+Verify (check):
 
 ```bash
 ls -lh /efi/EFI/Linux
