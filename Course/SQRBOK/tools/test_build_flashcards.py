@@ -25,6 +25,23 @@ MANIFEST = SQRBOK_ROOT / "source_manifest.json"
 
 
 class RevisionQuestionExtractionTest(unittest.TestCase):
+    def test_static_deck_identifies_topic_and_origin(self) -> None:
+        self.assertIn('class="card-meta"', builder.STATIC_HTML_TEMPLATE)
+        self.assertIn("esc(c.topic)", builder.STATIC_HTML_TEMPLATE)
+        self.assertIn("esc(c.source_path)", builder.STATIC_HTML_TEMPLATE)
+
+    def test_truncation_preserves_markdown_block_boundaries(self) -> None:
+        text = (
+            "#### Detailed View Descriptions\n\n"
+            "**1. Transcendent View**\n"
+            "- Quality is absolute and universally recognizable\n"
+        )
+
+        truncated = builder.truncate_markdown(text, limit=40)
+
+        self.assertNotIn("**1.", truncated)
+        self.assertIn("\n\n…", truncated)
+
     def test_markdown_renderer_handles_source_blocks_safely(self) -> None:
         rendered = builder.markdownish_to_html(
             "#### Quality views\n\n"

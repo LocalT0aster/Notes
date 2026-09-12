@@ -33,7 +33,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Detailed View Descriptions
 >
-> **1.
+> **1. Transcendent View**
+> - Quality is absolute and universally recognizable but cannot be precisely defined
+> - Often associated with excellence or "innate goodness"
+> - *Example:* A luxury watch like a Rolex is recognized as high quality because of its superior craftsmanship and prestige
+> - *Criticism:* Subjective and difficult to measure or operationalize
+>
+> **2. Product-Based View**
+> - Quality is a precise and measurable variable based on product attributes
+> - More features or better performance equals higher quality
+> - *Example:* A smartphone with better resolution, longer battery life, and faster processing speed
+> - *Criticism:* Assumes all improvements are desirable, ignoring trade-offs like cost
 >
 > …
 >
@@ -74,7 +84,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Detailed View Descriptions
 >
-> **1.
+> **1. Transcendent View**
+> - Quality is absolute and universally recognizable but cannot be precisely defined
+> - Often associated with excellence or "innate goodness"
+> - *Example:* A luxury watch like a Rolex is recognized as high quality because of its superior craftsmanship and prestige
+> - *Criticism:* Subjective and difficult to measure or operationalize
+>
+> **2. Product-Based View**
+> - Quality is a precise and measurable variable based on product attributes
+> - More features or better performance equals higher quality
+> - *Example:* A smartphone with better resolution, longer battery life, and faster processing speed
+> - *Criticism:* Assumes all improvements are desirable, ignoring trade-offs like cost
 >
 > …
 >
@@ -125,7 +145,33 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### McCall's 11 Quality Factors
 >
-> …
+> | Category | Factors | Description |
+> |----------|---------|-------------|
+> | **Product Operation** | Correctness | Meets specified requirements |
+> | | Reliability | Performs without failure |
+> | | Efficiency | Uses minimal resources |
+> | | Integrity | Protected from unauthorized access |
+> | | Usability | Easy to learn and operate |
+> | **Product Revision** | Maintainability | Easy to modify for corrections |
+> | | Flexibility | Easy to modify for enhancements |
+> | | Testability | Easy to validate and verify |
+> | **Product Transition** | Portability | Runs in different environments |
+> | | Reusability | Components can be reused |
+> | | Interoperability | Works with other systems |
+>
+> #### Three-Level Structure
+>
+> McCall's model has three levels:
+>
+> 1. **Factor** — External view (what users see)
+>    - Example: Reliability
+> 2. **Criteria** — Internal view (what developers control)
+>    - Example: Simplicity, Modularity
+> 3. **Metric** — Measurement
+>    - Example: Cyclomatic complexity
+>
+> **Key Insight:** Same criterion can affect multiple factors!
+> - *Example:* Modularity → Maintainability AND Testability
 >
 > #### McCall's Quality Factors (1977)
 >
@@ -195,7 +241,33 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### McCall's 11 Quality Factors
 >
-> …
+> | Category | Factors | Description |
+> |----------|---------|-------------|
+> | **Product Operation** | Correctness | Meets specified requirements |
+> | | Reliability | Performs without failure |
+> | | Efficiency | Uses minimal resources |
+> | | Integrity | Protected from unauthorized access |
+> | | Usability | Easy to learn and operate |
+> | **Product Revision** | Maintainability | Easy to modify for corrections |
+> | | Flexibility | Easy to modify for enhancements |
+> | | Testability | Easy to validate and verify |
+> | **Product Transition** | Portability | Runs in different environments |
+> | | Reusability | Components can be reused |
+> | | Interoperability | Works with other systems |
+>
+> #### Three-Level Structure
+>
+> McCall's model has three levels:
+>
+> 1. **Factor** — External view (what users see)
+>    - Example: Reliability
+> 2. **Criteria** — Internal view (what developers control)
+>    - Example: Simplicity, Modularity
+> 3. **Metric** — Measurement
+>    - Example: Cyclomatic complexity
+>
+> **Key Insight:** Same criterion can affect multiple factors!
+> - *Example:* Modularity → Maintainability AND Testability
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/define/foundations/RQ-L1-QM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/define/foundations/RQ-L1-QM.md)
@@ -237,7 +309,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Perry's Tradeoff Matrix (Selected)
 >
-> …
+> | Attribute | Efficiency | Maintainability | Reusability |
+> |-----------|:----------:|:---------------:|:-----------:|
+> | **Integrity** | − | | − |
+> | **Usability** | − | + | |
+> | **Testability** | − | + | + |
+> | **Portability** | − | + | + |
+>
+> > **Key Takeaway:** You cannot maximize all quality attributes simultaneously. Quality engineering is about **informed tradeoffs**.
 >
 > #### Perry’s Model of Quality Attribute Relationships
 >
@@ -283,7 +362,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Sub-Characteristics (Selected)
 >
-> …
+> | Characteristic | Sub-Characteristics |
+> |----------------|---------------------|
+> | **Functional Suitability** | Completeness, Correctness, Appropriateness |
+> | **Performance Efficiency** | Time Behavior, Resource Utilization, Capacity |
+> | **Reliability** | Maturity, Availability, Fault Tolerance, Recoverability |
+> | **Security** | Confidentiality, Integrity, Non-repudiation, Accountability, Authenticity |
+> | **Maintainability** | Modularity, Reusability, Analyzability, Modifiability, Testability |
 >
 > #### Quality Attributes in ISO/IEC 25002:2024
 >
@@ -302,6 +387,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   A --> H[Maintainability 🔄]
 >   A --> I[Portability 🌍]
 >   A --> J[Quality in Use ⭐]
+>
+>   B --> B1[Functional Completeness<br>Functional Correctness<br>Functional Appropriateness]
+>   C --> C1[Time Behavior<br>Resource Utilization<br>Capacity]
+>   D --> D1[Coexistence<br>Interoperability]
+>   E --> E1[Appropriateness Recognizability<br>Learnability<br>Operability<br>User Error Protection<br>User Interface Aesthetics]
+>   F --> F1[Maturity<br>Availability<br>Fault Tolerance<br>Recoverability]
+>   G --> G1[Confidentiality<br>Integrity<br>Non-repudiation<br>Accountability<br>Authenticity]
+>   H --> H1[Modularity<br>Reusability<br>Analyzability<br>Modifiability<br>Testability]
+>   I --> I1[Adaptability<br>Installability<br>Replaceability]
+>   J --> J1[Effectiveness<br>Efficiency<br>Satisfaction<br>Freedom from Risk]
+> ```
 >
 > …
 
@@ -438,7 +534,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Sub-Characteristics (Selected)
 >
-> …
+> | Characteristic | Sub-Characteristics |
+> |----------------|---------------------|
+> | **Functional Suitability** | Completeness, Correctness, Appropriateness |
+> | **Performance Efficiency** | Time Behavior, Resource Utilization, Capacity |
+> | **Reliability** | Maturity, Availability, Fault Tolerance, Recoverability |
+> | **Security** | Confidentiality, Integrity, Non-repudiation, Accountability, Authenticity |
+> | **Maintainability** | Modularity, Reusability, Analyzability, Modifiability, Testability |
 >
 > #### Quality Attributes in ISO/IEC 25002:2024
 >
@@ -457,6 +559,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   A --> H[Maintainability 🔄]
 >   A --> I[Portability 🌍]
 >   A --> J[Quality in Use ⭐]
+>
+>   B --> B1[Functional Completeness<br>Functional Correctness<br>Functional Appropriateness]
+>   C --> C1[Time Behavior<br>Resource Utilization<br>Capacity]
+>   D --> D1[Coexistence<br>Interoperability]
+>   E --> E1[Appropriateness Recognizability<br>Learnability<br>Operability<br>User Error Protection<br>User Interface Aesthetics]
+>   F --> F1[Maturity<br>Availability<br>Fault Tolerance<br>Recoverability]
+>   G --> G1[Confidentiality<br>Integrity<br>Non-repudiation<br>Accountability<br>Authenticity]
+>   H --> H1[Modularity<br>Reusability<br>Analyzability<br>Modifiability<br>Testability]
+>   I --> I1[Adaptability<br>Installability<br>Replaceability]
+>   J --> J1[Effectiveness<br>Efficiency<br>Satisfaction<br>Freedom from Risk]
+> ```
 >
 > …
 
@@ -822,7 +935,18 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Stakeholder** | For whom? | Development team |
 > | **Context** | Environment/constraints | New team members joining |
 >
-> …
+> **Complete Goal:** "Improve maintainability of the code base from the perspective of the development team in the context of new team members joining."
+>
+> #### GQM Example
+>
+> | Goal | Improve code maintainability for new team members |
+> |------|--------------------------------------------------|
+> | **Question 1** | How complex are modules? |
+> | **Metric 1a** | Cyclomatic complexity |
+> | **Metric 1b** | Lines of code |
+> | **Question 2** | Are modules well-documented? |
+> | **Metric 2a** | Comment ratio |
+> | **Metric 2b** | Documentation coverage |
 >
 > #### Maintainability Metrics:
 >
@@ -1214,7 +1338,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Practical Implications:**
 >
-> …
+> | Tool Strategy | Focus |
+> |---------------|-------|
+> | Academic tools | Soundness (catch all) |
+> | Commercial tools | Low false positives (usability) |
+>
+> **Commercial tools prioritize usability over soundness** — they accept some missed bugs to avoid overwhelming developers with false alarms.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/overview/RQ_L03_Verification.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/overview/RQ_L03_Verification.md)
@@ -1505,7 +1634,23 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   "encoding": {
 >     "y": {"field": "factor", "type": "nominal", "sort": {"field": "order"}, "axis": {"title": null}},
 >     "x": {"field": "correlation", "type": "quantitative", "title": "Correlation Coefficient", "scale": {"domain": [0, 1]}},
->     "color": {"condition": {"test": "datum.factor === 'Assertion Count'", "value": "#019546"}, "value": "#c8
+>     "color": {"condition": {"test": "datum.factor === 'Assertion Count'", "value": "#019546"}, "value": "#c8e6c9"}
+>   },
+>   "config": {"font": "Tahoma, sans-serif", "view": {"stroke": null}}
+> }
+> ```
+>
+> | Factor | Correlation with Effectiveness |
+> |--------|-------------------------------|
+> | **Assertion quantity** | **0.927 - 0.973** |
+> | Statement coverage (alone) | Weak |
+>
+> > "The correlation between size and effectiveness is driven by assertions, not coverage."
+>
+> **What this means practically:**
+> A test that executes 100 lines but checks nothing (no assertions) is almost worthless. A test that executes 10 lines but has strong assertions on the output is valuable. **Coverage measures exploration; assertions measure verification.**
+>
+> **Coverage Criteria Compared** :
 >
 > …
 
@@ -1837,7 +1982,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 > y = z / x       # Block 3 (merge point)
 > ```
 >
-> …
+> ```mermaid
+> flowchart TD
+>     B1["x = 0"] --> D{"A < 5?"}
+>     D -->|True| B2["x = 4"]
+>     D -->|False| B3["y = z / x"]
+>     B2 --> B3
+>
+>     style B1 fill:#f0f8f0,stroke:#019546
+>     style D fill:#fff3cd,stroke:#2D6E2A
+>     style B2 fill:#c8e6c9,stroke:#019546
+>     style B3 fill:#019546,stroke:#2D6E2A,color:#fff
+> ```
+>
+> **CFG Metrics:** Nodes=4, Edges=4, V(G) = 4 − 4 + 2 = **2**
+>
+> > **Note:** An if-then (no else) has **no empty node** on the false path — the false edge goes directly to the merge block. Adding a phantom "skip" node keeps V(G) the same (5−5+2=2) but is non-standard and risks a counting mismatch if the empty node is forgotten while counting edges.
 >
 > #### 3.3 Cyclomatic Complexity & Basis Path
 >
@@ -1868,6 +2028,28 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 10 | 1,024 | **11** |
 >
 > All-path coverage is **exponential** — infeasible for real code.
+>
+> **Basis Path Advantages:**
+> - **Linear** growth in test count
+> - Covers all independent control flow paths
+> - Covers every edge at least once
+> - V(G) gives **upper bound** on required tests
+>
+> **Example: Binary Search CFG**
+>
+> ```python
+> def binary_search(arr, target):
+>     low, high = 0, len(arr) - 1
+>     while low <= high:         # D1
+>         mid = (low + high) // 2
+>         if arr[mid] == target: # D2
+>             return mid         # P1: found
+>         elif arr[mid] < target: # D3
+>             low = mid + 1      # P3: right
+>         else:
+>             high = mid - 1     # P2: left
+>     return -1                  # P4: not found
+> ```
 >
 > …
 
@@ -1913,6 +2095,28 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 10 | 1,024 | **11** |
 >
 > All-path coverage is **exponential** — infeasible for real code.
+>
+> **Basis Path Advantages:**
+> - **Linear** growth in test count
+> - Covers all independent control flow paths
+> - Covers every edge at least once
+> - V(G) gives **upper bound** on required tests
+>
+> **Example: Binary Search CFG**
+>
+> ```python
+> def binary_search(arr, target):
+>     low, high = 0, len(arr) - 1
+>     while low <= high:         # D1
+>         mid = (low + high) // 2
+>         if arr[mid] == target: # D2
+>             return mid         # P1: found
+>         elif arr[mid] < target: # D3
+>             low = mid + 1      # P3: right
+>         else:
+>             high = mid - 1     # P2: left
+>     return -1                  # P4: not found
+> ```
 >
 > …
 >
@@ -2001,9 +2205,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Goal**            | Cover all **edges** and **independent paths** | Cover **every possible execution path**                      |
 > | **Feasibility**     | Practical                                     | Often infeasible (many paths may be redundant or untestable) |
 > | **Redundancy**      | Minimal                                       | High (many paths may test the same logic repeatedly)         |
-> | **Example (n=3)**   | \~4 tests                                     | 8 tests (if all pa
+> | **Example (n=3)**   | \~4 tests                                     | 8 tests (if all paths feasible)                              |
 >
-> …
+> So, for **n decision points**, Basis Path typically requires only $$n + 1$$ test cases, while All Path Coverage requires $$2^n$$ — which grows very quickly.
 >
 > #### Basis Path Coverage
 >
@@ -2259,7 +2463,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Two Uses of Coverage:**
 >
-> …
+> | Use | Purpose | Example |
+> |-----|---------|---------|
+> | **Generator** | Create tests to satisfy criterion | Write tests until 80% branch coverage |
+> | **Measure** | Evaluate existing tests | Report current coverage percentage |
+>
+> **The Coverage Formula:**
+>
+> $$\text{Coverage} = \frac{\text{Measured Items Executed}}{\text{Total Measured Items}} \times 100\%$$
+>
+> **Concrete Example:**
+> ```python
+> def grade(score):          # Line 1
+>     if score >= 90:        # Line 2 (decision)
+>         return "A"         # Line 3
+>     elif score >= 70:      # Line 4 (decision)
+>         return "B"         # Line 5
+>     else:                  # Line 6
+>         return "C"         # Line 7
+> ```
+>
+> | Test | Input | Statements Hit | Coverage |
+> |------|-------|----------------|----------|
+> | T1 | 95 | 1,2,3 | 3/7 = 43% |
+> | T1+T2 | 95, 75 | 1,2,3,4,5 | 5/7 = 71% |
+> | T1+T2+T3 | 95, 75, 50 | All 7 | 7/7 = 100% |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/coverage/RQ_L04_Coverage.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/coverage/RQ_L04_Coverage.md)
@@ -2351,9 +2579,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     classDef test fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px;
 >     classDef mutant fill:#fce4ec,stroke:#ad1457,stroke-width:2px;
 >     classDef process fill:#fff9c4,stroke:#f9a825,stroke-width:2px;
->     classDef decision fill:#ffe0b2,stroke:#ef
+>     classDef decision fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px;
+>     classDef killed fill:#ffcdd2,stroke:#c62828,stroke-width:2px;
+>     classDef survive fill:#d1c4e9,stroke:#4527a0,stroke-width:2px;
+>     classDef equiv fill:#e0e0e0,stroke:#616161,stroke-width:2px;
+>     classDef score fill:#dcedc8,stroke:#558b2f,stroke-width:2px;
 >
-> …
+> ```
 >
 > #### Equivalent Mutants
 >
@@ -2599,6 +2831,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   ],
 >   "mark": {"type": "bar"},
 >   "encoding": {
+>     "y": {"field": "metric", "type": "nominal", "axis": {"title": null}},
+>     "x": {"field": "value", "type": "quantitative", "title": "% of Correlation", "stack": "normalize", "axis": {"format": ".0%"}},
+>     "color": {"field": "component", "type": "nominal", "scale": {"range": ["#d32f2f", "#019546"]}, "legend": {"title": null, "labelExpr": "datum.value === 'size_effect' ? 'Explained by Size' : 'Independent Effect'"}}
+>   },
+>   "config": {"font": "Tahoma, sans-serif", "view": {"stroke": null}}
+> }
+> ```
+>
+> | Metric | % Explained by Size |
+> |--------|---------------------|
+> | Statement Coverage | **69%** |
+> | Branch Coverage | **81.9%** |
+>
+> **The Hidden Variable:**
+> More tests → Higher coverage AND more faults found (Correlation, not causation!)
 >
 > …
 
@@ -2649,7 +2896,23 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   "encoding": {
 >     "y": {"field": "factor", "type": "nominal", "sort": {"field": "order"}, "axis": {"title": null}},
 >     "x": {"field": "correlation", "type": "quantitative", "title": "Correlation Coefficient", "scale": {"domain": [0, 1]}},
->     "color": {"condition": {"test": "datum.factor === 'Assertion Count'", "value": "#019546"}, "value": "#c8
+>     "color": {"condition": {"test": "datum.factor === 'Assertion Count'", "value": "#019546"}, "value": "#c8e6c9"}
+>   },
+>   "config": {"font": "Tahoma, sans-serif", "view": {"stroke": null}}
+> }
+> ```
+>
+> | Factor | Correlation with Effectiveness |
+> |--------|-------------------------------|
+> | **Assertion quantity** | **0.927 - 0.973** |
+> | Statement coverage (alone) | Weak |
+>
+> > "The correlation between size and effectiveness is driven by assertions, not coverage."
+>
+> **What this means practically:**
+> A test that executes 100 lines but checks nothing (no assertions) is almost worthless. A test that executes 10 lines but has strong assertions on the output is valuable. **Coverage measures exploration; assertions measure verification.**
+>
+> **Coverage Criteria Compared** :
 >
 > …
 
@@ -3142,7 +3405,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 >   Uses --> Branches
 >
-> …
+>   style DU fill:#f0f0f0,stroke:#999
+>   style Uses fill:#f0f0f0,stroke:#999
+>   style Defs fill:#f0f0f0,stroke:#999
+>   style Comp fill:#f0f0f0,stroke:#999
+>   style MCDC fill:#f0f0f0,stroke:#999
+>   style Basic fill:#f0f0f0,stroke:#999
+> ```
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/coverage/RQ_L04_Coverage.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/coverage/RQ_L04_Coverage.md)
@@ -3302,9 +3571,19 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 >     subgraph exec["Execution Phase"]
 >         P4["4. Inspection<br>Team"]
->         P5["5.
+>         P5["5. Rework<br>Author"]
+>         P6["6. Follow-up<br>Moderator"]
+>     end
 >
-> …
+>     P1 --> P2 --> P3 --> P4 --> P5 --> P6
+>
+>     style P1 fill:#e3f2fd,stroke:#1976d2,color:#000
+>     style P2 fill:#e3f2fd,stroke:#1976d2,color:#000
+>     style P3 fill:#e3f2fd,stroke:#1976d2,color:#000
+>     style P4 fill:#c8e6c9,stroke:#388e3c,color:#000
+>     style P5 fill:#fff3e0,stroke:#f57c00,color:#000
+>     style P6 fill:#c8e6c9,stroke:#388e3c,color:#000
+> ```
 >
 > #### 1.1 The Origins: Fagan Inspection (1976)
 >
@@ -3536,27 +3815,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Defect density drops rapidly beyond 200 LOC. The optimal review size is 200-400 LOC :
 >
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "title": "Defect Density vs. Review Size",
->   "width": 400,
->   "height": 280,
->   "layer": [
->     {
->       "data": {
->         "values": [
->           {"loc": 10, "defects": 200}, {"loc": 20, "defects": 170},
->           {"loc": 30, "defects": 145}, {"loc": 50, "defects": 110},
->           {"loc": 75, "defects": 85}, {"loc": 100, "defects": 65},
->           {"loc": 150, "defects": 45}, {"loc": 200, "defects": 35},
->           {"loc": 300, "defects": 22}, {"loc": 400, "defects": 15},
->           {"loc": 600, "defects": 8}, {"loc": 800, "defects": 5},
->           {"loc": 1000, "defects": 3}
->         ]
->       },
->       "mark": {"type": "
->
 > …
 
 > [!info]- Source
@@ -3581,27 +3839,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Finding 1: Size Matters**
 >
 > Defect density drops rapidly beyond 200 LOC. The optimal review size is 200-400 LOC :
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "title": "Defect Density vs. Review Size",
->   "width": 400,
->   "height": 280,
->   "layer": [
->     {
->       "data": {
->         "values": [
->           {"loc": 10, "defects": 200}, {"loc": 20, "defects": 170},
->           {"loc": 30, "defects": 145}, {"loc": 50, "defects": 110},
->           {"loc": 75, "defects": 85}, {"loc": 100, "defects": 65},
->           {"loc": 150, "defects": 45}, {"loc": 200, "defects": 35},
->           {"loc": 300, "defects": 22}, {"loc": 400, "defects": 15},
->           {"loc": 600, "defects": 8}, {"loc": 800, "defects": 5},
->           {"loc": 1000, "defects": 3}
->         ]
->       },
->       "mark": {"type": "
 >
 > …
 >
@@ -3848,6 +4085,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     I2 --> R
 >     R --> N
 >
+>     style I1 fill:#bbdefb,stroke:#1976d2,color:#000
+>     style I2 fill:#fff3e0,stroke:#f57c00,color:#000
+>     style R fill:#c8e6c9,stroke:#388e3c,color:#000
+>     style N fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#000
+> ```
+>
+> **Lincoln-Petersen Formula:**
+>
+> $$\hat{N} = \frac{M \times C}{R}$$
+>
+> Where:
+> - $\hat{N}$ = estimated total defects
+> - $M$ = defects found by Inspector 1
+> - $C$ = defects found by Inspector 2
+> - $R$ = defects found by both (the overlap)
+>
+> **Example:**
+> - Inspector A finds 20 defects
+> - Inspector B finds 15 defects
+> - Both find 6 of the same defects
+> - N = (20 × 15) / 6 = **50 estimated**
+> - Found 29 unique, remaining: **21 unfound**
+>
+> **Defect Distribution Visualization:**
+>
 > …
 >
 > #### The Lincoln-Petersen Formula
@@ -3949,6 +4211,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     I1 --> R
 >     I2 --> R
 >     R --> N
+>
+>     style I1 fill:#bbdefb,stroke:#1976d2,color:#000
+>     style I2 fill:#fff3e0,stroke:#f57c00,color:#000
+>     style R fill:#c8e6c9,stroke:#388e3c,color:#000
+>     style N fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#000
+> ```
+>
+> **Lincoln-Petersen Formula:**
+>
+> $$\hat{N} = \frac{M \times C}{R}$$
+>
+> Where:
+> - $\hat{N}$ = estimated total defects
+> - $M$ = defects found by Inspector 1
+> - $C$ = defects found by Inspector 2
+> - $R$ = defects found by both (the overlap)
+>
+> **Example:**
+> - Inspector A finds 20 defects
+> - Inspector B finds 15 defects
+> - Both find 6 of the same defects
+> - N = (20 × 15) / 6 = **50 estimated**
+> - Found 29 unique, remaining: **21 unfound**
+>
+> **Defect Distribution Visualization:**
 >
 > …
 
@@ -4151,6 +4438,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     I2 --> R
 >     R --> N
 >
+>     style I1 fill:#bbdefb,stroke:#1976d2,color:#000
+>     style I2 fill:#fff3e0,stroke:#f57c00,color:#000
+>     style R fill:#c8e6c9,stroke:#388e3c,color:#000
+>     style N fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#000
+> ```
+>
+> **Lincoln-Petersen Formula:**
+>
+> $$\hat{N} = \frac{M \times C}{R}$$
+>
+> Where:
+> - $\hat{N}$ = estimated total defects
+> - $M$ = defects found by Inspector 1
+> - $C$ = defects found by Inspector 2
+> - $R$ = defects found by both (the overlap)
+>
+> **Example:**
+> - Inspector A finds 20 defects
+> - Inspector B finds 15 defects
+> - Both find 6 of the same defects
+> - N = (20 × 15) / 6 = **50 estimated**
+> - Found 29 unique, remaining: **21 unfound**
+>
+> **Defect Distribution Visualization:**
+>
 > …
 
 > [!info]- Source
@@ -4300,8 +4612,28 @@ Generated from the SQRBOK source repository. **423 cards.**
 >           {"rate": 450, "defects": 30}, {"rate": 550, "defects": 28},
 >           {"rate": 650, "defects": 10}, {"rate": 750, "defects": 12},
 >           {"rate": 850, "defects": 80}, {"rate": 950, "defects": 10},
+>           {"rate": 1100, "defects": 12}, {"rate": 1300, "defects": 8}
+>         ]
+>       },
+>       "mark": {"type": "point", "color": "#1976d2", "size": 50, "filled": true},
+>       "encoding": {
+>         "x": {"field": "rate", "type": "quantitative", "title": "Review Rate (LOC/hour)", "scale": {"domain": [0, 1400]}},
+>         "y": {"field": "defects", "type": "quantitative", "title": "Defects Found / KSLOC", "scale": {"domain": [0, 160]}}
+>       }
+>     },
+>     {
+>       "data": {"values": [{"x": 500}]},
+>       "mark": {"type": "rule", "color": "#d32f2f", "strokeWidth": 3},
+>       "encoding": {"x": {"field": "x", "type": "quantitative"}}
+>     }
+>   ]
+> }
+> ```
 >
-> …
+> {: .note }
+> > *Chart reconstructed to illustrate trend. See  for original data.*
+>
+> The red vertical line at 500 LOC/hour marks the threshold above which reviews become hasty and miss defects.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/inspection/RQ_A05_Inspection.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/inspection/RQ_A05_Inspection.md)
@@ -4571,7 +4903,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Common Partition Dimensions:**
 >
-> …
+> | Attribute | Partition Values |
+> |-----------|------------------|
+> | String length | 0, 1, typical, max, >max |
+> | Set size | Empty, 1 element, many |
+> | Pointer/Reference | Null, valid, invalid |
+> | File | Missing, empty, normal, huge |
+>
+> **Example - Password Validation:**
+>
+> | Partition | Values | Expected Result |
+> |-----------|--------|-----------------|
+> | Too short | length < 8 | "Password too short" |
+> | Valid simple | 8-12, letters only | "Weak password" |
+> | Valid complex | 8-20, mixed chars | "Strong password" |
+> | Too long | length > 20 | "Password too long" |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_L05_Domain.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_L05_Domain.md)
@@ -4720,7 +5066,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Common Partition Dimensions:**
 >
-> …
+> | Attribute | Partition Values |
+> |-----------|------------------|
+> | String length | 0, 1, typical, max, >max |
+> | Set size | Empty, 1 element, many |
+> | Pointer/Reference | Null, valid, invalid |
+> | File | Missing, empty, normal, huge |
+>
+> **Example - Password Validation:**
+>
+> | Partition | Values | Expected Result |
+> |-----------|--------|-----------------|
+> | Too short | length < 8 | "Password too short" |
+> | Valid simple | 8-12, letters only | "Weak password" |
+> | Valid complex | 8-20, mixed chars | "Strong password" |
+> | Too long | length > 20 | "Password too long" |
 >
 > #### Range-Based (Comprehension)
 >
@@ -4835,7 +5195,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Rule: Discount for orders > $100 (open boundary)
 >
-> …
+> ON point:  $100.00 → should NOT get discount (boundary excluded)
+> OFF point: $100.01 → should get discount (inside domain)
+> ```
+>
+> > **Warning — Open Boundaries Are Counterintuitive:** "ON" means *on the boundary* (Beizer's definition), **not** "the feature is on." For open boundaries like `> $100`, the ON point ($100.00) is *excluded* from the domain — it does NOT get the discount. The OFF point ($100.01) is the first value *inside* the domain that does. This reversal surprises many readers: the ON point is inactive, the OFF point is active. Keep the definition in mind: ON = at the boundary; OFF = just past it.
+>
+> > **Key Insight:** The OFF point must be in the **opposite** processing region from the ON point. This ensures you detect whether the boundary operator is correct.
+>
+> > **Exam Tip:** For closed boundaries (≤, ≥), the OFF point goes OUTSIDE the domain. For open boundaries (<, >), the OFF point goes INSIDE the domain. Think: "OFF point tests the OTHER side."
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_L05_Domain.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_L05_Domain.md)
@@ -4895,27 +5263,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > #### 3.5 Closed vs Open Boundaries
 >
 > The key difference between closed and open intervals determines where you place ON and OFF test points:
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 400,
->   "height": 80,
->   "title": "Closed Interval: L ≤ X ≤ R",
->   "layer": [
->     {
->       "data": {"values": [{"x1": 1, "x2": 3}]},
->       "mark": {"type": "rule", "strokeWidth": 8, "color": "#019546"},
->       "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": {"domain": [-0.5, 4.5]}, "axis": null}, "x2": {"field": "x2"}}
->     },
->     {
->       "data": {"values": [{"x": 1, "label": "L"}, {"x": 3, "label": "R"}]},
->       "mark": {"type": "point", "size": 300, "filled": true, "color": "#019546"},
->       "encoding": {"x": {"field": "x", "type": "quantitative"}}
->     },
->     {
->       "data": {"values": [{"x": 0, "label": "L-1"}, {"x": 4, "label": "R+1"}]},
->       "mark": {"type": "point", "size": 25
 >
 > …
 >
@@ -5012,7 +5359,25 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - "Invalid amount" - if amount is not divisible by 20
 > - "Daily limit exceeded" - if limit has been reached
 >
-> …
+> **Legend:** Y = Yes (condition true), N = No (condition false), * = Don't care
+>
+> | Conditions | R1 | R2 | R3 | R4 | R5 |
+> |------------|:--:|:--:|:--:|:--:|:--:|
+> | Sufficient Balance? | Y | Y | N | N | * |
+> | Amount ÷ 20? | Y | N | Y | N | * |
+> | Daily Limit OK? | Y | Y | Y | Y | N |
+> | **Actions** | | | | | |
+> | Dispense Cash | ✓ | | | | |
+> | Show "Invalid Amount" | | ✓ | | ✓ | |
+> | Show "Insufficient Funds" | | | ✓ | ✓ | |
+> | Show "Limit Exceeded" | | | | | ✓ |
+>
+> **Reading the table:**
+> - **R1:** All conditions met → Dispense cash
+> - **R2:** Good balance but bad amount → "Invalid amount"
+> - **R3:** Bad balance, good amount → "Insufficient funds"
+> - **R4:** Bad balance, bad amount → Show both errors (or priority error)
+> - **R5:** Daily limit exceeded → "Limit exceeded" (other conditions don't matter)
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_L05_Domain.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_L05_Domain.md)
@@ -5093,7 +5458,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **After Consolidation (5 rules):**
 >
-> …
+> | | R1 | R2 | R3 | R4 | R5 |
+> |-|:--:|:--:|:--:|:--:|:--:|
+> | Balance OK? | Y | Y | N | N | * |
+> | ÷20? | Y | N | Y | N | * |
+> | Limit OK? | Y | Y | Y | Y | N |
+> | **Actions** ||||||
+> | Dispense Cash | ✓ | | | | |
+> | "Invalid Amount" | | ✓ | | ✓ | |
+> | "Insufficient Funds" | | | ✓ | ✓ | |
+> | "Limit Exceeded" | | | | | ✓ |
+> | **Covers** | 1 | 1 | 1 | 1 | 4 |
+>
+> **Checksum verification:** Sum of "covers" counts must equal original rule count.
+>
+> $$1 + 1 + 1 + 1 + 4 = 8 \checkmark$$
 >
 > #### 5. Skipping Decision Table Verification
 >
@@ -5149,9 +5528,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 2. List conditions | Define input variables/partitions | "Balance OK?", "Amount valid?" |
 > | 3. Calculate rules | Product of condition values | 2×2×2 = 8 rules |
 > | 4. Fill combinations | Systematic enumeration | YYY, YYN, YNY, ... |
-> | 5.
+> | 5. Specify outputs | Map rules to actions | Rule 1 → Dispense |
+> | 6. Consolidate | Identify don't-care conditions | "If limit exceeded, don't care about balance" |
+> | 7. Verify checksum | Ensure complete coverage | Sum of covers = original count |
+> | 8. Generate tests | 1 per rule + don't-care verification | 5 tests from 8 rules |
 >
-> …
+> > **Key Insight:** Decision tables force completeness - they force explicit consideration of all combinations and can reveal don't-care conditions that reduce test count.
 >
 > #### Decision Table Structure
 >
@@ -5242,26 +5624,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **NIST/FDA Research (15 years of medical device recall data):**
 >
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 450,
->   "height": 250,
->   "title": {"text": "Cumulative Fault Detection by Interaction Strength", "subtitle": "Source: Kuhn et al. 2004, Wallace & Kuhn 2001"},
->   "data": {
->     "values": [
->       {"interaction": "1-way", "percent": 67, "order": 1},
->       {"interaction": "2-way", "percent": 93, "order": 2},
->       {"interaction": "3-way", "percent": 98, "order": 3},
->       {"interaction": "4-way", "percent": 99.5, "order": 4},
->       {"interaction": "5-way", "percent": 99.9, "order": 5},
->       {"interaction": "6-way", "percent": 100, "order": 6}
->     ]
->   },
->   "layer": [
->     {
->       "mark": {"type": "area",
->
 > …
 >
 > #### The 90% Finding
@@ -5288,26 +5650,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > #### 5.3 Pairwise (2-Way) Testing
 >
 > **Concept:** Cover all pairs of parameter values without testing all combinations.
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 350,
->   "height": 200,
->   "title": "Test Count: Exhaustive vs Pairwise (log scale)",
->   "data": {
->     "values": [
->       {"approach": "2-way (Pairwise)", "tests": 29, "order": 1},
->       {"approach": "4-way", "tests": 85, "order": 2},
->       {"approach": "6-way", "tests": 350, "order": 3},
->       {"approach": "All combinations", "tests": 17179869184, "order": 4}
->     ]
->   },
->   "transform": [
->     {"calculate": "log(datum.tests) / log(10)", "as": "log_tests"},
->     {"calculate": "datum.tests < 1000 ? datum.tests + '' : datum.tests < 1000000 ? format(datum.tests/1000, '.0f') + 'K' : datum.tests < 1000000000 ? format(datum.tests/1000000, '.0f') + 'M' : format(datum.tests/1000000000, '.1f') + 'B'", "as": "label"}
->   ],
->   "layer": [
 >
 > …
 >
@@ -5359,26 +5701,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > #### 5.3 Pairwise (2-Way) Testing
 >
 > **Concept:** Cover all pairs of parameter values without testing all combinations.
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 350,
->   "height": 200,
->   "title": "Test Count: Exhaustive vs Pairwise (log scale)",
->   "data": {
->     "values": [
->       {"approach": "2-way (Pairwise)", "tests": 29, "order": 1},
->       {"approach": "4-way", "tests": 85, "order": 2},
->       {"approach": "6-way", "tests": 350, "order": 3},
->       {"approach": "All combinations", "tests": 17179869184, "order": 4}
->     ]
->   },
->   "transform": [
->     {"calculate": "log(datum.tests) / log(10)", "as": "log_tests"},
->     {"calculate": "datum.tests < 1000 ? datum.tests + '' : datum.tests < 1000000 ? format(datum.tests/1000, '.0f') + 'K' : datum.tests < 1000000000 ? format(datum.tests/1000000, '.0f') + 'M' : format(datum.tests/1000000000, '.1f') + 'B'", "as": "label"}
->   ],
->   "layer": [
 >
 > …
 
@@ -5561,26 +5883,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Concept:** Cover all pairs of parameter values without testing all combinations.
 >
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 350,
->   "height": 200,
->   "title": "Test Count: Exhaustive vs Pairwise (log scale)",
->   "data": {
->     "values": [
->       {"approach": "2-way (Pairwise)", "tests": 29, "order": 1},
->       {"approach": "4-way", "tests": 85, "order": 2},
->       {"approach": "6-way", "tests": 350, "order": 3},
->       {"approach": "All combinations", "tests": 17179869184, "order": 4}
->     ]
->   },
->   "transform": [
->     {"calculate": "log(datum.tests) / log(10)", "as": "log_tests"},
->     {"calculate": "datum.tests < 1000 ? datum.tests + '' : datum.tests < 1000000 ? format(datum.tests/1000, '.0f') + 'K' : datum.tests < 1000000000 ? format(datum.tests/1000000, '.0f') + 'M' : format(datum.tests/1000000000, '.1f') + 'B'", "as": "label"}
->   ],
->   "layer": [
->
 > …
 >
 > #### Decision Table Testing
@@ -5624,7 +5926,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style B4 fill:#c8e6c9,stroke:#333
 > ```
 >
-> …
+> | Aspect | Category-Partition (1988) | Classification Tree Method (1993) |
+> |--------|--------------------------|-----------------------------------|
+> | **Notation** | Formalized text (TSL language) | Graphical tree + combination table |
+> | **Structure** | Flat categories, all at same level | Hierarchical, multi-level |
+> | **Test volume** | Start large, add restrictions | Start minimal, add until sufficient |
+> | **Specification** | Implicit, lengthy generated lists | Direct, compact combination table |
+>
+> {: .exam-tip }
+> > **Exam Tip:** The key improvement is **visual structure**. CP uses text; CTM uses a tree you can see, discuss with stakeholders, and reason about hierarchically.
 >
 > #### Why CTM?
 >
@@ -5652,7 +5962,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style B4 fill:#c8e6c9,stroke:#333
 > ```
 >
-> …
+> | Aspect | Category-Partition | Classification Tree Method |
+> |--------|:--:|:--:|
+> | **Notation** | Textual (TSL syntax) | Graphical (tree + table) |
+> | **Structure** | Flat list of categories | Hierarchical tree |
+> | **Test case creation** | Start large, add restrictions | Start minimal, add until sufficient |
+> | **Specification** | Implicit (lengthy generated lists) | Direct (compact combination table) |
+> | **Hierarchy support** | Complex constraints needed | Built into tree structure |
+>
+> > "The crucial activity during testing is test case determination, since it determines the kind and scope of the examination and thus the quality of the test."
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_A08_ClassificationTree.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_A08_ClassificationTree.md)
@@ -5684,7 +6002,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"Method": "EP", "Phase": "Before Training", "Percentage": 15},
 >       {"Method": "EP", "Phase": "After Training", "Percentage": 5},
 >       {"Method": "CTM", "Phase": "Before Training", "Percentage": 0},
->       {"Method": "CTM", "Phase": "Aft
+>       {"Method": "CTM", "Phase": "After Training", "Percentage": 66},
+>       {"Method": "Other", "Phase": "Before Training", "Percentage": 20},
+>       {"Method": "Other", "Phase": "After Training", "Percentage": 3}
+>     ]
+>   },
+>   "mark": "bar",
+>   "encoding": {
+>     "x": {"field": "Method", "type": "nominal", "axis": {"labelAngle": 0}},
+>     "y": {"field": "Percentage", "type": "quantitative", "title": "% of students"},
+>     "xOffset": {"field": "Phase", "type": "nominal"},
+>     "color": {
+>       "field": "Phase",
+>       "type": "nominal",
+>       "scale": {"range": ["#fff3cd", "#019546"]}
+>     }
+>   }
+> }
+> ```
+>
+> | Metric | Result |
+> |--------|--------|
+> | Preferred CTM over ad hoc | **66%** |
+> | Perceived CTM as systematic | **63%** |
+> | Valued graphical representation | **54%** |
+> | Ad hoc fault detection | Only **55%** of faulty programs |
 >
 > …
 >
@@ -5707,7 +6049,32 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"Method": "EP", "Phase": "Before Training", "Percentage": 15},
 >       {"Method": "EP", "Phase": "After Training", "Percentage": 5},
 >       {"Method": "CTM", "Phase": "Before Training", "Percentage": 0},
->       {"Method": "CTM", "Phase": "After Traini
+>       {"Method": "CTM", "Phase": "After Training", "Percentage": 66},
+>       {"Method": "Other", "Phase": "Before Training", "Percentage": 20},
+>       {"Method": "Other", "Phase": "After Training", "Percentage": 3}
+>     ]
+>   },
+>   "mark": "bar",
+>   "encoding": {
+>     "x": {"field": "Method", "type": "nominal", "axis": {"labelAngle": 0}},
+>     "y": {"field": "Percentage", "type": "quantitative", "title": "% of students"},
+>     "xOffset": {"field": "Phase", "type": "nominal"},
+>     "color": {
+>       "field": "Phase",
+>       "type": "nominal",
+>       "scale": {"range": ["#fff3cd", "#019546"]}
+>     }
+>   }
+> }
+> ```
+>
+> | Finding | Value |
+> |---------|:--:|
+> | Initially preferred white-box | 53% |
+> | Preferred CTM after 3h training | **~66%** |
+> | Perceived CTM as systematic | 63% |
+> | Perceived CTM as complete | 56% |
+> | Original suites' fault detection | 55% |
 >
 > …
 
@@ -5741,7 +6108,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"Method": "EP", "Phase": "Before Training", "Percentage": 15},
 >       {"Method": "EP", "Phase": "After Training", "Percentage": 5},
 >       {"Method": "CTM", "Phase": "Before Training", "Percentage": 0},
->       {"Method": "CTM", "Phase": "Aft
+>       {"Method": "CTM", "Phase": "After Training", "Percentage": 66},
+>       {"Method": "Other", "Phase": "Before Training", "Percentage": 20},
+>       {"Method": "Other", "Phase": "After Training", "Percentage": 3}
+>     ]
+>   },
+>   "mark": "bar",
+>   "encoding": {
+>     "x": {"field": "Method", "type": "nominal", "axis": {"labelAngle": 0}},
+>     "y": {"field": "Percentage", "type": "quantitative", "title": "% of students"},
+>     "xOffset": {"field": "Phase", "type": "nominal"},
+>     "color": {
+>       "field": "Phase",
+>       "type": "nominal",
+>       "scale": {"range": ["#fff3cd", "#019546"]}
+>     }
+>   }
+> }
+> ```
+>
+> | Metric | Result |
+> |--------|--------|
+> | Preferred CTM over ad hoc | **66%** |
+> | Perceived CTM as systematic | **63%** |
+> | Valued graphical representation | **54%** |
+> | Ad hoc fault detection | Only **55%** of faulty programs |
 >
 > …
 >
@@ -5771,7 +6162,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style B4 fill:#c8e6c9,stroke:#333
 > ```
 >
-> …
+> | Aspect | Category-Partition | Classification Tree Method |
+> |--------|:--:|:--:|
+> | **Notation** | Textual (TSL syntax) | Graphical (tree + table) |
+> | **Structure** | Flat list of categories | Hierarchical tree |
+> | **Test case creation** | Start large, add restrictions | Start minimal, add until sufficient |
+> | **Specification** | Implicit (lengthy generated lists) | Direct (compact combination table) |
+> | **Hierarchy support** | Complex constraints needed | Built into tree structure |
+>
+> > "The crucial activity during testing is test case determination, since it determines the kind and scope of the examination and thus the quality of the test."
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_A08_ClassificationTree.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_A08_ClassificationTree.md)
@@ -5803,7 +6202,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"Method": "EP", "Phase": "Before Training", "Percentage": 15},
 >       {"Method": "EP", "Phase": "After Training", "Percentage": 5},
 >       {"Method": "CTM", "Phase": "Before Training", "Percentage": 0},
->       {"Method": "CTM", "Phase": "Aft
+>       {"Method": "CTM", "Phase": "After Training", "Percentage": 66},
+>       {"Method": "Other", "Phase": "Before Training", "Percentage": 20},
+>       {"Method": "Other", "Phase": "After Training", "Percentage": 3}
+>     ]
+>   },
+>   "mark": "bar",
+>   "encoding": {
+>     "x": {"field": "Method", "type": "nominal", "axis": {"labelAngle": 0}},
+>     "y": {"field": "Percentage", "type": "quantitative", "title": "% of students"},
+>     "xOffset": {"field": "Phase", "type": "nominal"},
+>     "color": {
+>       "field": "Phase",
+>       "type": "nominal",
+>       "scale": {"range": ["#fff3cd", "#019546"]}
+>     }
+>   }
+> }
+> ```
+>
+> | Metric | Result |
+> |--------|--------|
+> | Preferred CTM over ad hoc | **66%** |
+> | Perceived CTM as systematic | **63%** |
+> | Valued graphical representation | **54%** |
+> | Ad hoc fault detection | Only **55%** of faulty programs |
 >
 > …
 >
@@ -5850,7 +6273,32 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"Method": "EP", "Phase": "Before Training", "Percentage": 15},
 >       {"Method": "EP", "Phase": "After Training", "Percentage": 5},
 >       {"Method": "CTM", "Phase": "Before Training", "Percentage": 0},
->       {"Method": "CTM", "Phase": "After Traini
+>       {"Method": "CTM", "Phase": "After Training", "Percentage": 66},
+>       {"Method": "Other", "Phase": "Before Training", "Percentage": 20},
+>       {"Method": "Other", "Phase": "After Training", "Percentage": 3}
+>     ]
+>   },
+>   "mark": "bar",
+>   "encoding": {
+>     "x": {"field": "Method", "type": "nominal", "axis": {"labelAngle": 0}},
+>     "y": {"field": "Percentage", "type": "quantitative", "title": "% of students"},
+>     "xOffset": {"field": "Phase", "type": "nominal"},
+>     "color": {
+>       "field": "Phase",
+>       "type": "nominal",
+>       "scale": {"range": ["#fff3cd", "#019546"]}
+>     }
+>   }
+> }
+> ```
+>
+> | Finding | Value |
+> |---------|:--:|
+> | Initially preferred white-box | 53% |
+> | Preferred CTM after 3h training | **~66%** |
+> | Perceived CTM as systematic | 63% |
+> | Perceived CTM as complete | 56% |
+> | Original suites' fault detection | 55% |
 >
 > …
 >
@@ -6029,6 +6477,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     COLOR --> g(["Green"])
 >     COLOR --> b(["Blue"])
 >
+>     SIZE --> sm(["Small"])
+>     SIZE --> lg(["Large"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style FIG fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style INV fill:#d32f2f,stroke:#333,color:white
+>     style VAL fill:#019546,stroke:#333,color:white
+>     style EXMP fill:#ffcdd2,stroke:#d32f2f,color:#333,stroke-width:3px
+>     style ATTR fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SHAPE fill:#4a90d9,stroke:#333,color:white
+>     style COLOR fill:#4a90d9,stroke:#333,color:white
+>     style SIZE fill:#4a90d9,stroke:#333,color:white
+> ```
+>
+> **Why a separate branch?** If invalid values sit inside each valid classification, they enter the **combinatorial explosion** — the test generator combines them with every valid value from other aspects, producing meaningless test cases like "undefined shape + red + small + bright + white." A separate branch ensures invalids are tested individually.
+>
 > …
 >
 > #### 2.5 Modeling Invalid Cases
@@ -6064,6 +6528,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 >     SIZE --> sm(["Small"])
 >     SIZE --> lg(["Large"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style FIG fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style INV fill:#d32f2f,stroke:#333,color:white
+>     style VAL fill:#019546,stroke:#333,color:white
+>     style EXMP fill:#ffcdd2,stroke:#d32f2f,color:#333,stroke-width:3px
+>     style ATTR fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SHAPE fill:#4a90d9,stroke:#333,color:white
+>     style COLOR fill:#4a90d9,stroke:#333,color:white
+>     style SIZE fill:#4a90d9,stroke:#333,color:white
+> ```
+> {% endraw %}
+>
+> **Why?** If invalids sit inside each valid classification, the generator combines them with every valid value from other aspects — producing meaningless test cases. A separate branch ensures invalids are tested **individually**.
+>
+> **Decision guide:** If the application tests invalids one at a time, use a separate branch. If it processes combinations of valid and invalid inputs together (e.g., multi-field form validation), consider mixing.
 >
 > …
 
@@ -6226,9 +6706,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Avoid** | Modify the generator to skip conflicts | **Smallest** |
 > | **Replace** | Generate all, then clone & fix conflicts | 2nd best |
 > | **Abstract** | Merge conflicting parameters into one | Larger |
-> | **Sub-models** | Split into conflic
+> | **Sub-models** | Split into conflict-free sub-models | Largest |
 >
-> …
+> {: .exam-tip }
+> > **Exam Tip:** Remember: **Avoid > Replace > Abstract > Sub-models** in terms of suite size efficiency. "Avoid" is the recommended default strategy.
 >
 > #### Strategy Comparison
 >
@@ -6255,26 +6736,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > #### 5.3 Pairwise (2-Way) Testing
 >
 > **Concept:** Cover all pairs of parameter values without testing all combinations.
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 350,
->   "height": 200,
->   "title": "Test Count: Exhaustive vs Pairwise (log scale)",
->   "data": {
->     "values": [
->       {"approach": "2-way (Pairwise)", "tests": 29, "order": 1},
->       {"approach": "4-way", "tests": 85, "order": 2},
->       {"approach": "6-way", "tests": 350, "order": 3},
->       {"approach": "All combinations", "tests": 17179869184, "order": 4}
->     ]
->   },
->   "transform": [
->     {"calculate": "log(datum.tests) / log(10)", "as": "log_tests"},
->     {"calculate": "datum.tests < 1000 ? datum.tests + '' : datum.tests < 1000000 ? format(datum.tests/1000, '.0f') + 'K' : datum.tests < 1000000000 ? format(datum.tests/1000000, '.0f') + 'M' : format(datum.tests/1000000000, '.1f') + 'B'", "as": "label"}
->   ],
->   "layer": [
 >
 > …
 >
@@ -6339,9 +6800,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Avoid** | Modify the generator to skip conflicts | **Smallest** |
 > | **Replace** | Generate all, then clone & fix conflicts | 2nd best |
 > | **Abstract** | Merge conflicting parameters into one | Larger |
-> | **Sub-models** | Split into conflic
+> | **Sub-models** | Split into conflict-free sub-models | Largest |
 >
-> …
+> {: .exam-tip }
+> > **Exam Tip:** Remember: **Avoid > Replace > Abstract > Sub-models** in terms of suite size efficiency. "Avoid" is the recommended default strategy.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_A08_ClassificationTree.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_A08_ClassificationTree.md)
@@ -6424,6 +6886,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     COLOR --> g(["Green"])
 >     COLOR --> b(["Blue"])
 >
+>     SIZE --> sm(["Small"])
+>     SIZE --> lg(["Large"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style FIG fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style INV fill:#d32f2f,stroke:#333,color:white
+>     style VAL fill:#019546,stroke:#333,color:white
+>     style EXMP fill:#ffcdd2,stroke:#d32f2f,color:#333,stroke-width:3px
+>     style ATTR fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SHAPE fill:#4a90d9,stroke:#333,color:white
+>     style COLOR fill:#4a90d9,stroke:#333,color:white
+>     style SIZE fill:#4a90d9,stroke:#333,color:white
+> ```
+>
+> **Why a separate branch?** If invalid values sit inside each valid classification, they enter the **combinatorial explosion** — the test generator combines them with every valid value from other aspects, producing meaningless test cases like "undefined shape + red + small + bright + white." A separate branch ensures invalids are tested individually.
+>
 > …
 >
 > #### 2.5 Modeling Invalid Cases
@@ -6459,6 +6937,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 >     SIZE --> sm(["Small"])
 >     SIZE --> lg(["Large"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style FIG fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style INV fill:#d32f2f,stroke:#333,color:white
+>     style VAL fill:#019546,stroke:#333,color:white
+>     style EXMP fill:#ffcdd2,stroke:#d32f2f,color:#333,stroke-width:3px
+>     style ATTR fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SHAPE fill:#4a90d9,stroke:#333,color:white
+>     style COLOR fill:#4a90d9,stroke:#333,color:white
+>     style SIZE fill:#4a90d9,stroke:#333,color:white
+> ```
+> {% endraw %}
+>
+> **Why?** If invalids sit inside each valid classification, the generator combines them with every valid value from other aspects — producing meaningless test cases. A separate branch ensures invalids are tested **individually**.
+>
+> **Decision guide:** If the application tests invalids one at a time, use a separate branch. If it processes combinations of valid and invalid inputs together (e.g., multi-field form validation), consider mixing.
 >
 > …
 
@@ -6508,6 +7002,29 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     GP --> LOW(["≤ $30,000"])
 >     GP --> MID(["$30,001–<br>$50,000"])
 >     GP --> HIGH(["&gt; $50,000"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style RES fill:#4a90d9,stroke:#333,color:white
+>     style MS fill:#4a90d9,stroke:#333,color:white
+>     style GP fill:#4a90d9,stroke:#333,color:white
+> ```
+> {% endraw %}
+>
+> {: .important }
+> This flat tree generates 2 × 2 × 3 = **12 potential combinations**. Six are infeasible (Non-Resident paired with any Status or Pay bracket). **Dependency rules** (Avoid strategy) filter them out before test generation.
+>
+> **Step 5 -- Combination Table:**
+>
+> | TC | Resident? | Status | Gross Pay | Expected Tax |
+> |----|-----------|--------|-----------|-------------|
+> | 1 | No | -- | -- | 1% |
+> | 2 | Yes | Single | <= $30k | 1% |
+> | 3 | Yes | Single | $30k-$50k | 5% |
+> | 4 | Yes | Single | > $50k | 15% |
+> | 5 | Yes | Family | <= $50k | 1% |
+> | 6 | Yes | Family | > $50k | 5% |
+>
+> **Step 6 -- Concrete Test Cases:**
 >
 > …
 >
@@ -6625,7 +7142,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style B4 fill:#c8e6c9,stroke:#333
 > ```
 >
-> …
+> | Aspect | Category-Partition | Classification Tree Method |
+> |--------|:--:|:--:|
+> | **Notation** | Textual (TSL syntax) | Graphical (tree + table) |
+> | **Structure** | Flat list of categories | Hierarchical tree |
+> | **Test case creation** | Start large, add restrictions | Start minimal, add until sufficient |
+> | **Specification** | Implicit (lengthy generated lists) | Direct (compact combination table) |
+> | **Hierarchy support** | Complex constraints needed | Built into tree structure |
+>
+> > "The crucial activity during testing is test case determination, since it determines the kind and scope of the examination and thus the quality of the test."
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_A08_ClassificationTree.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_A08_ClassificationTree.md)
@@ -6673,7 +7198,27 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     LEN --> one(["1 char"])
 >     LEN --> multi(["&gt; 1 char"])
 >
-> …
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style ARR fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style CW fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SZ fill:#4a90d9,stroke:#333,color:white
+>     style OCC fill:#4a90d9,stroke:#333,color:white
+>     style ORD fill:#4a90d9,stroke:#333,color:white
+>     style CNT fill:#4a90d9,stroke:#333,color:white
+>     style LEN fill:#4a90d9,stroke:#333,color:white
+> ```
+> {% endraw %}
+>
+> **Combinatorial count:** 3 x 2 x 3 x 3 x 3 = **162 potential combinations** (valid only). Many are **infeasible** — e.g., "Array size = 0" AND "Occurrences = Many" is impossible. This is where constraints come in.
+>
+> **Constraints (impossible combinations):**
+>
+> | Constraint | Reason |
+> |------------|--------|
+> | Size = 0 -> Occurrences = None | Empty array cannot contain the value |
+> | Size = 0 -> Order is irrelevant | Cannot sort an empty array |
+> | Size = 1 -> Occurrences in {None, One} | Single element: either matches or doesn't |
+> | Size = 1 -> Order is irrelevant | Single element is trivially sorted |
 >
 > #### Constraints (impossible combinations)
 >
@@ -6749,7 +7294,18 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     LIGHT --> day(["Daylight"])
 >     LIGHT --> art(["Artificial"])
 >
-> …
+>     BG --> white(["White"])
+>     BG --> dark(["Dark"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style FIG fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style ENV fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SHAPE fill:#4a90d9,stroke:#333,color:white
+>     style COLOR fill:#4a90d9,stroke:#333,color:white
+>     style SIZE fill:#4a90d9,stroke:#333,color:white
+>     style LIGHT fill:#4a90d9,stroke:#333,color:white
+>     style BG fill:#4a90d9,stroke:#333,color:white
+> ```
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/domain/RQ_A08_ClassificationTree.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/domain/RQ_A08_ClassificationTree.md)
@@ -6765,26 +7321,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > #### 5.3 Pairwise (2-Way) Testing
 >
 > **Concept:** Cover all pairs of parameter values without testing all combinations.
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 350,
->   "height": 200,
->   "title": "Test Count: Exhaustive vs Pairwise (log scale)",
->   "data": {
->     "values": [
->       {"approach": "2-way (Pairwise)", "tests": 29, "order": 1},
->       {"approach": "4-way", "tests": 85, "order": 2},
->       {"approach": "6-way", "tests": 350, "order": 3},
->       {"approach": "All combinations", "tests": 17179869184, "order": 4}
->     ]
->   },
->   "transform": [
->     {"calculate": "log(datum.tests) / log(10)", "as": "log_tests"},
->     {"calculate": "datum.tests < 1000 ? datum.tests + '' : datum.tests < 1000000 ? format(datum.tests/1000, '.0f') + 'K' : datum.tests < 1000000000 ? format(datum.tests/1000000, '.0f') + 'M' : format(datum.tests/1000000000, '.1f') + 'B'", "as": "label"}
->   ],
->   "layer": [
 >
 > …
 >
@@ -6807,7 +7343,32 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"Method": "EP", "Phase": "Before Training", "Percentage": 15},
 >       {"Method": "EP", "Phase": "After Training", "Percentage": 5},
 >       {"Method": "CTM", "Phase": "Before Training", "Percentage": 0},
->       {"Method": "CTM", "Phase": "After Traini
+>       {"Method": "CTM", "Phase": "After Training", "Percentage": 66},
+>       {"Method": "Other", "Phase": "Before Training", "Percentage": 20},
+>       {"Method": "Other", "Phase": "After Training", "Percentage": 3}
+>     ]
+>   },
+>   "mark": "bar",
+>   "encoding": {
+>     "x": {"field": "Method", "type": "nominal", "axis": {"labelAngle": 0}},
+>     "y": {"field": "Percentage", "type": "quantitative", "title": "% of students"},
+>     "xOffset": {"field": "Phase", "type": "nominal"},
+>     "color": {
+>       "field": "Phase",
+>       "type": "nominal",
+>       "scale": {"range": ["#fff3cd", "#019546"]}
+>     }
+>   }
+> }
+> ```
+>
+> | Finding | Value |
+> |---------|:--:|
+> | Initially preferred white-box | 53% |
+> | Preferred CTM after 3h training | **~66%** |
+> | Perceived CTM as systematic | 63% |
+> | Perceived CTM as complete | 56% |
+> | Original suites' fault detection | 55% |
 >
 > …
 
@@ -6854,7 +7415,18 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     LIGHT --> day(["Daylight"])
 >     LIGHT --> art(["Artificial"])
 >
-> …
+>     BG --> white(["White"])
+>     BG --> dark(["Dark"])
+>
+>     style ROOT fill:#019546,stroke:#333,color:white
+>     style FIG fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style ENV fill:#2D6E2A,stroke:#333,color:white,stroke-width:3px
+>     style SHAPE fill:#4a90d9,stroke:#333,color:white
+>     style COLOR fill:#4a90d9,stroke:#333,color:white
+>     style SIZE fill:#4a90d9,stroke:#333,color:white
+>     style LIGHT fill:#4a90d9,stroke:#333,color:white
+>     style BG fill:#4a90d9,stroke:#333,color:white
+> ```
 >
 > #### 2.2 Aspects and Equivalence Classes
 >
@@ -6988,9 +7560,16 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > 3. **Block B3 (first iteration):** Division `x = x / y` with y:NZ is safe. Then `y = y - 1`: since y:NZ, subtracting 1 might make it zero, so y:MZ. Then `z = 5`: z:NZ. State leaving B3: {x:NZ, y:MZ, z:NZ}.
 >
-> 4.
+> 4. **Block B2 (second visit):** Now state from B1 and state from B3 must be **joined**:
+>    - x: NZ join NZ = NZ
+>    - y: NZ join MZ = MZ
+>    - z: Z join NZ = MZ
 >
-> …
+> 5. **Block B3 (second iteration):** Division `x = x / y` with **y:MZ** -- the divisor might be zero. **Report warning: potential divide-by-zero.**
+>
+> 6. **Fixed point:** The abstract state no longer changes between iterations. Analysis terminates.
+>
+> > **Detection:** At `x = x / y` in B3, the divisor `y` has abstract value MZ. The analysis reports a warning for potential divide-by-zero. This is a genuine bug: when `y` counts down to 0, the loop condition `y > -1` is still true, and the division executes with y = 0.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7108,7 +7687,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Branch refinement** is a key feature of null analysis: when code checks `y != null`, the analysis can narrow `y` from MaybeNull to NotNull in the true branch and to Null in the false branch. This dramatically reduces false positives.
 >
-> …
+> Facebook's **Infer** tool uses a sophisticated variant of this analysis based on **separation logic** to detect null dereferences and resource leaks at scale, running automatically on every code diff before it is submitted .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7135,9 +7714,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Effort** | Low (automated tools) | Medium (model construction required) |
 > | **Best for** | Broad bug detection across large codebases | Verifying specific properties of concurrent systems |
 >
-> In practice, model checking and static analysis are complementary.
->
-> …
+> In practice, model checking and static analysis are complementary. Static analysis tools like Coverity or CodeQL handle large codebases with shallow-to-medium analysis depth, while model checkers like SPIN verify critical concurrency properties with deep guarantees on smaller models.
 >
 > #### 5.1 What is Model Checking?
 >
@@ -7153,7 +7730,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Safety:** $G(\neg \textit{bad})$ -- "Globally, the bad state never occurs." Example: never divide by zero.
 > - **Liveness:** $G(\textit{request} \rightarrow F\;\textit{response})$ -- "Globally, every request is eventually followed by a response." Example: every lock is eventually unlocked.
 >
-> …
+> **When to use model checking vs dataflow analysis:**
+>
+> | Criterion | Dataflow Analysis | Model Checking |
+> |-----------|-------------------|----------------|
+> | Best for | Value tracking (null, zero, taint) | Protocol/behavioral properties |
+> | Concurrency | Limited | Excellent (all interleavings) |
+> | Scalability | Good (handles large codebases) | Limited (state explosion) |
+> | Output | Warnings at specific lines | Counterexample traces |
+> | Cost | Moderate | Expensive |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7272,7 +7857,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **eBay** reached the same threshold through a different path :
 >
-> …
+> | Phase | False Positive Rate | Developer Response |
+> |-------|--------------------|--------------------|
+> | Initial deployment (default config) | **50%** | Declared tool "useless" |
+> | After customization (75% of checks disabled) | **10%** | Acceptance and adoption |
+>
+> > **Key insight:** The threshold for developer tolerance is remarkably consistent across organizations -- around 10%. Above this, developers simply ignore all warnings.
 >
 > #### 6.2 Google Tricorder: The 10% Rule in Practice
 >
@@ -7294,7 +7884,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > 4. **Project-level customization** -- not per-user (maintains team consistency)
 > 5. **Provide fixes, not just warnings** -- suggested auto-fixes lower the barrier to action
 >
-> …
+> > "The bottom line is that developers will decide whether an analysis tool has high impact, and what a false positive is."
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7336,9 +7926,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **False positives** | Yes (conservative) | Rare (path conditions verified) | None (observed behavior) |
 > | **Automation** | Fully automatic | Fully automatic | Requires test design |
 >
-> **Compared with fuzzing**, symbolic execution is guided by program structure rather than random mutation.
+> **Compared with fuzzing**, symbolic execution is guided by program structure rather than random mutation. A fuzzer might spend hours trying random inputs without discovering that `y` must equal `x + 1`, while symbolic execution solves this constraint directly. However, fuzzers are faster per execution and handle complex environments more naturally.
 >
-> …
+> **Hybrid fuzzing** combines both strengths: use fast fuzzing for broad coverage, switch to symbolic execution when the fuzzer gets stuck at complex branch conditions. This approach is the current state of the art for automated vulnerability detection .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7386,9 +7976,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Effort** | Low (automated tools) | Medium (model construction required) |
 > | **Best for** | Broad bug detection across large codebases | Verifying specific properties of concurrent systems |
 >
-> In practice, model checking and static analysis are complementary.
->
-> …
+> In practice, model checking and static analysis are complementary. Static analysis tools like Coverity or CodeQL handle large codebases with shallow-to-medium analysis depth, while model checkers like SPIN verify critical concurrency properties with deep guarantees on smaller models.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7417,7 +8005,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Safety:** $G(\neg \textit{bad})$ -- "Globally, the bad state never occurs." Example: never divide by zero.
 > - **Liveness:** $G(\textit{request} \rightarrow F\;\textit{response})$ -- "Globally, every request is eventually followed by a response." Example: every lock is eventually unlocked.
 >
-> …
+> **When to use model checking vs dataflow analysis:**
+>
+> | Criterion | Dataflow Analysis | Model Checking |
+> |-----------|-------------------|----------------|
+> | Best for | Value tracking (null, zero, taint) | Protocol/behavioral properties |
+> | Concurrency | Limited | Excellent (all interleavings) |
+> | Scalability | Good (handles large codebases) | Limited (state explosion) |
+> | Output | Warnings at specific lines | Counterexample traces |
+> | Cost | Moderate | Expensive |
 >
 > #### Model Checking
 >
@@ -7448,9 +8044,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Effort** | Low (automated tools) | Medium (model construction required) |
 > | **Best for** | Broad bug detection across large codebases | Verifying specific properties of concurrent systems |
 >
-> In practice, model checking and static analysis are complementary.
->
-> …
+> In practice, model checking and static analysis are complementary. Static analysis tools like Coverity or CodeQL handle large codebases with shallow-to-medium analysis depth, while model checkers like SPIN verify critical concurrency properties with deep guarantees on smaller models.
 >
 > #### 5.1 What is Model Checking?
 >
@@ -7466,7 +8060,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Safety:** $G(\neg \textit{bad})$ -- "Globally, the bad state never occurs." Example: never divide by zero.
 > - **Liveness:** $G(\textit{request} \rightarrow F\;\textit{response})$ -- "Globally, every request is eventually followed by a response." Example: every lock is eventually unlocked.
 >
-> …
+> **When to use model checking vs dataflow analysis:**
+>
+> | Criterion | Dataflow Analysis | Model Checking |
+> |-----------|-------------------|----------------|
+> | Best for | Value tracking (null, zero, taint) | Protocol/behavioral properties |
+> | Concurrency | Limited | Excellent (all interleavings) |
+> | Scalability | Good (handles large codebases) | Limited (state explosion) |
+> | Output | Warnings at specific lines | Counterexample traces |
+> | Cost | Moderate | Expensive |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7515,7 +8117,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Safety:** $G(\neg \textit{bad})$ -- "Globally, the bad state never occurs." Example: never divide by zero.
 > - **Liveness:** $G(\textit{request} \rightarrow F\;\textit{response})$ -- "Globally, every request is eventually followed by a response." Example: every lock is eventually unlocked.
 >
-> …
+> **When to use model checking vs dataflow analysis:**
+>
+> | Criterion | Dataflow Analysis | Model Checking |
+> |-----------|-------------------|----------------|
+> | Best for | Value tracking (null, zero, taint) | Protocol/behavioral properties |
+> | Concurrency | Limited | Excellent (all interleavings) |
+> | Scalability | Good (handles large codebases) | Limited (state explosion) |
+> | Output | Warnings at specific lines | Counterexample traces |
+> | Cost | Moderate | Expensive |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7547,9 +8157,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Effort** | Low (automated tools) | Medium (model construction required) |
 > | **Best for** | Broad bug detection across large codebases | Verifying specific properties of concurrent systems |
 >
-> In practice, model checking and static analysis are complementary.
->
-> …
+> In practice, model checking and static analysis are complementary. Static analysis tools like Coverity or CodeQL handle large codebases with shallow-to-medium analysis depth, while model checkers like SPIN verify critical concurrency properties with deep guarantees on smaller models.
 >
 > #### 2.1 Static vs Dynamic Analysis
 >
@@ -7564,9 +8172,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Input dependence** | Independent of specific inputs | Depends entirely on test inputs |
 > | **Cost scaling** | Scales with code size | Scales with input space |
 >
-> **Key definition:** Static analysis systematically examines an *abstraction* of the program state space.
->
-> …
+> **Key definition:** Static analysis systematically examines an *abstraction* of the program state space. The word "abstraction" is critical -- we do not track exact values, we track simplified representations that capture the properties we care about.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7606,7 +8212,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Medium** | No new issues allowed (fix-forward) |
 > | **Low** | Limited enforcement |
 >
-> …
+> **Result:** 10% false positive rate, developer acceptance, cost approximately $400K/year -- equivalent to about 2 manual testers.
+>
+> **Lesson:** Static analysis scales to millions of LOC; manual testers do not. But trust is fragile -- a bad first experience poisons adoption for years. **Customization before deployment is essential**, not optional.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7639,7 +8247,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Every practical tool must sacrifice at least one of these properties:
 >
-> …
+> | Tool Strategy | Sound? | Complete? | Terminates? | Example |
+> |---------------|--------|-----------|-------------|---------|
+> | Over-approximate (conservative) | Yes | No | Yes | Dataflow analysis, abstract interpretation |
+> | Under-approximate (optimistic) | No | Yes | Yes | Testing, bounded model checking |
+> | Precise but may not halt | Yes | Yes | No | Unbounded theorem provers |
+> | Heuristic (practical) | No | No | Yes | Most commercial tools (FindBugs, PMD) |
+>
+> > **Exam Tip:** Most commercial tools are *neither* sound nor complete. They use heuristics to find common bugs quickly. This is a practical engineering choice, not a theoretical deficiency.
 >
 > #### Modern Static Analysis Tools
 >
@@ -7678,7 +8293,30 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **If tainted data reaches a sink without passing through a sanitizer, report a vulnerability.**
 >
-> …
+> | Vulnerability | Source | Sink | Sanitizer |
+> |---------------|--------|------|-----------|
+> | **SQL Injection** | HTTP parameter | SQL query execution | Parameterized query / escaping |
+> | **XSS** | User input field | HTML output | HTML encoding |
+> | **Command Injection** | Form field | `exec()` / `system()` | Input validation / whitelist |
+> | **Path Traversal** | URL parameter | File open | Path canonicalization |
+>
+> **Vulnerable code (SQL injection):**
+> ```java
+> String query = "SELECT * FROM users WHERE id = " + request.getParameter("id");
+> Statement stmt = conn.createStatement();
+> stmt.execute(query);  // SINK: tainted data in SQL query!
+> ```
+>
+> **Safe code:**
+> ```java
+> PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE id = ?");
+> stmt.setString(1, request.getParameter("id"));  // Sanitized via parameterized query
+> stmt.execute();
+> ```
+>
+> **Tools for taint analysis:** CodeQL (GitHub), Semgrep, Fortify (Micro Focus)
+>
+> > **Exam Tip:** Be able to trace a taint flow from source to sink and identify where sanitization is needed. Know the four vulnerability types and their source/sink/sanitizer patterns.
 >
 > #### Taint Analysis
 >
@@ -7693,6 +8331,29 @@ Generated from the SQRBOK source repository. **423 cards.**
 > If tainted data reaches a sink without passing through an appropriate sanitizer, the tool reports a vulnerability.
 >
 > **Common vulnerability patterns:**
+>
+> | Vulnerability | Source | Sink | Sanitizer |
+> |---------------|--------|------|-----------|
+> | SQL Injection | HTTP parameter | SQL query | Parameterized query |
+> | Cross-Site Scripting (XSS) | User input | HTML output | `escapeHtml()` |
+> | Command Injection | User input | `exec()` / `system()` | Input validation |
+> | Path Traversal | URL parameter | File open | Path canonicalization |
+>
+> **Example -- SQL injection:**
+>
+> ```java
+> // VULNERABLE: tainted data flows directly to sink
+> String id = request.getParameter("id");           // Source (tainted)
+> String sql = "SELECT * FROM users WHERE id=" + id; // Propagation
+> stmt.executeQuery(sql);                            // Sink - ALERT!
+>
+> // SAFE: sanitizer (parameterized query) removes taint
+> String id = request.getParameter("id");           // Source (tainted)
+> PreparedStatement ps = conn.prepareStatement(
+>     "SELECT * FROM users WHERE id=?");
+> ps.setString(1, id);                              // Sanitizer
+> ps.executeQuery();                                // Sink - OK
+> ```
 >
 > …
 
@@ -7740,7 +8401,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Path forking:** At each conditional branch, execution forks into two paths -- one where the condition is true and one where it is false
 > - **SMT solving:** An **SMT solver** (Satisfiability Modulo Theories) such as Z3 or STP checks whether a path condition is satisfiable. If so, it produces a concrete input that exercises that path
 >
-> …
+> The result: symbolic execution can automatically generate test inputs that reach specific code locations, trigger specific branches, or expose specific bugs.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/static/RQ_A06_Static.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/static/RQ_A06_Static.md)
@@ -7773,7 +8434,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 > 2. Walk the tree looking for subtree patterns that match known bugs
 > 3. Report matches with location and description
 >
-> …
+> **Example -- Double-checked locking (Java):**
+> ```java
+> // Broken double-checked locking pattern
+> if (instance == null) {
+>     synchronized (lock) {
+>         if (instance == null) {
+>             instance = new Singleton(); // May be reordered!
+>         }
+>     }
+> }
+> ```
+>
+> A tool like SpotBugs (formerly FindBugs) recognizes this AST pattern and flags it because the Java Memory Model allows instruction reordering that can expose a partially constructed object.
+>
+> **Tools:** PMD (Java, multi-language), SpotBugs (Java bytecode), Semgrep (multi-language, custom rules)
 >
 > #### 3.1 AST Pattern Matching
 >
@@ -7812,9 +8487,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **The tradeoff:** Abstraction loses information. We can no longer distinguish x=5 from x=42 -- both are NZ. This means some paths that are infeasible in reality will appear feasible in the abstract model, producing false positives. But the analysis becomes tractable and *terminates*.
 >
-> > **Key Takeaway:** Abstraction is what makes static analysis possible despite Rice's Theorem.
->
-> …
+> > **Key Takeaway:** Abstraction is what makes static analysis possible despite Rice's Theorem. We accept imprecision (false positives) in exchange for tractability and termination.
 >
 > #### 4.2 The Abstract Domain for Zero Analysis
 >
@@ -7867,9 +8540,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | CodeQL alone | 27 |
 > | IRIS (LLM + CodeQL) | 55 (**+103%**) |
 >
-> IRIS also identified 4 previously unknown vulnerabilities that no existing tool could find.
->
-> …
+> IRIS also identified 4 previously unknown vulnerabilities that no existing tool could find. The key insight is that LLMs excel at understanding API semantics (what is a source? what is a sanitizer?) while formal analysis excels at tracing data flow through code.
 >
 > #### Modern Static Analysis Tools
 >
@@ -7922,9 +8593,16 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > 3. **Block B3 (first iteration):** Division `x = x / y` with y:NZ is safe. Then `y = y - 1`: since y:NZ, subtracting 1 might make it zero, so y:MZ. Then `z = 5`: z:NZ. State leaving B3: {x:NZ, y:MZ, z:NZ}.
 >
-> 4.
+> 4. **Block B2 (second visit):** Now state from B1 and state from B3 must be **joined**:
+>    - x: NZ join NZ = NZ
+>    - y: NZ join MZ = MZ
+>    - z: Z join NZ = MZ
 >
-> …
+> 5. **Block B3 (second iteration):** Division `x = x / y` with **y:MZ** -- the divisor might be zero. **Report warning: potential divide-by-zero.**
+>
+> 6. **Fixed point:** The abstract state no longer changes between iterations. Analysis terminates.
+>
+> > **Detection:** At `x = x / y` in B3, the divisor `y` has abstract value MZ. The analysis reports a warning for potential divide-by-zero. This is a genuine bug: when `y` counts down to 0, the loop condition `y > -1` is still true, and the division executes with y = 0.
 >
 > #### 4.2 The Abstract Domain for Zero Analysis
 >
@@ -7984,7 +8662,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Actually, let us trace more carefully: After processing one request, `nPackets` is incremented but `nPacketsOld` was set to the old value. So `nPackets != nPacketsOld` is TRUE and the loop continues. The loop exits only when no request is processed in an iteration. But that means the if-condition was false, which is Bug 1's scenario.
 >
-> **Revised trace for Bug 2:** Consider the case where the if-condition is true on the first iteration (unlock at S2) and then the if-condition is false on the second iteration (no unlock).
+> **Revised trace for Bug 2:** Consider the case where the if-condition is true on the first iteration (unlock at S2) and then the if-condition is false on the second iteration (no unlock). Now `nPackets == nPacketsOld`, so the loop exits at S3. At this point, the lock is held (from the second iteration's lock at S0 without unlock). Then S4 does `unlock()` -- this is actually correct for this path.
+>
+> The double unlock scenario occurs if: after processing the last request (unlock at S2), the loop condition evaluates to exit (nPackets == nPacketsOld somehow), and then S4 does `unlock()` again. The model checker identifies the precise condition under which this path is feasible.
+>
+> **Path:** $P_0 \xrightarrow{\text{lock}(S_0)} P_1 \xrightarrow{\text{unlock}(S_2)} P_0 \xrightarrow{\text{exit}(S_3)} P_0 \xrightarrow{\text{unlock}(S_4)} \textbf{ERROR}$
+>
+> **Key insight:** Both bugs are non-local -- the lock and unlock operations are spread across different code locations and control flow paths. The product automaton mechanically reveals all paths to the error state.
 >
 > …
 >
@@ -8097,7 +8781,8 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 40 | 1.2 × 10¹⁹ | **21** |
 > | 100 | 5.2 × 10⁴⁷ | **25** |
 >
-> …
+> {: .highlight }
+> > **Exam Tip:** The formula N ∝ v^t × log(k) explains two facts: (1) why CT scales to huge parameter spaces, and (2) why raising strength is so expensive. Be ready to explain both.
 >
 > #### Logarithmic Growth
 >
@@ -8272,7 +8957,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - 800-service telecom project: 336 scenarios → **30 pairwise tests**
 > - Achieved >90% block coverage on Unix commands
 >
-> …
+> **Limitation:** Random candidate generation (M=50 per test) makes AETG slow for large models.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/combinatorial/RQ_A07_Combinatorial.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/combinatorial/RQ_A07_Combinatorial.md)
@@ -8432,9 +9117,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - Pedestrian type (adult, child)
 > - Lighting (day, night), road surface (dry, wet)
 >
-> **Key insight:** Ontology-based CT bridges the gap between domain knowledge and systematic test generation.
->
-> …
+> **Key insight:** Ontology-based CT bridges the gap between domain knowledge and systematic test generation. The ontology captures relationships and constraints that raw parameter models cannot express.
 >
 > #### Case Study: Autonomous Driving (Tao 2019)
 >
@@ -8609,7 +9292,8 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 40 | 1.2 × 10¹⁹ | **21** |
 > | 100 | 5.2 × 10⁴⁷ | **25** |
 >
-> …
+> {: .highlight }
+> > **Exam Tip:** The formula N ∝ v^t × log(k) explains two facts: (1) why CT scales to huge parameter spaces, and (2) why raising strength is so expensive. Be ready to explain both.
 >
 > #### Example: scaling parameters (pairwise, 3 values each)
 >
@@ -8658,9 +9342,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Hybrid** | Search + greedy/algebraic | REH | Speed + quality |
 > | **Hyper-heuristic** | Meta-level selector | HHSA, HHH | Selects best strategy per instance |
 >
-> **Key finding:** Simulated Annealing is the most successful algorithm across all categories .
->
-> …
+> **Key finding:** Simulated Annealing is the most successful algorithm across all categories . Hyper-heuristics represent the emerging frontier — they select which low-level algorithm to use for each specific problem instance.
 >
 > #### 4.4 Algorithm Evolution
 >
@@ -8816,7 +9498,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Randoop** found 30 errors in a .NET component already tested by 40 engineers for 5 years — more than a tester typically finds in a year
 > - **QuickCheck** discovered bugs in production Haskell libraries with a 300-line tool, finding errors equally distributed across generators, specifications, and implementations
 >
-> …
+> Random testing also uniquely supports **statistical reliability prediction**: after N successful random tests drawn from an operational profile, one can bound the probability of undetected failure .
 >
 > #### 1.2 Why Use Random Testing?
 >
@@ -8867,11 +9549,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > $$
 >
 > So ~3,000 successful tests give 95% confidence the failure rate is below 0.1% .
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "title": "Confidence vs.
 >
 > …
 >
@@ -8947,7 +9624,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Tests generated | 4,000,000 sequences |
 > | Coverage finding | Found errors in code with 100% block and arc coverage |
 >
-> …
+> The "plateau effect" — error-finding rate dropping from 5/hour to zero after ~12 hours — reveals the limitation of uniform random method selection: classes with simple constructors are explored disproportionately .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/random/RQ_L06_Random.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/random/RQ_L06_Random.md)
@@ -8972,7 +9649,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Scenario 2 — Persistent-state systems:**
 > Valid tests of stateful programs must be *input sequences from reset*, not individually sampled states. Feasible states are "very sparse in all possible bit patterns" — directly setting a program to an arbitrary state may exercise configurations no real input sequence can reach. Random sequence generation correctly restricts testing to reachable states; state-sampled systematic testing does not.
 >
-> …
+> > "Valid tests of programs with state are sequences of inputs, and it is here that random testing comes into its own." — Hamlet 2006
 >
 > #### 2.4 Randoop: Feedback-Directed Random Testing
 >
@@ -9013,9 +9690,27 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Contracts** | Preconditions, postconditions, invariants | Specification violations | Unspecified behavior |
 > | **Properties** | User-defined invariants for all inputs | Logical errors, corner cases | Requires developer specification effort |
 > | **Coverage feedback** | New code paths = interesting input | Guides exploration toward new behavior | Does not verify correctness |
-> | **Differential** | Compare against r
+> | **Differential** | Compare against reference implementation | Any divergence from reference | Shared bugs in both implementations |
 >
-> …
+> ```mermaid
+> flowchart LR
+>     A["Crash Detection"] --> B["Sanitizers"]
+>     B --> C["Coverage Feedback"]
+>     C --> D["Contracts"]
+>     D --> E["Properties"]
+>     E --> F["Differential"]
+>
+>     style A fill:#c8e6c9,stroke:#388e3c
+>     style B fill:#c8e6c9,stroke:#388e3c
+>     style C fill:#fff3cd,stroke:#ffc107
+>     style D fill:#fff3cd,stroke:#ffc107
+>     style E fill:#ffccbc,stroke:#e64a19
+>     style F fill:#ffccbc,stroke:#e64a19
+> ```
+>
+> *Left to right: more automated but less precise → more precise but requires more effort.*
+>
+> The evolution from crash oracles  to sanitizer-augmented coverage  to specification-based properties  represents a trade-off between **automation and precision** .
 >
 > #### 1.1 What is Random Testing?
 >
@@ -9058,7 +9753,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Randoop** found 30 errors in a .NET component already tested by 40 engineers for 5 years — more than a tester typically finds in a year
 > - **QuickCheck** discovered bugs in production Haskell libraries with a 300-line tool, finding errors equally distributed across generators, specifications, and implementations
 >
-> …
+> Random testing also uniquely supports **statistical reliability prediction**: after N successful random tests drawn from an operational profile, one can bound the probability of undetected failure .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/random/RQ_L06_Random.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/random/RQ_L06_Random.md)
@@ -9133,7 +9828,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **macOS X (2006)**: Command-line reliability improved to 7% crash rate (down from 33%), but GUI failure rate reached 73% — the worst ever recorded .
 >
-> …
+> **The longitudinal finding**: The same error classes — buffer overflows, null pointer dereferences, unchecked return values — persisted for 16 years across operating systems. Simple random testing continues to find bugs that sophisticated techniques miss .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/random/RQ_L06_Random.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/random/RQ_L06_Random.md)
@@ -9172,7 +9867,16 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **What mutation looks like** — AFL takes a seed input and applies small changes:
 >
-> …
+> ```
+> Original seed: "GET /index.html HTTP/1.1\r\n"
+> Bit flip:      "GET /index.htm\xec HTTP/1.1\r\n"   ← flipped one bit
+> Arithmetic:    "GET /index.html HTTP/2.1\r\n"       ← incremented '1' → '2'
+> Block delete:  "GET HTTP/1.1\r\n"                   ← removed a chunk
+> ```
+>
+> If any mutated input triggers a new code edge, it joins the queue for further mutation.
+>
+> **Directed greybox fuzzing (AFLGo)**: Böhme et al. extended greybox fuzzing with distance-based guidance via simulated annealing, directing the fuzzer toward specific program locations . AFLGo exposed Heartbleed in under 20 minutes where Katch (symbolic execution) failed in 24 hours, and found 26 bugs in OSS-Fuzz targets including 17 CVEs.
 >
 > #### Three Generations of Fuzzing
 >
@@ -9215,7 +9919,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **macOS X (2006)**: Command-line reliability improved to 7% crash rate (down from 33%), but GUI failure rate reached 73% — the worst ever recorded .
 >
-> …
+> **The longitudinal finding**: The same error classes — buffer overflows, null pointer dereferences, unchecked return values — persisted for 16 years across operating systems. Simple random testing continues to find bugs that sophisticated techniques miss .
 >
 > #### Bug Oracles for Fuzzing
 >
@@ -9288,7 +9992,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **macOS X (2006)**: Command-line reliability improved to 7% crash rate (down from 33%), but GUI failure rate reached 73% — the worst ever recorded .
 >
-> …
+> **The longitudinal finding**: The same error classes — buffer overflows, null pointer dereferences, unchecked return values — persisted for 16 years across operating systems. Simple random testing continues to find bugs that sophisticated techniques miss .
 >
 > #### Key Insight: Where Bugs Hide
 >
@@ -9779,7 +10483,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Randoop** found 30 errors in a .NET component already tested by 40 engineers for 5 years — more than a tester typically finds in a year
 > - **QuickCheck** discovered bugs in production Haskell libraries with a 300-line tool, finding errors equally distributed across generators, specifications, and implementations
 >
-> …
+> Random testing also uniquely supports **statistical reliability prediction**: after N successful random tests drawn from an operational profile, one can bound the probability of undetected failure .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/random/RQ_L06_Random.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/random/RQ_L06_Random.md)
@@ -9826,7 +10530,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Tests generated | 4,000,000 sequences |
 > | Coverage finding | Found errors in code with 100% block and arc coverage |
 >
-> …
+> The "plateau effect" — error-finding rate dropping from 5/hour to zero after ~12 hours — reveals the limitation of uniform random method selection: classes with simple constructors are explored disproportionately .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/random/RQ_L06_Random.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/random/RQ_L06_Random.md)
@@ -10026,7 +10730,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style overlap fill:#fff9c4,stroke:#f9a825
 > ```
 >
-> …
+> | Dimension | ET Strength | Scripted Strength |
+> |-----------|-------------|-------------------|
+> | Defect types | Usability, GUI, edge cases  | Conformance, specification-based |
+> | Efficiency | Higher (no design overhead) | — |
+> | Coverage | — | Higher systematic coverage  |
+> | Traceability | — | Full traceability to requirements |
+> | Adaptability | High (responds to discoveries) | Low (follows script) |
+>
+> > "ET is not a replacement for existing test-case based approaches, but a complementary testing approach suitable for certain situations"
 >
 > #### 2.8 The Coverage Paradox
 >
@@ -10034,9 +10746,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > 1. **Coverage measures traversal, not fault-revealing power.** Code coverage records which statements or branches were executed — not whether those executions stressed the system. Scripted tests systematically execute all branches, but many of those executions use "expected" inputs on "expected" paths. The code runs without finding a bug not because the bug isn't there, but because the input didn't trigger it.
 >
-> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies.
+> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies. They reach high-defect areas without covering the full structural map.
 >
-> …
+> 3. **ET exercises paths with higher fault-revealing inputs.** Even when an ET tester and a scripted tester both execute the same branch, the ET tester is more likely to do so with adversarial, boundary-probing, or semantically interesting inputs. Coverage counts the path once; it doesn't distinguish between a routine traversal and a targeted probe.
+>
+> {: .highlight }
+> > **Exam Tip:** Coverage is a **necessary but not sufficient** condition for fault detection. Executing code does not guarantee finding bugs in it — it depends on *how* the code is executed. ET achieves comparable fault detection with lower coverage because it optimises the *quality* of each execution, not the breadth.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10116,7 +10831,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style overlap fill:#fff9c4,stroke:#f9a825
 > ```
 >
-> …
+> | Dimension | ET Strength | Scripted Strength |
+> |-----------|-------------|-------------------|
+> | Defect types | Usability, GUI, edge cases  | Conformance, specification-based |
+> | Efficiency | Higher (no design overhead) | — |
+> | Coverage | — | Higher systematic coverage  |
+> | Traceability | — | Full traceability to requirements |
+> | Adaptability | High (responds to discoveries) | Low (follows script) |
+>
+> > "ET is not a replacement for existing test-case based approaches, but a complementary testing approach suitable for certain situations"
 >
 > #### 2.2 ET in Practice — The Coupon Example
 >
@@ -10197,7 +10920,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Command Injection** | Malicious input | Single quote in search → SQL error? |
 > | **Data Type Attacks** | Type boundaries | Feb 30, 13:75, 2^32+1 |
 >
-> …
+> **The Nightmare Headline Game:** Ask *"What would be the worst headline if this software fails?"*
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10286,9 +11009,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Historical District** | Legacy code and old features | Bad Neighborhood Tour, Museum Tour |
 > | **Entertainment District** | Fun, unusual inputs | Obsessive-Compulsive Tour, Couch Potato Tour |
 > | **Tourist District** | First-time user experience | Collector's Tour, Supermodel Tour |
-> |
->
-> …
+> | **Hotel District** | Background processes | All-Nighter Tour, TOGOF Tour (Tour Of Good Old Features — verify that existing features still work after changes) |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10332,9 +11053,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Key Research Papers:**
 > - Itkonen & Mantyla 2007, 2014: ET vs. scripted testing experiments
 > - Afzal et al. 2015: Equal-time ET experiment
-> - Ghazi et al.
->
-> …
+> - Ghazi et al. 2017: Five levels of exploration
+> - Miranda & Bertolino 2016, 2018: Operational coverage
+> - Bleier et al. 2025: Android Cloud Profiles
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10424,9 +11145,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > 1. **Coverage measures traversal, not fault-revealing power.** Code coverage records which statements or branches were executed — not whether those executions stressed the system. Scripted tests systematically execute all branches, but many of those executions use "expected" inputs on "expected" paths. The code runs without finding a bug not because the bug isn't there, but because the input didn't trigger it.
 >
-> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies.
+> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies. They reach high-defect areas without covering the full structural map.
 >
-> …
+> 3. **ET exercises paths with higher fault-revealing inputs.** Even when an ET tester and a scripted tester both execute the same branch, the ET tester is more likely to do so with adversarial, boundary-probing, or semantically interesting inputs. Coverage counts the path once; it doesn't distinguish between a routine traversal and a targeted probe.
+>
+> {: .highlight }
+> > **Exam Tip:** Coverage is a **necessary but not sufficient** condition for fault detection. Executing code does not guarantee finding bugs in it — it depends on *how* the code is executed. ET achieves comparable fault detection with lower coverage because it optimises the *quality* of each execution, not the breadth.
 >
 > #### ET Complements Scripted Testing
 >
@@ -10463,7 +11187,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style overlap fill:#fff9c4,stroke:#f9a825
 > ```
 >
-> …
+> | Dimension | ET Strength | Scripted Strength |
+> |-----------|-------------|-------------------|
+> | Defect types | Usability, GUI, edge cases  | Conformance, specification-based |
+> | Efficiency | Higher (no design overhead) | — |
+> | Coverage | — | Higher systematic coverage  |
+> | Traceability | — | Full traceability to requirements |
+> | Adaptability | High (responds to discoveries) | Low (follows script) |
+>
+> > "ET is not a replacement for existing test-case based approaches, but a complementary testing approach suitable for certain situations"
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10540,9 +11272,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Key Research Papers:**
 > - Itkonen & Mantyla 2007, 2014: ET vs. scripted testing experiments
 > - Afzal et al. 2015: Equal-time ET experiment
-> - Ghazi et al.
->
-> …
+> - Ghazi et al. 2017: Five levels of exploration
+> - Miranda & Bertolino 2016, 2018: Operational coverage
+> - Bleier et al. 2025: Android Cloud Profiles
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10659,7 +11391,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Step 3 — Tabular vs Graphical:**
 >
-> …
+> | Representation | Structure | Use When |
+> |----------------|-----------|----------|
+> | **Tabular (flat)** | Simple table: operation, rate, probability | Single initiator type; ≤ ~30 operations; straightforward system |
+> | **Graphical (tree)** | Hierarchical: initiator types branch into operations | Multiple initiator types; large operation count; complex system; communication to non-technical stakeholders |
+>
+> > **Rule of thumb (Musa):** Start with tabular. Switch to graphical when you have multiple initiator types whose operations do not overlap, or when the list grows large enough that structure aids comprehension.
+>
+> {: .highlight }
+> > **Exam Tip:** Tabular = one initiator type, small list. Graphical = multiple initiator types or complex hierarchy. The key driver is the number and type of initiators, not personal preference.
 >
 > #### Purpose
 >
@@ -10673,9 +11413,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Key Research Papers:**
 > - Itkonen & Mantyla 2007, 2014: ET vs. scripted testing experiments
 > - Afzal et al. 2015: Equal-time ET experiment
-> - Ghazi et al.
->
-> …
+> - Ghazi et al. 2017: Five levels of exploration
+> - Miranda & Bertolino 2016, 2018: Operational coverage
+> - Bleier et al. 2025: Android Cloud Profiles
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10847,9 +11587,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > 1. **Coverage measures traversal, not fault-revealing power.** Code coverage records which statements or branches were executed — not whether those executions stressed the system. Scripted tests systematically execute all branches, but many of those executions use "expected" inputs on "expected" paths. The code runs without finding a bug not because the bug isn't there, but because the input didn't trigger it.
 >
-> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies.
+> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies. They reach high-defect areas without covering the full structural map.
 >
-> …
+> 3. **ET exercises paths with higher fault-revealing inputs.** Even when an ET tester and a scripted tester both execute the same branch, the ET tester is more likely to do so with adversarial, boundary-probing, or semantically interesting inputs. Coverage counts the path once; it doesn't distinguish between a routine traversal and a targeted probe.
+>
+> {: .highlight }
+> > **Exam Tip:** Coverage is a **necessary but not sufficient** condition for fault detection. Executing code does not guarantee finding bugs in it — it depends on *how* the code is executed. ET achieves comparable fault detection with lower coverage because it optimises the *quality* of each execution, not the breadth.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10891,9 +11634,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Key Research Papers:**
 > - Itkonen & Mantyla 2007, 2014: ET vs. scripted testing experiments
 > - Afzal et al. 2015: Equal-time ET experiment
-> - Ghazi et al.
->
-> …
+> - Ghazi et al. 2017: Five levels of exploration
+> - Miranda & Bertolino 2016, 2018: Operational coverage
+> - Bleier et al. 2025: Android Cloud Profiles
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -10967,9 +11710,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Documentation** | Upfront (test plans) | Session reports | Quantitative (rates, probabilities) |
 > | **Defect types found** | Known, specified | Unknown, emergent | High-frequency, usage-driven |
 >
-> **Scripted + Exploratory = Coverage:** Scripted testing systematically exercises known requirements and guards against regression — it finds *specified* defects.
->
-> …
+> **Scripted + Exploratory = Coverage:** Scripted testing systematically exercises known requirements and guards against regression — it finds *specified* defects. Exploratory testing discovers unexpected behaviour that no test plan anticipated — it finds *emergent* defects. Neither alone is sufficient: scripted testing misses what was never specified; exploratory testing misses what requires systematic repetition to verify. Together they cover both dimensions, which is why the combination is standard industry practice .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -11094,9 +11835,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Documentation** | Upfront (test plans) | Session reports | Quantitative (rates, probabilities) |
 > | **Defect types found** | Known, specified | Unknown, emergent | High-frequency, usage-driven |
 >
-> **Scripted + Exploratory = Coverage:** Scripted testing systematically exercises known requirements and guards against regression — it finds *specified* defects.
->
-> …
+> **Scripted + Exploratory = Coverage:** Scripted testing systematically exercises known requirements and guards against regression — it finds *specified* defects. Exploratory testing discovers unexpected behaviour that no test plan anticipated — it finds *emergent* defects. Neither alone is sufficient: scripted testing misses what was never specified; exploratory testing misses what requires systematic repetition to verify. Together they cover both dimensions, which is why the combination is standard industry practice .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -11138,9 +11877,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > 1. **Coverage measures traversal, not fault-revealing power.** Code coverage records which statements or branches were executed — not whether those executions stressed the system. Scripted tests systematically execute all branches, but many of those executions use "expected" inputs on "expected" paths. The code runs without finding a bug not because the bug isn't there, but because the input didn't trigger it.
 >
-> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies.
+> 2. **Defects cluster.** Most bugs are concentrated in a small fraction of the codebase — the complex, edge-case-heavy modules. ET testers, guided by heuristics and active reasoning, naturally gravitate toward complexity and anomalies. They reach high-defect areas without covering the full structural map.
 >
-> …
+> 3. **ET exercises paths with higher fault-revealing inputs.** Even when an ET tester and a scripted tester both execute the same branch, the ET tester is more likely to do so with adversarial, boundary-probing, or semantically interesting inputs. Coverage counts the path once; it doesn't distinguish between a routine traversal and a targeted probe.
+>
+> {: .highlight }
+> > **Exam Tip:** Coverage is a **necessary but not sufficient** condition for fault detection. Executing code does not guarantee finding bugs in it — it depends on *how* the code is executed. ET achieves comparable fault detection with lower coverage because it optimises the *quality* of each execution, not the breadth.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -11182,9 +11924,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Key Research Papers:**
 > - Itkonen & Mantyla 2007, 2014: ET vs. scripted testing experiments
 > - Afzal et al. 2015: Equal-time ET experiment
-> - Ghazi et al.
->
-> …
+> - Ghazi et al. 2017: Five levels of exploration
+> - Miranda & Bertolino 2016, 2018: Operational coverage
+> - Bleier et al. 2025: Android Cloud Profiles
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -11233,7 +11975,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > $$P(\text{op}) = \frac{\text{Rate(op)}}{\text{Total Rate}}$$
 >
-> …
+> $$\text{OpCov} = \sum_i \frac{\text{covered}_i}{\text{total}_i} \times \text{usage}_i$$
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/verif/exploratory/RQ_L07_Exploratory_OP.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/verif/exploratory/RQ_L07_Exploratory_OP.md)
@@ -11307,7 +12049,23 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > The 1996 revision  extended the set to eight laws, adding Law VII (Declining Quality — perceived quality declines unless rigorously maintained) and Law VIII (Feedback System — evolution is a multi-loop feedback process).
 >
-> …
+> ```mermaid
+> graph TD
+>     A["Law I: Continuing Change"] -->|"software must adapt"| B["Changes Required"]
+>     C["Law II: Increasing Complexity"] -->|"changes add entropy"| D["Complexity Grows"]
+>     B --> E["Modification"]
+>     E --> D
+>     D -->|"without deliberate effort"| F["Technical Debt Accumulates"]
+>     F -->|"eventually"| G["System Becomes Unmaintainable"]
+>     E -->|"with refactoring"| H["Complexity Managed"]
+>     H -->|"enables"| B
+>
+>     style A fill:#e8f5e9
+>     style C fill:#ffcdd2
+>     style F fill:#fff3cd
+>     style G fill:#d32f2f,color:#fff
+>     style H fill:#019546,color:#fff
+> ```
 >
 > #### Lehman's Laws of Software Evolution
 >
@@ -11366,6 +12124,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 >         H["Seek Second Opinions<br>(reviews)"]
 >     end
 >
+>     style A fill:#ffcdd2
+>     style B fill:#ffcdd2
+>     style C fill:#d32f2f,color:#fff
+>     style F fill:#e8f5e9
+>     style G fill:#e8f5e9
+>     style H fill:#e8f5e9
+> ```
+>
+> **Parnas's prescriptions:**
+> - **Design for change:** Use information hiding so implementation details are isolated behind stable interfaces
+> - **Keep records:** Maintain documentation that captures design rationale, not just code comments
+> - **Seek second opinions:** Code reviews and architectural reviews catch "ignorant surgery" before it damages the system
+>
+> **Concrete Example:**
+> Consider a payment processing system. Lack of Movement: not updating to support PSD2/SCA regulations makes the system non-compliant in the EU. Ignorant Surgery: a developer unfamiliar with the authorization flow adds a shortcut that bypasses the fraud check — the system works but is now structurally compromised.
+>
 > …
 
 > [!info]- Source
@@ -11394,7 +12168,23 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > The 1996 revision  extended the set to eight laws, adding Law VII (Declining Quality — perceived quality declines unless rigorously maintained) and Law VIII (Feedback System — evolution is a multi-loop feedback process).
 >
-> …
+> ```mermaid
+> graph TD
+>     A["Law I: Continuing Change"] -->|"software must adapt"| B["Changes Required"]
+>     C["Law II: Increasing Complexity"] -->|"changes add entropy"| D["Complexity Grows"]
+>     B --> E["Modification"]
+>     E --> D
+>     D -->|"without deliberate effort"| F["Technical Debt Accumulates"]
+>     F -->|"eventually"| G["System Becomes Unmaintainable"]
+>     E -->|"with refactoring"| H["Complexity Managed"]
+>     H -->|"enables"| B
+>
+>     style A fill:#e8f5e9
+>     style C fill:#ffcdd2
+>     style F fill:#fff3cd
+>     style G fill:#d32f2f,color:#fff
+>     style H fill:#019546,color:#fff
+> ```
 >
 > #### Lehman's Laws of Software Evolution
 >
@@ -11442,6 +12232,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 >         G["Keep Records<br>(documentation)"]
 >         H["Seek Second Opinions<br>(reviews)"]
 >     end
+>
+>     style A fill:#ffcdd2
+>     style B fill:#ffcdd2
+>     style C fill:#d32f2f,color:#fff
+>     style F fill:#e8f5e9
+>     style G fill:#e8f5e9
+>     style H fill:#e8f5e9
+> ```
+>
+> **Parnas's prescriptions:**
+> - **Design for change:** Use information hiding so implementation details are isolated behind stable interfaces
+> - **Keep records:** Maintain documentation that captures design rationale, not just code comments
+> - **Seek second opinions:** Code reviews and architectural reviews catch "ignorant surgery" before it damages the system
+>
+> **Concrete Example:**
+> Consider a payment processing system. Lack of Movement: not updating to support PSD2/SCA regulations makes the system non-compliant in the EU. Ignorant Surgery: a developer unfamiliar with the authorization flow adds a shortcut that bypasses the fraud check — the system works but is now structurally compromised.
 >
 > …
 >
@@ -11527,7 +12333,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Component independence | Code without external deps | >80% independent |
 >
 > **How SIG maps to ISO 25010:**
-> Each property affects one or more ISO sub-characteristics.
+> Each property affects one or more ISO sub-characteristics. For example, Module Coupling affects both Analyzability and Modifiability, while Component Independence primarily affects Modularity.
+>
+> **Star rating calibration:**
+> SIG benchmarks systems on a 1-5 star scale using a 5%/30%/30%/30%/5% distribution. A 5-star system is in the top 5% of the benchmark — this is deliberately exclusive.
 >
 > …
 >
@@ -11598,7 +12407,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Component independence | Code without external deps | >80% independent |
 >
 > **How SIG maps to ISO 25010:**
-> Each property affects one or more ISO sub-characteristics.
+> Each property affects one or more ISO sub-characteristics. For example, Module Coupling affects both Analyzability and Modifiability, while Component Independence primarily affects Modularity.
+>
+> **Star rating calibration:**
+> SIG benchmarks systems on a 1-5 star scale using a 5%/30%/30%/30%/5% distribution. A 5-star system is in the top 5% of the benchmark — this is deliberately exclusive.
 >
 > …
 
@@ -11631,7 +12443,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Nested `if` inside loop | +1 | +2 | Nesting increases cognitive load |
 > | `if-else` chain | +N | +1 | Linear if-else is easy to scan |
 >
-> …
+> **Validation:** 77% developer acceptance rate across 22 open-source projects on SonarCloud — developers agreed with CogC assessments more often than CC assessments.
 >
 > #### Cognitive Complexity
 >
@@ -11643,7 +12455,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 > 2. **Increment** for every break in linear flow (if, for, catch, goto, etc.).
 > 3. **Add a nesting penalty** for control flow nested inside other control flow.
 >
-> …
+> | Aspect | Cyclomatic Complexity | Cognitive Complexity |
+> |--------|----------------------|---------------------|
+> | **Counts** | Independent execution paths | Breaks in linear flow + nesting depth |
+> | **Switch** | +1 per case | +1 for the entire switch |
+> | **Nested if inside loop** | +1 | +2 (flow break + nesting) |
+> | **Design goal** | Testability (minimum test cases) | Human comprehension difficulty |
+>
+> A developer acceptance survey across 22 open-source projects on SonarCloud showed a 77% acceptance rate, with developers actively fixing high Cognitive Complexity code .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -11693,9 +12512,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 65 -- 85 | Moderately maintainable |
 > | < 65 | Difficult to maintain |
 >
-> **Limitations.** The MI uses averages across all modules, which masks local hotspots: a few highly complex modules can be hidden by many simple ones. It was designed for procedural code and does not account for object-oriented features such as inheritance and coupling.
->
-> …
+> **Limitations.** The MI uses averages across all modules, which masks local hotspots: a few highly complex modules can be hidden by many simple ones. It was designed for procedural code and does not account for object-oriented features such as inheritance and coupling. Empirical evidence shows that MI is significantly influenced by software size (a confounding effect), and it correlates only moderately with technical debt at the class level (Spearman rho approximately -0.6) .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -11722,9 +12539,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > Code metrics and structural metrics are **complementary**, not competing. You need both for a complete maintainability assessment. The tool for structural analysis is the **Design Structure Matrix (DSM)**.
 >
 > {: .exam-tip }
-> > **Exam Tip:** When comparing measurement approaches, use this framework: SIG measures *code-level* maintainability, DSM measures *structural* maintainability, and Propagation Cost quantifies *change impact*.
->
-> …
+> > **Exam Tip:** When comparing measurement approaches, use this framework: SIG measures *code-level* maintainability, DSM measures *structural* maintainability, and Propagation Cost quantifies *change impact*. No single metric captures everything.
 >
 > #### 3.2 Maintainability Index: Problems with a Single Number
 >
@@ -11777,7 +12592,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Component independence | Code without external deps | >80% independent |
 >
 > **How SIG maps to ISO 25010:**
-> Each property affects one or more ISO sub-characteristics.
+> Each property affects one or more ISO sub-characteristics. For example, Module Coupling affects both Analyzability and Modifiability, while Component Independence primarily affects Modularity.
+>
+> **Star rating calibration:**
+> SIG benchmarks systems on a 1-5 star scale using a 5%/30%/30%/30%/5% distribution. A 5-star system is in the top 5% of the benchmark — this is deliberately exclusive.
 >
 > …
 >
@@ -11805,9 +12623,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     end
 >     subgraph "Bad: High Coupling, Low Cohesion"
 >         direction TB
->         A2["Module C<br>━━━━━━<br>func1()<br>fun
+>         A2["Module C<br>━━━━━━<br>func1()<br>func5()"]
+>         B2["Module D<br>━━━━━━<br>func2()<br>func4()"]
+>         A2 <-->|"5 dependencies"| B2
+>     end
 >
-> …
+>     style A1 fill:#e8f5e9
+>     style B1 fill:#e8f5e9
+>     style A2 fill:#ffcdd2
+>     style B2 fill:#ffcdd2
+> ```
+>
+> **The ideal:** Highly cohesive modules with minimal coupling between them. DSM makes this visible — clusters on the diagonal represent high cohesion, while off-diagonal marks represent coupling.
+>
+> {: .exam-tip }
+> > **Exam Tip:** Coupling and cohesion are inversely related in practice: splitting a module reduces its internal cohesion but increases coupling (more inter-module interfaces). The art of modular design is finding the right balance.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -11833,9 +12663,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - *Processing-step decomposition:* modules correspond to processing stages → coupled design (changing one stage affects all downstream stages)
 > - *Information-hiding decomposition:* modules hide design decisions → modular design (changing one decision affects only one module)
 >
-> The information-hiding decomposition has higher NOV because it preserves more options for future change.
->
-> …
+> The information-hiding decomposition has higher NOV because it preserves more options for future change. The more uncertain future requirements are, the more valuable modularity becomes.
 >
 > #### Net Option Value (NOV)
 >
@@ -11897,9 +12725,25 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   },
 >   "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4},
 >   "encoding": {
->     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}}
+>     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}},
+>     "x": {"field": "value", "type": "quantitative", "title": "Propagation Cost (%)"},
+>     "color": {
+>       "field": "system",
+>       "type": "nominal",
+>       "scale": {
+>         "domain": ["Mozilla v1 (1998)", "Linux v2.1.105", "Mozilla redesign (1998)"],
+>         "range": ["#d32f2f", "#019546", "#81c784"]
+>       },
+>       "legend": null
+>     }
+>   }
+> }
+> ```
 >
-> …
+> **Key findings:**
+> 1. Linux has *more* dependencies than Mozilla v1 (9,110 vs 6,717) but dramatically lower PC (5.82% vs 17.35%). **Number of dependencies alone does not determine modularity** — structure matters.
+> 2. Mozilla's purposeful redesign achieved PC = 2.78% — lower than Linux. **Architecture is a deliberate choice**, not an inevitable consequence of system size.
+> 3. The redesign reduced dependencies from 6,717 to 3,037 and files from 1,684 to 1,508 — both dependency elimination and module consolidation.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -11936,9 +12780,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     end
 >     subgraph "Bad: High Coupling, Low Cohesion"
 >         direction TB
->         A2["Module C<br>━━━━━━<br>func1()<br>fun
+>         A2["Module C<br>━━━━━━<br>func1()<br>func5()"]
+>         B2["Module D<br>━━━━━━<br>func2()<br>func4()"]
+>         A2 <-->|"5 dependencies"| B2
+>     end
 >
-> …
+>     style A1 fill:#e8f5e9
+>     style B1 fill:#e8f5e9
+>     style A2 fill:#ffcdd2
+>     style B2 fill:#ffcdd2
+> ```
+>
+> **The ideal:** Highly cohesive modules with minimal coupling between them. DSM makes this visible — clusters on the diagonal represent high cohesion, while off-diagonal marks represent coupling.
+>
+> {: .exam-tip }
+> > **Exam Tip:** Coupling and cohesion are inversely related in practice: splitting a module reduces its internal cohesion but increases coupling (more inter-module interfaces). The art of modular design is finding the right balance.
 >
 > #### Modifiability Tactics and DSM
 >
@@ -11959,9 +12815,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Reduce Coupling** | Fewer off-diagonal entries -- dependencies between modules decrease |
 > | **Increase Cohesion** | Denser diagonal blocks -- dependencies within modules increase |
 > | **Split Module** | Smaller, more focused clusters with clearer boundaries |
-> | **U
+> | **Use an Intermediary** | Replaces direct dependencies with indirect paths through a controlled interface |
 >
-> …
+> Nord et al. formalized this connection: DSM clustering operationalizes the "Increase Cohesion" / "Reduce Coupling" pair, while partitioning and tearing break cyclical dependencies that are sometimes called "code cancer" .
+>
+> ![Layered architecture dependency graph — upward dependencies (above the diagonal) indicate architectural violations](achi_graph.png)
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12029,9 +12887,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     end
 >     subgraph "Bad: High Coupling, Low Cohesion"
 >         direction TB
->         A2["Module C<br>━━━━━━<br>func1()<br>fun
+>         A2["Module C<br>━━━━━━<br>func1()<br>func5()"]
+>         B2["Module D<br>━━━━━━<br>func2()<br>func4()"]
+>         A2 <-->|"5 dependencies"| B2
+>     end
 >
-> …
+>     style A1 fill:#e8f5e9
+>     style B1 fill:#e8f5e9
+>     style A2 fill:#ffcdd2
+>     style B2 fill:#ffcdd2
+> ```
+>
+> **The ideal:** Highly cohesive modules with minimal coupling between them. DSM makes this visible — clusters on the diagonal represent high cohesion, while off-diagonal marks represent coupling.
+>
+> {: .exam-tip }
+> > **Exam Tip:** Coupling and cohesion are inversely related in practice: splitting a module reduces its internal cohesion but increases coupling (more inter-module interfaces). The art of modular design is finding the right balance.
 >
 > #### The Feedback System Perspective
 >
@@ -12039,9 +12909,9 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > - **Local improvements are attenuated or inverted** -- productivity improvements in one part of the process may be cancelled out by organizational feedback loops (e.g., faster coding leads to more features requested, which leads to more complexity, which slows coding again)
 > - **Self-stabilization through negative feedback** -- Laws III, IV, and V describe how organizational and cognitive constraints act as governors that keep the evolution rate approximately constant regardless of management intervention
-> - **Instability from excessive positive feedback** -- when feedback loops reinforce rather than dampen change (e.g., accumulating technical debt that accelerates further debt), the system can enter a state of decl
+> - **Instability from excessive positive feedback** -- when feedback loops reinforce rather than dampen change (e.g., accumulating technical debt that accelerates further debt), the system can enter a state of declining quality (Law VII)
 >
-> …
+> This perspective explains why simplistic process improvements (adding developers, adopting new tools) often fail to produce lasting gains: they address only the forward path of the feedback system while ignoring the return paths that regulate overall system behavior .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12073,6 +12943,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Before (original order A–G)** — 6 above-diagonal marks (↑X = violations):
 >
+> |   | A | B | C | D | E | F | G |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   | ↑X |   |   |   |   |
+> | **B** |   | · |   |   |   | ↑X |   |
+> | **C** |   |   | · | ↑X |   |   | ↑X |
+> | **D** |   | X |   | · |   | ↑X |   |
+> | **E** | X |   | X | X | · |   | ↑X |
+> | **F** |   |   |   |   |   | · |   |
+> | **G** |   | X |   |   |   |   | · |
+>
+> **After (F→B→D→G→C→A→E)** — all marks below diagonal ✓:
+>
+> |   | F | B | D | G | C | A | E |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **F** | · |   |   |   |   |   |   |
+> | **B** | X | · |   |   |   |   |   |
+> | **D** | X | X | · |   |   |   |   |
+> | **G** |   | X |   | · |   |   |   |
+> | **C** |   |   | X | X | · |   |   |
+> | **A** |   |   |   |   | X | · |   |
+> | **E** |   |   | X | X | X | X | · |
+>
+> The algorithm discovers: F has no dependencies (goes first), E provides nothing (goes last), and the rest form a dependency chain F→{B,D}→G→C→A→E.
+>
+> **Concrete Example — Clustering:**
+>
+> **Before (original order 1–7)** — dependencies scattered:
+>
 > …
 >
 > #### Modifiability Tactics and DSM
@@ -12094,9 +12992,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Reduce Coupling** | Fewer off-diagonal entries -- dependencies between modules decrease |
 > | **Increase Cohesion** | Denser diagonal blocks -- dependencies within modules increase |
 > | **Split Module** | Smaller, more focused clusters with clearer boundaries |
-> | **U
+> | **Use an Intermediary** | Replaces direct dependencies with indirect paths through a controlled interface |
 >
-> …
+> Nord et al. formalized this connection: DSM clustering operationalizes the "Increase Cohesion" / "Reduce Coupling" pair, while partitioning and tearing break cyclical dependencies that are sometimes called "code cancer" .
+>
+> ![Layered architecture dependency graph — upward dependencies (above the diagonal) indicate architectural violations](achi_graph.png)
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12128,9 +13028,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Reduce Coupling** | Fewer off-diagonal entries -- dependencies between modules decrease |
 > | **Increase Cohesion** | Denser diagonal blocks -- dependencies within modules increase |
 > | **Split Module** | Smaller, more focused clusters with clearer boundaries |
-> | **U
+> | **Use an Intermediary** | Replaces direct dependencies with indirect paths through a controlled interface |
 >
-> …
+> Nord et al. formalized this connection: DSM clustering operationalizes the "Increase Cohesion" / "Reduce Coupling" pair, while partitioning and tearing break cyclical dependencies that are sometimes called "code cancer" .
+>
+> ![Layered architecture dependency graph — upward dependencies (above the diagonal) indicate architectural violations](achi_graph.png)
 >
 > #### 5.4 DSM Operations
 >
@@ -12150,6 +13052,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Concrete Example — Partitioning:**
 >
 > **Before (original order A–G)** — 6 above-diagonal marks (↑X = violations):
+>
+> |   | A | B | C | D | E | F | G |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   | ↑X |   |   |   |   |
+> | **B** |   | · |   |   |   | ↑X |   |
+> | **C** |   |   | · | ↑X |   |   | ↑X |
+> | **D** |   | X |   | · |   | ↑X |   |
+> | **E** | X |   | X | X | · |   | ↑X |
+> | **F** |   |   |   |   |   | · |   |
+> | **G** |   | X |   |   |   |   | · |
+>
+> **After (F→B→D→G→C→A→E)** — all marks below diagonal ✓:
+>
+> |   | F | B | D | G | C | A | E |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **F** | · |   |   |   |   |   |   |
+> | **B** | X | · |   |   |   |   |   |
+> | **D** | X | X | · |   |   |   |   |
+> | **G** |   | X |   | · |   |   |   |
+> | **C** |   |   | X | X | · |   |   |
+> | **A** |   |   |   |   | X | · |   |
+> | **E** |   |   | X | X | X | X | · |
+>
+> The algorithm discovers: F has no dependencies (goes first), E provides nothing (goes last), and the rest form a dependency chain F→{B,D}→G→C→A→E.
+>
+> **Concrete Example — Clustering:**
+>
+> **Before (original order 1–7)** — dependencies scattered:
 >
 > …
 
@@ -12182,6 +13112,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Concrete Example — Partitioning:**
 >
 > **Before (original order A–G)** — 6 above-diagonal marks (↑X = violations):
+>
+> |   | A | B | C | D | E | F | G |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   | ↑X |   |   |   |   |
+> | **B** |   | · |   |   |   | ↑X |   |
+> | **C** |   |   | · | ↑X |   |   | ↑X |
+> | **D** |   | X |   | · |   | ↑X |   |
+> | **E** | X |   | X | X | · |   | ↑X |
+> | **F** |   |   |   |   |   | · |   |
+> | **G** |   | X |   |   |   |   | · |
+>
+> **After (F→B→D→G→C→A→E)** — all marks below diagonal ✓:
+>
+> |   | F | B | D | G | C | A | E |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **F** | · |   |   |   |   |   |   |
+> | **B** | X | · |   |   |   |   |   |
+> | **D** | X | X | · |   |   |   |   |
+> | **G** |   | X |   | · |   |   |   |
+> | **C** |   |   | X | X | · |   |   |
+> | **A** |   |   |   |   | X | · |   |
+> | **E** |   |   | X | X | X | X | · |
+>
+> The algorithm discovers: F has no dependencies (goes first), E provides nothing (goes last), and the rest form a dependency chain F→{B,D}→G→C→A→E.
+>
+> **Concrete Example — Clustering:**
+>
+> **Before (original order 1–7)** — dependencies scattered:
 >
 > …
 >
@@ -12218,6 +13176,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Concrete Example — Partitioning:**
 >
 > **Before (original order A–G)** — 6 above-diagonal marks (↑X = violations):
+>
+> |   | A | B | C | D | E | F | G |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   | ↑X |   |   |   |   |
+> | **B** |   | · |   |   |   | ↑X |   |
+> | **C** |   |   | · | ↑X |   |   | ↑X |
+> | **D** |   | X |   | · |   | ↑X |   |
+> | **E** | X |   | X | X | · |   | ↑X |
+> | **F** |   |   |   |   |   | · |   |
+> | **G** |   | X |   |   |   |   | · |
+>
+> **After (F→B→D→G→C→A→E)** — all marks below diagonal ✓:
+>
+> |   | F | B | D | G | C | A | E |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **F** | · |   |   |   |   |   |   |
+> | **B** | X | · |   |   |   |   |   |
+> | **D** | X | X | · |   |   |   |   |
+> | **G** |   | X |   | · |   |   |   |
+> | **C** |   |   | X | X | · |   |   |
+> | **A** |   |   |   |   | X | · |   |
+> | **E** |   |   | X | X | X | X | · |
+>
+> The algorithm discovers: F has no dependencies (goes first), E provides nothing (goes last), and the rest form a dependency chain F→{B,D}→G→C→A→E.
+>
+> **Concrete Example — Clustering:**
+>
+> **Before (original order 1–7)** — dependencies scattered:
 >
 > …
 >
@@ -12261,6 +13247,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Concrete Example — Partitioning:**
 >
 > **Before (original order A–G)** — 6 above-diagonal marks (↑X = violations):
+>
+> |   | A | B | C | D | E | F | G |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   | ↑X |   |   |   |   |
+> | **B** |   | · |   |   |   | ↑X |   |
+> | **C** |   |   | · | ↑X |   |   | ↑X |
+> | **D** |   | X |   | · |   | ↑X |   |
+> | **E** | X |   | X | X | · |   | ↑X |
+> | **F** |   |   |   |   |   | · |   |
+> | **G** |   | X |   |   |   |   | · |
+>
+> **After (F→B→D→G→C→A→E)** — all marks below diagonal ✓:
+>
+> |   | F | B | D | G | C | A | E |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **F** | · |   |   |   |   |   |   |
+> | **B** | X | · |   |   |   |   |   |
+> | **D** | X | X | · |   |   |   |   |
+> | **G** |   | X |   | · |   |   |   |
+> | **C** |   |   | X | X | · |   |   |
+> | **A** |   |   |   |   | X | · |   |
+> | **E** |   |   | X | X | X | X | · |
+>
+> The algorithm discovers: F has no dependencies (goes first), E provides nothing (goes last), and the rest form a dependency chain F→{B,D}→G→C→A→E.
+>
+> **Concrete Example — Clustering:**
+>
+> **Before (original order 1–7)** — dependencies scattered:
 >
 > …
 >
@@ -12306,7 +13320,16 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Horizontal Bus** — row E has many marks (E depends on A, B, C, F):
 >
-> …
+> |   | A | B | C | D | E | F |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   |   |   |   |   |
+> | **B** |   | · |   |   |   |   |
+> | **C** |   |   | · |   |   |   |
+> | **D** |   |   |   | · |   |   |
+> | **★E** | X | X | X |   | · | X |
+> | **F** |   |   |   |   |   | · |
+>
+> **Why bus patterns matter:** They are architecturally intentional (libraries *should* be widely used; controllers *should* orchestrate many services), but they inflate propagation cost because they create many transitive paths through the system.
 >
 > #### Modifiability Tactics and DSM
 >
@@ -12327,9 +13350,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Reduce Coupling** | Fewer off-diagonal entries -- dependencies between modules decrease |
 > | **Increase Cohesion** | Denser diagonal blocks -- dependencies within modules increase |
 > | **Split Module** | Smaller, more focused clusters with clearer boundaries |
-> | **U
+> | **Use an Intermediary** | Replaces direct dependencies with indirect paths through a controlled interface |
 >
-> …
+> Nord et al. formalized this connection: DSM clustering operationalizes the "Increase Cohesion" / "Reduce Coupling" pair, while partitioning and tearing break cyclical dependencies that are sometimes called "code cancer" .
+>
+> ![Layered architecture dependency graph — upward dependencies (above the diagonal) indicate architectural violations](achi_graph.png)
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12375,7 +13400,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > (↑X = above-diagonal mark, indicating a feedback/violation)
 >
-> …
+> **Design goal:** Maximize independent and dependent patterns. Minimize coupled patterns (cycles create ripple effects).
 >
 > #### 5.5 Layering and Violations
 >
@@ -12399,7 +13424,18 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **With violation — E depends on G** (upward dependency ↑X):
 >
-> …
+> |   | A | E | B | C | D | F | G | H |
+> |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+> | **A** | · |   |   |   |   |   |   |   |
+> | **E** |   | · |   |   |   |   | ↑X |   |
+> | **B** | X |   | · |   |   |   |   |   |
+> | **C** | X |   |   | · |   |   |   |   |
+> | **D** | X |   |   |   | · |   |   |   |
+> | **F** |   |   | X |   |   | · |   |   |
+> | **G** |   |   |   |   | X |   | · |   |
+> | **H** |   |   |   |   | X |   | X | · |
+>
+> E→G is above the diagonal — a higher layer depends on a lower layer, violating the layering constraint. Changes to G can now break E, which defeats the purpose of layering.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12440,9 +13476,25 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   },
 >   "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4},
 >   "encoding": {
->     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}}
+>     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}},
+>     "x": {"field": "value", "type": "quantitative", "title": "Propagation Cost (%)"},
+>     "color": {
+>       "field": "system",
+>       "type": "nominal",
+>       "scale": {
+>         "domain": ["Mozilla v1 (1998)", "Linux v2.1.105", "Mozilla redesign (1998)"],
+>         "range": ["#d32f2f", "#019546", "#81c784"]
+>       },
+>       "legend": null
+>     }
+>   }
+> }
+> ```
 >
-> …
+> **Key findings:**
+> 1. Linux has *more* dependencies than Mozilla v1 (9,110 vs 6,717) but dramatically lower PC (5.82% vs 17.35%). **Number of dependencies alone does not determine modularity** — structure matters.
+> 2. Mozilla's purposeful redesign achieved PC = 2.78% — lower than Linux. **Architecture is a deliberate choice**, not an inevitable consequence of system size.
+> 3. The redesign reduced dependencies from 6,717 to 3,037 and files from 1,684 to 1,508 — both dependency elimination and module consolidation.
 >
 > #### The Mozilla vs. Linux Case Study
 >
@@ -12456,7 +13508,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Despite having *fewer* raw dependencies per element pair, Mozilla's 1998 architecture was far more coupled than Linux because its dependencies formed long indirect chains. After a purposeful re-design, Mozilla's propagation cost dropped from 17.35% to 2.78% -- a change to a file now impacted **80% fewer files** on average.
 >
-> …
+> ![DSM heatmaps: Mozilla (left) shows scattered dependencies; Linux (right) shows block-diagonal clusters](mozilla-linux-comparison.png)
+>
+> ![Mozilla DSM after redesign: block-diagonal clusters with sparse inter-cluster dependencies](mozilla-re2.png)
+>
+> {: .important }
+> > Architecture is not wholly determined by function. The Mozilla re-design proves that architects can significantly adapt a design's structure through purposeful effort .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12478,25 +13535,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Top 10%** of dependencies cause **>70%** of all change propagation (measured in Eclipse)
 > - Static DSM **overestimates** change risk because it treats all dependencies equally
 >
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "width": 400,
->   "height": 300,
->   "title": {
->     "text": "Dependency Change Concentration (Lorenz Curve)",
->     "subtitle": "Source: Geipel & Schweitzer 2009, 35 Java projects"
->   },
->   "layer": [
->     {
->       "data": {
->         "values": [
->           {"pct_deps": 0, "pct_changes": 0, "series": "Equal Distribution"},
->           {"pct_deps": 100, "pct_changes": 100, "series": "Equal Distribution"}
->         ]
->       },
->       "mark": {"type": "line", "
->
 > …
 >
 > #### The Concentration Phenomenon
@@ -12512,7 +13550,8 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Standard DSM analysis assumes **homogeneity** -- every dependency is equally likely to transmit a change. In reality, most dependencies never transmit a single change during the entire development history, and a small fraction is responsible for the majority of change propagation. This makes static-only propagation estimates "highly inaccurate" .
 >
-> …
+> {: .warning }
+> > The higher the concentration of change propagation in a small fraction of dependencies, the better refactoring effort can be **targeted** -- focus on the 10% of "active" dependencies rather than minimizing all dependencies globally .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12544,7 +13583,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | AVG | Expected propagation (mean) | Average-case estimation |
 > | MAX | Worst-case single path | Risk analysis |
 >
-> …
+> **Result:** Enhanced PC detects improvement from encapsulation tactics (24% → 13%) that original PC misses entirely.
 >
 > #### Enhanced Propagation Cost
 >
@@ -12560,7 +13599,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Three aggregation formulas for parallel paths:
 >
-> …
+> | Formula | Semantics | Use Case |
+> |---------|-----------|----------|
+> | **SUM** | Cumulative exposure across all paths | Total risk assessment |
+> | **AVG** | Expected propagation assuming equal probability | Typical-case analysis |
+> | **MAX** | Worst-case propagation along least-protected path | Conservative estimation |
+>
+> Applying the "Encapsulate" and "Use an Intermediary" tactics reduced enhanced PC from 24%/18%/23% (SUM/AVG/MAX) down to 13%/13%/13%, correctly detecting the modifiability improvement that binary PC missed .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12586,9 +13631,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Key lessons:**
 > 1. **Targeted refactoring works:** Microsoft focused on the top 5% most-coupled modules and achieved 0.85x dependency reduction while non-refactored modules grew 1.10x
 > 2. **Modest investment, large returns:** ABB used ~3 hours/week of SE expert consultation for 3 months and achieved 75-83% effort reduction
-> 3.
+> 3. **Automatic refactoring has limits:** In 55% of cases it improved maintainability, but 10% showed degradation  — human oversight remains essential
+> 4. **Regression is the primary risk:** 76% of Microsoft developers identified regression bugs as the top concern when refactoring
 >
-> …
+> **Concrete Example — ABB DID:**
+> ABB's Drives Interface Device (DID) had 30,000 lines of C++ code for controlling industrial drives. Adding a new cooling method required modifying 59 different files — 8-12 weeks of work. After modular refactoring guided by an SE expert, the same type of change took only 1-2 weeks. Code duplication dropped from 5,647 lines to 338 lines (-82%).
+>
+> {: .exam-tip }
+> > **Exam Tip:** Remember three numbers from the case studies: **0.85x** (Microsoft dependency reduction), **-82%** (ABB duplication reduction), **75%** (ABB effort reduction). These quantify the ROI of refactoring.
 >
 > #### 6.2 Mozilla vs. Linux Case Study
 >
@@ -12618,9 +13668,25 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   },
 >   "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4},
 >   "encoding": {
->     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}}
+>     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}},
+>     "x": {"field": "value", "type": "quantitative", "title": "Propagation Cost (%)"},
+>     "color": {
+>       "field": "system",
+>       "type": "nominal",
+>       "scale": {
+>         "domain": ["Mozilla v1 (1998)", "Linux v2.1.105", "Mozilla redesign (1998)"],
+>         "range": ["#d32f2f", "#019546", "#81c784"]
+>       },
+>       "legend": null
+>     }
+>   }
+> }
+> ```
 >
-> …
+> **Key findings:**
+> 1. Linux has *more* dependencies than Mozilla v1 (9,110 vs 6,717) but dramatically lower PC (5.82% vs 17.35%). **Number of dependencies alone does not determine modularity** — structure matters.
+> 2. Mozilla's purposeful redesign achieved PC = 2.78% — lower than Linux. **Architecture is a deliberate choice**, not an inevitable consequence of system size.
+> 3. The redesign reduced dependencies from 6,717 to 3,037 and files from 1,684 to 1,508 — both dependency elimination and module consolidation.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/maintainability/RQ_A10_MaintainabilityDSM.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md)
@@ -12708,9 +13774,25 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   },
 >   "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4},
 >   "encoding": {
->     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}}
+>     "y": {"field": "system", "type": "nominal", "sort": null, "axis": {"title": null, "labelFontSize": 13}},
+>     "x": {"field": "value", "type": "quantitative", "title": "Propagation Cost (%)"},
+>     "color": {
+>       "field": "system",
+>       "type": "nominal",
+>       "scale": {
+>         "domain": ["Mozilla v1 (1998)", "Linux v2.1.105", "Mozilla redesign (1998)"],
+>         "range": ["#d32f2f", "#019546", "#81c784"]
+>       },
+>       "legend": null
+>     }
+>   }
+> }
+> ```
 >
-> …
+> **Key findings:**
+> 1. Linux has *more* dependencies than Mozilla v1 (9,110 vs 6,717) but dramatically lower PC (5.82% vs 17.35%). **Number of dependencies alone does not determine modularity** — structure matters.
+> 2. Mozilla's purposeful redesign achieved PC = 2.78% — lower than Linux. **Architecture is a deliberate choice**, not an inevitable consequence of system size.
+> 3. The redesign reduced dependencies from 6,717 to 3,037 and files from 1,684 to 1,508 — both dependency elimination and module consolidation.
 >
 > #### Key Findings
 >
@@ -12862,7 +13944,20 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style FL fill:#ffcdd2,stroke:#d32f2f,color:#282828
 > ```
 >
-> …
+> **Concrete Example — Null Pointer Bug:**
+>
+> | Stage | What Happens |
+> |-------|-------------|
+> | **Fault** | Developer forgets to check `if (user != null)` before accessing `user.name` |
+> | **Error** | When `user` is `null`, the program dereferences a null pointer — internal state is corrupted |
+> | **Failure** | Application throws `NullPointerException`, user sees "500 Internal Server Error" |
+>
+> The fault was dormant in the code for months. It only became an error when a specific input (a deleted user) triggered the code path. The error became a failure when it propagated to the HTTP response.
+>
+> > **Key insight:** Only **failure** is externally observable. Verification finds faults (static). Testing observes failures (dynamic).
+>
+> {: .highlight }
+> > **Exam Tip:** Be able to trace a given scenario through all three stages. "What is the fault? What is the error? What is the failure?" is a classic exam question.
 >
 > #### 1.5 Fault → Error → Failure: Case Analyses
 >
@@ -12873,6 +13968,16 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Fault** | A content configuration file (Channel File 291) shipped by CrowdStrike's update mechanism contained malformed data — a logic error in the content validator allowed an invalid pattern to pass quality checks |
 > | **Error** | The Falcon sensor kernel driver attempted to parse the malformed file at runtime; an out-of-bounds memory read produced an invalid internal state (corrupted pointer) inside the Windows kernel |
 > | **Failure** | The kernel encountered an unrecoverable exception and issued a Blue Screen of Death; 8.5 million Windows hosts could not boot, affecting hospitals, airlines, banks, and broadcasters globally |
+>
+> **Reliability concept:** Common-mode failure — every host running the same sensor version failed simultaneously; redundant hardware provided no protection because all instances shared the identical fault.
+>
+> **Meta/Facebook 2021**
+>
+> | Stage | What happened |
+> |-------|--------------|
+> | **Fault** | A routine BGP (Border Gateway Protocol) configuration change contained an error that withdrew all of Facebook's BGP route advertisements — the command that should have been scoped to a subset of routers was applied globally |
+> | **Error** | Facebook's backbone routers stopped announcing their IP prefixes to the internet; DNS servers that needed to reach Facebook's authoritative name servers became unreachable; internal tools used to diagnose and fix the problem also relied on the same network and went dark |
+> | **Failure** | Facebook, Instagram, and WhatsApp became globally unreachable for ~6 hours; ~3.5 billion users could not connect; engineers had to physically travel to data centres to restore access because remote management was also cut off |
 >
 > …
 
@@ -12902,30 +14007,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Aging** | Degrades over time | Does not degrade — same binary, same behavior |
 > | **Environment** | Temperature, vibration, humidity | Input patterns, workload, timing |
 >
-> …
+> **The two failure curves** (see lecture slide 6):
+> - **Hardware** follows the classic **bathtub curve**: high infant mortality → low steady-state (useful life) → rising wear-out.
+> - **Software** has a **decreasing curve with sawtooth spikes**: failure rate drops as bugs are found, but each update reintroduces new faults (spike), then drops again. There is **no wear-out** — only design change.
+>
+> **Why this matters:** Because software doesn't wear out, all software failures are triggered by specific inputs that activate dormant design faults. This means **testing and operational profiles** (what inputs the system actually receives) are critical to predicting reliability.
 >
 > #### Failure Rate Over Time
 >
 > Hardware follows the classic "bathtub curve" — infant mortality, useful life, wear-out. Software has no wear-out phase; its failure rate changes only when the code changes:
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "hconcat": [
->     {
->       "title": {"text": "Hardware (Bathtub Curve)", "fontSize": 14},
->       "width": 280,
->       "height": 200,
->       "layer": [
->         {
->           "data": {
->             "values": [
->               {"t": 0, "rate": 9.0}, {"t": 3, "rate": 5.5}, {"t": 6, "rate": 3.2},
->               {"t": 10, "rate": 1.8}, {"t": 15, "rate": 1.2}, {"t": 20, "rate": 1.0},
->               {"t": 25, "rate": 1.0}, {"t": 30, "rate": 1.0}, {"t": 35, "rate": 1.0},
->               {"t": 40, "rate": 1.0}, {"t": 45, "rate": 1.0}, {"t": 50, "rate": 1.0},
->               {"t": 55, "rate": 1.0}, {"t": 60, "rate": 1.0}, {"t": 65, "rate": 1.05},
->               {"t
 >
 > …
 
@@ -12984,7 +14074,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### By Human Life (Safety-Critical)
 >
-> …
+> | Class | Impact | Applicable Domains |
+> |-------|--------|--------------------|
+> | 1 | Possible **loss of life** | Aerospace (DO-178C), Automotive (ISO 26262) |
+> | 2 | Severe injury or damage | Medical devices (IEC 62304) |
+> | 3 | Minor injury | Nuclear (IEC 61513) |
+> | 4 | Minor recoverable effects | General embedded systems |
+>
+> **Safety-critical:** Class 1 failures require the highest assurance levels — MC/DC coverage, formal verification, and independent assessment.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/reliability/RQ_L08_Reliability.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/reliability/RQ_L08_Reliability.md)
@@ -13153,7 +14250,20 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **The Domino Effect:** In systems with communicating processes, a rollback in one process can invalidate messages already sent to others, forcing them to roll back too — cascading rollbacks that can undo all work.
 >
-> …
+> ```mermaid
+> flowchart LR
+>     subgraph Process_A
+>         A1["Checkpoint A1"] --> A2["Work"] --> A3["Send msg"] --> A4["Checkpoint A2"] --> A5["Failure! ❌"]
+>     end
+>     subgraph Process_B
+>         B1["Checkpoint B1"] --> B2["Receive msg"] --> B3["Work"] --> B4["Must rollback! 🔙"]
+>     end
+>     A3 -->|"message"| B2
+>     A5 -->|"rollback to A1"| A1
+>     B4 -->|"rollback to B1<br>(domino effect)"| B1
+>     style A5 fill:#d32f2f,stroke:#b71c1c,color:#fff
+>     style B4 fill:#ffc107,stroke:#f57f17,color:#282828
+> ```
 >
 > #### The Domino Effect
 >
@@ -13179,7 +14289,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     Note over P1,P3: 😱 All progress lost!
 > ```
 >
-> …
+> **Modern solutions** to the domino effect:
+> - **Idempotent operations** — safe to retry without side effects
+> - **Saga patterns** — compensating transactions instead of rollback
+> - **Event sourcing** — rebuild state from the event log
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/reliability/RQ_L08_Reliability.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/reliability/RQ_L08_Reliability.md)
@@ -13239,21 +14352,6 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > The failure intensity decreases exponentially — the hallmark of **reliability growth**. As faults are found and fixed, the system becomes more reliable.
 >
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "title": "Goel-Okumoto Model (a=50 faults, b=0.05/week)",
->   "width": 500,
->   "height": 280,
->   "hconcat": [
->     {
->       "width": 230,
->       "height": 250,
->       "title": "Cumulative Failures m(t)",
->       "layer": [
->         {
->           "data": {
->
 > …
 
 > [!info]- Source
@@ -13304,6 +14402,25 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   },
 >   "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4, "width": 80},
 >   "encoding": {
+>     "x": {"field": "type", "type": "nominal", "axis": {"labelAngle": 0, "title": null, "labelFontSize": 13}},
+>     "y": {"field": "failures", "type": "quantitative", "title": "Relative Coincident Failures"},
+>     "color": {
+>       "field": "type", "type": "nominal",
+>       "scale": {"range": ["#c8e6c9", "#d32f2f"]},
+>       "legend": null
+>     }
+>   },
+>   "config": {
+>     "font": "Tahoma, sans-serif",
+>     "axis": {"labelFontSize": 12, "titleFontSize": 13},
+>     "view": {"stroke": null}
+>   }
+> }
+> ```
+>
+> **29× more coincident failures than independence would predict.**
+>
+> **Why do independently developed versions fail together?**
 >
 > …
 >
@@ -13321,7 +14438,29 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Coincident failures — where multiple versions failed on the same input — were significantly more frequent than statistical independence would predict .
 >
-> …
+> ```vega-lite
+> {
+>   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+>   "title": "Knight & Leveson (1986): Predicted vs Actual Coincident Failures",
+>   "width": 450,
+>   "height": 250,
+>   "data": {
+>     "values": [
+>       {"category": "Expected if\nindependent", "failures": 0.2, "color": "Expected (independence)"},
+>       {"category": "Observed\n(actual)", "failures": 5.8, "color": "Observed"}
+>     ]
+>   },
+>   "mark": {"type": "bar", "width": 60},
+>   "encoding": {
+>     "x": {"field": "category", "type": "nominal", "title": null, "axis": {"labelAngle": 0}},
+>     "y": {"field": "failures", "type": "quantitative", "title": "Avg. coincident failures per version pair"},
+>     "color": {"field": "color", "type": "nominal", "title": null, "scale": {"range": ["#1565c0", "#d32f2f"]}}
+>   }
+> }
+> ```
+>
+> {: .note }
+> > If versions failed independently, coincident failures would be extremely rare (~0.2 per pair). The actual rate was ~29x higher — independence rejected at 99% confidence .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/reliability/RQ_L08_Reliability.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/reliability/RQ_L08_Reliability.md)
@@ -13369,7 +14508,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > $$R_{system} = \binom{5}{3}(0.9)^3(0.1)^2 + \binom{5}{4}(0.9)^4(0.1)^1 + \binom{5}{5}(0.9)^5(0.1)^0$$
 >
-> …
+> $$= 10 \times 0.729 \times 0.01 + 5 \times 0.6561 \times 0.1 + 1 \times 0.59049 \times 1$$
+>
+> $$= 0.0729 + 0.3281 + 0.5905 = \mathbf{0.9914}$$
+>
+> **Result:** System reliability improves from 90% to **99.1%** — but only if failures are independent!
 >
 > #### Voting Strategies
 >
@@ -13449,6 +14592,28 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | > 20% threshold? | Yes | → Mandatory postmortem |
 > | Budget exhausted? | No (67% remaining) | → Continue shipping |
 >
+> ```mermaid
+> flowchart TB
+>     INC["Incident: 1,000 errors"] --> PCT["1,000 / 3,000 = 33% consumed"]
+>     PCT --> D1{"> 20% consumed?"}
+>     D1 -->|"Yes"| PM["🔍 Mandatory postmortem"]
+>     D1 -->|"No"| LOG["📝 Log & monitor"]
+>     PCT --> D2{"Budget exhausted?"}
+>     D2 -->|"Yes"| FREEZE["🛑 Feature freeze"]
+>     D2 -->|"No"| SHIP["🚀 Continue shipping"]
+>     style FREEZE fill:#d32f2f,stroke:#b71c1c,color:#fff
+>     style PM fill:#ffc107,stroke:#f57f17,color:#282828
+>     style SHIP fill:#019546,stroke:#2D6E2A,color:#fff
+>     style INC fill:#f0f8f0,stroke:#019546,color:#282828
+>     style PCT fill:#f0f8f0,stroke:#019546,color:#282828
+> ```
+>
+> **Mixed-Unit Incidents (outage time + failed requests):**
+>
+> When an incident report gives both downtime *and* a failed-request count, convert everything to requests using the traffic rate before adding:
+>
+> $$\text{Request rate} = \frac{\text{Total requests/month}}{\text{Minutes/month}}$$
+>
 > …
 
 > [!info]- Source
@@ -13484,7 +14649,32 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Key difference:** FIO gates **release** (pre-production). SLO governs **production velocity** (post-release).
 >
-> …
+> ```mermaid
+> flowchart TB
+>     subgraph fio["FIO: Release Gate (1990s)"]
+>         T["Test"] --> M["Measure λ(t)"]
+>         M --> D{"λ ≤ FIO?"}
+>         D -->|"Yes"| R["Release ✅"]
+>         D -->|"No"| T
+>     end
+>     subgraph slo["SLO: Operational Loop (2010s)"]
+>         P["Production"] --> MON["Monitor SLI"]
+>         MON --> B{"Budget<br>left?"}
+>         B -->|"Yes"| SHIP["Ship 🚀"]
+>         SHIP --> P
+>         B -->|"No"| FREEZE["Freeze 🛑"]
+>         FREEZE --> P
+>     end
+>     style T fill:#f0f8f0,stroke:#019546,color:#282828
+>     style M fill:#f0f8f0,stroke:#019546,color:#282828
+>     style D fill:#fff3cd,stroke:#ffc107,color:#282828
+>     style R fill:#019546,stroke:#2D6E2A,color:#fff
+>     style P fill:#f0f8f0,stroke:#019546,color:#282828
+>     style MON fill:#f0f8f0,stroke:#019546,color:#282828
+>     style B fill:#fff3cd,stroke:#ffc107,color:#282828
+>     style SHIP fill:#019546,stroke:#2D6E2A,color:#fff
+>     style FREEZE fill:#d32f2f,stroke:#b71c1c,color:#fff
+> ```
 >
 > #### From FIO to SLO: Classical Meets Modern Reliability
 >
@@ -13569,7 +14759,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style FF fill:#ffcdd2,stroke:#d32f2f,color:#282828
 > ```
 >
-> …
+> **Key insight:** Moving from reactive firefighting to proactive engineering reduces production defect escape from **30% to 5%** — a 6× improvement .
 >
 > #### Performance Anti-Patterns Are Architectural
 >
@@ -13621,7 +14811,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **More examples of Little's Law in action:**
 >
-> …
+> | System | Known Values | Derived |
+> |--------|-------------|---------|
+> | Wine cellar | L=160 bottles, λ=96 bought/year | W = 160/96 = **1.67 years** aging |
+> | Hospital ward | λ=5 births/day, W=2.5 days stay | L = 5×2.5 = **12.5 beds needed** |
+> | Semiconductor fab | λ=1000 wafers/day, L=45000 WIP | W = 45000/1000 = **45 day cycle time** |
+>
+> {: .highlight }
+> > **Exam Tip:** Little's Law is the single most important equation in performance analysis. Be ready to apply it in any direction (given any two, derive the third) and in any domain (not just computer systems).
 >
 > #### Practice Questions
 >
@@ -13669,7 +14866,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **p99** | Tail latency | SLA targets |
 > | **p99.9** | Extreme tail | Large-scale systems (Google, Amazon) |
 >
-> …
+> **Wilson's recommendation:** Report the **90th percentile** as the primary metric, not the mean .
+>
+> **The Rule of 8:** Human productivity drops dramatically when system response times exceed **8 seconds** — users lose their train of thought, context-switch, or abandon entirely.
+>
+> **Practical thresholds for bottleneck detection:**
+>
+> | Resource | Warning Threshold |
+> |----------|-------------------|
+> | CPU utilization | >70% average or run queue >2/processor |
+> | Disk utilization | >20% |
+> | Response change | <10% may be noise, not real improvement |
 >
 > #### Percentile Guidelines
 >
@@ -13713,55 +14920,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > When load increases, a system passes through three distinct zones :
 >
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "title": {
->     "text": "System Behavior Under Load",
->     "subtitle": "Source: Haines 2006, Pro Java EE5 Performance Management",
->     "subtitleFontSize": 11,
->     "subtitleColor": "#666"
->   },
->   "width": 450,
->   "height": 250,
->   "layer": [
->     {
->       "data": {
->         "values": [
->           {"N": 0, "R": 2}, {"N": 10, "R": 2}, {"N": 20, "R": 2.5},
->           {"N": 30, "R": 3}, {"N": 40, "R": 3.5}, {"N": 50, "R": 4},
->           {"N": 60, "R": 5}, {"N": 70, "R": 7},
->           {"N": 75, "R": 10}, {"N": 80, "R": 18},
->           {"N": 85, "R": 35}, {"N": 88, "R": 55},
->           {"N": 91, "R": 75}, {"N": 93, "R": 90}, {"N": 95, "R": 100}, {"N": 96, "R": 105}
->         ]
->       },
->       "mark": {"type": "line", "strokeWidth": 3, "interpolate": "monotone", "
->
 > …
 >
 > #### Queuing Theory: The Hockey Stick Curve
 >
 > When utilization increases, response time follows a characteristic **hockey stick** shape — flat at low load, then climbing exponentially :
->
-> ```vega-lite
-> {
->   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
->   "title": {"text": "Response Time vs Utilization (M/M/1)", "fontSize": 14},
->   "width": 450,
->   "height": 280,
->   "data": {
->     "values": [
->       {"u": 0.05, "rt": 1.05}, {"u": 0.10, "rt": 1.11}, {"u": 0.15, "rt": 1.18},
->       {"u": 0.20, "rt": 1.25}, {"u": 0.25, "rt": 1.33}, {"u": 0.30, "rt": 1.43},
->       {"u": 0.35, "rt": 1.54}, {"u": 0.40, "rt": 1.67}, {"u": 0.45, "rt": 1.82},
->       {"u": 0.50, "rt": 2.00}, {"u": 0.55, "rt": 2.22}, {"u": 0.60, "rt": 2.50},
->       {"u": 0.65, "rt": 2.86}, {"u": 0.70, "rt": 3.33}, {"u": 0.75, "rt": 4.00},
->       {"u": 0.80, "rt": 5.00}, {"u": 0.85, "rt": 6.67}, {"u": 0.90, "rt": 10.0},
->       {"u": 0.95, "rt": 20.0}
->     ]
->   },
->   "layer": [
 >
 > …
 
@@ -13807,7 +14970,21 @@ Generated from the SQRBOK source repository. **423 cards.**
 > 3. **Calculate max gain** — is the optimization effort worthwhile?
 > 4. **Optimize the common case** — not cold code
 >
-> …
+> ```mermaid
+> flowchart LR
+>     P["Profile"] --> M["Measure α"]
+>     M --> C{"α large<br>enough?"}
+>     C -->|"Yes"| O["Optimize (q)"]
+>     C -->|"No"| S["Skip — low impact"]
+>     O --> V["Verify S = 1/((1-α)+α/q)"]
+>     style P fill:#c8e6c9,stroke:#019546,color:#282828
+>     style C fill:#fff3cd,stroke:#ffc107,color:#282828
+>     style S fill:#ffcdd2,stroke:#d32f2f,color:#282828
+>     style O fill:#c8e6c9,stroke:#019546,color:#282828
+> ```
+>
+> {: .highlight }
+> > **Anti-pattern:** Micro-optimizing code that runs 1% of the time. Even a 10× improvement in that code gives only 0.9% overall speedup.
 >
 > #### 3.1 Amdahl's Law: The Serial Fraction Ceiling (1967)
 >
@@ -13831,7 +15008,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Implications:**
 >
-> …
+> | Serial Fraction (f) | Max Speedup | Even with ∞ processors |
+> |---------------------|-------------|------------------------|
+> | 50% | 2× | Can never exceed 2× |
+> | 10% | 10× | Can never exceed 10× |
+> | 5% | 20× | Can never exceed 20× |
+> | 1% | 100× | Can never exceed 100× |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/performance/RQ_L09_PerformanceAnalysis.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/performance/RQ_L09_PerformanceAnalysis.md)
@@ -13873,7 +15055,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 1 | Small grid | 5 min | 55 min | 60 min |
 > | 100 | **Large grid** | 5 min | 55 min | **60 min** |
 >
-> …
+> With 100 processors, you don't compute the same grid 100× faster — you compute a **100× finer grid** in the same time. The serial work (initialization, I/O) stays fixed, but the parallel work (computation) scales with processor count.
+>
+> {: .highlight }
+> > **Exam Tip:** Know when to apply each law. Amdahl: "How much faster can this single task run?" (latency). Gustafson: "How much more work can we do in the same time?" (throughput).
 >
 > #### 3.1 Amdahl's Law: The Serial Fraction Ceiling (1967)
 >
@@ -13897,7 +15082,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Implications:**
 >
-> …
+> | Serial Fraction (f) | Max Speedup | Even with ∞ processors |
+> |---------------------|-------------|------------------------|
+> | 50% | 2× | Can never exceed 2× |
+> | 10% | 10× | Can never exceed 10× |
+> | 5% | 20× | Can never exceed 20× |
+> | 1% | 100× | Can never exceed 100× |
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/performance/RQ_L09_PerformanceAnalysis.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/performance/RQ_L09_PerformanceAnalysis.md)
@@ -13951,7 +15141,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style U fill:#d32f2f,color:#fff
 > ```
 >
-> …
+> **When β = 0:** USL reduces to Amdahl's Law (plateau only).
+> **When β > 0:** The system **degrades beyond a peak** — adding more servers actually makes performance *worse*. This is called **retrograde throughput**.
+>
+> **Why retrograde throughput happens:** When you add the 101st server to a distributed cache, the cache invalidation traffic (which grows as N²) can overwhelm the benefit of the extra compute capacity. At some point, the coherence overhead exceeds the marginal throughput gain.
 >
 > #### Amdahl's Law in the Cloud: The USL Connection
 >
@@ -14020,9 +15213,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **One-Lane Bridge** → *Unsharded DB* | Serial bottleneck where high bandwidth is needed | All requests serialize |
 > | **Excessive Dynamic Allocation** → *Cold starts* | Frequent create/destroy cycles | GC overhead, latency spikes |
 >
-> **The cloud-native evolution:** Each classical anti-pattern has a modern equivalent. God Class becomes God Service (one microservice does everything).
+> **The cloud-native evolution:** Each classical anti-pattern has a modern equivalent. God Class becomes God Service (one microservice does everything). Circuitous Treasure Hunt becomes the chatty N+1 query pattern. The underlying principle is the same: poor decomposition causes excessive communication.
 >
-> …
+> {: .highlight }
+> > **Key insight:** These are **design-level** problems, not code-level bugs. Profiling and tuning won't help — you must **redesign**. This is why performance engineering must start at the architecture phase.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/performance/RQ_L09_PerformanceAnalysis.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/performance/RQ_L09_PerformanceAnalysis.md)
@@ -14067,7 +15261,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **The neglect gap (Zaman et al., 2011)** :
 >
-> …
+> Comparing security vs performance bugs in Firefox:
+> - Security bugs triaged **3.64× faster**
+> - Security bugs fixed **2.8× faster**
+> - Performance bugs touch **2.6× more files** per fix
+> - **62% of performance bugs never assigned** a developer
+>
+> {: .highlight }
+> > **Exam Tip:** The surprise finding: **profiling discovers only 5–10%** of performance bugs. **Code reasoning** (reading and thinking about code) discovers 33–57%. This means code review for performance patterns is more effective than runtime measurement alone.
 >
 > #### Performance Bug Characteristics
 >
@@ -14120,7 +15321,27 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Smoke** | Quick sanity check of changes | Changed code only | After each build |
 > | **Isolation** | Diagnose specific transactions | Repeated single | Debugging known issues |
 >
-> …
+> ```mermaid
+> flowchart TD
+>     BL["Baseline<br>(1 user)"]
+>     SM["Smoke<br>(quick check)"]
+>     LD["Load<br>(expected traffic)"]
+>     SK["Soak<br>(hours/days)"]
+>     ST["Stress<br>(beyond capacity)"]
+>     IS["Isolation<br>(single transaction)"]
+>     BL -->|"Establish reference"| SM
+>     SM -->|"Pass → full test"| LD
+>     LD -->|"SLA met → endurance"| SK
+>     LD -->|"SLA met → limits"| ST
+>     ST -->|"Problem found"| IS
+>     SK -->|"Leak found"| IS
+>     style BL fill:#c8e6c9,stroke:#019546,color:#282828
+>     style SM fill:#c8e6c9,stroke:#019546,color:#282828
+>     style LD fill:#fff3cd,stroke:#ffc107,color:#282828
+>     style SK fill:#fff3cd,stroke:#ffc107,color:#282828
+>     style ST fill:#ffcdd2,stroke:#d32f2f,color:#282828
+>     style IS fill:#bbdefb,stroke:#1976d2,color:#282828
+> ```
 >
 > #### Six Types of Performance Tests
 >
@@ -14174,7 +15395,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     S2-->>C: Fast reply ✅ (cancel S1)
 > ```
 >
-> …
+> **Why hedged requests are so effective — and why overhead is only +2%:** The backup request is *delayed*, not simultaneous. It is only issued if the first server has not replied within the 95th-percentile expected latency. Because ~95% of requests complete before that threshold, only ~5% ever trigger the backup — and those often cancel quickly once one reply arrives. Unconditional duplication to two servers simultaneously would cost ~100% extra traffic; the delayed backup design reduces that to ~2%. You're not making the slow server faster — you're giving the slow tail a second chance to hit a fast one.
 >
 > #### Practice Questions
 >
@@ -14229,7 +15450,19 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Each service owns its SLO. The call chain maps to a **wait chain** model from queuing theory.
 >
-> …
+> ```mermaid
+> flowchart LR
+>     U["User<br>Request"]
+>     A["Service A<br>SLO: p99 < 50ms"]
+>     B["Service B<br>SLO: p99 < 100ms"]
+>     C["Service C<br>SLO: p99 < 50ms"]
+>     R["Response<br>Total < 200ms"]
+>     U --> A --> B --> C --> R
+>     style A fill:#c8e6c9,stroke:#019546,color:#282828
+>     style B fill:#fff3cd,stroke:#ffc107,color:#282828
+>     style C fill:#c8e6c9,stroke:#019546,color:#282828
+>     style R fill:#bbdefb,stroke:#1976d2,color:#282828
+> ```
 >
 > #### Practice Questions
 >
@@ -14916,7 +16149,16 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Failure** | Observable security violation | Private keys, passwords exposed |
 > | **Malicious external fault** | Attack | Crafted TLS heartbeat request |
 >
-> …
+> The key insight: in security, the fault (vulnerability) may exist for years without causing an error. The **activation** of the fault requires a deliberate, malicious external action — the attack. This distinguishes security faults from accidental faults in reliability.
+>
+> **Four means of dealing with faults** (Avizienis 2004):
+>
+> | Means | Description | Security Example |
+> |-------|-------------|------------------|
+> | **Fault prevention** | Avoid introducing faults | Secure coding standards, CERT rules |
+> | **Fault tolerance** | Continue operating despite faults | Input validation, sandboxing |
+> | **Fault removal** | Find and eliminate faults | SAST, DAST, code review, pen testing |
+> | **Fault forecasting** | Predict future faults | Threat modeling, risk assessment |
 >
 > #### The Fault-Error-Failure Chain in Security
 >
@@ -14939,9 +16181,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 >     style A fill:#e8eaf6,stroke:#3f51b5,color:#282828
 > ```
 >
-> A **vulnerability** exists when a fault (e.g., missing bounds check) can be activated by an attack (e.g., crafted input) to produce an error (e.g., buffer overread) that propagates to a failure (e.g., data exfiltration).
->
-> …
+> A **vulnerability** exists when a fault (e.g., missing bounds check) can be activated by an attack (e.g., crafted input) to produce an error (e.g., buffer overread) that propagates to a failure (e.g., data exfiltration). The Heartbleed vulnerability (CVE-2014-0160) illustrates this chain: a missing bounds check in OpenSSL's heartbeat extension allowed attackers to read up to 64KB of server memory per request .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/security/RQ_L10_Security.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/security/RQ_L10_Security.md)
@@ -14981,7 +16221,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - Code review (though <1% of review comments address security )
 > - Costly: average breach = $4.88M
 >
-> …
+> **Proactive (Prevent):**
+> - Security requirements engineering (SQUARE )
+> - Threat modeling (STRIDE )
+> - Secure design principles (Saltzer & Schroeder )
+> - DevSecOps pipeline integration
 >
 > #### McGraw's 50/50 Split
 >
@@ -15029,9 +16273,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Abstract interpretation** | Sound approximation of semantics | Lower | High |
 > | **Model checking** | Exhaustive state exploration | Lowest | Very high |
 >
-> **Why false positives are inherent:** Rice's Theorem proves that any nontrivial semantic property of a general program is undecidable.
+> **Why false positives are inherent:** Rice's Theorem proves that any nontrivial semantic property of a general program is undecidable. Security tools deliberately choose to **over-report** (false positives) rather than **under-report** (missed vulnerabilities). The practical result: approximately **70% of SAST results are false positives** .
 >
-> …
+> > "Static analysis is like a spell checker for security bugs." — Chess 2007
+>
+> **Practical impact of false positives:**
+> - Alert fatigue: developers stop trusting tools
+> - Triage cost: each false positive consumes review time
+> - Industry challenge: only **30%** of scan results are actionable
 >
 > #### SAST vs. DAST vs. IAST vs. RASP
 >
@@ -15045,7 +16294,22 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **RASP** | Self-protecting runtime agent | Real-time attack blocking | Performance overhead, not a testing tool |
 > | **SCA** | Scans dependencies | Finds known CVEs in libraries | Cannot detect novel vulnerabilities |
 >
-> …
+> ```mermaid
+> flowchart LR
+>     IDE["<b>🖥️ IDE</b><br>IDE SAST<br>Real-time"]
+>     Build["<b>🔨 Build</b><br>SAST · SCA"]
+>     Test["<b>🧪 Test</b><br>DAST<br>HTTP scanning"]
+>     Runtime["<b>🚀 Runtime</b><br>IAST · RASP"]
+>
+>     IDE --> Build --> Test --> Runtime
+>
+>     style IDE fill:#e8f5e9,stroke:#019546,color:#282828
+>     style Build fill:#c8e6c9,stroke:#019546,color:#282828
+>     style Test fill:#a5d6a7,stroke:#019546,color:#282828
+>     style Runtime fill:#81c784,stroke:#019546,color:#282828
+> ```
+>
+> The trend is toward **shifting left** — catching vulnerabilities as early as possible in the development cycle. IDE-integrated SAST provides real-time feedback during coding, while SCA catches known dependency vulnerabilities at build time .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/security/RQ_L10_Security.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/security/RQ_L10_Security.md)
@@ -15141,9 +16405,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **D**enial of Service | Availability | Server flood (WannaCry) | Process, data flow |
 > | **E**levation of Privilege | Authorization | User → admin | Process |
 >
-> STRIDE is applied **per DFD element**: each element is checked against the applicable threat categories.
->
-> …
+> STRIDE is applied **per DFD element**: each element is checked against the applicable threat categories. However, Shostack himself warns that STRIDE **"makes a lousy taxonomy"** — it was designed as a **mnemonic** to help practitioners remember threat categories, not as a rigorous classification system .
 >
 > #### STRIDE Threat Categories
 >
@@ -15158,7 +16420,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **D**enial of Service | Making a system unavailable | Availability | WannaCry ransomware  |
 > | **E**levation of Privilege | Gaining unauthorized access | Authorization | Buffer overflow → root |
 >
-> …
+> Shostack candidly acknowledges that STRIDE "makes a lousy taxonomy" — it was designed as a **mnemonic to prompt thinking**, not a rigorous classification system . Categories overlap, and real attacks often span multiple categories.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/security/RQ_L10_Security.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/security/RQ_L10_Security.md)
@@ -15198,9 +16460,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **CVSS Scoring** | Vulnerability severity | Standardized, quantitative | Scores may vary across experts |
 > | **Trike** | Requirements-based, risk model | Formal risk assessment | Limited adoption |
 >
-> The survey's key conclusion: **no single best method** — selection depends on project needs, team expertise, and regulatory context .
->
-> …
+> The survey's key conclusion: **no single best method** — selection depends on project needs, team expertise, and regulatory context . STRIDE remains the most mature and widely adopted, but organizations should consider combining methods for comprehensive coverage.
 >
 > #### 3.5 Alternative Threat Modeling Methods
 >
@@ -15315,9 +16575,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Blacklist** | Block known bad patterns | Misses new attack variants | **Avoid** |
 > | **Whitelist** | Allow only known good patterns | May be more restrictive | **Prefer** |
 >
-> **Example:** Blacklisting `--` for SQL injection → attacker uses `/**/` comment syntax to bypass.
->
-> …
+> **Example:** Blacklisting `--` for SQL injection → attacker uses `/**/` comment syntax to bypass. **Whitelisting** `[A-Za-z0-9]` for usernames → any unexpected character is rejected regardless of attack technique.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/attributes/security/RQ_L10_Security.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/attributes/security/RQ_L10_Security.md)
@@ -15364,7 +16622,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Industry challenges** :
 >
-> …
+> | Challenge | Detail |
+> |-----------|--------|
+> | False positives | Only 30% of results are actionable |
+> | Speed mismatch | SAST takes hours; DevOps cycles are minutes |
+> | Tool age | Many tools built on 15-year-old scan models |
+> | Alert fatigue | Teams stop trusting and start ignoring tools |
 >
 > #### 2.3 Dynamic Application Security Testing (DAST)
 >
@@ -15418,7 +16681,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Major supply chain incidents:**
 >
-> …
+> | Incident | Year | Vector | Impact |
+> |----------|------|--------|--------|
+> | **SolarWinds** | 2020 | Build compromise | 18,000 organizations, 9 months undetected  |
+> | **Log4Shell** | 2021 | Vulnerable dependency | 93% of enterprise clouds vulnerable  |
+> | **XZ Utils** | 2024 | Maintainer social engineering | Backdoor in compression library (caught before widespread deployment) |
+>
+> **Countermeasures:**
+> - **Software Bill of Materials (SBOM):** Inventory of all dependencies
+> - **SCA scanning:** Automated CVE checks on every build
+> - **Build provenance:** Cryptographic attestation of build process (SLSA framework)
+> - **Dependency pinning:** Lock specific versions, review updates
 >
 > #### Supply Chain Security
 >
@@ -15490,7 +16763,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Example: Log4Shell (CVE-2021-44228)** :
 >
-> …
+> | Base Metric | Value | Rationale |
+> |-------------|-------|-----------|
+> | Attack Vector | Network | Exploitable remotely |
+> | Attack Complexity | Low | No special conditions needed |
+> | Privileges Required | None | No authentication required |
+> | User Interaction | None | No user action needed |
+> | Scope | Changed | Impacts beyond vulnerable component |
+> | Confidentiality Impact | High | Full read access |
+> | Integrity Impact | High | Full write access |
+> | Availability Impact | High | Complete denial of service |
+> | **Base Score** | **10.0 (Critical)** | Maximum severity |
 >
 > #### CVSS: Scoring Vulnerability Severity
 >
@@ -15547,7 +16830,17 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Major supply chain incidents:**
 >
-> …
+> | Incident | Year | Vector | Impact |
+> |----------|------|--------|--------|
+> | **SolarWinds** | 2020 | Build compromise | 18,000 organizations, 9 months undetected  |
+> | **Log4Shell** | 2021 | Vulnerable dependency | 93% of enterprise clouds vulnerable  |
+> | **XZ Utils** | 2024 | Maintainer social engineering | Backdoor in compression library (caught before widespread deployment) |
+>
+> **Countermeasures:**
+> - **Software Bill of Materials (SBOM):** Inventory of all dependencies
+> - **SCA scanning:** Automated CVE checks on every build
+> - **Build provenance:** Cryptographic attestation of build process (SLSA framework)
+> - **Dependency pinning:** Lock specific versions, review updates
 >
 > #### Supply Chain Security
 >
@@ -15841,7 +17134,10 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Key concepts:**
 >
-> …
+> - **Injection pipes:** Defects flow INTO the system at each development phase
+> - **The tank:** Cumulative "backlog" of defects residing in the system
+> - **Removal pipes:** V&V activities act as filters, removing defects
+> - **Residual defects:** What remains after all removal activities—these become field defects
 >
 > #### The "Tank and Pipes" Model
 >
@@ -15886,7 +17182,8 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > > **How do you choose?** Analyze the cost of each alternative AND the likelihood of achieving the assumed improvements. A 10–20% improvement is achievable; a 2× improvement is unlikely unless current processes are severely broken .
 >
-> …
+> For detailed analysis of code review effectiveness and ROI calculations, see
+> supplementary notes: [Code Review ROI](05-code-review-roi.md)
 >
 > #### Shift-Left Testing: Early Defect Detection
 >
@@ -16141,9 +17438,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **A** | Wipers (lowest safety) |
 > | **QM** | Infotainment (quality managed, no safety) |
 >
-> **Key Insight:** Your web app is probably QM/Level E. Don't over-engineer.
->
-> …
+> **Key Insight:** Your web app is probably QM/Level E. Don't over-engineer. Don't under-engineer.
 >
 > #### DO-178B Avionic Software Criticality
 >
@@ -16666,9 +17961,24 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **P1 (Critical)** | Data loss, security breach, blocks feature | Fix NOW—hotfix branch | **Blocks release** |
 > | **P2 (High)** | Major bug, workaround exists | Fix this sprint if capacity | ≤3 open allowed |
 > | **P3 (Medium)** | Minor bug, cosmetic issues | Add to backlog | Tracked, not blocking |
-> | **P4 (Low)** | Enhancement, nice-to-have | Backlog for future sprint | No
+> | **P4 (Low)** | Enhancement, nice-to-have | Backlog for future sprint | Not tracked for release |
 >
-> …
+> **Quality Plan Must Define:**
+>
+> | Decision | Example Rule |
+> |----------|--------------|
+> | **Who triages?** | Dev + PO at daily standup |
+> | **What's P1 vs P2?** | P1 = blocks feature, data loss, security. P2 = workaround exists |
+> | **Does P1 block "Done"?** | Yes—feature not Done until P1s fixed |
+> | **P2 at sprint end?** | Must document, can release if ≤3 open |
+> | **Who can interrupt sprint?** | Only PO for P1 bugs |
+>
+> **Release Gate Example:**
+> - ✅ 0 open P1s
+> - ✅ ≤3 open P2s (documented with workarounds)
+> - ⚠️ P3-P4 tracked but don't block
+>
+> **Cross-reference:** See A03 for Microsoft's bug bar and severity definitions.
 >
 > #### 5.4 RACI: Who Does What?
 >
@@ -16928,7 +18238,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"stage": "1. Start", "percentage": 100, "order": 1},
 >       {"stage": "2. Believe", "percentage": 50, "order": 2},
 >       {"stage": "3. Systemic", "percentage": 25, "order": 3},
->       {"stage": "4.
+>       {"stage": "4. Persist", "percentage": 12.5, "order": 4}
+>     ]
+>   },
+>   "mark": {"type": "bar", "cornerRadiusEnd": 4},
+>   "encoding": {
+>     "y": {"field": "stage", "type": "nominal", "sort": {"field": "order"}, "title": null},
+>     "x": {"field": "percentage", "type": "quantitative", "title": "Organizations (%)"},
+>     "color": {
+>       "field": "percentage",
+>       "type": "quantitative",
+>       "scale": {"scheme": "reds", "reverse": true},
+>       "legend": null
+>     }
+>   }
+> }
+> ```
+>
+> **Why Organizations Fail at Each Stage:**
+>
+> 1. **Belief Filter (50% → 50%):**
+>    - "Our situation is different"
+>    - "That won't work here"
+>    - Resistance to change based on past failures
+>
+> 2. **Systemic Filter (50% → 25%):**
+>    - Isolated "checkbox" changes instead of comprehensive reform
+>    - Implementing tools without changing processes
+>    - Training without cultural shift
 >
 > …
 >
@@ -16967,7 +18304,8 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > > "If dissent and questioning are not welcomed, you stop doing it." — Sheila Widnall, CAIB Member
 >
-> …
+> **The Culture Definition:**
+> Culture is the "set of rules you have to follow to have a fast-track career." At NASA, questioning schedule decisions was not a path to career success, so engineers stopped questioning.
 >
 > #### Case Study: Space Shuttle Columbia Disaster
 >
@@ -17006,9 +18344,7 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Implications:**
 > 1. Evidence alone is insufficient
 > 2. Must believe AND act systematically AND persist
-> 3.
->
-> …
+> 3. Most fail not because SPI doesn't work, but because they don't follow through
 >
 > #### 4.4 Five Maturity Levels - Quick Reference
 >
@@ -17031,7 +18367,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >         L1["Level 1: Initial<br>🔥 Ad hoc, Chaotic"]
 >     end
 >
-> …
+>     L1 --> L2 --> L3 --> L4 --> L5
+>
+>     style L1 fill:#FFCDD2
+>     style L2 fill:#FFE0B2
+>     style L3 fill:#FFF9C4
+>     style L4 fill:#C8E6C9
+>     style L5 fill:#B3E5FC
+> ```
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/03-process/RQ-A2-Proc.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/03-process/RQ-A2-Proc.md)
@@ -17074,7 +18417,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   - Manager declares victory
 >   - Next week: similar bug appears
 >
-> …
+> Process improvement approach:
+>   - Root cause analysis: Why do payment bugs keep appearing?
+>   - Finding: No integration tests for payment flow
+>   - Fix: Add mandatory payment test coverage
+>   - Result: Payment bugs reduced by 60%
+> ```
+>
+> > **Exam Tip:** When asked about SPI motivations, remember: quick fixes address symptoms, process improvement addresses root causes.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/03-process/RQ-A2-Proc.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/03-process/RQ-A2-Proc.md)
@@ -17106,6 +18456,33 @@ Generated from the SQRBOK source repository. **423 cards.**
 >         C1 --> S1[Same Strategy]
 >         S1 -.-> E1
 >     end
+>
+>     subgraph Double-Loop["Double-Loop Learning"]
+>         direction LR
+>         E2[Error] --> Q2[Question Assumptions]
+>         Q2 --> M2[Modify Strategy]
+>         M2 --> N2[New Approach]
+>         N2 -.-> E2
+>     end
+> ```
+>
+> **Software Engineering Examples:**
+>
+> | Scenario | Single-Loop Response | Double-Loop Response |
+> |----------|---------------------|---------------------|
+> | Server crashes | Restart the server | Add monitoring policy; implement auto-restart |
+> | Test failures | Fix the failing tests | Analyze why tests weren't written earlier; improve TDD practices |
+> | Late delivery | Work overtime to catch up | Examine estimation process; improve planning methodology |
+> | Bug in production | Patch and deploy hotfix | Root cause analysis; add regression tests and code review |
+>
+> **Example - The Recurring Bug:**
+> ```
+> Scenario: Login failures spike every Monday morning
+>
+> Single-loop thinking:
+>   Week 1: Fix the bug, deploy hotfix
+>   Week 2: Same type of bug, fix again
+>   Week 3: "Why does this keep happening?"
 >
 > …
 >
@@ -17150,7 +18527,30 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **PDCA in Software Frameworks:**
 >
-> …
+> | Framework | Plan | Do | Check | Act |
+> |-----------|------|-----|-------|-----|
+> | **Scrum** | Sprint planning | Sprint work | Sprint demo | Retrospective |
+> | **CMMI** | Assessment | Implement | Measure | Adjust |
+> | **DevOps** | Deploy strategy | Deploy | Monitor | Improve pipeline |
+>
+> **Example - PDCA for Reducing Build Time:**
+> ```
+> PLAN: "We will reduce build time from 45 min to 15 min by adding caching"
+>   - Objective: 15-minute builds
+>   - Measure: CI pipeline duration
+>
+> DO: Implement build caching for dependencies
+>   - Add cache layer for npm packages
+>   - Cache compiled intermediate files
+>
+> CHECK: Measure results after 2 weeks
+>   - Average build time: 22 minutes (not 15)
+>   - Finding: Test execution is now the bottleneck
+>
+> ACT: Adjust strategy
+>   - Caching helped (45→22 min)
+>   - Next cycle: parallelize tests to reach 15 min target
+> ```
 >
 > #### PDCA/PDSA Cycle (Deming)
 >
@@ -17182,7 +18582,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Software Kaizen Manifestations:**
 >
-> …
+> | Traditional Approach | Kaizen Approach |
+> |---------------------|-----------------|
+> | Quarterly releases with extensive change logs | Dozens of deployments per day |
+> | Annual performance reviews | Continuous feedback and retrospectives |
+> | One-time training events | Daily learning and pair programming |
+> | Large refactoring projects | Incremental "boy scout rule" improvements |
+>
+> > **Key Insight:** Kaizen + DevOps = Continuous deployment with real-time feedback loops.
 >
 > #### Kaizen Philosophy
 >
@@ -17218,6 +18625,37 @@ Generated from the SQRBOK source repository. **423 cards.**
 > 5. Capability erodes → more pressure → vicious cycle
 > 6. Eventually: burnout, technical debt, quality collapse
 >
+> ```mermaid
+> flowchart TD
+>     subgraph Trap["❌ The Capability Trap (Vicious Cycle)"]
+>         direction TB
+>         P1["Performance Gap"] --> M1["Manager: Work Harder!"]
+>         M1 --> O1["Overtime & Shortcuts"]
+>         O1 --> R1["Short-term Recovery"]
+>         R1 --> N1["No Time for Improvement"]
+>         N1 --> E1["Capability Erodes"]
+>         E1 --> P1
+>     end
+>
+>     subgraph Escape["✅ Escape: Work Smarter"]
+>         direction TB
+>         P2["Performance Gap"] --> M2["Manager: Invest in Improvement"]
+>         M2 --> D2["Temporary Dip"]
+>         D2 --> C2["Capability Building"]
+>         C2 --> S2["Sustained High Performance"]
+>     end
+>
+>     style P1 fill:#FFCDD2
+>     style E1 fill:#FFCDD2
+>     style S2 fill:#C8E6C9
+>     style C2 fill:#C8E6C9
+> ```
+>
+> **Example - The Automation Trap:**
+> ```
+> Quarter 1: Team proposes automation to reduce manual testing (2 weeks investment)
+>   Manager: "We don't have time, just do manual testing"
+>
 > …
 >
 > #### 2.5 The "Worse-Before-Better" Dynamic
@@ -17235,7 +18673,27 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Diagram: Worse-Before-Better**
 >
-> …
+> ```mermaid
+> %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#019546'}}}%%
+> flowchart LR
+>     subgraph Timeline["Performance Over Time"]
+>         direction LR
+>         A["📊 Baseline"] --> B["📉 Investment Dip"]
+>         B --> C["📈 Capability Building"]
+>         C --> D["🚀 Sustained Gains"]
+>     end
+>
+>     style A fill:#90CAF9
+>     style B fill:#FFCDD2
+>     style C fill:#FFF9C4
+>     style D fill:#A5D6A7
+> ```
+>
+> **Visual Representation:**
+> - **Baseline** → Starting performance level
+> - **Investment Dip** → Short-term decline during learning
+> - **Capability Building** → Skills improve, performance recovers
+> - **Sustained Gains** → Long-term performance exceeds original baseline
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/03-process/RQ-A2-Proc.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/03-process/RQ-A2-Proc.md)
@@ -17263,7 +18721,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Software Kaizen Manifestations:**
 >
-> …
+> | Traditional Approach | Kaizen Approach |
+> |---------------------|-----------------|
+> | Quarterly releases with extensive change logs | Dozens of deployments per day |
+> | Annual performance reviews | Continuous feedback and retrospectives |
+> | One-time training events | Daily learning and pair programming |
+> | Large refactoring projects | Incremental "boy scout rule" improvements |
+>
+> > **Key Insight:** Kaizen + DevOps = Continuous deployment with real-time feedback loops.
 >
 > #### Software Kaizen
 >
@@ -17352,6 +18817,38 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | 4 | **Elevate** | Invest to increase capacity | Add more reviewers, automate linting |
 > | 5 | **Repeat** | Return to step 1 | Testing is now the new bottleneck |
 >
+> ```mermaid
+> flowchart TD
+>     I["1️⃣ IDENTIFY<br>Find the constraint"] --> E["2️⃣ EXPLOIT<br>Maximize constraint usage"]
+>     E --> S["3️⃣ SUBORDINATE<br>Align everything else"]
+>     S --> EL["4️⃣ ELEVATE<br>Increase capacity"]
+>     EL --> R{"5️⃣ REPEAT<br>Constraint broken?"}
+>     R -->|Yes| I
+>     R -->|No| EL
+>
+>     style I fill:#E3F2FD
+>     style E fill:#E8F5E9
+>     style S fill:#FFF3E0
+>     style EL fill:#FCE4EC
+>     style R fill:#F3E5F5
+> ```
+>
+> **The Hiking Group Analogy:**
+> ```
+> Scenario: Group hiking to summit. One person keeps falling behind.
+>
+> That person IS the constraint - group speed = slowest person's speed.
+>
+> Five Focusing Steps applied:
+>   1. IDENTIFY: "Alex is the slowest"
+>   2. EXPLOIT: Move heavy items from Alex's backpack to others
+>   3. SUBORDINATE: Strongest hiker walks with Alex (not ahead)
+>   4. ELEVATE: Give Alex hiking poles, lightest boots
+>   5. REPEAT: Now someone else is slowest - repeat process
+> ```
+>
+> **Advantages and Disadvantages:**
+>
 > …
 
 > [!info]- Source
@@ -17388,6 +18885,32 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | **Analyze** | Use statistical methods to find root causes | What causes the defects? | Statistical analysis, fishbone diagram |
 > | **Improve** | Implement solutions to remove causes | Does the solution work? | Pilot testing, optimization |
 > | **Control** | Maintain improvements | How do we prevent regression? | Control charts, documentation |
+>
+> ```mermaid
+> flowchart LR
+>     D["Define"] --> M["Measure"]
+>     M --> A["Analyze"]
+>     A --> I["Improve"]
+>     I --> C["Control"]
+>     C -.->|Continuous| D
+>
+>     style D fill:#1565C0,color:#fff
+>     style M fill:#2E7D32,color:#fff
+>     style A fill:#F57F17,color:#fff
+>     style I fill:#6A1B9A,color:#fff
+>     style C fill:#C62828,color:#fff
+> ```
+>
+> **Six Sigma Infrastructure:**
+>
+> | Role | Responsibility |
+> |------|----------------|
+> | **Champion** | Executive sponsor, removes barriers |
+> | **Black Belt** | Full-time improvement specialist |
+> | **Green Belt** | Part-time improvement participant |
+> | **Yellow Belt** | Awareness and participation |
+>
+> **12 Critical Success Factors** (ranked) :
 >
 > …
 
@@ -17453,7 +18976,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Retrospectives vs DPP:**
 >
-> …
+> | Aspect | DPP | Retrospectives |
+> |--------|-----|----------------|
+> | Trigger | Defects discovered | Sprint/iteration end |
+> | Focus | Root cause of defects | Team effectiveness |
+> | Frequency | After defect discovery | Regular cadence (2-4 weeks) |
+> | Participants | Action team | Whole team |
+> | Data source | Defect database | Team discussion + repository data |
+>
+> **Empirical Finding:** 75% of retrospective statements focus on controllable topics (sprint planning, implementation, testing) .
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/03-process/RQ-A2-Proc.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/03-process/RQ-A2-Proc.md)
@@ -17487,7 +19018,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >         L1["Level 1: Initial<br>🔥 Ad hoc, Chaotic"]
 >     end
 >
-> …
+>     L1 --> L2 --> L3 --> L4 --> L5
+>
+>     style L1 fill:#FFCDD2
+>     style L2 fill:#FFE0B2
+>     style L3 fill:#FFF9C4
+>     style L4 fill:#C8E6C9
+>     style L5 fill:#B3E5FC
+> ```
 >
 > #### 4.2 What is CMMI?
 >
@@ -17534,6 +19072,23 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Level 2: Managed
 > **Summary:** Process developed at the projects level, practices are retained during times of stress.
+>
+> **Definition:** Projects ensure that requirements are managed and that processes are planned, performed, measured, and controlled according to documented plans. Process discipline helps to ensure that existing practices are retained during times of stress.
+>
+> **Key Characteristics:**
+> - Status of work products visible to management at defined points (milestones)
+> - Commitments established among relevant stakeholders and revised as needed
+> - Work products are appropriately controlled
+> - Products and services satisfy specified process descriptions, standards, and procedures
+>
+> **Process Areas:** REQM, PP, PMC, SAM, MA, PPQA, CM (7 PAs)
+>
+> > **Key Distinction from Level 1:** Practices are **retained during stress** — this is the critical difference.
+>
+> #### Level 3: Defined
+> **Summary:** Process developed at the organization level. Proactive.
+>
+> **Definition:** Processes are well characterized and understood, and are described in standards, procedures, tools, and methods.
 >
 > …
 >
@@ -17601,7 +19156,19 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Level 4 Process Areas (2 total):**
 >
-> …
+> | Abbrev | Full Name |
+> |--------|-----------|
+> | OPP | Organizational Process Performance |
+> | QPM | Quantitative Project Management |
+>
+> **Level 5 Process Areas (2 total):**
+>
+> | Abbrev | Full Name |
+> |--------|-----------|
+> | OID | Organizational Innovation and Deployment |
+> | CAR | Causal Analysis and Resolution |
+>
+> > **Exam Tip:** Know the abbreviations! Common exam questions ask you to identify which level a Process Area belongs to.
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/03-process/RQ-A2-Proc.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/03-process/RQ-A2-Proc.md)
@@ -17646,7 +19213,19 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Level 4 Process Areas (2 total):**
 >
-> …
+> | Abbrev | Full Name |
+> |--------|-----------|
+> | OPP | Organizational Process Performance |
+> | QPM | Quantitative Project Management |
+>
+> **Level 5 Process Areas (2 total):**
+>
+> | Abbrev | Full Name |
+> |--------|-----------|
+> | OID | Organizational Innovation and Deployment |
+> | CAR | Causal Analysis and Resolution |
+>
+> > **Exam Tip:** Know the abbreviations! Common exam questions ask you to identify which level a Process Area belongs to.
 >
 > #### 4.7 CMMI Process Areas by Level
 >
@@ -17691,9 +19270,11 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Commitment | Policies and sponsorship | "Management commits to process" |
 > | Ability | Resources and training | "Team has required skills" |
 > | Directing | Measurement and analysis | "Process performance is measured" |
-> | Verification | Conformance audits | "Proce
+> | Verification | Conformance audits | "Process is reviewed for compliance" |
 >
-> …
+> **Two Representations:**
+> - **Staged:** Organization's overall maturity level (1-5)
+> - **Continuous:** Individual process area capability levels
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/03-process/RQ-A2-Proc.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/03-process/RQ-A2-Proc.md)
@@ -17733,6 +19314,23 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > #### Level 2: Managed
 > **Summary:** Process developed at the projects level, practices are retained during times of stress.
+>
+> **Definition:** Projects ensure that requirements are managed and that processes are planned, performed, measured, and controlled according to documented plans. Process discipline helps to ensure that existing practices are retained during times of stress.
+>
+> **Key Characteristics:**
+> - Status of work products visible to management at defined points (milestones)
+> - Commitments established among relevant stakeholders and revised as needed
+> - Work products are appropriately controlled
+> - Products and services satisfy specified process descriptions, standards, and procedures
+>
+> **Process Areas:** REQM, PP, PMC, SAM, MA, PPQA, CM (7 PAs)
+>
+> > **Key Distinction from Level 1:** Practices are **retained during stress** — this is the critical difference.
+>
+> #### Level 3: Defined
+> **Summary:** Process developed at the organization level. Proactive.
+>
+> **Definition:** Processes are well characterized and understood, and are described in standards, procedures, tools, and methods.
 >
 > …
 
@@ -17927,7 +19525,34 @@ Generated from the SQRBOK source repository. **423 cards.**
 >       {"stage": "1. Start", "percentage": 100, "order": 1},
 >       {"stage": "2. Believe", "percentage": 50, "order": 2},
 >       {"stage": "3. Systemic", "percentage": 25, "order": 3},
->       {"stage": "4.
+>       {"stage": "4. Persist", "percentage": 12.5, "order": 4}
+>     ]
+>   },
+>   "mark": {"type": "bar", "cornerRadiusEnd": 4},
+>   "encoding": {
+>     "y": {"field": "stage", "type": "nominal", "sort": {"field": "order"}, "title": null},
+>     "x": {"field": "percentage", "type": "quantitative", "title": "Organizations (%)"},
+>     "color": {
+>       "field": "percentage",
+>       "type": "quantitative",
+>       "scale": {"scheme": "reds", "reverse": true},
+>       "legend": null
+>     }
+>   }
+> }
+> ```
+>
+> **Why Organizations Fail at Each Stage:**
+>
+> 1. **Belief Filter (50% → 50%):**
+>    - "Our situation is different"
+>    - "That won't work here"
+>    - Resistance to change based on past failures
+>
+> 2. **Systemic Filter (50% → 25%):**
+>    - Isolated "checkbox" changes instead of comprehensive reform
+>    - Implementing tools without changing processes
+>    - Training without cultural shift
 >
 > …
 >
@@ -18027,7 +19652,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Why Cultural Change Matters:**
 >
-> …
+> | Without Cultural Shift | With Cultural Shift |
+> |------------------------|---------------------|
+> | Old behaviors persist | New behaviors adopted |
+> | New processes gamed | Processes followed in spirit |
+> | Improvements abandoned under stress | Practices retained during crisis |
+> | Return to "the way we've always done it" | Permanent transformation |
+>
+> > **Key Insight:** Culture is "the set of rules you have to follow to have a fast-track career." If questioning isn't rewarded, people stop questioning.
 >
 > #### Two Levels of Change
 >
@@ -18115,7 +19747,28 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Why This Ratio Works:**
 > - **Small tests:** Fast to run, deterministic, easy to debug. When a small test fails, you know *exactly* which function broke.
-> - **Medium tests:** Verify component integration.
+> - **Medium tests:** Verify component integration. May use real implementations (e.g., in-memory databases) instead of mocks.
+> - **Large tests:** Validate critical user journeys. When a large test fails, you might spend hours debugging across 20 services.
+>
+> > "User-facing projects may increase medium/large test proportion. Infrastructure projects use significantly more small tests."
+>
+> **Concrete Example - E-commerce Checkout:**
+>
+> ```
+> Small tests (70%):
+>   - validateCreditCard() returns true for valid Visa
+>   - calculateTax() handles edge case of $0 subtotal
+>   - formatCurrency() displays correct decimal places
+>
+> Medium tests (20%):
+>   - PaymentService correctly calls StripeAPI mock
+>   - OrderService persists to in-memory database
+>   - InventoryService reduces stock after purchase
+>
+> Large tests (10%):
+>   - User can add item, checkout, pay, receive confirmation email
+>   - Failed payment shows error and preserves cart
+> ```
 >
 > …
 >
@@ -18138,7 +19791,26 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Test Scheduling by Size:**
 >
-> …
+> | Size | Scheduling |
+> |------|------------|
+> | **Small** | Run immediately, highest priority |
+> | **Medium** | Queue after small tests |
+> | **Large** | Run in parallel, don't block small tests |
+>
+> **Microsoft Priority Model** :
+>
+> | Milestone | Tests Required |
+> |-----------|----------------|
+> | M1 | P1 only |
+> | M2 | P1 + P2 |
+> | Release | All tests |
+>
+> **Benefits of Dependency Graphs:**
+> - **Isolation:** Identify exact change where test started failing
+> - **Efficiency:** Run minimal tests without sacrificing accuracy
+> - **Scale:** Handle changes to common libraries (may trigger thousands of tests)
+>
+> **Maturity:** Intermediate - Requires build system integration
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/05-practice/RQ-A3-Practice.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/05-practice/RQ-A3-Practice.md)
@@ -18177,7 +19849,13 @@ Generated from the SQRBOK source repository. **423 cards.**
 > **Practical Rule:**
 > 80% coverage is a good target. The last 20% often includes error handlers and edge cases that are expensive to test but rarely run.
 >
-> …
+> **Anti-patterns to Avoid:**
+> - Treating coverage as quality proof (high coverage != good tests)
+> - Retrofitting tests to bad code (may exercise bugs)
+> - Ignoring E2E coverage (unit coverage alone insufficient)
+> - Gaming coverage metrics (testing getters/setters vs logic)
+>
+> **Maturity:** Starter - Coverage tools available in most languages
 >
 > #### 1.5 Test Coverage (80% Target)
 >
@@ -18203,7 +19881,14 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Level 4 | 40% | 25% |
 > | Level 5 | 60% | 40% |
 >
-> …
+> **Coverage Measurement Types:**
+> - **Statement coverage** - whether each line of code was executed
+> - **Branch coverage** - whether each logical block was exercised
+> - **Mutation coverage** - whether tests detect code changes (stronger)
+>
+> **Why 100% Coverage Can Be Misleading:**
+>
+> ```python
 
 > [!info]- Source
 > [SQRBOK handbook](https://sqrbok.github.io/organization/05-practice/RQ-A3-Practice.html) · [source Markdown](https://github.com/sqrbok/sqrbok-preview/blob/main/content/organization/05-practice/RQ-A3-Practice.md)
@@ -18238,7 +19923,12 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > Unlike traditional code inspection focused on finding defects, Google's code review prioritizes **knowledge transfer and maintainability**:
 >
-> …
+> - **Readability certification**: Every change requires approval from a language-certified reviewer
+> - **New hire learning**: Developers under 1 year receive **2x more comments** per change
+> - **Lightweight process**: 80%+ of changes require at most one iteration
+> - **Tool integration**: Tricorder static analysis integrated directly in review UI
+>
+> > "The foremost reason for introducing code review at Google was to improve code understandability and maintainability."
 >
 > #### 2.1 Traditional Code Review Process
 >
@@ -18257,6 +19947,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Outcome:** Codebase "looks like one person wrote it"
 >
 > **What Reviewers Look For:**
+>
+> | Focus | Description |
+> |-------|-------------|
+> | **Correctness** | Logic errors that tests might miss |
+> | **Standards** | Style guide adherence, data structure choices |
+> | **Understandability** | Security/reliability properties obvious to future maintainers |
+> | **Knowledge sharing** | Educational feedback for author |
+> | **Minimalism** | YAGNI - eliminate over-engineering |
+>
+> **Key Metrics** :
+>
+> | Metric | Value |
+> |--------|-------|
+> | Median latency | **< 4 hours** |
+> | Median change size | **24 lines** |
+> | Tool satisfaction | **97%** |
+> | Volume | ~50,000 reviews/day (via Tricorder) |
+>
+> **Review Principles:**
+> - **No solo commits** - Multi-party authorization required
+> - **Just-in-time notifications** - Keep developers unblocked
+> - **One-click fixes** - Suggested auto-fixes for common issues
+> - **Low friction** - Automation handles mechanical details
+>
+> **Microsoft Effective Review Practices** :
 >
 > …
 
@@ -18298,6 +20013,27 @@ Generated from the SQRBOK source repository. **423 cards.**
 > - **Security vulnerabilities:** SQL injection, XSS (injection sinks detection)
 > - **API conformance:** Deprecated/risky API usage flagged at compile time
 > - **Style/readability:** Enforce language style guides for consistency
+>
+> **Why <=10% False Positives?**
+>
+> | FP Rate | Developer Response |
+> |---------|-------------------|
+> | <5% | Trust and fix |
+> | 10% | Grudging acceptance |
+> | >15% | Ignore the tool |
+> | >30% | Demand removal |
+>
+> **Effectiveness Metrics:**
+> - **10% false positive rule** - Google disables checks with >10% noise
+> - **"Not useful" feedback** - Tricorder lets devs report unhelpful warnings
+> - **2 orders of magnitude** - XSS vulnerabilities reduced with safe types
+> - **Auto-fixes** - One-click fixes encourage adoption
+>
+> **Adoption Strategies:**
+> - **Integrate into code review** - Make results visible where developers work
+> - **Minimize friction** - Auto-suggest fixes, low false-positive rate
+> - **Incremental rollout** - Enforce on new code, exempt legacy until cleaned
+> - **Developer feedback loop** - Let devs report "not useful" to tune tools
 >
 > …
 >
@@ -18344,7 +20080,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Staged Rollout Percentages:**
 >
-> …
+> | Stage | Population | Purpose |
+> |-------|------------|---------|
+> | **Canary** | ~1% | Initial risk detection |
+> | **Expand** | ~10% | Broader validation |
+> | **Wide** | ~50% | Near-full confidence |
+> | **Full** | 100% | Complete rollout |
+>
+> **Canary Math - Why It Limits Blast Radius:**
+> ```
+> Scenario: Canary has a bug causing 20% error rate
+>
+> Without canary: 100% of users see 20% errors = 20% overall error rate
+> With 5% canary: Only 5% of users affected = 1% overall error rate
+>
+> Your SLO of 99.9% is preserved while you detect and fix the bug!
+> ```
+>
+> **VALET Framework (Home Depot):**
+> - **V**olume - traffic handled
+> - **A**vailability - uptime
+> - **L**atency - response speed
+> - **E**rrors - failure rate
+> - **T**ickets - manual interventions
+>
+> **Maturity:** Intermediate - Requires deployment automation
 >
 > #### Error Budget Math for Canary
 >
@@ -18395,7 +20155,31 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   SLA to customers: 99.9% availability
 >   Internal SLO:     99.95% availability
 >
-> …
+>   If you drop to 99.92%, you:
+>   + Still meet SLA (no refunds)
+>   - Violated SLO (trigger reliability work)
+> ```
+>
+> **Common SLIs:**
+>
+> | Service Type | SLI | Formula |
+> |--------------|-----|---------|
+> | Request-driven | Availability | Successful requests / Total requests |
+> | Request-driven | Latency | Requests < 100ms / Total requests |
+> | Data pipeline | Freshness | Data updated < threshold / Total |
+>
+> **Availability Targets:**
+>
+> | Target | Downtime/year | Use Case |
+> |--------|---------------|----------|
+> | 99.5% | ~1.8 days | Non-critical apps |
+> | 99.9% (3 nines) | ~8.7 hours | Internal systems |
+> | 99.95% | ~4.4 hours | Production services |
+> | 99.99% (4 nines) | **~52 minutes** | Shared infrastructure |
+>
+> > "100% reliability is the wrong target - it leaves no room for change and costs more than the marginal utility it provides."
+>
+> **Maturity:** Intermediate - Requires monitoring infrastructure
 >
 > #### SRE vs Traditional Operations
 >
@@ -18455,6 +20239,33 @@ Generated from the SQRBOK source repository. **423 cards.**
 >
 > **Budget Exhausted -> Actions:**
 >
+> | Action | Description |
+> |--------|-------------|
+> | **Feature freeze** | Halt all new launches |
+> | **Reliability focus** | Pivot to reliability work |
+> | **Production freeze** | Minimize change risk |
+> | **Mandatory postmortem** | If single incident uses >20% of 4-week budget |
+>
+> **Budget Remaining -> Benefits:**
+> - Deploy features aggressively
+> - Allow risky experiments
+> - Favor speed over safety checks
+>
+> **Burn Rate Explained:**
+> Burn rate measures how fast you're consuming your budget.
+>
+> ```
+> Burn rate 1  = Using budget at exactly sustainable pace
+> Burn rate 10 = Using budget 10x too fast (30-day budget gone in 3 days!)
+>
+> Alert thresholds:
+> - Burn rate 2 for 1 hour  -> Page (immediate response)
+> - Burn rate 6 for 6 hours -> Ticket (scheduled fix)
+> ```
+>
+> **Extreme Example:**
+> > 99.999% monthly availability means 100% outage exhausts entire budget in **26 seconds**
+>
 > …
 >
 > #### Budget Exhausted → Actions
@@ -18502,6 +20313,35 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   Traffic: 500 req/sec ok
 >   Errors:  0.05% ok
 >   Saturation: 40% CPU ok
+>
+> Black Friday:
+>   Latency: p99 = 800ms ALERT <- Users experiencing delays
+>   Traffic: 2000 req/sec    <- Expected spike
+>   Errors:  2.5% ALERT      <- Checkout failing
+>   Saturation: 95% CPU ALERT <- Need to scale
+> ```
+>
+> **Symptoms vs Causes:**
+>
+> | Type | Use For | Example |
+> |------|---------|---------|
+> | Symptoms | Alerting (page on-call) | "The service is slow" |
+> | Causes | Debugging | "Database at 90% CPU" |
+>
+> **Why Page on Symptoms, Not Causes:**
+> ```
+> Scenario: Database CPU at 95%
+>
+> Bad alert: "Database CPU high"
+>   -> Maybe the database is fine at 95%, or maybe it's not affecting users
+>
+> Good alert: "Checkout latency > 2 seconds"
+>   -> Definitely affecting users, investigate to find cause
+> ```
+>
+> > "Page on the symptom 'the service is slow', not the cause 'database at 90% CPU'. The cause may not actually affect users."
+>
+> **Burn Rate Alert Levels:**
 >
 > …
 >
@@ -18558,7 +20398,20 @@ Generated from the SQRBOK source repository. **423 cards.**
 > | Password resets | Self-service portal |
 > | Log searches | Dashboards |
 >
-> …
+> **Reduction Strategies:**
+>
+> | Strategy | Description |
+> |----------|-------------|
+> | **Engineer out** | Automate the task entirely |
+> | **Reject** | Push back on toil requests, propose alternatives |
+> | **Human-backed interfaces** | Design systems where humans are last resort |
+> | **Melt snowflakes** | Standardize to reduce special cases |
+> | **Self-service** | Enable users to help themselves |
+>
+> **Complexity Toil Warning:**
+> > "Automatable" doesn't always mean "should automate" - overly complex automation becomes its own form of toil when it breaks and requires debugging.
+>
+> **Maturity:** Starter - Can track immediately, automation builds over time
 >
 > #### Toil Management
 >
@@ -18657,9 +20510,15 @@ Generated from the SQRBOK source repository. **423 cards.**
 >   -> Human writes all code, agent just advises
 >
 > Month 2 (T1): Agent writes test code, human reviews and approves
->   -> "I generated 5 tests.
+>   -> "I generated 5 tests. Here they are for your review."
 >
-> …
+> Month 3 (T2): Agent can auto-fix failing tests if fix is <10 lines
+>   -> Small fixes happen automatically, big changes need approval
+>
+> Month 6 (T3): Agent handles routine bug fixes end-to-end
+>   -> Creates PR, gets review, merges, monitors deployment
+>   -> REQUIRES: 95% success rate, 0 policy violations over 100 deploys
+> ```
 >
 > #### Convergent Quality Engineering Framework
 >
