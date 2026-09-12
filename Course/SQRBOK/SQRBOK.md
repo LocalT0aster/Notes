@@ -20,6 +20,12 @@ bash Course/SQRBOK/sync.sh
 
 This initializes/updates `sqrbok/sqrbok-preview` and regenerates all decks from every revision-question Markdown file it discovers. The parser also checks the current known snapshot: **423 cards across 20 linked revision files**. If upstream adds questions or files, they are included automatically and the count warning tells you the snapshot changed.
 
+The generator is a self-contained `uv` script and declares Python `>=3.14`; `uv` provisions a compatible interpreter automatically. Run its regression tests with:
+
+```bash
+uv run --script Course/SQRBOK/tools/test_build_flashcards.py
+```
+
 ## Flashcard philosophy
 
 The original questions are mostly oral/explanatory exam prompts. The deck therefore keeps each original question intact rather than breaking it into trivia fragments. The back side uses, in priority order:

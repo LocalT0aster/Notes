@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.14"
+# dependencies = []
+# ///
 """Build SQRBOK flashcards from the upstream Markdown sources.
 
 The builder intentionally does not synthesize authoritative answers.  It uses

@@ -25,7 +25,7 @@ elif [[ -d "$SOURCE/.git" ]]; then
   git -C "$SOURCE" pull --ff-only || true
 fi
 
-python3 "$HERE/tools/build_flashcards.py" \
+"$HERE/tools/build_flashcards.py" \
   --source "$SOURCE" \
   --manifest "$HERE/source_manifest.json" \
   --output-dir "$HERE"
