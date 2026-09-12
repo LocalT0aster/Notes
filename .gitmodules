@@ -1,3 +1,6 @@
 [submodule "MDTools"]
 	path = MDTools
 	url = https://github.com/LocalT0aster/MDTools.git
+[submodule "Course/SQRBOK/source"]
+	path = Course/SQRBOK/source
+	url = https://github.com/sqrbok/sqrbok-preview.git

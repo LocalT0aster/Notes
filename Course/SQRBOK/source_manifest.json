@@ -1,0 +1,29 @@
+{
+  "source_repository": "https://github.com/sqrbok/sqrbok-preview",
+  "live_site": "https://sqrbok.github.io/",
+  "license": "CC BY 4.0",
+  "snapshot_checked": "2026-09-11",
+  "expected_total_questions": 423,
+  "revision_files": [
+    {"path":"content/define/foundations/RQ-L1-QM.md","topic":"Quality Models","expected":10},
+    {"path":"content/define/measurement/RQ_L2_Metrics.md","topic":"Quality Measurement","expected":12},
+    {"path":"content/verif/overview/RQ_L03_Verification.md","topic":"Verification Methods","expected":11},
+    {"path":"content/verif/coverage/RQ_L04_Coverage.md","topic":"Adequacy Criteria","expected":32},
+    {"path":"content/verif/inspection/RQ_A05_Inspection.md","topic":"Software Inspection","expected":28},
+    {"path":"content/verif/domain/RQ_L05_Domain.md","topic":"Input Domain Testing","expected":26},
+    {"path":"content/verif/domain/RQ_A08_ClassificationTree.md","topic":"Classification Tree Method","expected":27},
+    {"path":"content/verif/static/RQ_A06_Static.md","topic":"Static Analysis","expected":22},
+    {"path":"content/verif/combinatorial/RQ_A07_Combinatorial.md","topic":"Combinatorial Testing","expected":15},
+    {"path":"content/verif/random/RQ_L06_Random.md","topic":"Random Testing","expected":34},
+    {"path":"content/verif/exploratory/RQ_L07_Exploratory_OP.md","topic":"Exploratory Testing & Operational Profile","expected":30},
+    {"path":"content/attributes/maintainability/RQ_A10_MaintainabilityDSM.md","topic":"Maintainability & DSM","expected":32},
+    {"path":"content/attributes/reliability/RQ_L08_Reliability.md","topic":"Software Reliability","expected":12},
+    {"path":"content/attributes/performance/RQ_L09_PerformanceAnalysis.md","topic":"Performance Analysis","expected":14},
+    {"path":"content/attributes/queuing/RQ-A09-Queuing.md","topic":"Queuing Theory","expected":30},
+    {"path":"content/attributes/security/RQ_L10_Security.md","topic":"Security","expected":12},
+    {"path":"content/organization/01-coq/RQ-A1-CoSQ.md","topic":"Cost of Quality","expected":10},
+    {"path":"content/organization/02-plan/RQ-A4-QualityPlan.md","topic":"Quality Planning","expected":17},
+    {"path":"content/organization/03-process/RQ-A2-Proc.md","topic":"Process Improvement","expected":37},
+    {"path":"content/organization/05-practice/RQ-A3-Practice.md","topic":"Industry Practices","expected":12}
+  ]
+}
