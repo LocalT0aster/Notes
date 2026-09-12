@@ -1,7 +1,9 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.14"
-# dependencies = []
+# dependencies = [
+#   "markdown-it-py>=4.0.0,<5.0.0",
+# ]
 # ///
 """Build SQRBOK flashcards from the upstream Markdown sources.
 
@@ -13,13 +15,14 @@ SQRBOK source-note sections as active-recall cues.
 from __future__ import annotations
 
 import argparse
-import html
 import json
 import re
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable, Sequence
+
+from markdown_it import MarkdownIt
 
 GITHUB_BASE = "https://github.com/sqrbok/sqrbok-preview/blob/main/"
 SITE_BASE = "https://sqrbok.github.io/"
@@ -38,6 +41,7 @@ MODEL_ANSWER_RE = re.compile(r"\*\*Model Answer:\*\*\s*(?P<body>.*)", re.IGNOREC
 CITE_RE = re.compile(r"\{%\s*(?:cite|bibliography)\b.*?%\}", re.IGNORECASE)
 HTML_TAG_RE = re.compile(r"</?(?:details|summary)(?:\s+[^>]*)?>", re.IGNORECASE)
 TOKEN_RE = re.compile(r"[a-z0-9][a-z0-9_-]{2,}")
+MARKDOWN_RENDERER = MarkdownIt("commonmark", {"html": False}).enable("table")
 
 STOPWORDS = {
     "the", "and", "for", "that", "this", "with", "from", "into", "are", "was", "were",
@@ -489,13 +493,8 @@ def write_json(cards: Sequence[Card], output: Path) -> None:
 
 
 def markdownish_to_html(text: str) -> str:
-    """Small safe renderer for the embedded offline deck; source remains escaped."""
-    escaped = html.escape(text)
-    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
-    escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
-    escaped = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", escaped)
-    escaped = escaped.replace("\n\n", "</p><p>").replace("\n", "<br>")
-    return "<p>" + escaped + "</p>"
+    """Render source Markdown without allowing source HTML into the deck."""
+    return MARKDOWN_RENDERER.render(text)
 
 
 def write_static_html(cards: Sequence[Card], output: Path) -> None:
@@ -518,6 +517,7 @@ STATIC_HTML_TEMPLATE = r'''<!doctype html>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color-scheme:light dark;--bg:#101216;--panel:#181b21;--muted:#9ca3af;--border:#30343d;--accent:#8ab4f8;--good:#76c893;--bad:#ff8585}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#eef1f5;min-height:100vh}.wrap{max-width:980px;margin:auto;padding:22px}.top{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.top h1{margin:0 auto 0 0;font-size:clamp(1.5rem,4vw,2.2rem)}.muted{color:var(--muted)}select,input,button{font:inherit;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:inherit;padding:10px 12px}button{cursor:pointer}button:hover{border-color:var(--accent)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:16px 0}.stat{background:var(--panel);border:1px solid var(--border);padding:10px;border-radius:12px}.stat b{display:block;font-size:1.25rem}.filters{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:9px;margin:12px 0 18px}.card{min-height:390px;background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:clamp(18px,4vw,34px);display:flex;flex-direction:column;box-shadow:0 16px 50px #0005}.pill{align-self:flex-start;border:1px solid var(--border);border-radius:999px;padding:5px 9px;font-size:.82rem;color:var(--muted)}.content{font-size:clamp(1.08rem,2.2vw,1.35rem);line-height:1.55;flex:1}.content code{font-size:.9em}.answer{border-top:1px solid var(--border);padding-top:18px}.source{font-size:.85rem;color:var(--muted);margin-top:16px}.source a{color:var(--accent)}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}.flip{width:100%;margin-top:12px}.hidden{display:none}.empty{text-align:center;padding:80px 20px;color:var(--muted)}.key{font-size:.75rem;color:var(--muted)}@media(max-width:700px){.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.stats{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr 1fr}}
+.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{line-height:1.25;margin:1.2em 0 .55em}.content h1:first-child,.content h2:first-child,.content h3:first-child,.content h4:first-child,.content h5:first-child,.content h6:first-child{margin-top:0}.content p{margin:.8em 0}.content ul,.content ol{padding-left:1.45em}.content li+li{margin-top:.25em}.content table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:1em 0;font-size:.88em}.content th,.content td{border:1px solid var(--border);padding:.45em .6em;text-align:left;vertical-align:top}.content th{background:#242932}.content pre{overflow-x:auto;padding:.8em;border:1px solid var(--border);border-radius:8px;background:#0d0f13;font-size:.82em}.content blockquote{margin:1em 0;padding-left:1em;border-left:3px solid var(--accent);color:var(--muted)}.content a{color:var(--accent)}
 </style>
 </head><body><main class="wrap">
 <div class="top"><div><h1>SQRBOK Flashcards</h1><div class="muted">__CARD_COUNT__ source-grounded revision cards · progress stays in this browser</div></div><button id="shuffle">Shuffle</button></div>
