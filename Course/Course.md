@@ -18,4 +18,4 @@
 - [ProbStat](ProbStat/ProbStat.md)
 - [TCS](TCS/TCS.md)
 - [SoftArch](SoftArch/SoftArch.md)
-- [SQRBOK — Software Quality & Reliability](SQRBOK/SQRBOK.md)
+- [SQRS — Software Quality & Reliability](SQRS/SQRS.md)
