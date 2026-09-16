@@ -2,6 +2,16 @@
 
 Flashcards synthesized from the ten SQRBOK revision-question sets used for the course. Each lecture is separate for selective revision in Obsidian.
 
+## Interactive deck
+
+- [HTML flashcards](flashcards.html) — search, lecture filters, shuffle, keyboard grading, and local review progress.
+
+Rebuild it from the Markdown decks with the `uv` generator adapted from the repository's `sqrbok` branch:
+
+```bash
+uv run --script tools/build_flashcards.py --source .
+```
+
 ## Decks
 
 - [L01 — Quality Models](L01_Quality_Models.md) — 10
