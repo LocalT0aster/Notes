@@ -4,7 +4,7 @@ Flashcards synthesized from the ten SQRBOK revision-question sets used for the c
 
 ## Interactive deck
 
-- [HTML flashcards](flashcards.html) — search, lecture filters, shuffle, keyboard grading, and local review progress.
+- [HTML flashcards](https://html-preview.github.io/?url=https://github.com/LocalT0aster/Notes/blob/master/Course/SQRS/flashcards.html) — search, lecture filters, shuffle, keyboard grading, and local review progress.
 
 Rebuild it from the Markdown decks with the `uv` generator adapted from the repository's `sqrbok` branch:
 
