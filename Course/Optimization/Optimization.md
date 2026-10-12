@@ -1,53 +1,64 @@
-# Introduction to Optimization
+# Optimization — Weekly Notes
 
-## TOC
+Old AI notes by topic: [ByTopic/Optimization.md](ByTopic/Optimization.md)
 
-- [Introduction to Optimization](#introduction-to-optimization)
-  - [TOC](#toc)
-  - [Course Topics in Order](#course-topics-in-order)
-  - [Exam topics](#exam-topics)
-    - [Midterm Topics by Ex](#midterm-topics-by-ex)
-    - [Test 2 topics](#test-2-topics)
-    - [Final topics](#final-topics)
-  - [Resources](#resources)
+## How to use this
+- Work week-by-week in order; each `WeekXX.md` ends with an “Exam prep” section you can turn into practice questions.
+- For each week: re-derive the key algorithms once without looking (simplex pivots, dual construction, KKT setup, etc.).
+- Keep a running “mistakes list”: the “Common mistakes” sections are designed to seed it.
 
-## Course Topics in Order
+## Weekly notes
 
-1. [Introduction](Intro.md)
-2. [Graphical Solution of Linear Programs](GraphLinProblems.md)
-3. [Simplex method](Simplex.md)
-4. [Linear Programming Duality](LinProgrammingDuality.md)
-5. [Sensitivity Analysis (Algebraic)](SensitivityAnalysis.md)
-6. [Advanced Linear Programming](LinProgrammingAdv.md)
-7. [An Interior-Point Algorithm](InteriorPoint.md)
-8. [Transportation Model](TransportModel.md)
-9. [Classical Optimization](ClassicalOptimization.md)
-10. Nonlinear Optimization (todo)
-11. Minimization and Maximization of Convex Functions (todo)
+- [Week 1 — Introduction & Graphical Linear Programming](Week01.md)
+  - Optimization problem statement, feasibility, modeling workflow
+  - LP canonical form, slack variables, corner points/basic solutions
+  - Graphical LP method and intuition for simplex
+- [Week 2 — Simplex Method (Tableau Computations)](Week02.md)
+  - Tableau mechanics, entering/leaving rules, Gauss–Jordan pivoting
+  - Optimality and feasibility (ratio test) conditions
+  - Slack interpretation (scarce vs abundant resources)
+- [Week 3 — Artificial Variables (Big‑M and Two‑Phase Methods)](Week03.md)
+  - When/why artificial variables are required
+  - Big‑M setup and “fixing” the z-row
+  - Two‑phase method and infeasibility detection
+- [Week 4 — Simplex Special Cases & Graphical Sensitivity](Week04.md)
+  - Degeneracy, redundancy, cycling intuition
+  - Alternative optima and how simplex reveals them
+  - Unboundedness and graphical sensitivity ranges (shadow prices)
+- [Week 5 — Duality and Advanced Linear Programming](Week05.md)
+  - Primal↔dual construction and primal–dual objective relationships
+  - Dual values and simplex/reduced-cost interpretation
+  - Advanced LP: bases, $B^{-1}$, revised simplex, bounded variables idea
+- [Week 6 — Interior‑Point Methods (Projected Gradient + Centering)](Week06.md)
+  - Interior-point intuition vs simplex
+  - Projected gradient and scaling/centering iteration structure
+  - Strict interior feasibility requirements and step-size logic
+- [Week 7 — Transportation Problems (Transportation Simplex)](Week07.md)
+  - Transportation LP model and balancing with dummy nodes
+  - Initial BFS methods (NW corner, Vogel, Russell)
+  - $u$-$v$ potentials, reduced costs, loop (cycle) adjustments
+- [Week 8 — Classical Optimization I (Unconstrained + Newton)](Week08.md)
+  - Stationary points, Hessian definiteness, higher-order tests (1D)
+  - Newton–Raphson for equation solving and extrema finding
+  - Equality constraints motivation (feasible directions)
+- [Week 9 — Classical Optimization II (Lagrangian, KKT, Sensitivity)](Week09.md)
+  - Lagrangian method and multiplier interpretation
+  - KKT conditions and active-set thinking
+  - Local sensitivity analysis and sufficiency ideas (bordered Hessian/convexity)
+- [Week 10 — Nonlinear Programming Algorithms I (Direct Search + Gradient)](Week10.md)
+  - 1D direct search (dichotomous, golden section), convergence/iteration counts
+  - Gradient method with line search and common failure modes
+- [Week 11 — Nonlinear Programming Algorithms II (QP + Linear Combinations)](Week11.md)
+  - Quadratic programming form and KKT specialization
+  - Phase-I-style feasibility approach (conceptual)
+  - Linear combinations method (successive linearization + line search)
 
-## Exam topics
-
-### Midterm Topics by Ex
-
-1. Construction of dual problem (topic 4,5)
-2. Transportation problem (topic 8)
-3. Graphical & Simlex methods (topic 2,3)
-4. Interior-Point (topic 7)
-5. Two Phase method (topic 3+)
-6. Adv. Lin. Prog. (matrix) (topic 6)
-
-2345678
-
-### Test 2 topics
-
-[Test 2 Prep](Test2Prep.md)
-
-1. Classical Optimization (topic 9)
-
-### Final topics
-
-## Resources
-
-- Engineering Optimization: Theory and Practice, by Singiresu S. Rao, John Wiley and Sons.
-- Introduction to Linear Optimization, by Bertsimas, Dimitris, and John Tsitsiklis. Belmont, MA: Athena Scientific, 1997. ISBN: 9781886529199.
-- Convex Optimization, by Boyd and Vandenberghe. Cambridge University Press.
+## Final review map
+- Previous year Final sample: `Final24.md`
+- Modeling → LP standard form → simplex tableaux → artificials (Big‑M / two‑phase)
+- Simplex behavior → degeneracy / alternative optima / unboundedness → sensitivity (shadow prices)
+- Duality ↔ reduced costs ↔ sensitivity interpretation ↔ revised simplex (matrix view)
+- LP solvers: simplex (edge-walk) vs interior-point (interior path)
+- Structured LPs: transportation model → $u$-$v$ potentials → loop pivots
+- Calculus optimization: $\nabla f$, Hessian → Newton → equality constraints (Lagrange) → inequality constraints (KKT)
+- NLP algorithms: direct search / gradient → constrained NLP (QP, linearization-based methods)
