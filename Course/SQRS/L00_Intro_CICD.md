@@ -92,9 +92,7 @@
 
 > [!answer]- Answer / self-check
 > Defect density = counted defects / code size. Here **20/8 = 2.5 post-release defects/KLOC**, below the sample median **4.3**. The median better represents a typical sampled project because extreme values pull up the mean **7.47**.
-> Two reasons the comparison with the benchmark can mislead:
-> - **Incompatible measurement definitions:** physical vs logical LOC, generated/test code in or out, different severity thresholds, duplicate handling and reporting windows change the numerator and denominator.
-> - **Different project contexts:** usage volume, operating environment and detection/reporting effort differ, so equal quality can produce unequal reported densities — a lower figure does not itself prove better quality.
+> Two reasons the comparison with the benchmark can mislead: projects measure differently (physical vs logical LOC, generated/test code, severity thresholds, duplicate handling, reporting windows) and differ in context (usage volume, operating environment, detection/reporting effort), so a lower reported density does not itself prove better quality.
 
 ### Q6 — Continuous Integration
 
