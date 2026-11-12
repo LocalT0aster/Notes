@@ -97,6 +97,20 @@ class CourseCoverageTest(unittest.TestCase):
         diagram = next(c for c in payload if c["source_path"].startswith("L10_") and c["question_number"] == 6)
         self.assertIn("data:image/svg+xml;base64,", diagram["prompt_html"])
 
+    def test_answer_side_notes_field_uses_separate_storage(self) -> None:
+        cards = builder.build_cards(ROOT)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "flashcards.html"
+            builder.write_static_html(cards, output)
+            html = output.read_text(encoding="utf-8")
+        self.assertIn("const KEY='sqrs-progress-v1',NOTES_KEY='sqrs-notes-v1'", html)
+        self.assertIn('<textarea class="note" id="note"', html)
+        self.assertIn("resize:vertical", html)
+        self.assertIn("width:min(640px,100%)", html)
+        self.assertIn("note.oninput=()=>saveNote(c.id,note.value)", html)
+        self.assertIn("e.target.matches('input,select,textarea')", html)
+        self.assertIn("localStorage.setItem(NOTES_KEY", html)
+
 
 if __name__ == "__main__":
     unittest.main()
