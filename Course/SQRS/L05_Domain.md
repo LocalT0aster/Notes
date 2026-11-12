@@ -1,6 +1,6 @@
 # L05 — Input Domain Testing Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L05_Domain.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L05_Domain.html
 
 **Cards:** 26
 

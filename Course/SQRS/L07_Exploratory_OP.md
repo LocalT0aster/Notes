@@ -1,6 +1,6 @@
 # L07 — Exploratory Testing & Operational Profiles Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L07_Exploratory_OP.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L07_Exploratory_OP.html
 
 **Cards:** 30
 

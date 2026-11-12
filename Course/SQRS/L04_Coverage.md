@@ -1,6 +1,6 @@
 # L04 — Adequacy Criteria / Coverage Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L04_Coverage.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L04_Coverage.html
 
 **Cards:** 32
 

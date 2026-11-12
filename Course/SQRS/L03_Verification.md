@@ -1,8 +1,8 @@
 # L03 — Verification Methods Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L03_Verification.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L03_Verification.html
 
-**Cards:** 11
+**Cards:** 16
 
 > [!tip] Active recall
 > Answer every part before revealing the answer. For design/essay questions, the answer is a grading checklist: alternative designs can also be correct when justified.
@@ -17,6 +17,7 @@
 > - **Analysis:** use models/calculations/static reasoning; e.g. timing or static-analysis proof.
 > - **Demonstration:** operate the item and observe behavior, usually without precise instrumentation; e.g. show an installation/workflow.
 > - **Test:** execute under controlled conditions and compare measured outputs to expected results.
+> Matrix: product not run + human observation → inspection; not run + calculation/model evidence → analysis; run + human observation → demonstration; run + detailed measured data → testing. Choose the evidence a particular requirement needs.
 
 ### Q2 — Inspection formality spectrum
 
@@ -25,6 +26,7 @@
 
 > [!answer]- Answer / self-check
 > A defensible order: **Fagan inspection → formal technical/peer review → walkthrough → desk check/ad-hoc review**. Formal inspections fit high-risk or regulated artifacts; walkthroughs are useful for shared understanding; informal review is cheap for low-risk/local changes.
+> A walkthrough is author-led explanation; an inspection is led by a trained non-author moderator and participants prepare individually before the meeting.
 
 ### Q3 — Inspection vs testing
 
@@ -43,6 +45,7 @@
 > - **Safety:** “something bad never happens.” Example: a balance never becomes negative without an authorized overdraft.
 > - **Liveness:** “something good eventually happens.” Example: every accepted job eventually completes or reaches a terminal failure state.
 > Safety violations have finite bad prefixes; liveness concerns progress/eventuality.
+> A model checker represents a liveness counterexample as an infinite non-progress run, usually a finite prefix followed by a repeating cycle.
 
 ### Q5 — Soundness, completeness, Rice's theorem
 
@@ -64,6 +67,7 @@
 > - **Integration:** component interfaces; developers/testers; contract/protocol mismatch.
 > - **System:** complete system in representative environment; test team; end-to-end behavior/configuration failure.
 > - **Acceptance:** business/user needs; customer/product stakeholders; requirement/fitness-for-use gap.
+> Check unit outputs against intended local behavior, integration against interface contracts, system against system requirements, acceptance against user/business goals. A cents/euros contract mismatch may escape isolated unit tests but fail integration.
 
 ### Q7 — Mocks and test doubles
 
@@ -72,6 +76,7 @@
 
 > [!answer]- Answer / self-check
 > Mocks replace collaborators so the unit is isolated and tests are deterministic/fast. They can supply controlled responses and verify interactions (calls, arguments, ordering). Over-mocking couples tests to implementation details, so mock boundaries rather than every internal object.
+> A **stub** supplies canned responses; a **fake** is a lightweight working implementation; a **mock** verifies expected interactions, so it can detect an omitted required call that a response-only stub would not. Prefer real collaborators when practical, then faithful fakes; avoid making irrelevant implementation call sequences part of the contract.
 
 ### Q8 — Black-box vs white-box testing
 
@@ -81,14 +86,15 @@
 > [!answer]- Answer / self-check
 > - **Black-box:** uses specification/interface, not implementation; targets missing/incorrect behavior and input-domain faults; techniques include EP, BVA, decision tables.
 > - **White-box:** uses code/control/data structure; targets unexecuted branches, path/condition/data-flow issues; techniques include statement/branch/MC/DC coverage.
+> Black-box tests can miss unmentioned implementation behavior; white-box tests cannot reveal a requirement never implemented. Copying a €20 shipping expectation from the code when the specification is silent is a circular oracle: clarify intended behavior independently before asserting it.
 
 ### Q9 — Google-style test pyramid
 
 > [!question] Question
-> Explain the 70/20/10 pyramid and the ice-cream-cone anti-pattern.
+> Explain the 80/15/5 pyramid, the earlier 70/20/10 split and the ice-cream-cone anti-pattern. What do the percentages count?
 
 > [!answer]- Answer / self-check
-> Typical ratio: about **70% unit/small**, **20% integration/service**, **10% end-to-end/UI**. Lower-level tests are faster, more deterministic, and easier to diagnose; a small number of E2E tests protects critical flows. The **ice-cream cone** reverses this with many slow/brittle UI tests and too little fast unit coverage.
+> Google's book suggests **80% unit, 15% integration, 5% E2E by test count**; the earlier blog used **70/20/10**. Both are rules of thumb, not measured universal optima. Lower-level tests are faster, more deterministic, and easier to diagnose; a few E2E tests protect critical flows. The **ice-cream cone** reverses this with many slow/brittle UI tests and too little fast unit coverage.
 
 ### Q10 — Demonstration as verification
 
@@ -107,4 +113,45 @@
 > - **Maintainability:** inspection/design review + static analysis/code metrics; targeted tests for changeability.
 > - **Usability:** demonstration/validation with representative users and task-based testing.
 > - **Security:** combine threat/design inspection, SAST/static analysis, dynamic/penetration/fuzz testing, and dependency analysis.
+> - **Reliability:** analysis of failure data/models plus execution under representative workloads and fault-injection tests.
 > No single technique covers all attributes.
+
+### Q12 — Verification versus validation
+
+> [!question] Question
+> The program meets its specification but users cannot accomplish their work. Did verification or validation fail?
+
+> [!answer]- Answer / self-check
+> **Verification:** did we build the product right, against its specification? It can pass here. **Validation:** did we build the right product for the intended use? It fails. The specification may be incomplete or wrong; conformance alone does not establish fitness for purpose.
+
+### Q13 — Write temporal properties
+
+> [!question] Question
+> With `[]` (always), `<>` (eventually), `U` (until), express a nonnegative balance and eventual confirmation/rejection of every placed order. Which is safety, and how could the second reject a legitimate shop behavior?
+
+> [!answer]- Answer / self-check
+> **`[](balance >= 0)`** is safety. For one identified order: **`[](placed -> <>(confirmed || rejected))`** is liveness; track the same order identity rather than letting another order's confirmation satisfy it. A legitimate permanently cancelled order violates the latter unless cancellation counts as rejection or another terminal outcome. A proof establishes the written property of its model, not the correctness of the chosen requirement. `p U q` additionally requires eventual q while p holds beforehand.
+
+### Q14 — A clean tool report is not a proof
+
+> [!question] Question
+> Pylint gives 10/10 and mypy no issues, yet a function divides by zero on an empty list. Why no contradiction? What would a verifier need?
+
+> [!answer]- Answer / self-check
+> The tools check configured lint/type properties, not every runtime behavior or the business contract. An empty list can be correctly typed. A verifier needs a proven nonzero divisor: for example a caller-established **nonempty-input precondition**, or code that handles/rejects the empty case with a suitable specification. Silence is meaningful only within a tool's stated guarantees and assumptions.
+
+### Q15 — Reachability, infection and propagation
+
+> [!question] Question
+> `num_zero` starts its loop at index 1 instead of 0. Trace `[2,7,0]` and `[0,7,2]` through fault, error and failure.
+
+> [!answer]- Answer / self-check
+> **Fault:** wrong initial index. Both runs **reach** it and start with an incorrect loop-index state (**infection**, under the lecture's state definition). `[2,7,0]` still counts one zero correctly, so no observable **propagation/failure**. `[0,7,2]` misses the first zero and returns 0 instead of 1: the wrong state propagates to an externally wrong result. Reaching faulty code alone is insufficient; the oracle must observe the consequence.
+
+### Q16 — TDD and its evidence
+
+> [!question] Question
+> Describe red–green–refactor. Why could industrial reports of 40–90% lower defect density coexist with newcomer experiments showing no gain?
+
+> [!answer]- Answer / self-check
+> **Red:** write a test that fails for the intended missing behavior. **Green:** implement enough to pass. **Refactor:** improve structure while retaining behavior and green tests. Experience affects test design and fluency; task type matters (new simple code versus complex legacy changes). Industrial case studies also differ from controlled experiments in selection, baselines and confounders. The studies do not establish a uniform causal gain for every team.

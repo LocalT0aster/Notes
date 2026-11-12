@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from collections import Counter
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Sequence
@@ -139,7 +140,28 @@ def build_cards(source: Path) -> list[Card]:
     cards: list[Card] = []
     for path in files:
         cards.extend(parse_deck(path, source))
+    validate_coverage(source, cards)
     return cards
+
+
+def validate_coverage(source: Path, cards: Sequence[Card]) -> None:
+    """Reject missing lecture decks or incomplete question-to-card mappings."""
+    manifest = json.loads((source / "source_manifest.json").read_text(encoding="utf-8"))
+    counts = Counter(card.source_path for card in cards)
+    expected_paths = {deck["path"] for deck in manifest["decks"]}
+    if set(counts) != expected_paths:
+        raise ValueError(f"Lecture coverage mismatch: missing={sorted(expected_paths - set(counts))}, unexpected={sorted(set(counts) - expected_paths)}")
+    for deck in manifest["decks"]:
+        path = deck["path"]
+        declared = re.search(r"(?m)^\*\*Cards:\*\* (\d+)\s*$", (source / path).read_text(encoding="utf-8"))
+        if counts[path] != deck["cards"] or declared is None or int(declared[1]) != counts[path]:
+            raise ValueError(f"{path}: expected {deck['cards']} cards, parsed {counts[path]}; check **Cards:** metadata")
+        labels = [int(re.match(r"Q(\d+)", card.label)[1]) for card in cards if card.source_path == path]
+        if labels != list(range(1, counts[path] + 1)):
+            raise ValueError(f"{path}: card numbers must be consecutive to preserve progress IDs")
+        for question, mapped in enumerate(deck["question_cards"], 1):
+            if not mapped or any(number not in labels for number in mapped):
+                raise ValueError(f"{path}: upstream Q{question} has no valid local card mapping")
 
 
 def markdown_to_html(text: str) -> str:
@@ -171,7 +193,7 @@ STATIC_HTML_TEMPLATE = r'''<!doctype html>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color-scheme:light dark;--bg:#101216;--panel:#181b21;--muted:#9ca3af;--border:#30343d;--accent:#8ab4f8;--good:#76c893;--bad:#ff8585}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#eef1f5;min-height:100vh}.wrap{max-width:980px;margin:auto;padding:22px}.top{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.top h1{margin:0 auto 0 0;font-size:clamp(1.5rem,4vw,2.2rem)}.muted{color:var(--muted)}select,input,button{font:inherit;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:inherit;padding:10px 12px}button{cursor:pointer}button:hover{border-color:var(--accent)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:16px 0}.stat{background:var(--panel);border:1px solid var(--border);padding:10px;border-radius:12px}.stat b{display:block;font-size:1.25rem}.filters{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:9px;margin:12px 0 18px}.card{min-height:390px;background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:clamp(18px,4vw,34px);display:flex;flex-direction:column;box-shadow:0 16px 50px #0005}.card-meta{display:flex;align-items:start;gap:9px;margin-bottom:14px}.pill{align-self:flex-start;border:1px solid var(--border);border-radius:999px;padding:5px 9px;font-size:.82rem;color:var(--muted)}.origin{margin-left:auto;max-width:52%;overflow-wrap:anywhere;text-align:right;font-size:.72rem;line-height:1.35;color:var(--muted)}.content{font-size:clamp(1.08rem,2.2vw,1.35rem);line-height:1.55;flex:1}.content code{font-size:.9em}.answer{border-top:1px solid var(--border);padding-top:18px}.source{font-size:.85rem;color:var(--muted);margin-top:16px}.source a{color:var(--accent)}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}.flip{width:100%;margin-top:12px}.hidden{display:none}.empty{text-align:center;padding:80px 20px;color:var(--muted)}.key{font-size:.75rem;color:var(--muted)}@media(max-width:700px){.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.stats{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr 1fr}.origin{max-width:62%}}
-.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{line-height:1.25;margin:1.2em 0 .55em}.content h1:first-child,.content h2:first-child,.content h3:first-child,.content h4:first-child,.content h5:first-child,.content h6:first-child{margin-top:0}.content p{margin:.8em 0}.content ul,.content ol{padding-left:1.45em}.content li+li{margin-top:.25em}.content table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:1em 0;font-size:.88em}.content th,.content td{border:1px solid var(--border);padding:.45em .6em;text-align:left;vertical-align:top}.content th{background:#242932}.content pre{overflow-x:auto;padding:.8em;border:1px solid var(--border);border-radius:8px;background:#0d0f13;font-size:.82em}.content blockquote{margin:1em 0;padding-left:1em;border-left:3px solid var(--accent);color:var(--muted)}.content a{color:var(--accent)}
+.filters>*{min-width:0}.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{line-height:1.25;margin:1.2em 0 .55em}.content h1:first-child,.content h2:first-child,.content h3:first-child,.content h4:first-child,.content h5:first-child,.content h6:first-child{margin-top:0}.content p{margin:.8em 0}.content ul,.content ol{padding-left:1.45em}.content li+li{margin-top:.25em}.content table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:1em 0;font-size:.88em}.content th,.content td{border:1px solid var(--border);padding:.45em .6em;text-align:left;vertical-align:top}.content th{background:#242932}.content pre{overflow-x:auto;padding:.8em;border:1px solid var(--border);border-radius:8px;background:#0d0f13;font-size:.82em}.content blockquote{margin:1em 0;padding-left:1em;border-left:3px solid var(--accent);color:var(--muted)}.content a{color:var(--accent)}
 </style>
 </head><body><main class="wrap">
 <div class="top"><div><h1>SQRS Flashcards</h1><div class="muted">__CARD_COUNT__ current-course revision cards · progress stays in this browser</div></div><button id="shuffle">Shuffle</button></div>

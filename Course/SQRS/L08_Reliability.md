@@ -1,8 +1,8 @@
 # L08 — Software Reliability Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L08_Reliability.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L08_Reliability.html
 
-**Cards:** 12
+**Cards:** 17
 
 > [!tip] Active recall
 > Answer every part before revealing the answer. For design/essay questions, the answer is a grading checklist: alternative designs can also be correct when justified.
@@ -14,6 +14,7 @@
 
 > [!answer]- Answer / self-check
 > Use one case and keep levels distinct. Example CrowdStrike 2024: **fault** = invalid content/update accepted by validation/design; **error** = sensor/kernel code enters invalid memory/state while parsing it; **failure** = Windows hosts crash/boot-loop visibly. Fault is latent cause, error is incorrect internal state, failure is externally observed service deviation.
+> For the source's server example: missing length check = **fault**; request >8 KB = **activation**; corrupt/invalid internal state = **error**; crash = **failure**. A dormant fault can exist during months with no triggering requests. Musa's “error” is a programmer's mistake; Avizienis's is a wrong system state; state which vocabulary you use.
 
 ### Q2 — Hardware vs software reliability curves
 
@@ -34,10 +35,10 @@
 ### Q4 — FIO from availability
 
 > [!question] Question
-> A=99.9%, mean downtime per failure=2 min=0.033 h. Compute λ, MTTF, and failures/month (720 h) using the exact formula.
+> A=99.9%, mean downtime per failure=2 min=1/30 h. Compute exact and approximate λ, MTTF and the lecture's expected failures over 720 h.
 
 > [!answer]- Answer / self-check
-> λ=(1−A)/(A×t_m)=0.001/(0.999×0.033) ≈ **0.0303 failures/h**. MTTF=1/λ ≈ **32.97 h**. Expected failures in 720 h ≈ **21.84**. High availability can coexist with frequent failures when recovery is very fast.
+> λ=(1−A)/(A×t_m)=0.001/(0.999/30) ≈ **0.030030 failures/operating-hour**. MTTF=1/λ = **33.3 h**. The lecture's λ×720 estimate is **21.62 failures**; accounting for uptime in 720 calendar hours gives λ×A×720 = **21.6**. Approximation λ≈(1−A)/t_m = **0.03/h**, 0.1% below exact. Keep 2/60 exact until the final rounding. High availability can coexist with frequent failures when recovery is fast.
 
 ### Q5 — When failure metrics mislead
 
@@ -74,6 +75,7 @@
 > - λ(20)=2.4e^-0.6 ≈ **1.317/week**.
 > - Set 1=2.4e^-0.03t → t≈ **29.18 weeks**.
 > - m(t)=80(1−1/2.4)≈ **46.7 faults** found.
+> Remaining faults = a·e^(−bt)=FIO/b=**33.3** (expected counts need not be integers).
 
 ### Q9 — Why N-version independence fails
 
@@ -81,23 +83,23 @@
 > Summarize Knight & Leveson and why it matters.
 
 > [!answer]- Answer / self-check
-> Setup: **27 independently developed versions**, same specification/language, tested on **1,000,000 random cases**. Coincident failures were far above the independence model (lecture shorthand ~**29×**). Causes included difficult/collinear inputs, numerical precision traps, and shared specification ambiguity. Therefore multiplying independent reliabilities can grossly overstate N-version safety.
+> The current source reports **27 independently developed versions** of an anti-missile program, tested on **1,000,000 random cases**. Two or more versions failed together in **1,255 cases versus 127 predicted** under independence (about **9.9×**); independence was rejected at 99% confidence. Shared logical slips, finite-precision arithmetic and hard inputs caused correlated failures. Diversity can help, but multiplying independent reliabilities overstates its benefit when that assumption fails.
 
 ### Q10 — Three-version majority voting
 
 > [!question] Question
-> Each version has Rc=0.95. Compute independent 2-of-3 reliability, then discuss 10% coincident failures.
+> Each version has Rc=0.95. Compute independent 2-of-3 reliability. Then use a mixture: 1% of inputs fail all three versions; otherwise each independently fails with probability 0.04.
 
 > [!answer]- Answer / self-check
-> Independent majority reliability = 3R²(1−R)+R³ = **0.99275**. A single version is **0.95**. If 10% of the 5% component failure probability is a common-mode event, there is already a **0.5% system-failure floor** before independent residual failures; a simple mixture gives effective reliability around **0.989** (exact value depends on the dependence model). Key lesson: correlation erodes the redundancy gain.
+> Independent majority reliability = 3R²(1−R)+R³ = **0.99275**. Mixture failure probability = 0.01 + 0.99×(3×0.04²×0.96+0.04³) = **0.01462528**; reliability = **0.98537472**. The mixture's component reliability is 1−(0.01+0.99×0.04)=0.9504, approximately 0.95. A voter cannot mask an input that defeats all versions together.
 
 ### Q11 — SLO error budget
 
 > [!question] Question
-> For 99.95% monthly availability and 50M requests, compute request/minute budgets and interpret 8 min outage + 5000 errors.
+> For a 99.95% successful-request SLO over 30 days and 50M evenly spread requests, calculate the budget and consumption by A: 6 min full outage; B: 3 min full outage; C: 4000 failed requests. Postmortems are required above 20% per incident; freeze only when the whole budget is spent.
 
 > [!answer]- Answer / self-check
-> Allowed error fraction = 0.0005. Request budget = 50,000,000×0.0005 = **25,000 requests**. For a 30-day month: 43,200×0.0005 = **21.6 min** downtime budget. Eight outage minutes consume ~**37%** of the time budget; 5,000 failed requests consume **20%** of the request budget. Do not add minutes and requests directly—choose a consistent SLI/error-budget policy.
+> Budget = 50M×0.0005 = **25,000 failed requests**, equivalent to **21.6 minutes** of full outage under uniform traffic. Rate=50M/43,200≈1157.407 requests/min. **A:** ≈6944.44 failures, **27.78%** of budget; **B:** ≈3472.22, **13.89%**; **C:** 4000, **16%**. Total ≈14,416.67 failures, **57.67%** spent, **42.33%** left. Only A exceeds the strict >20% postmortem threshold; shipping may continue under the stated policy. Use a common request denominator; the time conversion depends on uniform traffic.
 
 ### Q12 — FIO vs SLO
 
@@ -106,3 +108,44 @@
 
 > [!answer]- Answer / self-check
 > Both set a **quantitative acceptable failure level** rather than demanding perfection. FIO is framed as allowable failure intensity during reliability engineering/testing; SLO sets a target for production service indicators. λ(t) corresponds to an error/failure-rate SLI, and “just-right reliability” corresponds to spending an **error budget** instead of overengineering beyond business need.
+> A 100% target leaves zero room for failures and change; its cost can exceed user benefit. Choose objectives by consequence, operating conditions and economic value rather than assuming perfect reliability is attainable.
+
+### Q13 — Ariane 5 and identical backups
+
+> [!question] Question
+> Trace Ariane 5 flight 501 through fault–activation–error–failure, and explain why its backup did not protect it.
+
+> [!answer]- Answer / self-check
+> **Fault:** an unprotected 64-to-16-bit conversion in reused inertial-reference code. **Activation:** Ariane 5's flight values exceeded the Ariane 4 assumption. **Error:** overflow exception. **Component failure:** inertial computer shutdown; diagnostic data were then treated as flight data, leading to destructive commands and loss of the rocket. The backup ran the same faulty logic under the same conditions and failed too: identical redundancy does not remove common-mode design faults.
+
+### Q14 — Derive reliability from failure data
+
+> [!question] Question
+> Four failures occur in 2000 operating hours; mean downtime per failure is 2 hours. Compute λ, MTTF, R(24 h) and availability. State assumptions.
+
+> [!answer]- Answer / self-check
+> **λ=4/2000=0.002/h; MTTF=1/λ=500 h**. Assuming stable use and a constant failure intensity with exponential time to failure, **R(24)=e^(−0.002×24)≈0.95313**. Steady-state availability **A=500/(500+2)≈0.996016=99.6016%**. A point estimate from four failures has substantial uncertainty; the exponential model is an assumption, not a consequence of the count.
+
+### Q15 — FIO from a mission reliability target
+
+> [!question] Question
+> Require R(4 h)≥0.995. What maximum failure intensity follows under a constant-intensity model?
+
+> [!answer]- Answer / self-check
+> R(t)=e^(−λt), so **λ≤−ln(0.995)/4≈0.00125314/h** (about one failure per 798 operating hours). Use common time units and the intended operational profile; changing usage or nonconstant intensity invalidates a simple extrapolation.
+
+### Q16 — Growth-model limits under continuous delivery
+
+> [!question] Question
+> Why does fitting one reliability growth curve to a shop deploying features several times daily mislead? What replaces one-off certification?
+
+> [!answer]- Answer / self-check
+> Classical growth models assume stable code and usage, representative tests and effective fixes. New features inject/change faults and traffic changes activation rates, so the fitted decay no longer describes one fixed fault population. Use **production SLIs, rolling-window SLOs, error-budget policies and continuous monitoring**, alongside per-release verification; these manage changing service behavior rather than certify a frozen version once.
+
+### Q17 — Acceptance checks in recovery blocks
+
+> [!question] Question
+> Give an acceptance check for square root and sorting. Why is a complete sort check harder than merely checking order?
+
+> [!answer]- Answer / self-check
+> For nonnegative finite x and candidate y, require y≥0 and **abs(y²−x)≤ε×max(1,x)**, with tolerance chosen for the numeric range. For sorting require **nondecreasing output plus exactly the same multiset as the input** (not just length or sum). Checking order is linear, but exact permutation checking needs additional storage/counting or comparable processing, and must preserve duplicates. These are runtime acceptance checks for a recovery block, not user-acceptance testing.

@@ -1,6 +1,6 @@
 # L06 — Random Testing Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L06_Random.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L06_Random.html
 
 **Cards:** 34
 
@@ -219,21 +219,23 @@
 > [!answer]- Answer / self-check
 > No. Structural traversal and fault sensitivity are different dimensions. A suite can cover every branch yet fail to kill simple mutants because its assertions are weak; a mutation-focused suite may still omit structurally irrelevant branches. Use both when the risk justifies it.
 
-### Q26 — Random vs partition testing
+### Q26 — Plain versus guided random testing
 
 > [!question] Question
-> Is random testing better than partition testing?
+> Is random testing universally better than partition testing? Which reliability-estimation assumptions do feedback-directed tests, coverage-guided fuzzing and edge-biased property generators break?
 
 > [!answer]- Answer / self-check
 > Neither universally. Partition testing is efficient when meaningful risk-based subdomains/boundaries are known. Random testing is simple, scalable, statistically analyzable, and attractive when the space is unstructured or the operational distribution matters. At scale, modestly more random tests can erase small partition advantages in some studies.
+> For a reliability estimate, tests must be independent samples from the specified usage distribution. Feedback-directed testing and coverage-guided fuzzing adapt later inputs to earlier results, breaking that independence/fixed sampling model; edge-biased PBT does not sample the operational distribution. These can be excellent bug-finding tools, but their raw success counts cannot justify the same unbiased operational failure probability or simple independent-trial confidence bound.
 
-### Q27 — Define fuzz testing
+### Q27 — Random seeds and reproducibility
 
 > [!question] Question
-> Define fuzzing and distinguish it from generic random testing by input, focus, and oracle.
+> In AutoTest, one seed found 5 bugs and another 23 for the same class in 30 minutes. How should random-testing runs be conducted and reported? How does fuzzing's purpose differ from unbiased reliability sampling?
 
 > [!answer]- Answer / self-check
 > Fuzzing automatically feeds unexpected/malformed or mutated inputs to find robustness/security defects. Inputs are often mutation/coverage-guided rather than independent operational samples; the focus is bug discovery rather than unbiased reliability estimation; common oracles are crashes, hangs, sanitizers, assertions, and coverage signals.
+> One seed is not representative. Run **multiple independent seeds at equal budgets**, report the distribution/variability of unique bugs and the tool/version/configuration/budget, and preserve seeds plus minimized failing inputs for replay. Do not report only the best seed or treat duplicate crashes as distinct defects.
 
 ### Q28 — Oracle bottleneck
 

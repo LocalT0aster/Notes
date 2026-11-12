@@ -1,8 +1,8 @@
 # L09 — Performance Analysis Flashcards
 
-**Source:** https://sqrbok.github.io//content/material/sqr/RQ_L09_PerformanceAnalysis.html
+**Source:** https://sqrbok.github.io/content/material/sqr/RQ_L09_PerformanceAnalysis.html
 
-**Cards:** 14
+**Cards:** 17
 
 > [!tip] Active recall
 > Answer every part before revealing the answer. For design/essay questions, the answer is a grading checklist: alternative designs can also be correct when justified.
@@ -10,10 +10,10 @@
 ### Q1 — Business impact of latency
 
 > [!question] Question
-> 50k orders/day at $80; latency improves 1.2s→0.4s for $200k/year. Use 100ms≈1% sales and critique the estimate.
+> A shop has 50k orders/day at $80; an $200k/year upgrade cuts latency by 800 ms. Can Google's 0.2–0.6% fewer searches after 100–400 ms delay predict the shop's revenue gain? What should it measure?
 
 > [!answer]- Answer / self-check
-> Daily revenue = 50,000×$80 = $4M; annual ≈ **$1.46B**. 800 ms = eight 100-ms steps → heuristic **8%** uplift ≈ **$116.8M/year**, dwarfing $200k. But the heuristic is not causal/universal: conversion response may be nonlinear, baseline differs, order count may already include lost demand, seasonality/confounders matter, and infrastructure may affect more than latency.
+> **No:** searches are not purchases, users and baselines differ, and the latency–conversion response need not be linear. The folklore “100 ms≈1% sales” is not a justified forecast. Measure the shop's own randomized/controlled change in conversion, revenue or contribution margin per visitor, tail latency and errors across representative traffic. Daily gross revenue is $4M, but the decision concerns **incremental benefit net of costs**, not a mechanically extrapolated percentage of gross revenue.
 
 ### Q2 — Performance engineering vs late testing
 
@@ -65,6 +65,7 @@
 
 > [!answer]- Answer / self-check
 > Fixed problem (Amdahl): 10 + 50/10 = **15 min** idealized. Gustafson view: keep the 60-min wall-clock budget; after 10 min serial work, 10 GPUs provide **500 GPU-min** of parallel training—roughly a 10× larger parallel workload. Use Amdahl for fixed-size speedup; Gustafson when the problem grows with resources.
+> The enlarged workload takes **510 minutes on one GPU**, so scaled speedup is **510/60=8.5×**, equivalently 10−9×(10/60). The model assumes the serial loading cost stays fixed.
 
 ### Q8 — USL and retrograde throughput
 
@@ -83,6 +84,7 @@
 > - 1 + 100 queries → **N+1 query / chatty I/O**; fix with join/batch/prefetch.
 > - One service owns unrelated critical work → **god service / serialized bottleneck**; split or isolate queues/resources, use async boundaries.
 > - Create/destroy connections per request → **resource churn/no pooling**; use connection pooling/reuse and bounded lifecycle.
+> For the source's controller that fetches price/discount/stock for 20 items (**60 calls**), the **God Class** remedy is to put behavior next to its data: call **`cart.total()` once** and let cart/items do their work. That does not magically remove all internal work; it removes controller-level chat and misplaced responsibilities.
 
 ### Q10 — How performance bugs are discovered
 
@@ -99,6 +101,7 @@
 
 > [!answer]- Answer / self-check
 > Sequence a **baseline/smoke → load at 5k → spike to 200k → stress beyond expected peak → scalability/capacity tests → soak/endurance** at sustained realistic traffic. Monitor p50/p95/p99 latency, throughput, errors, saturation (CPU/memory/DB/queues), retries/timeouts, GC, cache hit, dependency SLOs. Realism includes arrival burst shape, transaction mix, think time, hot inventory, auth/payment dependencies.
+> The lecture's six named types are **baseline, smoke, load, stress, soak, isolation**; spike is a stress variant, isolation diagnoses one repeated transaction. Write agreed targets, e.g. purchase p99<2 s and failed purchases<0.1% at the specified arrival/peak profile. Model the two-hour sale and recovery, not just the peak count. Skipping stress hides collapse/recovery behavior; skipping soak hides leaks/exhaustion.
 
 ### Q12 — Tail-latency amplification
 
@@ -107,6 +110,7 @@
 
 > [!answer]- Answer / self-check
 > At least one slow shard: 1−0.995^80 ≈ **33.0%**. If two independent replicas are raced for every subrequest, both slow probability = 0.005² = **0.0025%**; across 80, ≈ **0.20%** chance at least one remains slow. Full tied requests roughly **double subrequest traffic**. True hedging sends a backup only after a tail threshold, so overhead is near the fraction exceeding that threshold, not 100%.
+> Sending a backup after the expected **p95** latency affects about **5%** of originals, so extra requests are about 5%, assuming that latency distribution remains valid. Correlation or overload weakens the independent-copy calculation.
 
 ### Q13 — Per-service latency budget
 
@@ -115,6 +119,7 @@
 
 > [!answer]- Answer / self-check
 > Allocate budgets that sum to ≤400 with contingency, e.g. Gateway 40–50, Recommendation ~290–300, DB 50–60 ms. If Recommendation rises 280→350 with others unchanged, end-to-end ≈ **430 ms**, violating the SLO. Approve only if other components improve or the model's value justifies renegotiating the SLO/risk; latency budget is finite like an error budget.
+> Summing marginal p99s is a **budgeting approximation, not the chain's measured p99 or a guarantee**: the slowest 1% need not be the same requests, and correlation changes the sum's distribution. Verify end-to-end percentiles on traces under representative load before approval.
 
 ### Q14 — Classical PE → cloud-native
 
@@ -128,3 +133,28 @@
 > - Planned PE effort → **continuous performance engineering/capacity work**.
 > - Queueing models → **capacity/autoscaling/queue models**.
 > Cloud changes scale/tooling, not utilization, queues, contention, latency propagation, or finite-resource laws.
+> Tracking also means **performance regression gates in CI**, not only dashboards. Little's law still relates average arrivals/completions, latency and in-flight work for a stable service boundary.
+
+### Q15 — Average equal-work rates
+
+> [!question] Question
+> Equal-work benchmark runs reach 40 and 60 requests/s. What is their combined average, and when is 50 correct?
+
+> [!answer]- Answer / self-check
+> Let each run process W requests. Total rate = 2W/(W/40+W/60) = **48 requests/s**, the harmonic mean. **50** is correct for runs of **equal duration**, where the faster run completes more work. Choose the mean from total work / total elapsed time, not from habit.
+
+### Q16 — Design-time performance budgets
+
+> [!question] Question
+> What does a performance budget allocate, how is it tracked, and why is load testing alone insufficient?
+
+> [!answer]- Answer / self-check
+> Allocate the end-to-end response-time/resource target among components, with headroom. Measure/model each component during development and fail meaningful performance regression gates when budgets are exceeded. Discovering a costly interaction while design can change is cheaper than waiting for an integrated load test to expose an architectural bottleneck. Budgeting complements realistic load testing; it does not replace it.
+
+### Q17 — Rising latency during a soak test
+
+> [!question] Question
+> At constant load, latency climbs steadily for four hours. What do you suspect and inspect next?
+
+> [!answer]- Answer / self-check
+> Suspect accumulating state or resource exhaustion: memory/connection/thread leaks, unbounded caches/queues or garbage-collection pressure. Correlate latency with heap/RSS, allocation/GC, open handles/connections, queue depth, database locks and throughput; confirm the arrival mix actually stayed stable. A trend is evidence to investigate, not proof of a memory leak.
