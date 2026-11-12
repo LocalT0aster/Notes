@@ -15,6 +15,9 @@ input adapter differs so it consumes Course/SQRS/L*.md callout cards.
 from __future__ import annotations
 
 import argparse
+import base64
+import hashlib
+import html
 import json
 import re
 from collections import Counter
@@ -24,9 +27,16 @@ from typing import Sequence
 
 from markdown_it import MarkdownIt
 
-MARKDOWN_RENDERER = MarkdownIt("commonmark", {"html": False}).enable("table")
+MARKDOWN_RENDERER = MarkdownIt("commonmark", {"html": True}).enable("table")
+MARKDOWN_RENDERER.renderer.rules["html_inline"] = lambda tokens, index, options, env: (
+    tokens[index].content if re.fullmatch(r"</?(?:sub|sup)>", tokens[index].content) else html.escape(tokens[index].content)
+)
+MARKDOWN_RENDERER.renderer.rules["html_block"] = lambda tokens, index, options, env: html.escape(tokens[index].content)
 CARD_HEADING_RE = re.compile(r"^###\s+(?P<label>Q\d+\s+—\s+.+?)\s*$")
+ORIGINAL_HEADING_RE = re.compile(r"^#{2,6}\s+(?:Question\s*|Q\s*)(?P<number>\d+)\s*:\s*(?P<title>.+?)\s*$")
+CARD_ID_RE = re.compile(r"^\*\*Card ID:\*\* (?P<id>[a-z0-9-]+)$")
 SOURCE_RE = re.compile(r"^\*\*Source:\*\*\s+(?P<url>https?://\S+)\s*$")
+SOURCE_QUESTION_RE = re.compile(r"^\*\*Source question:\*\*\s+(?P<url>https?://\S+)\s*$")
 QUESTION_MARKER = "> [!question] Question"
 ANSWER_PREFIX = "> [!answer]-"
 GITHUB_BASE = "https://github.com/LocalT0aster/Notes/blob/master/Course/SQRS/"
@@ -38,12 +48,55 @@ class Card:
     topic: str
     section: str
     label: str
+    question_number: int
     prompt: str
     answer: str
     answer_kind: str
     source_path: str
     source_url: str
     github_url: str
+
+
+@dataclass(frozen=True)
+class OriginalQuestion:
+    number: int
+    title: str
+    prompt: str
+
+
+def parse_original_questions(text: str) -> list[OriginalQuestion]:
+    """Copy complete question sections; ignore headings inside fenced code."""
+    lines = text.splitlines()
+    headings = [
+        (token.map[0], int(token.tag[1:]))
+        for token in MARKDOWN_RENDERER.parse(text)
+        if token.type == "heading_open" and token.map is not None
+    ]
+    questions: list[OriginalQuestion] = []
+    for index, (start, level) in enumerate(headings):
+        match = ORIGINAL_HEADING_RE.match(lines[start])
+        if match is None:
+            continue
+        stop = next(
+            (line for line, depth in headings[index + 1 :] if depth <= level or ORIGINAL_HEADING_RE.match(lines[line])),
+            len(lines),
+        )
+        block = lines[start:stop]
+        # Dividers separate source sections; they are not part of the question.
+        while block and block[-1].strip() in {"", "---"}:
+            block.pop()
+        questions.append(OriginalQuestion(int(match["number"]), match["title"], "\n".join(block)))
+    if [question.number for question in questions] != list(range(1, len(questions) + 1)):
+        raise ValueError("Original question numbers must be consecutive")
+    return questions
+
+
+def read_original_questions(source: Path, deck: dict) -> list[OriginalQuestion]:
+    path = source / "sources" / deck["revision_file"]
+    raw = path.read_bytes()
+    if hashlib.sha256(raw).hexdigest() != deck["source_sha256"]:
+        raise ValueError(f"{path}: source snapshot checksum mismatch")
+    return parse_original_questions(raw.decode("utf-8"))
 
 
 def parse_args() -> argparse.Namespace:
@@ -100,6 +153,8 @@ def parse_deck(path: Path, root: Path) -> list[Card]:
         heading = CARD_HEADING_RE.match(block[0])
         assert heading is not None
         label = heading.group("label")
+        stable_id = next((match["id"] for line in block if (match := CARD_ID_RE.match(line))), None)
+        question_url = next((match["url"] for line in block if (match := SOURCE_QUESTION_RE.match(line))), source_url)
 
         try:
             q_marker = block.index(QUESTION_MARKER)
@@ -118,15 +173,16 @@ def parse_deck(path: Path, root: Path) -> list[Card]:
         rel = path.relative_to(root).as_posix()
         cards.append(
             Card(
-                id=f"{slug(path.stem)}-{ordinal:03d}",
+                id=stable_id or f"{slug(path.stem)}-{ordinal:03d}",
                 topic=topic,
                 section=topic,
                 label=label,
+                question_number=int(re.match(r"Q(\d+)", label)[1]),
                 prompt=prompt,
                 answer=answer,
                 answer_kind="answer / self-check",
                 source_path=rel,
-                source_url=source_url,
+                source_url=question_url,
                 github_url=GITHUB_BASE + rel,
             )
         )
@@ -141,6 +197,7 @@ def build_cards(source: Path) -> list[Card]:
     for path in files:
         cards.extend(parse_deck(path, source))
     validate_coverage(source, cards)
+    validate_fidelity(source, cards)
     return cards
 
 
@@ -164,19 +221,49 @@ def validate_coverage(source: Path, cards: Sequence[Card]) -> None:
                 raise ValueError(f"{path}: upstream Q{question} has no valid local card mapping")
 
 
-def markdown_to_html(text: str) -> str:
-    return MARKDOWN_RENDERER.render(text)
+def validate_fidelity(source: Path, cards: Sequence[Card]) -> None:
+    """Reject edited/paraphrased fronts against checksummed upstream snapshots."""
+    manifest = json.loads((source / "source_manifest.json").read_text(encoding="utf-8"))
+    for deck in manifest["decks"]:
+        originals = read_original_questions(source, deck)
+        local = [card for card in cards if card.source_path == deck["path"]]
+        if len(local) != len(originals):
+            raise ValueError(f"{deck['path']}: expected one card per original question")
+        for card, original in zip(local, originals, strict=True):
+            if card.prompt != original.prompt:
+                raise ValueError(f"{deck['path']}: Q{original.number} differs from the original question")
+            expected_url = f"https://sqrbok.github.io/content/material/sqr/{Path(deck['revision_file']).stem}.html#{deck['question_anchors'][original.number - 1]}"
+            if card.source_url != expected_url:
+                raise ValueError(f"{deck['path']}: Q{original.number} source link differs from the verified anchor")
+        if [card.id for card in local] != deck["card_ids"]:
+            raise ValueError(f"{deck['path']}: stable card IDs differ from manifest")
+    for name, expected in manifest.get("assets", {}).items():
+        if hashlib.sha256((source / "sources" / name).read_bytes()).hexdigest() != expected:
+            raise ValueError(f"{name}: source asset checksum mismatch")
+
+
+def markdown_to_html(text: str, asset_root: Path | None = None) -> str:
+    tokens = MARKDOWN_RENDERER.parse(text)
+    if asset_root is not None:
+        for token in tokens:
+            for child in token.children or []:
+                name = child.attrGet("src") if child.type == "image" else None
+                if name and name == Path(name).name and name.endswith(".svg"):
+                    image = base64.b64encode((asset_root / name).read_bytes()).decode("ascii")
+                    child.attrSet("src", f"data:image/svg+xml;base64,{image}")
+    return MARKDOWN_RENDERER.renderer.render(tokens, MARKDOWN_RENDERER.options, {})
 
 
 def write_json(cards: Sequence[Card], output: Path) -> None:
     output.write_text(json.dumps([asdict(card) for card in cards], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def write_static_html(cards: Sequence[Card], output: Path) -> None:
+def write_static_html(cards: Sequence[Card], output: Path, source: Path | None = None) -> None:
+    asset_root = (source or Path(__file__).resolve().parents[1]) / "sources"
     payload = []
     for card in cards:
         data = asdict(card)
-        data["prompt_html"] = markdown_to_html(card.prompt)
+        data["prompt_html"] = markdown_to_html(card.prompt, asset_root)
         data["answer_html"] = markdown_to_html(card.answer)
         payload.append(data)
     json_blob = json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
@@ -194,6 +281,7 @@ STATIC_HTML_TEMPLATE = r'''<!doctype html>
 :root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color-scheme:light dark;--bg:#101216;--panel:#181b21;--muted:#9ca3af;--border:#30343d;--accent:#8ab4f8;--good:#76c893;--bad:#ff8585}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#eef1f5;min-height:100vh}.wrap{max-width:980px;margin:auto;padding:22px}.top{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.top h1{margin:0 auto 0 0;font-size:clamp(1.5rem,4vw,2.2rem)}.muted{color:var(--muted)}select,input,button{font:inherit;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:inherit;padding:10px 12px}button{cursor:pointer}button:hover{border-color:var(--accent)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:16px 0}.stat{background:var(--panel);border:1px solid var(--border);padding:10px;border-radius:12px}.stat b{display:block;font-size:1.25rem}.filters{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:9px;margin:12px 0 18px}.card{min-height:390px;background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:clamp(18px,4vw,34px);display:flex;flex-direction:column;box-shadow:0 16px 50px #0005}.card-meta{display:flex;align-items:start;gap:9px;margin-bottom:14px}.pill{align-self:flex-start;border:1px solid var(--border);border-radius:999px;padding:5px 9px;font-size:.82rem;color:var(--muted)}.origin{margin-left:auto;max-width:52%;overflow-wrap:anywhere;text-align:right;font-size:.72rem;line-height:1.35;color:var(--muted)}.content{font-size:clamp(1.08rem,2.2vw,1.35rem);line-height:1.55;flex:1}.content code{font-size:.9em}.answer{border-top:1px solid var(--border);padding-top:18px}.source{font-size:.85rem;color:var(--muted);margin-top:16px}.source a{color:var(--accent)}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}.flip{width:100%;margin-top:12px}.hidden{display:none}.empty{text-align:center;padding:80px 20px;color:var(--muted)}.key{font-size:.75rem;color:var(--muted)}@media(max-width:700px){.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.stats{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr 1fr}.origin{max-width:62%}}
 .filters>*{min-width:0}.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{line-height:1.25;margin:1.2em 0 .55em}.content h1:first-child,.content h2:first-child,.content h3:first-child,.content h4:first-child,.content h5:first-child,.content h6:first-child{margin-top:0}.content p{margin:.8em 0}.content ul,.content ol{padding-left:1.45em}.content li+li{margin-top:.25em}.content table{border-collapse:collapse;display:block;max-width:100%;overflow-x:auto;margin:1em 0;font-size:.88em}.content th,.content td{border:1px solid var(--border);padding:.45em .6em;text-align:left;vertical-align:top}.content th{background:#242932}.content pre{overflow-x:auto;padding:.8em;border:1px solid var(--border);border-radius:8px;background:#0d0f13;font-size:.82em}.content blockquote{margin:1em 0;padding-left:1em;border-left:3px solid var(--accent);color:var(--muted)}.content a{color:var(--accent)}
+.origin a{color:var(--accent)}.content img{display:block;max-width:100%;height:auto;background:white}
 </style>
 </head><body><main class="wrap">
 <div class="top"><div><h1>SQRS Flashcards</h1><div class="muted">__CARD_COUNT__ current-course revision cards · progress stays in this browser</div></div><button id="shuffle">Shuffle</button></div>
@@ -201,6 +289,7 @@ STATIC_HTML_TEMPLATE = r'''<!doctype html>
 <div class="filters"><input id="search" placeholder="Search questions…"><select id="topic"><option value="">All topics</option></select><select id="mode"><option value="all">All</option><option value="due">Due</option><option value="new">New</option><option value="trouble">Trouble</option></select><button id="reset">Reset progress</button></div>
 <section id="study"></section>
 <p class="muted"><span class="key">Space</span> flip · <span class="key">1</span> Again · <span class="key">2</span> Hard · <span class="key">3</span> Good · <span class="key">4</span> Easy</p>
+<p class="muted source">Original questions: <a href="https://github.com/sqrbok/sqrbok-preview">SQRBOK</a>, © 2025 Andrey Sadovykh, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Question wording is unchanged; self-check answers are locally synthesized.</p>
 </main><script>
 const cards=__CARD_DATA__;
 const KEY='sqrs-progress-v1';
@@ -211,7 +300,7 @@ function rec(c){return progress[c.id]||{reps:0,lapses:0,interval:0,due:0}}
 function filtered(){const q=$('search').value.trim().toLowerCase(),t=$('topic').value,m=$('mode').value,n=now();return cards.filter(c=>{const r=rec(c);if(t&&c.topic!==t)return false;if(q&&!(`${c.prompt} ${c.topic} ${c.section}`.toLowerCase().includes(q)))return false;if(m==='due'&&!(r.reps>0&&r.due<=n))return false;if(m==='new'&&r.reps>0)return false;if(m==='trouble'&&r.lapses<1)return false;return true})}
 function rebuild(keep=false){const current=keep&&queue[index]?.id;queue=filtered();index=Math.max(0,current?queue.findIndex(c=>c.id===current):0);if(index<0)index=0;revealed=false;render();updateStats()}
 function updateStats(){const n=now();$('available').textContent=cards.length;$('due').textContent=cards.filter(c=>{const r=rec(c);return r.reps>0&&r.due<=n}).length;$('newCount').textContent=cards.filter(c=>rec(c).reps===0).length;$('reviewed').textContent=cards.filter(c=>rec(c).reps>0).length}
-function render(){const host=$('study');if(!queue.length){host.innerHTML='<div class="empty">No cards match these filters.</div>';return}const c=queue[index%queue.length],r=rec(c);host.innerHTML=`<article class="card"><div class="card-meta"><span class="pill">${esc(c.topic)}</span><span class="origin">${esc(c.source_path)} · ${index+1}/${queue.length}</span></div><div class="content"><h2>${revealed?'Answer / cues':'Question'}</h2>${revealed?c.answer_html:c.prompt_html}</div>${revealed?`<div class="answer"><span class="pill">${esc(c.answer_kind)}</span><div class="source">${c.source_url?`<a href="${c.source_url}" target="_blank" rel="noopener">SQRBOK question set</a> · `:''}<a href="${c.github_url}" target="_blank" rel="noopener">course Markdown</a> · reviews: ${r.reps}, lapses: ${r.lapses}</div></div>`:''}</article><button class="flip" id="flip">${revealed?'Show question':'Reveal answer'} <span class="key">Space</span></button>${revealed?'<div class="controls"><button data-grade="again">Again <span class="key">1</span></button><button data-grade="hard">Hard <span class="key">2</span></button><button data-grade="good">Good <span class="key">3</span></button><button data-grade="easy">Easy <span class="key">4</span></button></div>':''}`;$('flip').onclick=flip;document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>grade(b.dataset.grade))}
+function render(){const host=$('study');if(!queue.length){host.innerHTML='<div class="empty">No cards match these filters.</div>';return}const c=queue[index%queue.length],r=rec(c);host.innerHTML=`<article class="card"><div class="card-meta"><span class="pill">${esc(c.topic)}</span><span class="origin"><a href="${c.source_url}" target="_blank" rel="noopener">${esc(c.source_path)} · Q${c.question_number}</a> · Review ${index+1}/${queue.length}</span></div><div class="content">${revealed?'<h2>Answer / self-check</h2>':''}${revealed?c.answer_html:c.prompt_html}</div>${revealed?`<div class="answer"><span class="pill">${esc(c.answer_kind)}</span><div class="source">${c.source_url?`<a href="${c.source_url}" target="_blank" rel="noopener">SQRBOK question</a> · `:''}<a href="${c.github_url}" target="_blank" rel="noopener">course Markdown</a> · reviews: ${r.reps}, lapses: ${r.lapses}</div></div>`:''}</article><button class="flip" id="flip">${revealed?'Show question':'Reveal answer'} <span class="key">Space</span></button>${revealed?'<div class="controls"><button data-grade="again">Again <span class="key">1</span></button><button data-grade="hard">Hard <span class="key">2</span></button><button data-grade="good">Good <span class="key">3</span></button><button data-grade="easy">Easy <span class="key">4</span></button></div>':''}`;$('flip').onclick=flip;document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>grade(b.dataset.grade))}
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 function flip(){revealed=!revealed;render()}
 function grade(g){if(!queue.length)return;const c=queue[index%queue.length],r=rec(c),day=86400000;let interval=r.interval||0,lapses=r.lapses||0;if(g==='again'){interval=0;lapses++;r.due=now()+10*60*1000}else if(g==='hard'){interval=Math.max(1,Math.round(interval*1.2)||1);r.due=now()+interval*day}else if(g==='good'){interval=interval<=1?3:Math.max(3,Math.round(interval*2));r.due=now()+interval*day}else{interval=interval<=1?7:Math.max(7,Math.round(interval*3));r.due=now()+interval*day}progress[c.id]={reps:(r.reps||0)+1,lapses,interval,due:r.due,last:g};save();index=(index+1)%queue.length;revealed=false;render()}
@@ -228,7 +317,7 @@ def main() -> int:
     cards = build_cards(source)
     output = (args.output or source / "flashcards.html").resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
-    write_static_html(cards, output)
+    write_static_html(cards, output, source)
     if args.json_output:
         write_json(cards, args.json_output.resolve())
     topics = len({card.topic for card in cards})
