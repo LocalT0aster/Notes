@@ -111,6 +111,19 @@ class CourseCoverageTest(unittest.TestCase):
         self.assertIn("e.target.matches('input,select,textarea')", html)
         self.assertIn("localStorage.setItem(NOTES_KEY", html)
 
+    def test_topic_and_card_selection_survive_reload(self) -> None:
+        cards = builder.build_cards(ROOT)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "flashcards.html"
+            builder.write_static_html(cards, output)
+            html = output.read_text(encoding="utf-8")
+        self.assertIn("VIEW_KEY='sqrs-view-v1'", html)
+        self.assertNotIn("sqrs-view-v1',VIEW_KEY", html)  # distinct from progress/notes keys
+        self.assertIn("localStorage.setItem(VIEW_KEY", html)
+        self.assertIn("||view.card||null", html)  # rebuild anchors on the stored card
+        self.assertIn("$('topic').value=view.topic", html)  # topic restored on load
+        self.assertIn("saveView();render()", html)  # grading/shuffling refresh the stored card
+
 
 if __name__ == "__main__":
     unittest.main()
