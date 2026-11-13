@@ -44,11 +44,11 @@
 > - a start-up shipping weekly to learn what customers want
 
 > [!answer]- Answer / self-check
-> A defensible mapping is enough if justified. Typical examples:
-> - **Scrum / XP:** user-based dominates because feedback and delivered value drive acceptance.
-> - **FDA-validated Waterfall:** manufacturing-based dominates because documented conformance and traceability are central.
-> - **RUP:** often blends product/manufacturing views through architecture, artifacts, and disciplined process.
-> - **CMMI-audited team:** manufacturing-based, emphasizing process conformance. A start-up shipping to learn can emphasize **value-based** quality, accepting known defects when fixing them costs more than the learning gained.
+> Choose any one example and justify the dominant view:
+> - **Scrum or XP, accepted by customer demo → user-based:** the customer judges whether the increment meets their needs.
+> - **Team audited against CMMI → manufacturing-based:** the audit emphasizes conformance to defined processes.
+> - **Medical-device project passing FDA validation → manufacturing-based:** documented evidence of meeting safety and performance requirements drives acceptance; validation also checks fitness for intended use.
+> - **Start-up shipping weekly to learn what customers want → user-based:** frequent releases reveal whether the product meets actual customer needs.
 
 ### Q3 — Garvin's Eight Dimensions
 
